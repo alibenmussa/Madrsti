@@ -1,0 +1,22 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="JavaFXApp">
+    <output-path>$PROJECT_DIR$/out/artifacts/JavaFXApp</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="Main" />
+        <option name="description" value="A Primary School System" />
+        <option name="height" value="640" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="title" value="Madrsti System" />
+        <option name="vendor" value="" />
+        <option name="version" value="1.0.0" />
+        <option name="width" value="960" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="JavaFXApp.jar">
+        <element id="module-output" name="Madrsti" />
+      </element>
+    </root>
+  </artifact>
+</component>
