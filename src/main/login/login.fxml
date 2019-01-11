@@ -11,26 +11,26 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="960.0" stylesheets="@../stylesheets/style.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.loginController">
-    <center>
-        <ScrollPane cacheShape="false" fitToHeight="true" fitToWidth="true" focusTraversable="false" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.login.loginController">
+   <center>
+      <ScrollPane cacheShape="false" fitToHeight="true" fitToWidth="true" focusTraversable="false" BorderPane.alignment="CENTER">
          <content>
-            <StackPane minHeight="-Infinity" prefWidth="960.0">
+            <StackPane minHeight="-Infinity" prefWidth="1024.0" style="-fx-background-color: #f8f8fb;">
                <children>
-                  <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="300.0" prefHeight="278.0" prefWidth="300.0" spacing="15.0">
+                  <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="300.0" prefHeight="300.0" prefWidth="300.0" spacing="15.0">
                      <children>
                         <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" text="Username" textAlignment="CENTER">
                            <opaqueInsets>
                               <Insets />
                            </opaqueInsets>
                         </Label>
-                        <TextField maxWidth="1.7976931348623157E308" prefHeight="45.0" />
+                        <TextField fx:id="username" maxWidth="1.7976931348623157E308" prefHeight="45.0" />
                         <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" text="Password" textAlignment="CENTER">
                            <opaqueInsets>
                               <Insets />
                            </opaqueInsets>
                         </Label>
-                        <PasswordField maxWidth="1.7976931348623157E308" prefHeight="45.0">
+                        <PasswordField fx:id="password" maxWidth="1.7976931348623157E308" prefHeight="45.0">
                            <opaqueInsets>
                               <Insets />
                            </opaqueInsets>
@@ -41,9 +41,12 @@
                </children>
             </StackPane>
          </content>
-        </ScrollPane>
-    </center>
+      </ScrollPane>
+   </center>
    <top>
-      <AnchorPane fx:id="header" prefHeight="120.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+      <AnchorPane fx:id="navbar" prefHeight="80.0" prefWidth="1024.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane fx:id="header" prefHeight="80.0" prefWidth="1024.0" />
+         </children></AnchorPane>
    </top>
 </BorderPane>

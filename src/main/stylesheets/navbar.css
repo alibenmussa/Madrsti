@@ -1,0 +1,11 @@
+AnchorPane {
+    -fx-background-color: #3d3ef3;
+}
+
+* {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 16;
+    -fx-font-weight: normal;
+    /*-fx-font-family: "Franklin Gothic Book";*/
+    -fx-text-alignment: center;
+}
