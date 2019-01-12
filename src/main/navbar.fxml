@@ -31,7 +31,7 @@
             </ImageView>
             <AnchorPane fx:id="list" prefHeight="30.0" prefWidth="246.0" GridPane.columnIndex="1">
                <children>
-                  <GridPane alignment="CENTER" maxHeight="-Infinity" prefHeight="80.0" style="-fx-background-color: transparent;">
+                  <GridPane fx:id="catigories" alignment="CENTER" maxHeight="-Infinity" prefHeight="80.0" prefWidth="512.0" style="-fx-background-color: transparent;">
                      <columnConstraints>
                         <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -42,10 +42,10 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                      </rowConstraints>
                      <children>
-                        <Label maxWidth="1.7976931348623157E308" text="Home" textAlignment="CENTER" />
-                        <Label text="Employees" textAlignment="CENTER" GridPane.columnIndex="1" />
-                        <Label text="Students" GridPane.columnIndex="2" />
-                        <Label text="Results" GridPane.columnIndex="3" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" text="HOME" textAlignment="CENTER" />
+                        <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="EMPLOYEES" textAlignment="CENTER" GridPane.columnIndex="1" />
+                        <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="STUDENTS" GridPane.columnIndex="2" />
+                        <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="RESULTS" GridPane.columnIndex="3" />
                      </children>
                   </GridPane>
                </children>
