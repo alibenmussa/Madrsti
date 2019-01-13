@@ -1,6 +1,5 @@
 package main.login;
 import javafx.event.ActionEvent;
-import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import main.Main;
@@ -20,8 +19,6 @@ public class loginController implements Initializable {
     private TextField username;
     @FXML
     private PasswordField password;
-
-
 
 
     @FXML
