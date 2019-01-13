@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane maxHeight="1.7976931348623157E308" prefHeight="80.0" prefWidth="1024.0" stylesheets="@stylesheets/navbar.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.navbarController">
+<AnchorPane fx:id="header" maxHeight="1.7976931348623157E308" onMouseDragged="#dragHeader" onMousePressed="#pressHeader" prefHeight="80.0" prefWidth="1024.0" stylesheets="@stylesheets/navbar.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.titlebarController">
    <children>
       <GridPane hgap="50.0" prefHeight="80.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0">
         <columnConstraints>
@@ -50,6 +52,12 @@
                   </GridPane>
                </children>
             </AnchorPane>
+            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2">
+               <children>
+                  <Button mnemonicParsing="false" text="-" textAlignment="CENTER" />
+                  <Button mnemonicParsing="false" text="X" />
+               </children>
+            </HBox>
          </children>
       </GridPane>
    </children>

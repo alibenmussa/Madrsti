@@ -1,5 +1,6 @@
 package main.login;
 import javafx.event.ActionEvent;
+import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import main.Main;
@@ -20,6 +21,9 @@ public class loginController implements Initializable {
     @FXML
     private PasswordField password;
 
+
+
+
     @FXML
     public void clickSignIn(ActionEvent event) throws Exception {
         String username = this.username.getText();
@@ -28,7 +32,7 @@ public class loginController implements Initializable {
         if(authenticationState != 0) {
             switch (authenticationState) {
                 case 1:
-                    new Admin().displayAdmin();
+                    new Admin(username, password).displayAdmin();
                     break;
                 case 2:
                     Teacher.displayTeacher();
@@ -44,7 +48,7 @@ public class loginController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        Main.headerLoader(header, "/main/navbar.fxml");
+        Main.headerLoader(header, "/main/titlebar.fxml");
 
     }
 
