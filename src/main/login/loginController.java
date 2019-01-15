@@ -20,6 +20,11 @@ public class loginController implements Initializable {
     @FXML
     private PasswordField password;
 
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        Main.headerLoader(header, "/main/titlebar.fxml");
+
+    }
 
     @FXML
     public void clickSignIn(ActionEvent event) throws Exception {
@@ -41,12 +46,6 @@ public class loginController implements Initializable {
         } else {
             System.out.println("Your Enter is Error!"); //مؤقتا لين ما نديروا رسالة خطأ
         }
-    }
-
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        Main.headerLoader(header, "/main/titlebar.fxml");
-
     }
 
     private int checkAuthentication(String username, String password) {

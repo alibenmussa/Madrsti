@@ -5,7 +5,6 @@ AnchorPane {
 * {
     -fx-text-fill: #ffffff;
     -fx-font-size: 16;
-
     /*-fx-font-family: "Franklin Gothic Book";*/
     -fx-text-alignment: center;
     -fx-box-border: transparent;
@@ -13,12 +12,11 @@ AnchorPane {
 
 #catigories .label {
     -fx-text-fill: #8EB9ED;
-    -fx-font-weight: lighter;
+    -fx-font-weight: 300;
 }
 
 VBox {
 
     -fx-background-color: #ffffff;
-
 
 }

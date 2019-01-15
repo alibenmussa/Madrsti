@@ -1,29 +1,37 @@
 package main;
 
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Group;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 public class Main extends Application {
 
-    static Stage window;
+    public static Stage window;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
         window = primaryStage;
         Pane root = FXMLLoader.load(getClass().getResource("/main/login/login.fxml"));
-        root.getStylesheets().add(Main.class.getResource("/main/stylesheets/style.css").toExternalForm());
         Rectangle page = new Rectangle(1024, 680);
         page.setArcWidth(20);
         page.setArcHeight(20);
         root.setClip(page);
         Scene scene = new Scene(root, 1024, 680);
+        scene.getStylesheets().add("http://fonts.googleapis.com/css?family=Roboto");
+        scene.getStylesheets().add(Main.class.getResource("/main/stylesheets/style.css").toExternalForm());
         scene.setFill(Color.TRANSPARENT);
         window.setScene(scene);
         window.setTitle("Madrasti System");
@@ -32,8 +40,8 @@ public class Main extends Application {
         System.out.println("Let Game Starts!");
     }
 
-    public static void closeWindow() {
-        window.close();
+    public static void closeApplication() {
+        Platform.exit();
     }
 
     public static void headerLoader(AnchorPane headerPane, String navbar) {

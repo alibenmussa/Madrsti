@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import main.login.AuthenticationLogin;
 
 public class Admin extends AuthenticationLogin {
 
@@ -17,7 +18,7 @@ public class Admin extends AuthenticationLogin {
     }
 
     public void displayAdmin() throws Exception {
-        Stage window = new Stage();
+        window = new Stage();
         Pane root = FXMLLoader.load(getClass().getResource("/main/views/admin/admin.fxml"));
         Rectangle page = new Rectangle(1024, 680);
         page.setArcWidth(20);
@@ -28,6 +29,6 @@ public class Admin extends AuthenticationLogin {
         window.setScene(scene);
         window.initStyle(StageStyle.TRANSPARENT);
         window.show();
-        Main.closeWindow();
+        Main.window.close();
     }
 }

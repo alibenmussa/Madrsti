@@ -55,7 +55,7 @@
             <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2">
                <children>
                   <Button mnemonicParsing="false" text="-" textAlignment="CENTER" />
-                  <Button mnemonicParsing="false" text="X" />
+                  <Button mnemonicParsing="false" onAction="#closeApplication" text="X" />
                </children>
             </HBox>
          </children>
