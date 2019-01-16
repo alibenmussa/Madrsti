@@ -27,7 +27,7 @@ public class loginController implements Initializable {
     }
 
     @FXML
-    public void clickSignIn(ActionEvent event) throws Exception {
+    public void ClickLogIn(ActionEvent event) throws Exception {
         String username = this.username.getText();
         String password = this.password.getText();
         int authenticationState = checkAuthentication(username, password);
