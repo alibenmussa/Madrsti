@@ -1,0 +1,7 @@
+.scroll-pane > .viewport {
+    -fx-background-color: rgba(53, 57, 89, 0.6);
+}
+
+#sceneWindow {
+    -fx-background-radius: 15;
+}

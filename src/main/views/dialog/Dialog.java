@@ -2,6 +2,7 @@ package main.views.dialog;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
@@ -18,12 +19,11 @@ public class Dialog {
         this.box = scene;
     }
 
-    public void show() {
+    public void show() throws Exception{
         Stage dialogStage = new Stage();
 
-        Pane root = new AnchorPane();
-
-        root.setStyle("-fx-background-color: rgba(0,0,0, 0.6)");
+        Pane root = FXMLLoader.load(getClass().getResource("/main/views/dialog/dialog.fxml"));
+        root.setBackground(null);
         Rectangle page = new Rectangle(1024, 680);
 
         page.setArcWidth(20);

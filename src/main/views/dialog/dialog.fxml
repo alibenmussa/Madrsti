@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.StackPane?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1024.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.views.dialog.dialogController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1024.0" style="-fx-background-color: transparent;" stylesheets="@dialog.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.views.dialog.dialogController">
    <center>
       <ScrollPane hbarPolicy="NEVER" prefHeight="680.0" prefWidth="1024.0" style="-fx-background-color: transparent;" BorderPane.alignment="CENTER">
          <content>
-            <StackPane alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" prefHeight="660.0" prefWidth="1024.0" style="-fx-background-color: transparent;">
+            <StackPane maxHeight="1.7976931348623157E308" prefWidth="1024.0" style="-fx-background-color: transparent;">
                <children>
-                  <AnchorPane fx:id="scene" maxHeight="335.0" maxWidth="321.0" StackPane.alignment="CENTER" />
+                  <AnchorPane fx:id="sceneWindow" maxHeight="471.0" maxWidth="460.0" prefHeight="471.0" prefWidth="460.0" style="-fx-background-color: #ffffff;" StackPane.alignment="CENTER" />
                </children>
+               <padding>
+                  <Insets top="100.0" />
+               </padding>
             </StackPane>
          </content>
       </ScrollPane>
