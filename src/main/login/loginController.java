@@ -2,6 +2,10 @@ package main.login;
 import javafx.event.ActionEvent;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.effect.DropShadow;
+import javafx.scene.effect.Shadow;
+import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import main.Main;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -19,15 +23,19 @@ public class loginController implements Initializable {
     private TextField username;
     @FXML
     private PasswordField password;
+    @FXML
+    private VBox loginContainer;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        DropShadow shadow = new DropShadow(80, 0 , 70, Color.web("F0F2F6"));
+        loginContainer.setEffect(shadow);
         Main.headerLoader(header, "/main/titlebar.fxml");
 
     }
 
     @FXML
-    public void ClickLogIn(ActionEvent event) throws Exception {
+    public void clickLogIn(ActionEvent event) throws Exception {
         String username = this.username.getText();
         String password = this.password.getText();
         int authenticationState = checkAuthentication(username, password);

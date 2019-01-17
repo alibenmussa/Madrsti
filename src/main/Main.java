@@ -30,8 +30,7 @@ public class Main extends Application {
         page.setArcHeight(20);
         root.setClip(page);
         Scene scene = new Scene(root, 1024, 680);
-        scene.getStylesheets().add("http://fonts.googleapis.com/css?family=Roboto");
-        scene.getStylesheets().add(Main.class.getResource("/main/stylesheets/style.css").toExternalForm());
+//        scene.getStylesheets().add("http://fonts.googleapis.com/css?family=Roboto");
         scene.setFill(Color.TRANSPARENT);
         window.setScene(scene);
         window.setTitle("Madrasti System");

@@ -1,5 +1,5 @@
 AnchorPane {
-    -fx-background-color: #3d3ef3;
+    -fx-background-color: #3F3FF2;
 }
 
 * {
@@ -19,4 +19,8 @@ VBox {
 
     -fx-background-color: #ffffff;
 
+}
+
+.button {
+    -fx-background-color: transparent;
 }

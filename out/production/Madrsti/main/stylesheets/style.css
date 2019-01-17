@@ -1,7 +1,12 @@
 /*
-    Blue: #3d3ef3
+    Blue: #3F3FF2
+    f-blue: #4054F5
     Gray: #f8f8fb
 
+    *TEXT:
+    Dark: #2C343A
+    Gray: #7F8FA4
+    l-gray: #E6E9F0
 
  */
 
@@ -10,7 +15,9 @@
 
 * {
 
-    -fx-font-family: Roboto,"Courier New";
+    -fx-font-family: "Segoe UI";
+    -fx-text-fill: #2C343A;
+    -fx-focus-color: transparent;
 
 }
 
@@ -21,7 +28,39 @@ AnchorPane, .scroll-pane:focused, .text-field:focused {
     /*linear-gradient(from 0px 0px to 0px 5px, derive(-fx-control-inner-background, -9%), -fx-control-inner-background);*/
 }
 
-.button:focused {
-    -fx-box-border: transparent;
+.text-field {
+    -fx-border-width: 2;
+    -fx-border-color: #E6E9F0;
+    -fx-border-radius: 5;
+    -fx-font-size: 14;
+    -fx-font-weight: 500;
+    -fx-text-fill: #7F8FA4;
+    -fx-background-color: #ffffff;
+}
+
+.text-field .text {
+    -fx-text-fill: #E6E9F0;
+}
+
+.text-field:empty .text {
+    -fx-text-fill: #E6E9F0;
+}
+
+.button {
+    -fx-cursor: hand;
+    -fx-background-color: #4054F5;
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 10;
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+}
+
+.button:hover {
+    -fx-background-color: #3F3FF2;
+
+
+}
+
+    .button:focused {-fx-box-border: transparent;
     -fx-faint-focus-color: transparent;
 }

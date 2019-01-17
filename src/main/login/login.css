@@ -1,0 +1,10 @@
+#loginContainer {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 15;
+
+}
+
+#welcome {
+    -fx-font-size: 42;
+    -fx-font-weight: 100;
+}
