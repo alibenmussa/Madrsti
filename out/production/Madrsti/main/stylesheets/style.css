@@ -1,5 +1,6 @@
 /*
-    Blue: #3F3FF2
+    Blue: #3F4CF3
+    d-blue: #3841DC
     f-blue: #4054F5
     Gray: #f8f8fb
 
@@ -32,10 +33,19 @@ AnchorPane, .scroll-pane:focused, .text-field:focused {
     -fx-border-width: 2;
     -fx-border-color: #E6E9F0;
     -fx-border-radius: 5;
-    -fx-font-size: 14;
-    -fx-font-weight: 500;
+    -fx-font-size: 16;
+    -fx-font-weight: bold;
     -fx-text-fill: #7F8FA4;
     -fx-background-color: #ffffff;
+}
+
+
+.text-field:focused {
+    -fx-border-color: #3F3FF2;
+}
+
+.text-field:focused .text {
+    -fx-text-fill: #3F3FF2;
 }
 
 .text-field .text {
@@ -48,7 +58,7 @@ AnchorPane, .scroll-pane:focused, .text-field:focused {
 
 .button {
     -fx-cursor: hand;
-    -fx-background-color: #4054F5;
+    -fx-background-color: #3F4CF3;
     -fx-text-fill: #ffffff;
     -fx-background-radius: 10;
     -fx-font-size: 14;
@@ -56,11 +66,17 @@ AnchorPane, .scroll-pane:focused, .text-field:focused {
 }
 
 .button:hover {
-    -fx-background-color: #3F3FF2;
+    -fx-background-color: #3841DC;
+}
+
+
+.button:pressed {
+    -fx-border-width: 3;
+    -fx-border-color: #8EB9ED;
+    -fx-border-radius: 5;
 
 
 }
-
-    .button:focused {-fx-box-border: transparent;
+.button:focused {-fx-box-border: transparent;
     -fx-faint-focus-color: transparent;
 }

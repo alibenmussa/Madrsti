@@ -1,9 +1,12 @@
 package main.login;
 import javafx.event.ActionEvent;
+import javafx.scene.Group;
+import javafx.scene.Scene;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.effect.Shadow;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import main.Main;
@@ -28,8 +31,7 @@ public class loginController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        DropShadow shadow = new DropShadow(80, 0 , 70, Color.web("F0F2F6"));
-        loginContainer.setEffect(shadow);
+        Main.shadowMaker(loginContainer);
         Main.headerLoader(header, "/main/titlebar.fxml");
 
     }
@@ -43,6 +45,7 @@ public class loginController implements Initializable {
             switch (authenticationState) {
                 case 1:
                     new Admin(username, password).displayAdmin();
+                    new main.views.dialog.Dialog(new AnchorPane()).show();
                     break;
                 case 2:
                     Teacher.displayTeacher();

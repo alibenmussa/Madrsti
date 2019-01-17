@@ -7,6 +7,7 @@ import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.effect.DropShadow;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
@@ -50,6 +51,11 @@ public class Main extends Application {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
+    }
+
+    public static void shadowMaker(Pane element) {
+        DropShadow shadow = new DropShadow(80, 0 , 70, Color.web("F0F2F6"));
+        element.setEffect(shadow);
     }
 
 

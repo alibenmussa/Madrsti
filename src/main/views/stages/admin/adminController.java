@@ -1,4 +1,4 @@
-package main.views.admin;
+package main.views.stages.admin;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;

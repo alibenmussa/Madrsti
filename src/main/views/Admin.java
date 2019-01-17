@@ -19,7 +19,7 @@ public class Admin extends AuthenticationLogin {
 
     public void displayAdmin() throws Exception {
         window = new Stage();
-        Pane root = FXMLLoader.load(getClass().getResource("/main/views/admin/admin.fxml"));
+        Pane root = FXMLLoader.load(getClass().getResource("/main/views/stages/admin/admin.fxml"));
         Rectangle page = new Rectangle(1024, 680);
         page.setArcWidth(20);
         page.setArcHeight(20);
