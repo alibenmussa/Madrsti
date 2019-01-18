@@ -16,6 +16,8 @@ import javafx.scene.layout.AnchorPane;
 import main.views.Admin;
 import main.views.Teacher;
 import main.views.Employee;
+
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -33,7 +35,6 @@ public class loginController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         Main.shadowMaker(loginContainer);
         Main.headerLoader(header, "/main/titlebar.fxml");
-
     }
 
     @FXML
@@ -45,7 +46,6 @@ public class loginController implements Initializable {
             switch (authenticationState) {
                 case 1:
                     new Admin(username, password).displayAdmin();
-                    new main.views.dialog.Dialog(new AnchorPane()).show();
                     break;
                 case 2:
                     Teacher.displayTeacher();

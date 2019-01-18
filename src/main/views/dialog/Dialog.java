@@ -11,35 +11,37 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import main.Main;
+import main.login.AuthenticationLogin;
 
 public class Dialog {
-    private Pane box;
 
-    public Dialog(Pane scene) {
-        this.box = scene;
-    }
-
-    public void show() throws Exception{
+    public static void show(AuthenticationLogin parentWindow, String title) throws Exception{
         Stage dialogStage = new Stage();
 
-        Pane root = FXMLLoader.load(getClass().getResource("/main/views/dialog/dialog.fxml"));
-        root.setBackground(null);
-        Rectangle page = new Rectangle(1024, 680);
+        Pane root = FXMLLoader.load(Dialog.class.getResource("/main/views/dialog/dialog.fxml"));
 
-        page.setArcWidth(20);
-        page.setArcHeight(20);
-        root.setClip(page);
-
-        root.setOnMouseClicked(e -> {
-            dialogStage.close();
-        });
-
-        Scene scene = new Scene(root, 1024, 680);
+        Scene scene = new Scene(root);
         scene.setFill(Color.TRANSPARENT);
+
+        dialogStage.setX(AuthenticationLogin.window.getX() + ((1024 - 400) / 2));
+        dialogStage.setY(AuthenticationLogin.window.getY() + ((680 - 400) / 2));
+
+        dialogStage.setTitle(title);
         dialogStage.setScene(scene);
         dialogStage.initStyle(StageStyle.TRANSPARENT);
-        dialogStage.initModality(Modality.APPLICATION_MODAL);
+
+        parentWindow.showBlackBG();
         dialogStage.show();
+
+        AuthenticationLogin.blackBG.setOnMouseClicked(e -> {
+            dialogStage.hide();
+            parentWindow.hideBlackBG();
+        });
+
+        dialogStage.setOnCloseRequest(e -> {
+            parentWindow.hideBlackBG();
+        });
     }
+
 
 }

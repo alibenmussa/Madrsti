@@ -14,6 +14,15 @@ AnchorPane {
     -fx-text-fill: #7A93FA;
 }
 
+.button:pressed {
+    -fx-border-width: 0;
+}
+
+#userPhoto {
+    -fx-background-radius: 40;
+    -fx-border-radius: 40;
+}
+
 VBox {
 
     -fx-background-color: #ffffff;

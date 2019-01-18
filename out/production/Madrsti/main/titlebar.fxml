@@ -2,6 +2,8 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -16,11 +18,11 @@
       <GridPane hgap="50.0" prefHeight="80.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="720.0" minWidth="10.0" prefWidth="624.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="84.0" minWidth="10.0" prefWidth="84.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="720.0" minWidth="10.0" prefWidth="573.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="135.0" />
         </columnConstraints>
         <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
             <ImageView cache="true" cacheHint="QUALITY" fitHeight="25.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true">
@@ -71,8 +73,17 @@
                   </GridPane>
                </children>
             </AnchorPane>
-            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2">
+            <HBox alignment="CENTER_RIGHT" prefHeight="80.0" prefWidth="158.0" spacing="20.0" GridPane.columnIndex="2">
                <children>
+                  <Group fx:id="userPhotoCircle">
+                     <children>
+                        <ImageView fx:id="userPhoto" fitHeight="40.0" fitWidth="40.0" onMouseClicked="#userPhotoClick" pickOnBounds="true" preserveRatio="true">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </children>
+                  </Group>
                   <Button mnemonicParsing="false" onAction="#closeApplication" prefHeight="40.0" prefWidth="40.0" text="X" />
                </children>
             </HBox>
