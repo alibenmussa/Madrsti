@@ -29,7 +29,7 @@ public class Dialog {
         dialogStage.setTitle(title);
         dialogStage.setScene(scene);
         dialogStage.initStyle(StageStyle.TRANSPARENT);
-
+        dialogStage.initModality(Modality.APPLICATION_MODAL);
         parentWindow.showBlackBG();
         dialogStage.show();
 

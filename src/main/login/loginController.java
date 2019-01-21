@@ -48,10 +48,10 @@ public class loginController implements Initializable {
                     new Admin(username, password).displayAdmin();
                     break;
                 case 2:
-                    Teacher.displayTeacher();
+                    new Teacher(username, password).displayTeacher();
                     break;
                 case 3:
-                    Employee.displayEmployee();
+                    new Employee(username, password).displayEmployee();
                     break;
             }
         } else {

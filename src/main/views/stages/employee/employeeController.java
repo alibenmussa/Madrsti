@@ -1,4 +1,4 @@
-package main.views.stages.admin;
+package main.views.stages.employee;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -9,7 +9,7 @@ import main.Main;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class adminController implements Initializable {
+public class employeeController implements Initializable {
     @FXML
     private AnchorPane header;
 
@@ -20,22 +20,17 @@ public class adminController implements Initializable {
 
     }
     @FXML
-    void adminShowEmployees(ActionEvent event) {
+    void employeeShowHome(ActionEvent event) {
 
     }
 
     @FXML
-    void adminShowHome(ActionEvent event) {
+    void employeeShowProfile(ActionEvent event) {
 
     }
 
     @FXML
-    void adminShowResults(ActionEvent event) {
-
-    }
-
-    @FXML
-    void adminShowStudents(ActionEvent event) {
+    void employeeShowStudents(ActionEvent event) {
 
     }
 }

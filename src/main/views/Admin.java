@@ -5,6 +5,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
+import javafx.stage.Modality;
 import main.Main;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
@@ -38,6 +39,8 @@ public class Admin extends AuthenticationLogin {
         window.show();
         Main.window.close();
         Dialog.show(this, "Insert Students Data");
+
+
     }
 
 }

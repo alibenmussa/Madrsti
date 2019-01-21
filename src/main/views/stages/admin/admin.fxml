@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1024.0" style="-fx-border-radius: 15;" stylesheets="@../../../stylesheets/style.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.views.stages.admin.adminController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1024.0" style="-fx-border-radius: 15;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.views.stages.admin.adminController">
    <center>
       <ScrollPane cacheShape="false" fitToHeight="true" fitToWidth="true" focusTraversable="false" BorderPane.alignment="CENTER">
          <content>
-            <StackPane minHeight="-Infinity" prefWidth="1024.0" style="-fx-background-color: #f8f8fb;" />
+
          </content>
       </ScrollPane>
    </center>
@@ -19,4 +26,8 @@
             <AnchorPane fx:id="header" prefHeight="80.0" prefWidth="1024.0" style="-fx-border-radius: 15;" />
          </children></AnchorPane>
    </top>
+   <stylesheets>
+      <URL value="@../../../stylesheets/style.css" />
+      <URL value="@admin.css" />
+   </stylesheets>
 </BorderPane>
