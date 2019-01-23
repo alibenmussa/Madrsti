@@ -20,24 +20,8 @@ public class Employee extends AuthenticationLogin {
         super(username, password);
     }
 
-    public  void displayEmployee() throws Exception {
-        window = new Stage();
-        Pane mainview = FXMLLoader.load(getClass().getResource("/main/views/stages/employee/employee.fxml"));
-
-        Rectangle page = new Rectangle(1024, 680);
-        page.setArcWidth(20);
-        page.setArcHeight(20);
-
-        root = new StackPane(mainview);
-        root.setClip(page);
-
-        Scene scene = new Scene(root, 1024, 680);
-        scene.setFill(Color.TRANSPARENT);
-        window.setScene(scene);
-        window.initStyle(StageStyle.TRANSPARENT);
-
-        window.show();
-        Main.window.close();
-        Dialog.show(this, "Insert Students Data");
+    public  void displayEmployee() {
+        //ليس الآن - ليس الآن
+        //بعد ما نكملوا الأدمن، كبي بيست، لأن مرات تتغير واجهة الأدمن
     }
 }
