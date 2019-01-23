@@ -36,7 +36,7 @@
             <AnchorPane fx:id="list" prefHeight="30.0" prefWidth="246.0" GridPane.columnIndex="1" />
             <HBox alignment="CENTER_RIGHT" prefWidth="362.0" spacing="20.0" GridPane.columnIndex="2">
                <children>
-                  <Button fx:id="signOut" graphicTextGap="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="30.0" text="Hello, Sign Out">
+                  <Button fx:id="signOut" onAction="#signOut" graphicTextGap="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="30.0" text="Hello, Sign Out">
                      <graphic>
                         <Group fx:id="userPhotoCircle">
                            <children>

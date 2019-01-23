@@ -70,7 +70,7 @@ AnchorPane, .scroll-pane:focused, .text-field:focused {
 }
 
 
-.button:pressed {
+.clickBtn:pressed {
     -fx-border-width: 4;
     -fx-border-color: #8EB9ED;
     -fx-border-radius: 11;

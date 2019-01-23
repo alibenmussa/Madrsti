@@ -5,6 +5,6 @@
 
 <StackPane maxHeight="1.7976931348623157E308" style="-fx-background-color: transparent;" stylesheets="@dialog.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ScrollPane fx:id="sceneWindow" prefHeight="450.0" prefWidth="620.0" StackPane.alignment="CENTER" />
+      <ScrollPane fx:id="sceneWindow" prefHeight="450.0" prefWidth="760.0" StackPane.alignment="CENTER" />
    </children>
 </StackPane>

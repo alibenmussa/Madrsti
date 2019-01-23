@@ -44,6 +44,7 @@ AnchorPane {
 
 .button:hover, #close:hover {
     -fx-background-color: #ffffff;
+    -fx-border-color: transparent;
     -fx-text-fill: #3F4CF3;
 }
 

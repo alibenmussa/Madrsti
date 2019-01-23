@@ -26,7 +26,7 @@
                            </VBox.margin></Label>
                         <TextField fx:id="username" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="50.0" prefWidth="320.0" promptText="Username" />
                         <PasswordField id="password" fx:id="password" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="50.0" prefWidth="320.0" promptText="Password" />
-                        <Button fx:id="login" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#clickLogIn" prefHeight="50.0" text="LOGIN">
+                        <Button fx:id="login" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#clickLogIn" prefHeight="50.0" styleClass="clickBtn" text="LOGIN">
                            <VBox.margin>
                               <Insets />
                            </VBox.margin>

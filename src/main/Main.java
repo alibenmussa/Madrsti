@@ -17,6 +17,7 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import main.login.AuthenticationLogin;
 
 public class Main extends Application {
 
@@ -36,6 +37,7 @@ public class Main extends Application {
         window.setScene(scene);
         window.setTitle("Madrasti System");
         window.initStyle(StageStyle.TRANSPARENT);
+
         window.show();
         System.out.println("Let Game Starts!");
     }
@@ -54,7 +56,7 @@ public class Main extends Application {
     }
 
     public static void shadowMaker(Pane element) {
-        DropShadow shadow = new DropShadow(80, 0 , 70, Color.web("F0F2F6"));
+        DropShadow shadow = new DropShadow(80, 0 , 70, Color.rgb(134, 139, 142, 0.1)); //Color.web("F0F2F6")
         element.setEffect(shadow);
     }
 

@@ -35,7 +35,7 @@ public class Admin extends AuthenticationLogin {
         scene.setFill(Color.TRANSPARENT);
         window.setScene(scene);
         window.initStyle(StageStyle.TRANSPARENT);
-
+        window.setTitle("Madrsti System | Control Panel");
         window.show();
         Main.window.close();
         Dialog.show(this, "./main/views/dialog/dialog.fxml");

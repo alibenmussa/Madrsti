@@ -40,10 +40,8 @@ public  class titlebarController implements Initializable {
 
     @FXML
     void dragHeader(MouseEvent event) {
-
         AuthenticationLogin.window.setX(event.getScreenX() - x);
         AuthenticationLogin.window.setY(event.getScreenY()  - y);
-
     }
 
     @FXML
@@ -58,8 +56,9 @@ public  class titlebarController implements Initializable {
     }
 
     @FXML
-    public void setSignOut(ActionEvent event) {
+    public void signOut(ActionEvent event) {
         AuthenticationLogin.window.close();
+        AuthenticationLogin.window = Main.window;
         Main.window.show();
     }
 

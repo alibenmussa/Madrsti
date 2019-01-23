@@ -20,6 +20,7 @@ public class adminController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         Main.headerLoader(header, "/main/titlebar.fxml");
+        Main.shadowMaker(navbar);
         AuthenticationLogin.navbarLoader(navbar, "/main/views/stages/admin/adminNavbar/adminNavbar.fxml");
 
 
