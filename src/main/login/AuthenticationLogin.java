@@ -1,20 +1,24 @@
 package main.login;
 
+import javafx.fxml.FXMLLoader;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import main.Main;
 
 public abstract class AuthenticationLogin {
-    protected String username;
-    protected String password;
+    public static String username;
+    public static String password;
+    public static String name;
     protected StackPane root;
     public static Pane blackBG;
     public static Stage window = Main.window;
 
     public AuthenticationLogin(String username, String password) {
-        this.username = username;
-        this.password = password;
+        AuthenticationLogin.username = username;
+        AuthenticationLogin.password = password;
+        name = "Ali";
         blackBG = new Pane();
         blackBG.setStyle("-fx-background-color: rgba(53, 57, 89, 0.6)");
     }
@@ -29,5 +33,14 @@ public abstract class AuthenticationLogin {
 
     public void hideBlackBG() {
         root.getChildren().remove(blackBG);
+    }
+
+    public static void navbarLoader(AnchorPane navbarPane, String navbar) {
+        try {
+            AnchorPane pane = FXMLLoader.load(Main.class.getResource(navbar));
+            navbarPane.getChildren().setAll(pane);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
     }
 }

@@ -14,9 +14,9 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1024.0" style="-fx-border-radius: 15;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.login.loginController">
    <center>
-      <ScrollPane cacheShape="false" fitToHeight="true" fitToWidth="true" focusTraversable="false" BorderPane.alignment="CENTER">
+      <ScrollPane cacheShape="false" fitToHeight="true" fitToWidth="true" focusTraversable="false" prefWidth="1024.0" BorderPane.alignment="CENTER">
          <content>
-            <StackPane minHeight="-Infinity" prefWidth="1024.0" style="-fx-background-color: #F7F7FA;">
+            <StackPane minHeight="-Infinity" prefWidth="1009.0" style="-fx-background-color: #F7F7FA;">
                <children>
                   <VBox fx:id="loginContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-alignment: center; -fx-spacing: 25px;" StackPane.alignment="TOP_CENTER">
                      <children>

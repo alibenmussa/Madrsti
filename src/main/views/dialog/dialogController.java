@@ -1,5 +1,6 @@
 package main.views.dialog;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.input.MouseEvent;
@@ -20,6 +21,27 @@ public class dialogController implements Initializable {
 
 
     }
+
+    @FXML
+    void adminShowEmployees(ActionEvent event) {
+
+    }
+
+    @FXML
+    void adminShowHome(ActionEvent event) {
+
+    }
+
+    @FXML
+    void adminShowResults(ActionEvent event) {
+
+    }
+
+    @FXML
+    void adminShowStudents(ActionEvent event) {
+
+    }
+
 
     @FXML
     void closeWindow(MouseEvent event) {

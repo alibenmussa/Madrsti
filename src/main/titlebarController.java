@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 
 import javafx.fxml.Initializable;
 import javafx.scene.Group;
+import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -25,7 +26,7 @@ public  class titlebarController implements Initializable {
     @FXML
     ImageView userPhoto;
     @FXML
-    GridPane catigories;
+    Button signOut;
 
     private double x;
     private double y;
@@ -33,7 +34,8 @@ public  class titlebarController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         userPhoto.setImage(new Image(AuthenticationLogin.getUserPhoto()));
-        userPhotoCircle.setClip(new Circle(20, 20, 20));
+        userPhotoCircle.setClip(new Circle(15, 15, 15));
+        signOut.setText(AuthenticationLogin.name + "? Sign Out");
     }
 
     @FXML
@@ -53,6 +55,12 @@ public  class titlebarController implements Initializable {
     @FXML
     public void closeApplication(ActionEvent event) {
         Main.closeApplication();
+    }
+
+    @FXML
+    public void setSignOut(ActionEvent event) {
+        AuthenticationLogin.window.close();
+        Main.window.show();
     }
 
     @FXML

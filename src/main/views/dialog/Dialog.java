@@ -14,22 +14,22 @@ import main.Main;
 import main.login.AuthenticationLogin;
 
 public class Dialog {
+    public static Stage dialogStage;
 
-    public static void show(AuthenticationLogin parentWindow, String title) throws Exception{
-        Stage dialogStage = new Stage();
+    public static void show(AuthenticationLogin parentWindow, String path) throws Exception{
+        dialogStage = new Stage();
 
-        Pane root = FXMLLoader.load(Dialog.class.getResource("/main/views/dialog/dialog.fxml"));
+        Pane root = FXMLLoader.load(Main.class.getResource("/main/views/dialog/dialog.fxml"));
 
         Scene scene = new Scene(root);
         scene.setFill(Color.TRANSPARENT);
 
-        dialogStage.setX(AuthenticationLogin.window.getX() + ((1024 - 400) / 2));
-        dialogStage.setY(AuthenticationLogin.window.getY() + ((680 - 400) / 2));
+        dialogStage.setX(AuthenticationLogin.window.getX() + ((1024 - 580) / 2));
+        dialogStage.setY(AuthenticationLogin.window.getY() + ((680 - 580) / 2) + 50);
 
-        dialogStage.setTitle(title);
         dialogStage.setScene(scene);
         dialogStage.initStyle(StageStyle.TRANSPARENT);
-        dialogStage.initModality(Modality.APPLICATION_MODAL);
+        dialogStage.initModality(Modality.WINDOW_MODAL);
         parentWindow.showBlackBG();
         dialogStage.show();
 
@@ -43,5 +43,8 @@ public class Dialog {
         });
     }
 
+    public static void setTitle(String title) {
+        dialogStage.setTitle(title);
+    }
 
 }

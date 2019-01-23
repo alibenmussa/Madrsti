@@ -7,6 +7,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="de.jensd:fontawesomefx:8.8" level="application" />
   </component>
 </module>
-

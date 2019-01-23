@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane id="navBG" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.views.stages.admin.adminNavbar.adminNavbarController">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="260.0">
+         <children>
+            <Button alignment="CENTER" contentDisplay="TOP" graphicTextGap="10.0" mnemonicParsing="false" onAction="#adminShowHome" prefHeight="100.0" prefWidth="160.0" text="Home">
+               <padding>
+                  <Insets bottom="20.0" top="20.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+               <graphic>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f8fcff" height="30.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="30.0" />
+               </graphic></Button>
+            <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#adminShowEmployees" prefHeight="100.0" prefWidth="160.0" text="Employees">
+               <padding>
+                  <Insets bottom="20.0" top="20.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin></Button>
+            <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#adminShowStudents" prefHeight="100.0" prefWidth="160.0" text="Students">
+               <padding>
+                  <Insets bottom="20.0" top="20.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin></Button>
+            <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#adminShowResults" prefHeight="100.0" prefWidth="160.0" text="Results">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="20.0" top="20.0" />
+               </padding></Button>
+         </children>
+         <padding>
+            <Insets top="60.0" />
+         </padding>
+      </VBox>
+   </children>
+    <stylesheets>
+        <URL value="@../../../../stylesheets/style.css" />
+        <URL value="@../../../../stylesheets/navbar.css" />
+    </stylesheets>
+</AnchorPane>

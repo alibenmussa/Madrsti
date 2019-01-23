@@ -22,13 +22,13 @@ public class Admin extends AuthenticationLogin {
 
     public void displayAdmin() throws Exception {
         window = new Stage();
-        Pane mainview = FXMLLoader.load(getClass().getResource("/main/views/stages/admin/admin.fxml"));
+        Pane mainView = FXMLLoader.load(getClass().getResource("/main/views/stages/admin/admin.fxml"));
 
         Rectangle page = new Rectangle(1024, 680);
         page.setArcWidth(20);
         page.setArcHeight(20);
 
-        root = new StackPane(mainview);
+        root = new StackPane(mainView);
         root.setClip(page);
 
         Scene scene = new Scene(root, 1024, 680);
@@ -38,7 +38,7 @@ public class Admin extends AuthenticationLogin {
 
         window.show();
         Main.window.close();
-        Dialog.show(this, "Insert Students Data");
+        Dialog.show(this, "./main/views/dialog/dialog.fxml");
 
 
     }
