@@ -34,7 +34,7 @@ public class loginController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         Main.shadowMaker(loginContainer);
-        Main.headerLoader(header, "/main/titlebar.fxml");
+        Main.FXMLLoaderPane(header, "/main/titlebar.fxml");
     }
 
     @FXML

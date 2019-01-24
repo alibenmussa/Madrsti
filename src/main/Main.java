@@ -7,6 +7,7 @@ import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
@@ -46,10 +47,19 @@ public class Main extends Application {
         Platform.exit();
     }
 
-    public static void headerLoader(AnchorPane headerPane, String navbar) {
+    public static void FXMLLoaderPane(AnchorPane mainPane, String fxmlFile) {
         try {
-            AnchorPane pane = FXMLLoader.load(Main.class.getResource(navbar));
-            headerPane.getChildren().setAll(pane);
+            AnchorPane pane = FXMLLoader.load(Main.class.getResource(fxmlFile));
+            mainPane.getChildren().setAll(pane);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }
+
+    public static void FXMLLoaderPane(ScrollPane mainPane, String fxmlFile) {
+        try {
+            AnchorPane pane = FXMLLoader.load(Main.class.getResource(fxmlFile));
+            mainPane.setContent(pane);
         } catch (Exception ex) {
             ex.printStackTrace();
         }

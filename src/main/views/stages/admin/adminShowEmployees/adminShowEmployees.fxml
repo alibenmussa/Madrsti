@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<?import javafx.scene.control.Label?>
+<AnchorPane maxWidth="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="762.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.views.stages.admin.adminShowEmployees.adminShowEmployeesController">
+   <children>
+       <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="320.0" text="Show Employees"></Label>
+   </children>
+</AnchorPane>
