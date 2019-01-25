@@ -30,13 +30,17 @@ public class Dialog {
         dialogStage.setScene(scene);
         dialogStage.initStyle(StageStyle.TRANSPARENT);
         dialogStage.initModality(Modality.WINDOW_MODAL);
-        parentWindow.showBlackBG();
         dialogStage.show();
+        parentWindow.showBlackBG();
 
         AuthenticationLogin.blackBG.setOnMouseClicked(e -> {
             dialogStage.hide();
-            dialogStage = null;
+//            dialogStage = null;
             parentWindow.hideBlackBG();
+        });
+
+        dialogStage.setOnShowing(e -> {
+            parentWindow.showBlackBG();
         });
 
         dialogStage.setOnCloseRequest(e -> {

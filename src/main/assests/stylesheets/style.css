@@ -15,22 +15,16 @@
 
 
 @font-face {
-    src: url('fonts/Ubuntu-Bold.ttf');
-    -fx-font-weight: bold;
+    src: url('../fonts/Ubuntu-Bold.ttf');
 }
 
 @font-face {
-    src: url('fonts/Ubuntu-Light.ttf');
-    -fx-font-weight: lighter;
+    src: url('../fonts/Ubuntu-Light.ttf');
 }
 
 @font-face {
-    src: url('fonts/Ubuntu-Regular.ttf');
-    -fx-font-weight: normal;
+    src: url('../fonts/Ubuntu-Regular.ttf');
 }
-
-
-
 
 * {
 

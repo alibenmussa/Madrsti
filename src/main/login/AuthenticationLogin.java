@@ -15,7 +15,7 @@ public abstract class AuthenticationLogin {
 
     protected StackPane root;
 
-    public static Pane blackBG;
+    public static Pane blackBG = new Pane();
     public static ScrollPane stageContent = null;
     public static Stage window = Main.window;
 
@@ -23,13 +23,13 @@ public abstract class AuthenticationLogin {
         AuthenticationLogin.username = username;
         AuthenticationLogin.password = password;
         AuthenticationLogin.stageContent = null;
-        name = "Ali";
-        blackBG = new Pane();
+        name = "Yousef";
         blackBG.setStyle("-fx-background-color: rgba(53, 57, 89, 0.75)");
+
     }
 
     public static String getUserPhoto() {
-        return "/main/images/users/user-02.jpg"; //ستستبدل بكويري من الداتابيز
+        return "/main/assests/images/users/user_02.jpg"; //ستستبدل بكويري من الداتابيز
     }
 
     public void showBlackBG() {

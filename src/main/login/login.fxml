@@ -18,9 +18,9 @@
          <content>
             <StackPane minHeight="-Infinity" prefWidth="1009.0" style="-fx-background-color: #F7F7FA;">
                <children>
-                  <VBox fx:id="loginContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-alignment: center; -fx-spacing: 25px;" StackPane.alignment="TOP_CENTER">
+                  <VBox fx:id="loginContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-alignment: center; -fx-spacing: 30;" StackPane.alignment="TOP_CENTER">
                      <children>
-                        <Label fx:id="welcome" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="320.0" text="Welcome,">
+                        <Label fx:id="loginSubject" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="320.0" text="Welcome,">
                            <VBox.margin>
                               <Insets bottom="5.0" top="5.0" />
                            </VBox.margin></Label>
@@ -53,7 +53,7 @@
          </children></AnchorPane>
    </top>
    <stylesheets>
-      <URL value="@../stylesheets/style.css" />
+      <URL value="@../assests/stylesheets/style.css" />
       <URL value="@login.css" />
    </stylesheets>
 </BorderPane>

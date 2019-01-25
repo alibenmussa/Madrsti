@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane fx:id="header" maxHeight="1.7976931348623157E308" onMouseDragged="#dragHeader" onMousePressed="#pressHeader" prefWidth="1024.0" stylesheets="@stylesheets/titlebar.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.titlebarController">
+<AnchorPane fx:id="header" maxHeight="1.7976931348623157E308" onMouseDragged="#dragHeader" onMousePressed="#pressHeader" prefWidth="1024.0" stylesheets="@assests/stylesheets/titlebar.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.titlebarController">
    <children>
       <GridPane hgap="50.0" prefHeight="25.0" prefWidth="924.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="0.0">
         <columnConstraints>
@@ -27,7 +27,7 @@
          <children>
             <ImageView cache="true" cacheHint="QUALITY" fitHeight="17.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@images/logo.png" />
+                  <Image url="@assests/images/logo.png" />
                </image>
                <viewport>
                   <Rectangle2D height="80.0" />

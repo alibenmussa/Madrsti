@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.layout.Pane;
 import main.Main;
 import main.login.AuthenticationLogin;
+import main.views.dialog.Dialog;
 
 public class adminNavbarController {
     @FXML
@@ -19,7 +20,7 @@ public class adminNavbarController {
 
     @FXML
     void adminShowResults(ActionEvent event) {
-
+        Dialog.dialogStage.show();
     }
 
     @FXML

@@ -2,6 +2,7 @@ package main.login;
 import javafx.event.ActionEvent;
 import javafx.scene.Group;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.effect.DropShadow;
@@ -19,11 +20,18 @@ import main.views.Employee;
 
 import java.io.IOException;
 import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.ResourceBundle;
 
 public class loginController implements Initializable {
     @FXML
     private AnchorPane header;
+    @FXML
+    private Label loginSubject;
     @FXML
     private TextField username;
     @FXML
@@ -35,6 +43,27 @@ public class loginController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         Main.shadowMaker(loginContainer);
         Main.FXMLLoaderPane(header, "/main/titlebar.fxml");
+        setLoginSubjectText();
+    }
+
+    private void setLoginSubjectText() {
+        Date date = new Date();
+        SimpleDateFormat sdf = new SimpleDateFormat("HH");
+
+        Calendar calendar = GregorianCalendar.getInstance();
+        int currentHour = Integer.parseInt(sdf.format(calendar.getTime()));
+        System.out.println(currentHour);
+        String message = "Welcome";
+        if (currentHour <= 3) {
+            message = "Goodnight";
+        } else if (currentHour <= 10) {
+            message = "Goodmorning";
+        } else if (currentHour <= 14) {
+            message = "Goodafternoon";
+        } else if (currentHour <= 23) {
+            message = "WELCOME";
+        }
+        loginSubject.setText(message + ",");
     }
 
     @FXML
