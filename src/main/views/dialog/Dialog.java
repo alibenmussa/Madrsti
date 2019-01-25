@@ -25,7 +25,7 @@ public class Dialog {
         scene.setFill(Color.TRANSPARENT);
 
         dialogStage.setX(AuthenticationLogin.window.getX() + ((1024 - 760) / 2));
-        dialogStage.setY(AuthenticationLogin.window.getY() + ((680 - 540) / 2) + 50);
+        dialogStage.setY(AuthenticationLogin.window.getY() + ((680 - 540) / 2));
 
         dialogStage.setScene(scene);
         dialogStage.initStyle(StageStyle.TRANSPARENT);

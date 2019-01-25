@@ -25,11 +25,11 @@ public abstract class AuthenticationLogin {
         AuthenticationLogin.stageContent = null;
         name = "Ali";
         blackBG = new Pane();
-        blackBG.setStyle("-fx-background-color: rgba(53, 57, 89, 0.6)");
+        blackBG.setStyle("-fx-background-color: rgba(53, 57, 89, 0.75)");
     }
 
     public static String getUserPhoto() {
-        return "/main/images/users/user_01.jpg"; //ستستبدل بكويري من الداتابيز
+        return "/main/images/users/user-02.jpg"; //ستستبدل بكويري من الداتابيز
     }
 
     public void showBlackBG() {

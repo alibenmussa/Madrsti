@@ -11,7 +11,7 @@
    <children>
       <VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="260.0">
          <children>
-            <Button alignment="CENTER" contentDisplay="TOP" graphicTextGap="10.0" mnemonicParsing="false" onAction="#adminShowHome" prefHeight="100.0" prefWidth="160.0" text="Home">
+            <Button alignment="CENTER" contentDisplay="TOP" graphicTextGap="10.0" mnemonicParsing="false" onAction="#adminShowHome" prefHeight="100.0" prefWidth="160.0" text="HOME">
                <padding>
                   <Insets bottom="20.0" top="20.0" />
                </padding>
@@ -21,7 +21,7 @@
                <graphic>
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f8fcff" height="30.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="30.0" />
                </graphic></Button>
-            <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#adminShowEmployees" prefHeight="100.0" prefWidth="160.0" text="Employees">
+            <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#adminShowEmployees" prefHeight="100.0" prefWidth="160.0" text="EMPLOYEES">
                <padding>
                   <Insets bottom="20.0" top="20.0" />
                </padding>

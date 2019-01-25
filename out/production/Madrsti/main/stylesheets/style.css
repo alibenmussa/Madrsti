@@ -14,12 +14,35 @@
 
 
 
+@font-face {
+    src: url('fonts/Ubuntu-Bold.ttf');
+    -fx-font-weight: bold;
+}
+
+@font-face {
+    src: url('fonts/Ubuntu-Light.ttf');
+    -fx-font-weight: lighter;
+}
+
+@font-face {
+    src: url('fonts/Ubuntu-Regular.ttf');
+    -fx-font-weight: normal;
+}
+
+
+
+
 * {
 
-    -fx-font-family: "Segoe UI";
+    -fx-label-padding: 0;
+    -fx-text-overrun: clip;
+    -fx-font-family: 'Ubuntu', sans-serif;
     -fx-text-fill: #2C343A;
     -fx-focus-color: transparent;
+}
 
+.root {
+    -fx-font-weight: normal;
 }
 
 .scroll-pane, .scroll-pane:focused, .button:focused, .text-field:focused {
@@ -35,7 +58,6 @@
     -fx-border-color: #E6E9F0;
     -fx-border-radius: 5;
     -fx-font-size: 16;
-    -fx-font-weight: bold;
     -fx-text-fill: #7F8FA4;
     -fx-background-color: #ffffff;
 }
@@ -43,6 +65,7 @@
 
 .text-field:focused {
     -fx-border-color: #3F3FF2;
+    -fx-background-radius: 5;
 }
 
 .text-field:focused .text {
@@ -63,6 +86,7 @@
     -fx-text-fill: #ffffff;
     -fx-background-radius: 10;
     -fx-font-size: 14;
+    -fx-font-weight: bold;
     -fx-font-weight: bold;
 }
 
