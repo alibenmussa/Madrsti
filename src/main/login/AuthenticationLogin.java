@@ -18,8 +18,10 @@ public abstract class AuthenticationLogin {
     public static Pane blackBG = new Pane();
     public static ScrollPane stageContent = null;
     public static Stage window = Main.window;
+    public static AuthenticationLogin stageController;
 
     public AuthenticationLogin(String username, String password) {
+        AuthenticationLogin.stageController = this;
         AuthenticationLogin.username = username;
         AuthenticationLogin.password = password;
         AuthenticationLogin.stageContent = null;

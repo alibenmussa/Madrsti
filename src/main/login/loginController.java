@@ -47,15 +47,10 @@ public class loginController implements Initializable {
     }
 
     private void setLoginSubjectText() {
-        Date date = new Date();
-        SimpleDateFormat sdf = new SimpleDateFormat("HH");
-
-        Calendar calendar = GregorianCalendar.getInstance();
-        int currentHour = Integer.parseInt(sdf.format(calendar.getTime()));
-        System.out.println(currentHour);
+        int currentHour = LocalDateTime.now().getHour();
         String message = "Welcome";
         if (currentHour <= 3) {
-            message = "Goodnight";
+            message = "GOODNIGHT";
         } else if (currentHour <= 10) {
             message = "Goodmorning";
         } else if (currentHour <= 14) {

@@ -16,7 +16,8 @@ import main.login.AuthenticationLogin;
 public class Dialog {
     public static Stage dialogStage;
 
-    public static void show(AuthenticationLogin parentWindow, String path) throws Exception{
+    public static void show(String path) throws Exception{
+        AuthenticationLogin parentWindow = AuthenticationLogin.stageController;
         dialogStage = new Stage();
 
         Pane root = FXMLLoader.load(Main.class.getResource("/main/views/dialog/dialog.fxml"));

@@ -38,7 +38,7 @@ public class Admin extends AuthenticationLogin {
         window.setTitle("Madrsti System | Control Panel");
         window.show();
         Main.window.close();
-        Dialog.show(this, "./main/views/dialog/dialog.fxml");
+        Dialog.show("./main/views/dialog/dialog.fxml");
 
 
     }
