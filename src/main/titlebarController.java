@@ -10,10 +10,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.GridPane;
 import javafx.scene.shape.Circle;
-import javafx.stage.Stage;
-import main.login.AuthenticationLogin;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -33,15 +30,15 @@ public  class titlebarController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        userPhoto.setImage(new Image(AuthenticationLogin.getUserPhoto()));
+        userPhoto.setImage(new Image(StagesManager.getUserPhoto()));
         userPhotoCircle.setClip(new Circle(15, 15, 15));
-        signOut.setText(AuthenticationLogin.name + "? Sign Out");
+        signOut.setText(StagesManager.name + "? Sign Out");
     }
 
     @FXML
     void dragHeader(MouseEvent event) {
-        AuthenticationLogin.window.setX(event.getScreenX() - x);
-        AuthenticationLogin.window.setY(event.getScreenY()  - y);
+        StagesManager.window.setX(event.getScreenX() - x);
+        StagesManager.window.setY(event.getScreenY()  - y);
     }
 
     @FXML
@@ -57,8 +54,8 @@ public  class titlebarController implements Initializable {
 
     @FXML
     public void signOut(ActionEvent event) {
-        AuthenticationLogin.window.close();
-        AuthenticationLogin.window = Main.window;
+        StagesManager.window.close();
+        StagesManager.window = Main.window;
         Main.window.show();
     }
 

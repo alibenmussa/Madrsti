@@ -3,23 +3,15 @@ package main;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Group;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
-import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
-import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import main.login.AuthenticationLogin;
-import main.views.Admin;
 
 public class Main extends Application {
 
@@ -38,6 +30,7 @@ public class Main extends Application {
         window.setScene(scene);
         window.setTitle("Madrasti System");
         window.initStyle(StageStyle.TRANSPARENT);
+        StagesManager.blackBG.setStyle("-fx-background-color: rgba(53, 57, 89, 0.75)");
 
 //        window.show();
         System.out.println("Let Game Starts!");
@@ -66,7 +59,7 @@ public class Main extends Application {
     }
 
     public static void shadowMaker(Pane element) {
-        DropShadow shadow = new DropShadow(80, 0 , 70, Color.rgb(134, 139, 142, 0.1)); //Color.web("F0F2F6")
+        DropShadow shadow = new DropShadow(70, 0 , 70, Color.rgb(134, 139, 142, 0.1)); //Color.web("F0F2F6")
         element.setEffect(shadow);
     }
 

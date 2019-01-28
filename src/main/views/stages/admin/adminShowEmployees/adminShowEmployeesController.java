@@ -11,6 +11,5 @@ public class adminShowEmployeesController {
     @FXML
     void adminAddEmployee(ActionEvent event) throws Exception {
         Dialog.show("/main/views/stages/admin/adminShowEmployees/adminAddEmployee/adminAddEmployee.fxml");
-
     }
 }

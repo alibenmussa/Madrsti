@@ -44,12 +44,44 @@ public class loginController implements Initializable {
         Main.shadowMaker(loginContainer);
         Main.FXMLLoaderPane(header, "/main/titlebar.fxml");
         setLoginSubjectText();
+
+        //مؤقتا فقط لعملية التصميم
         try {
-            new Admin("aaa","vvv").displayAdmin();
+            Admin.displayAdmin("ali");
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
+
+    @FXML
+    public void clickLogIn(ActionEvent event) throws Exception {
+        String username = this.username.getText();
+        String password = this.password.getText();
+        int authenticationState = checkAuthentication(username, password);
+        if(authenticationState != 0) {
+            switch (authenticationState) {
+                case 1:
+                    Admin.displayAdmin(username);
+                    break;
+                case 2:
+                    //Teacher Stage
+                    break;
+                case 3:
+
+                    //Employee Stage
+                    break;
+            }
+        } else {
+            System.out.println("Your Enter is Error!"); //مؤقتا لين ما نديروا رسالة خطأ
+            this.username.setStyle("-fx-border-color: red");
+            this.password.setStyle("-fx-border-color: red");
+        }
+    }
+
+    private int checkAuthentication(String username, String password) {
+        return 1;    //مؤقتا بس، بعدين حنربطوا بالداتابيز
+    }
+
 
     private void setLoginSubjectText() {
         int currentHour = LocalDateTime.now().getHour();
@@ -64,32 +96,6 @@ public class loginController implements Initializable {
             message = "WELCOME";
         }
         loginSubject.setText(message + ",");
-    }
-
-    @FXML
-    public void clickLogIn(ActionEvent event) throws Exception {
-        String username = this.username.getText();
-        String password = this.password.getText();
-        int authenticationState = checkAuthentication(username, password);
-        if(authenticationState != 0) {
-            switch (authenticationState) {
-                case 1:
-                    new Admin(username, password).displayAdmin();
-                    break;
-                case 2:
-                    new Teacher(username, password).displayTeacher();
-                    break;
-                case 3:
-                    new Employee(username, password).displayEmployee();
-                    break;
-            }
-        } else {
-            System.out.println("Your Enter is Error!"); //مؤقتا لين ما نديروا رسالة خطأ
-        }
-    }
-
-    private int checkAuthentication(String username, String password) {
-        return 1;    //مؤقتا بس، بعدين حنربطوا بالداتابيز
     }
 
 

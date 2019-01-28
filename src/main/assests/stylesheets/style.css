@@ -39,9 +39,13 @@
     -fx-font-weight: normal;
 }
 
-.scroll-pane, .scroll-pane:focused, .button:focused, .text-field:focused {
+.scroll-pane, .scroll-pane:focused, .button:focused, .text-field:focused, .button:pressed {
     -fx-box-border: transparent;
     -fx-faint-focus-color: transparent;
+}
+
+.button:pressed {
+    -fx-border-width: 0;
 }
 
 .content {
@@ -65,7 +69,7 @@
 }
 
 
-.text-field:focused {
+.text-field:focused, .combo-box:focused {
     -fx-border-color: #3F3FF2;
     -fx-background-radius: 5;
 }
@@ -88,7 +92,7 @@
     -fx-text-fill: #ffffff;
     -fx-background-radius: 10;
     -fx-font-size: 14;
-    -fx-padding: 15 auto;
+    /*-fx-padding: 15 auto;*/
 }
 
 .button:hover {
@@ -108,4 +112,13 @@
 }
 .button:focused {-fx-box-border: transparent;
     -fx-faint-focus-color: transparent;
+}
+
+.combo-box {
+    -fx-border-width: 1;
+    -fx-border-color: #E6E9F0;
+    -fx-border-radius: 5;
+    -fx-font-size: 16;
+    -fx-text-fill: #7F8FA4;
+    -fx-background-color: #ffffff;
 }
