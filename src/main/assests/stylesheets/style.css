@@ -44,11 +44,19 @@
     -fx-faint-focus-color: transparent;
 }
 
+.content {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 15;
+    -fx-padding: 25;
+}
 
-
+.pageContent .title {
+    -fx-font-size: 32;
+    -fx-font-weight: lighter;
+}
 
 .text-field {
-    -fx-border-width: 2;
+    -fx-border-width: 1;
     -fx-border-color: #E6E9F0;
     -fx-border-radius: 5;
     -fx-font-size: 16;
@@ -80,14 +88,16 @@
     -fx-text-fill: #ffffff;
     -fx-background-radius: 10;
     -fx-font-size: 14;
-    -fx-font-weight: bold;
-    -fx-font-weight: bold;
+    -fx-padding: 15 auto;
 }
 
 .button:hover {
     -fx-background-color: #3841DC;
 }
 
+.clickBtn {
+    -fx-font-weight: bold;
+}
 
 .clickBtn:pressed {
     -fx-border-width: 4;

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" style="-fx-background-color: transparent;" styleClass="dialogWindow" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ScrollPane fx:id="dialogContent" prefHeight="550.0" prefWidth="760.0" />
+   </children>
+   <stylesheets>
+      <URL value="@../../../../../assests/stylesheets/style.css" />
+      <URL value="@../../../../../assests/stylesheets/dialog.css" />
+      <URL value="@adminAddEmployee.css" />
+   </stylesheets>
+</AnchorPane>

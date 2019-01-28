@@ -19,6 +19,7 @@ import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import main.login.AuthenticationLogin;
+import main.views.Admin;
 
 public class Main extends Application {
 
@@ -33,13 +34,12 @@ public class Main extends Application {
         page.setArcHeight(20);
         root.setClip(page);
         Scene scene = new Scene(root, 1024, 680);
-//        scene.getStylesheets().add("http://fonts.googleapis.com/css?family=Roboto");
         scene.setFill(Color.TRANSPARENT);
         window.setScene(scene);
         window.setTitle("Madrasti System");
         window.initStyle(StageStyle.TRANSPARENT);
 
-        window.show();
+//        window.show();
         System.out.println("Let Game Starts!");
     }
 

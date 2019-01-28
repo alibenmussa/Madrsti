@@ -44,6 +44,11 @@ public class loginController implements Initializable {
         Main.shadowMaker(loginContainer);
         Main.FXMLLoaderPane(header, "/main/titlebar.fxml");
         setLoginSubjectText();
+        try {
+            new Admin("aaa","vvv").displayAdmin();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     private void setLoginSubjectText() {

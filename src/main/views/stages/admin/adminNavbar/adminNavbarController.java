@@ -23,8 +23,8 @@ public class adminNavbarController {
     }
 
     @FXML
-    void adminShowResults(ActionEvent event) throws Exception {
-        Dialog.show("new Stage");
+    void adminShowResults(ActionEvent event) {
+
     }
 
 

@@ -20,7 +20,7 @@ public class Dialog {
         AuthenticationLogin parentWindow = AuthenticationLogin.stageController;
         dialogStage = new Stage();
 
-        Pane root = FXMLLoader.load(Main.class.getResource("/main/views/dialog/dialog.fxml"));
+        Pane root = FXMLLoader.load(Main.class.getResource(path));
 
         Scene scene = new Scene(root);
         scene.setFill(Color.TRANSPARENT);
