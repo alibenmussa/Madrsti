@@ -107,6 +107,14 @@
     -fx-background-color: #3841DC;
 }
 
+.pageContent .button:pressed {
+    -fx-border-width: 4;
+    -fx-border-color: #8EB9ED;
+    -fx-border-radius: 12;
+    -fx-border-insets: -4;
+    -fx-background-insets: 0;
+}
+
 .gray-button {
     -fx-background-color: #E6E9F0;
     -fx-text-fill: #7F8FA4;
@@ -132,14 +140,6 @@
 .pageContent .function-button:pressed {
     /*-fx-border-color: #8EB9ED;*/
     -fx-border-color: #aee7d7;
-}
-
-.button:pressed {
-    -fx-border-width: 4;
-    -fx-border-color: #8EB9ED;
-    -fx-border-radius: 12;
-    -fx-border-insets: -4;
-    -fx-background-insets: 0;
 }
 
 .button:focused {

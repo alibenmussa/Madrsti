@@ -2,46 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Adding: confirm dialog and add staff function">
-      <change afterPath="$PROJECT_DIR$/src/main/assests/stylesheets/scroll.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/views/dialog/confirmDialog.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/views/dialog/confirmDialogController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminAddStaff/adminAddStaff.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminAddStaff/adminAddStaffController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminShowStaffController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/login/loginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/login/loginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/titlebarController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/titlebarController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/dialog/Dialog.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/dialog/Dialog.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/dialog/dialog.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/admin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/admin.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminNavbar/adminNavbar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminNavbar/adminNavbar.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminNavbar/adminNavbarController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminNavbar/adminNavbarController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminShowEmployees/adminShowEmployees.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminShowEmployees/adminShowEmployeesController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminShowHome/adminShowHome.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminShowHome/adminShowHome.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/StagesManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/StagesManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/assests/stylesheets/dialog.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/assests/stylesheets/dialog.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/assests/stylesheets/navbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/assests/stylesheets/navbar.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/assests/stylesheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/assests/stylesheets/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/assests/stylesheets/titlebar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/assests/stylesheets/titlebar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/login/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/login/loginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/titlebarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/titlebarController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/views/dialog/ConfirmDialog.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/views/dialog/Dialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/dialog/Dialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/views/dialog/dialog.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/views/dialog/dialogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminAddStaff/adminAddStaff.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/views/stages/admin/admin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/admin/admin.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/views/stages/admin/adminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/admin/adminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/views/stages/admin/adminNavbar/adminNavbar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/admin/adminNavbar/adminNavbar.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/views/stages/admin/adminNavbar/adminNavbarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/admin/adminNavbar/adminNavbarController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowEmployees/adminAddEmployee/adminAddEmployee.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminShowStaff.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowEmployees/adminAddEmployee/adminAddEmployee.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowEmployees/adminAddEmployee/adminAddEmployeeController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowEmployees/adminShowEmployees.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminShowStaff.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowEmployees/adminShowEmployeesController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowHome/adminShowHome.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowHome/adminShowHome.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStuff/adminShowEmployees.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowEmployees/adminShowEmployees.css" beforeDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -116,7 +80,7 @@
     <session id="1007320405">
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="1477" />
+          <entry key="css" value="1489" />
           <entry key="dummy" value="49" />
           <entry key="fxml" value="478" />
           <entry key="java" value="2776" />
@@ -125,7 +89,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="1477" />
+          <entry key="CSS" value="1489" />
           <entry key="JAVA" value="2776" />
           <entry key="PLAIN_TEXT" value="525" />
           <entry key="XML" value="478" />
@@ -175,12 +139,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminAddStaff/adminAddStaff.fxml">
           <provider editor-type-id="JavaFX-Scene-Builder" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="61" column="37" selection-start-line="61" selection-start-column="37" selection-end-line="61" selection-end-column="37" />
+            <state relative-caret-position="179">
+              <caret line="61" column="75" lean-forward="true" selection-start-line="61" selection-start-column="75" selection-end-line="61" selection-end-column="75" />
             </state>
           </provider>
         </entry>
@@ -264,11 +228,11 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/assests/stylesheets/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="136">
+              <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
             </state>
           </provider>
         </entry>
@@ -388,8 +352,8 @@
         <option value="$PROJECT_DIR$/src/main/views/stages/admin/adminNavbar/adminNavbarController.java" />
         <option value="$PROJECT_DIR$/src/main/views/dialog/confirmDialogController.java" />
         <option value="$PROJECT_DIR$/src/main/views/dialog/Dialog.java" />
-        <option value="$PROJECT_DIR$/src/main/assests/stylesheets/style.css" />
         <option value="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminAddStaff/adminAddStaff.fxml" />
+        <option value="$PROJECT_DIR$/src/main/assests/stylesheets/style.css" />
       </list>
     </option>
   </component>
@@ -518,7 +482,7 @@
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548803886078" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548804227643" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/AppData/Local/SceneBuilder/SceneBuilder.exe" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -674,7 +638,7 @@
       <workItem from="1548547206546" duration="600000" />
       <workItem from="1548693619537" duration="1644000" />
       <workItem from="1548707180543" duration="17148000" />
-      <workItem from="1548776037137" duration="19876000" />
+      <workItem from="1548776037137" duration="20217000" />
     </task>
     <task id="LOCAL-00001" summary="Add FXML header file into main FXML file">
       <created>1547240271430</created>
@@ -774,11 +738,18 @@
       <option name="project" value="LOCAL" />
       <updated>1548717571565</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Adding: confirm dialog and add staff function">
+      <created>1548803913121</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1548803913121</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="174892000" />
+    <option name="totallyTimeSpent" value="175233000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -802,7 +773,7 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32786885" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3065574" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3065574" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -813,7 +784,7 @@
       <window_info anchor="bottom" id="Changes" order="10" />
       <window_info anchor="bottom" id="Profiler" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" weight="0.3295082" />
-      <window_info active="true" anchor="bottom" id="Messages" order="13" visible="true" weight="0.32786885" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.32786885" />
       <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="15" weight="0.3295082" />
       <window_info anchor="bottom" id="Docker" order="16" show_stripe_button="false" />
@@ -1166,18 +1137,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/assests/stylesheets/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminAddStaff/adminAddStaff.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="61" column="37" selection-start-line="61" selection-start-column="37" selection-end-line="61" selection-end-column="37" />
+        <state relative-caret-position="179">
+          <caret line="61" column="75" lean-forward="true" selection-start-line="61" selection-start-column="75" selection-end-line="61" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/assests/stylesheets/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
         </state>
       </provider>
     </entry>
