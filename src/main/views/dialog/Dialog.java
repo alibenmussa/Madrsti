@@ -12,6 +12,8 @@ import main.StagesManager;
 
 public class Dialog {
     public static Stage dialogStage;
+    public static String confirmMessage;
+    public static boolean confirm = false;
 
     public static void show(String path) throws Exception{
         dialogStage = new Stage();
@@ -45,8 +47,43 @@ public class Dialog {
         });
     }
 
-    public static void setTitle(String title) {
-        dialogStage.setTitle(title);
+    public static boolean showConfirm(String message) throws Exception {
+        dialogStage = new Stage();
+
+        Pane root = FXMLLoader.load(Main.class.getResource("/main/views/dialog/confirmDialog.fxml"));
+
+        Scene scene = new Scene(root);
+        scene.setFill(Color.TRANSPARENT);
+
+        dialogStage.setX(StagesManager.window.getX() + ((1024 - 450) / 2));
+        dialogStage.setY(StagesManager.window.getY() + ((680 - 264) / 2));
+
+        dialogStage.setScene(scene);
+        dialogStage.initStyle(StageStyle.TRANSPARENT);
+        dialogStage.initModality(Modality.WINDOW_MODAL);
+
+        StagesManager.showBlackBG();
+
+        dialogStage.showAndWait();
+
+        dialogStage.setOnShowing(e -> {
+            StagesManager.showBlackBG();
+        });
+
+        StagesManager.blackBG.setOnMouseClicked(e -> {
+            closeDialogWindow();
+
+        });
+
+        dialogStage.setOnCloseRequest(e -> {
+            StagesManager.hideBlackBG();
+        });
+
+        return confirm;
     }
 
+    public static void closeDialogWindow() {
+        dialogStage.hide();
+        StagesManager.hideBlackBG();
+    }
 }

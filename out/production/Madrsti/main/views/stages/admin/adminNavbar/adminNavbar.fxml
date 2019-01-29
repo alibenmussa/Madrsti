@@ -9,42 +9,51 @@
 
 <AnchorPane id="navBG" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.views.stages.admin.adminNavbar.adminNavbarController">
    <children>
-      <VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="260.0">
+      <VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="250.0">
          <children>
-            <Button alignment="CENTER" contentDisplay="TOP" graphicTextGap="10.0" mnemonicParsing="false" onAction="#adminShowHome" prefHeight="100.0" prefWidth="160.0" text="HOME">
-               <padding>
-                  <Insets bottom="20.0" top="20.0" />
-               </padding>
+            <Button alignment="CENTER" contentDisplay="TOP" graphicTextGap="15.0" mnemonicParsing="false" onAction="#adminShowHome" prefWidth="120.0" text="HOME" VBox.vgrow="ALWAYS">
                <VBox.margin>
                   <Insets bottom="20.0" />
                </VBox.margin>
                <graphic>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f8fcff" height="30.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="30.0" />
-               </graphic></Button>
-            <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#adminShowEmployees" prefHeight="100.0" prefWidth="160.0" text="EMPLOYEES">
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="20.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="20.0" />
+               </graphic>
                <padding>
-                  <Insets bottom="20.0" top="20.0" />
-               </padding>
-               <VBox.margin>
-                  <Insets bottom="20.0" />
-               </VBox.margin></Button>
-            <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#adminShowStudents" prefHeight="100.0" prefWidth="160.0" text="Students">
-               <padding>
-                  <Insets bottom="20.0" top="20.0" />
-               </padding>
-               <VBox.margin>
-                  <Insets bottom="20.0" />
-               </VBox.margin></Button>
-            <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#adminShowResults" prefHeight="100.0" prefWidth="160.0" text="Results">
+                  <Insets bottom="30.0" top="30.0" />
+               </padding></Button>
+            <Button alignment="CENTER" contentDisplay="TOP" graphicTextGap="15.0" mnemonicParsing="false" onAction="#adminShowEmployees" prefWidth="120.0" text="STAFF" VBox.vgrow="ALWAYS">
                <VBox.margin>
                   <Insets bottom="20.0" />
                </VBox.margin>
                <padding>
-                  <Insets bottom="20.0" top="20.0" />
-               </padding></Button>
+                  <Insets bottom="30.0" top="30.0" />
+               </padding>
+               <graphic>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="20.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="20.0" />
+               </graphic></Button>
+            <Button alignment="CENTER" contentDisplay="TOP" graphicTextGap="15.0" mnemonicParsing="false" onAction="#adminShowStudents" prefWidth="120.0" text="STUDENTS" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="30.0" top="30.0" />
+               </padding>
+               <graphic>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="20.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="20.0" />
+               </graphic></Button>
+            <Button alignment="CENTER" contentDisplay="TOP" graphicTextGap="15.0" mnemonicParsing="false" onAction="#adminShowResults" prefWidth="120.0" text="RESULTS" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="30.0" top="30.0" />
+               </padding>
+               <graphic>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="20.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="20.0" />
+               </graphic></Button>
          </children>
          <padding>
-            <Insets top="60.0" />
+            <Insets top="50.0" />
          </padding>
       </VBox>
    </children>

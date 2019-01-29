@@ -27,18 +27,28 @@ public  class titlebarController implements Initializable {
 
     private double x;
     private double y;
+    private double xAxis;
+    private double yAxis;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         userPhoto.setImage(new Image(StagesManager.getUserPhoto()));
         userPhotoCircle.setClip(new Circle(15, 15, 15));
-        signOut.setText(StagesManager.name + "? Sign Out");
+        if (StagesManager.username != null) {
+
+            signOut.setText(StagesManager.name + "? Sign Out");
+        } else {
+            signOut = null;
+        }
     }
 
     @FXML
     void dragHeader(MouseEvent event) {
-        StagesManager.window.setX(event.getScreenX() - x);
-        StagesManager.window.setY(event.getScreenY()  - y);
+        xAxis = event.getScreenX() - x;
+        yAxis = event.getScreenY()  - y;
+        StagesManager.window.setX(xAxis);
+        StagesManager.window.setY(yAxis);
+
     }
 
     @FXML

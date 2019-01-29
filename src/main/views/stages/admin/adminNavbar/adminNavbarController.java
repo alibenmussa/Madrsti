@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import main.Main;
 import main.StagesManager;
+import main.views.dialog.Dialog;
 
 public class adminNavbarController {
     @FXML
@@ -13,12 +14,13 @@ public class adminNavbarController {
 
     @FXML
     void adminShowEmployees(ActionEvent event) {
-        Main.FXMLLoaderPane(StagesManager.stageContent, "/main/views/stages/admin/adminShowEmployees/adminShowEmployees.fxml");
+        Main.FXMLLoaderPane(StagesManager.stageContent, "/main/views/stages/admin/adminShowStaff/adminShowStaff.fxml");
     }
 
     @FXML
-    void adminShowStudents(ActionEvent event) {
-
+    void adminShowStudents(ActionEvent event) throws Exception {
+        boolean delete = Dialog.showConfirm("Do you sure delete this employee from here?");
+        System.out.println(delete);
     }
 
     @FXML

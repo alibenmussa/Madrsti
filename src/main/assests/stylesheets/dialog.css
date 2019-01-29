@@ -2,7 +2,14 @@
     -fx-background-color: transparent;
 }
 
-.dialogWindow, #dialogContent {
+ #dialogContent {
     -fx-background-radius: 15;
     -fx-background-color: #ffffff;
+     -fx-text-fill: #7F8FA4;
+     -fx-font-size: 14;
 }
+
+ .root {
+     -fx-background-color: transparent;
+
+ }

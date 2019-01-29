@@ -6,7 +6,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
-public abstract class StagesManager {
+public final class StagesManager {
     public static String username;
     public static String name = "Yousef";
 

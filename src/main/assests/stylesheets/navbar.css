@@ -1,8 +1,30 @@
 .button {
 
-    -fx-background-radius: 10;
+    -fx-background-radius: 15;
+    -fx-font-weight: bold;
+    -fx-font-size: 13;
+
+}
+
+.button:hover {
+    -fx-text-fill: #ffffff;
+    -fx-effect: dropshadow(gaussian, rgba(134, 139, 142, 0.2), 50, 0.15, 20, 20);
+}
+
+.button:pressed {
+    -fx-effect: dropshadow(gaussian, rgba(134, 139, 142, 0.2), 50, 0.15, 0, 10);
 }
 
 #navbg {
     -fx-background-color: #ffffff;
+}
+
+.button:pressed {
+    -fx-border-width: none;
+    -fx-border-insets: none;
+}
+
+Rectangle {
+    -fx-text-fill: fx-text-inner-color;
+    -fx-background-color: fx-text-inner-color;
 }

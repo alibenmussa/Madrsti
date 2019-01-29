@@ -65,5 +65,6 @@ VBox {
 }
 
 .button {
+    -fx-font-weight: lighter;
     -fx-background-color: transparent;
 }
