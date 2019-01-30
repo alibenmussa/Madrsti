@@ -32,13 +32,13 @@ public  class titlebarController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        userPhoto.setImage(new Image(StagesManager.getUserPhoto()));
-        userPhotoCircle.setClip(new Circle(15, 15, 15));
-        if (StagesManager.username != null) {
-
+        if (StagesManager.stageContent != null) {
             signOut.setText(StagesManager.name + "? Sign Out");
+            userPhoto.setImage(new Image(StagesManager.getUserPhoto()));
+            userPhotoCircle.setClip(new Circle(15, 15, 15));
+            signOut.setVisible(true);
         } else {
-            signOut = null;
+            signOut.setVisible(false);
         }
     }
 

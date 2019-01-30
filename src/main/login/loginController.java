@@ -41,11 +41,12 @@ public class loginController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        //مؤقتا فقط لعملية التصميم
+
         Main.shadowMaker(loginContainer);
         Main.FXMLLoaderPane(header, "/main/titlebar.fxml");
         setLoginSubjectText();
 
-        //مؤقتا فقط لعملية التصميم
         try {
             Admin.displayAdmin("ali");
         } catch (Exception e) {

@@ -8,3 +8,7 @@
     -fx-font-size: 40;
     -fx-font-weight: lighter;
 }
+
+.button {
+    -fx-text-fill: #ffffff;
+}

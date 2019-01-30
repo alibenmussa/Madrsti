@@ -11,17 +11,17 @@
    <children>
       <VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="250.0">
          <children>
-            <Button alignment="CENTER" contentDisplay="TOP" graphicTextGap="15.0" mnemonicParsing="false" onAction="#adminShowHome" prefWidth="120.0" text="HOME" VBox.vgrow="ALWAYS">
+            <Button fx:id="adminShowHome" alignment="CENTER" contentDisplay="TOP" graphicTextGap="15.0" mnemonicParsing="false" onAction="#adminShowHome" prefWidth="120.0" styleClass="active" text="HOME" VBox.vgrow="ALWAYS">
                <VBox.margin>
                   <Insets bottom="20.0" />
                </VBox.margin>
                <graphic>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="20.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="20.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="20.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="icon" width="20.0" />
                </graphic>
                <padding>
                   <Insets bottom="30.0" top="30.0" />
                </padding></Button>
-            <Button alignment="CENTER" contentDisplay="TOP" graphicTextGap="15.0" mnemonicParsing="false" onAction="#adminShowEmployees" prefWidth="120.0" text="STAFF" VBox.vgrow="ALWAYS">
+            <Button fx:id="adminShowStaff" alignment="CENTER" contentDisplay="TOP" graphicTextGap="15.0" mnemonicParsing="false" onAction="#adminShowStaff" prefWidth="120.0" text="STAFF" VBox.vgrow="ALWAYS">
                <VBox.margin>
                   <Insets bottom="20.0" />
                </VBox.margin>
@@ -29,9 +29,9 @@
                   <Insets bottom="30.0" top="30.0" />
                </padding>
                <graphic>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="20.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="20.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="20.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="icon" width="20.0" />
                </graphic></Button>
-            <Button alignment="CENTER" contentDisplay="TOP" graphicTextGap="15.0" mnemonicParsing="false" onAction="#adminShowStudents" prefWidth="120.0" text="STUDENTS" VBox.vgrow="ALWAYS">
+            <Button fx:id="adminShowStudents" alignment="CENTER" contentDisplay="TOP" graphicTextGap="15.0" mnemonicParsing="false" onAction="#adminShowStudents" prefWidth="120.0" text="STUDENTS" VBox.vgrow="ALWAYS">
                <VBox.margin>
                   <Insets bottom="20.0" />
                </VBox.margin>
@@ -39,9 +39,9 @@
                   <Insets bottom="30.0" top="30.0" />
                </padding>
                <graphic>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="20.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="20.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="20.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="icon" width="20.0" />
                </graphic></Button>
-            <Button alignment="CENTER" contentDisplay="TOP" graphicTextGap="15.0" mnemonicParsing="false" onAction="#adminShowResults" prefWidth="120.0" text="RESULTS" VBox.vgrow="ALWAYS">
+            <Button fx:id="adminShowResults" alignment="CENTER" contentDisplay="TOP" graphicTextGap="15.0" mnemonicParsing="false" onAction="#adminShowResults" prefWidth="120.0" text="RESULTS" VBox.vgrow="ALWAYS">
                <VBox.margin>
                   <Insets bottom="20.0" />
                </VBox.margin>
@@ -49,7 +49,7 @@
                   <Insets bottom="30.0" top="30.0" />
                </padding>
                <graphic>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="20.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="20.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="20.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="icon" width="20.0" />
                </graphic></Button>
          </children>
          <padding>

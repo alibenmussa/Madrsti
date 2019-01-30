@@ -64,19 +64,18 @@ public class Dialog {
 
         StagesManager.showBlackBG();
 
-        dialogStage.showAndWait();
-
-        dialogStage.setOnShowing(e -> {
-            StagesManager.showBlackBG();
+        dialogStage.setOnCloseRequest(e -> {
+            StagesManager.hideBlackBG();
         });
 
         StagesManager.blackBG.setOnMouseClicked(e -> {
             closeDialogWindow();
-
         });
 
-        dialogStage.setOnCloseRequest(e -> {
-            StagesManager.hideBlackBG();
+        dialogStage.showAndWait();
+
+        dialogStage.setOnShowing(e -> {
+            StagesManager.showBlackBG();
         });
 
         return confirm;
