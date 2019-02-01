@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import java.net.URL?>
+<AnchorPane xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.views.stages.admin.adminShowStaff.adminEditStaff.adminEditStaffController">
+   <children>
+      <AnchorPane maxHeight="1.7976931348623157E308" minHeight="550.0" prefWidth="746.0">
+         <children>
+            <VBox spacing="70.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <VBox>
+                     <children>
+                        <Label styleClass="title" text="Add Staff" />
+                        <GridPane alignment="CENTER" hgap="30.0" maxWidth="1.7976931348623157E308" vgap="20.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="40.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <HBox alignment="CENTER_LEFT" spacing="15.0" GridPane.rowIndex="1">
+                                 <children>
+                                    <TextField fx:id="fullName" promptText="Full Name" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_RIGHT" layoutX="344.0" layoutY="183.0" spacing="15.0" GridPane.rowIndex="2">
+                                 <children>
+                                    <DatePicker fx:id="birthDay" maxWidth="1.7976931348623157E308" promptText="Birthday" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="BOTTOM_RIGHT" spacing="30.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowSpan="3" GridPane.valignment="BOTTOM">
+                                 <children>
+                                    <VBox maxHeight="-Infinity" spacing="20.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <ComboBox fx:id="type" maxWidth="1.7976931348623157E308" prefWidth="135.0" promptText="Teacher">
+                                             <items>
+                                                <FXCollections fx:factory="observableArrayList">
+                                                   <String fx:value="Teacher" />
+                                                   <String fx:value="Employee" />
+                                                </FXCollections>
+                                             </items>
+                                             <value>
+                                                <String fx:value="Teacher" />
+                                             </value>
+                                          </ComboBox>
+                                          <ComboBox fx:id="gender" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefWidth="135.0" promptText="Gender">
+                                             <items>
+                                                <FXCollections fx:factory="observableArrayList">
+                                                   <String fx:value="Male" />
+                                                   <String fx:value="Female" />
+                                                </FXCollections>
+                                             </items>
+                                          </ComboBox>
+                                       </children>
+                                    </VBox>
+                                    <Button alignment="CENTER" contentDisplay="CENTER" defaultButton="true" maxHeight="1.7976931348623157E308" mnemonicParsing="false" onAction="#uploadPhoto" prefWidth="135.0" styleClass="gray-button">
+                                       <graphic>
+                                          <Group fx:id="userPhotoCircle">
+                                             <children>
+                                                <ImageView fx:id="userPhoto" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </ImageView>
+                                             </children>
+                                          </Group>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="113.0" spacing="15.0" GridPane.rowIndex="3">
+                                 <children>
+                                    <TextField fx:id="address" promptText="Living Address" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="223.0" spacing="15.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <children>
+                                    <TextField fx:id="nationality" promptText="Nationality" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="223.0" spacing="15.0" GridPane.rowIndex="4">
+                                 <children>
+                                    <TextField fx:id="phoneNumber" promptText="Phone Number" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" layoutX="344.0" layoutY="223.0" spacing="15.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                 <children>
+                                    <TextField fx:id="email" promptText="E-mail" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </VBox>
+                  <GridPane alignment="CENTER" hgap="30.0" layoutX="70.0" layoutY="143.0" maxWidth="1.7976931348623157E308" vgap="20.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="223.0" spacing="15.0" GridPane.rowIndex="1">
+                           <children>
+                              <TextField fx:id="education" promptText="University/Insitute" HBox.hgrow="ALWAYS" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="113.0" spacing="15.0" GridPane.columnIndex="1">
+                           <children>
+                              <TextField fx:id="degree" promptText="Degree" HBox.hgrow="ALWAYS" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="344.0" layoutY="223.0" spacing="15.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <ComboBox maxWidth="1.7976931348623157E308" promptText="Graduate Year" HBox.hgrow="ALWAYS" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="223.0" spacing="15.0">
+                           <children>
+                              <TextField fx:id="major" promptText="Major" HBox.hgrow="ALWAYS" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </GridPane>
+                  <AnchorPane>
+                     <children>
+                        <VBox AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+                           <children>
+                              <Label styleClass="title" text="Account">
+                                 <VBox.margin>
+                                    <Insets bottom="30.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <HBox>
+                                 <children>
+                                    <CheckBox mnemonicParsing="false" onAction="#clickCreateAccount" selected="true" text="Create an account to this user." />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="30.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <GridPane alignment="CENTER" hgap="30.0" maxWidth="1.7976931348623157E308" vgap="20.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="40.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="113.0" spacing="15.0">
+                                       <children>
+                                          <TextField fx:id="username" prefHeight="50.0" promptText="Username" HBox.hgrow="ALWAYS" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="223.0" spacing="15.0" GridPane.columnIndex="1">
+                                       <children>
+                                          <PasswordField fx:id="password" prefHeight="50.0" promptText="Password" HBox.hgrow="ALWAYS" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </VBox>
+                     </children>
+                     <styleClass>
+                        <String fx:value="content-blue" />
+                        <String fx:value="blue" />
+                     </styleClass>
+                  </AnchorPane>
+                  <HBox alignment="CENTER_RIGHT" prefWidth="200.0" spacing="20.0">
+                     <children>
+                        <Button minWidth="120.0" mnemonicParsing="false" onAction="#adminCancelAddStaff" prefHeight="45.0" styleClass="gray-button" text="CANCEL" />
+                        <Button alignment="CENTER" graphicTextGap="15.0" minWidth="120.0" mnemonicParsing="false" onAction="#adminSaveAddStaff" prefHeight="45.0" styleClass="function-button" text="SAVE" textFill="WHITE">
+                           <padding>
+                              <Insets left="20.0" right="20.0" />
+                           </padding>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="60.0" left="60.0" right="60.0" top="80.0" />
+               </padding>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+   <stylesheets>
+      <URL value="@../../../../../assests/stylesheets/style.css" />
+      <URL value="@../../../../../assests/stylesheets/dialog.css" />
+      <URL value="@../../adminShowStaff/adminEditStaff/adminAddEdit.css" />
+   </stylesheets>
+</AnchorPane>

@@ -23,6 +23,7 @@
 
 .button .icon {
     -fx-fill: #7d97f4;
+    -fx-font-family: 'jdFontAwesome';
 }
 
 
