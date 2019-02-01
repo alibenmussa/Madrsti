@@ -7,13 +7,11 @@ import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 public final class StagesManager {
+
     public static String username;
     public static String name = "Yousef";
-
     public static StackPane root;
-
     public static Pane blackBG = new Pane();
-
     public static Stage window = Main.window;
     public static ScrollPane stageContent = null;
 

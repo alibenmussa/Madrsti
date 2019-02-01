@@ -23,9 +23,9 @@
                   <Insets bottom="10.0" />
                </VBox.margin>
                <right>
-                  <Button alignment="CENTER" graphicTextGap="10.0" mnemonicParsing="false" onAction="#adminAddEmployee" prefHeight="40.0" styleClass="function-button" text="ADD STAFF" textFill="WHITE" BorderPane.alignment="CENTER">
+                  <Button alignment="CENTER" graphicTextGap="15.0" minWidth="120.0" mnemonicParsing="false" onAction="#adminAddStaff" prefHeight="40.0" styleClass="function-button" text="ADD STAFF" textFill="WHITE" BorderPane.alignment="CENTER">
                      <padding>
-                        <Insets left="15.0" right="15.0" />
+                        <Insets left="20.0" right="20.0" />
                      </padding>
                      <graphic>
                         <Label text="+" textFill="WHITE" />

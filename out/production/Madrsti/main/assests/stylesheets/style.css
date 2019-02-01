@@ -10,6 +10,8 @@
     Gray: #7F8FA4
     l-gray: #E6E9F0
 
+    text-f-blue: #7d97f4
+
  */
 
 
@@ -38,6 +40,12 @@
     -fx-font-weight: normal;
 }
 
+.sub-heading {
+    -fx-font-size: 28;
+    -fx-font-weight: lighter;
+    -fx-text-fill: #7F8FA4;
+}
+
 .scroll-pane, .scroll-pane:focused, .button:focused, .text-field:focused, .button:pressed {
     -fx-box-border: transparent;
     -fx-faint-focus-color: transparent;
@@ -49,25 +57,79 @@
     -fx-effect: none;
 }
 
-.content {
+.content, .content-blue {
     -fx-background-color: #ffffff;
     -fx-text-fill: #7F8FA4;
     -fx-background-radius: 15;
     -fx-padding: 25;
 }
 
+.content-blue {
+    -fx-background-color: #3F3FF2;
+    -fx-text-fill: #ffffff;
+}
+
+.content-blue .title {
+    -fx-text-fill: #ffffff;
+
+}
+
+.content-blue .sub-heading {
+    -fx-text-fill: #7d97f4;
+}
+
+.blue .check-box {
+    -fx-text-fill: #7d97f4;
+    -fx-font-family: 'Ubuntu', sans-serif;
+    -fx-font-size: 14;
+}
+
+.blue .check-box > .button {
+    -fx-background-color: #ffffff;
+}
+
+
 .label.text {
     -fx-text-fill: #7F8FA4;
     -fx-font-size: 14;
 }
 
-.text-field, .combo-box {
+.text-field, .combo-box, .date-picker {
     -fx-border-width: 1;
     -fx-border-color: #E6E9F0;
     -fx-border-radius: 5;
     -fx-font-size: 16;
     -fx-text-fill: #7F8FA4;
     -fx-background-color: #ffffff;
+}
+
+.date-picker:editable > .arrow-button > * {
+    -fx-opacity: 0;
+}
+
+.date-picker-popup .label {
+    -fx-font-size: 0.9em;
+}
+
+.date-picker-popup {
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(134, 139, 142, 0.1), 10, 0.2, 0, 5);
+
+}
+.date-picker-popup > .month-year-pane {
+    -fx-padding: 0.588883em 0.5em 0.666667em 0.5em;
+    -fx-background-insets: 0 0 0 0, 0 0 1 0;
+}
+
+.date-picker > .arrow-button {
+    -fx-background-size: 60% 60%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+}
+
+.date-picker .button {
+    -fx-background-color: #E6E9F0;
 }
 
 
@@ -88,8 +150,7 @@
     -fx-text-fill: #E6E9F0;
 }
 
-
-.text-field {
+.text-field, .combo-box {
     -fx-min-height: 40;
 }
 
@@ -168,6 +229,7 @@
     -fx-background: white;
     -fx-background-color: transparent;
     -fx-text-fill: -fx-text-base-color;
+    /*-fx-min-height: 39;*/
 }
 
 

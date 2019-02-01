@@ -22,7 +22,7 @@ public class adminShowStaffController implements Initializable {
     }
 
     @FXML
-    void adminAddEmployee(ActionEvent event) throws Exception {
-        Dialog.show("/main/views/stages/admin/adminShowStaff/adminAddStaff/adminAddStaff.fxml");
+    void adminAddStaff(ActionEvent event) throws Exception {
+        Dialog.show("Add Staff", "/main/views/stages/admin/adminShowStaff/adminAddStaff/adminAddStaff.fxml");
     }
 }

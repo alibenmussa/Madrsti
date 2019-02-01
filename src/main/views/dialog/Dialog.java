@@ -2,6 +2,7 @@ package main.views.dialog;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.stage.Modality;
@@ -12,13 +13,15 @@ import main.StagesManager;
 
 public class Dialog {
     public static Stage dialogStage;
+    public static String dialogPane;
     public static String confirmMessage;
     public static boolean confirm = false;
 
-    public static void show(String path) throws Exception{
+    public static void show(String title, String path) throws Exception{
         dialogStage = new Stage();
 
-        Pane root = FXMLLoader.load(Main.class.getResource(path));
+        dialogPane = path;
+        Pane root = FXMLLoader.load(Main.class.getResource("/main/views/dialog/dialog.fxml"));
 
         Scene scene = new Scene(root);
         scene.setFill(Color.TRANSPARENT);
@@ -30,6 +33,8 @@ public class Dialog {
         dialogStage.initStyle(StageStyle.TRANSPARENT);
         dialogStage.initModality(Modality.WINDOW_MODAL);
         dialogStage.show();
+
+        StagesManager.window.setTitle(title);
         StagesManager.showBlackBG();
 
         StagesManager.blackBG.setOnMouseClicked(e -> {
@@ -49,6 +54,7 @@ public class Dialog {
 
     public static boolean showConfirm(String message) throws Exception {
         dialogStage = new Stage();
+        confirmMessage = message;
 
         Pane root = FXMLLoader.load(Main.class.getResource("/main/views/dialog/confirmDialog.fxml"));
 
@@ -62,6 +68,7 @@ public class Dialog {
         dialogStage.initStyle(StageStyle.TRANSPARENT);
         dialogStage.initModality(Modality.WINDOW_MODAL);
 
+        StagesManager.window.setTitle("Confirm Message");
         StagesManager.showBlackBG();
 
         dialogStage.setOnCloseRequest(e -> {

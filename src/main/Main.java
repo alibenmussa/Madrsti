@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.layout.AnchorPane;
@@ -51,6 +52,8 @@ public class Main extends Application {
 
     public static void FXMLLoaderPane(ScrollPane mainPane, String fxmlFile) {
         try {
+            mainPane.setContent(new AnchorPane(new Button("Wait")));
+            System.out.println("okkk");
             AnchorPane pane = FXMLLoader.load(Main.class.getResource(fxmlFile));
             mainPane.setContent(pane);
         } catch (Exception ex) {

@@ -19,15 +19,15 @@
                         <Insets bottom="5.0" />
                      </VBox.margin>
                   </Label>
-                  <Label alignment="TOP_CENTER" maxWidth="1.7976931348623157E308" styleClass="text" text="Are you sure to Delete this employeee?" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+                  <Label fx:id="message" alignment="TOP_CENTER" maxWidth="1.7976931348623157E308" styleClass="text" text="Are you sure to Delete this employeee?" textAlignment="CENTER" VBox.vgrow="ALWAYS">
                      <VBox.margin>
                         <Insets bottom="10.0" />
                      </VBox.margin>
                   </Label>
                   <HBox alignment="CENTER" spacing="20.0">
                      <children>
-                        <Button minWidth="120.0" mnemonicParsing="false" onAction="#clickYes" prefHeight="45.0" text="Yes" />
-                        <Button minWidth="120.0" mnemonicParsing="false" onAction="#clickNo" prefHeight="45.0" styleClass="gray-button" text="Cancel" />
+                        <Button minWidth="120.0" mnemonicParsing="false" onAction="#clickYes" prefHeight="40.0" text="YES" />
+                        <Button minWidth="120.0" mnemonicParsing="false" onAction="#clickNo" prefHeight="40.0" styleClass="gray-button" text="CANCEL" />
                      </children>
                   </HBox>
                </children>

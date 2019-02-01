@@ -34,7 +34,7 @@ public class adminNavbarController {
     @FXML
     void adminShowStudents(ActionEvent event) throws Exception {
         addActiveButton(adminShowStudents);
-        boolean delete = Dialog.showConfirm("Are you sure to delete Ali Ben Mussa from employees?");
+        boolean delete = Dialog.showConfirm("Are you sure you want to delete this employee?");
         System.out.println(delete);
     }
 
