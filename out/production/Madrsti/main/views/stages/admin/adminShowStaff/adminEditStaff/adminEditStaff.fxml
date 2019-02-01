@@ -210,6 +210,6 @@
    <stylesheets>
       <URL value="@../../../../../assests/stylesheets/style.css" />
       <URL value="@../../../../../assests/stylesheets/dialog.css" />
-      <URL value="@../../adminShowStaff/adminEditStaff/adminAddEdit.css" />
+      <URL value="@../../adminShowStaff/adminEditStaff/adminEditStaff.css" />
    </stylesheets>
 </AnchorPane>
