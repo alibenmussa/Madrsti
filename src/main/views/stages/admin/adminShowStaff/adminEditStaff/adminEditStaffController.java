@@ -1,4 +1,4 @@
-package main.views.stages.admin.adminShowStaff.adminAddStaff;
+package main.views.stages.admin.adminShowStaff.adminEditStaff;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -13,11 +13,11 @@ import main.StagesManager;
 import main.views.dialog.Dialog;
 
 import java.io.File;
-import java.io.FileOutputStream;
 import java.net.URL;
+import java.time.LocalDate;
 import java.util.ResourceBundle;
 
-public class adminAddStaffController implements Initializable {
+public class adminEditStaffController implements Initializable {
     @FXML
     private TextField fullName;
 
@@ -67,6 +67,25 @@ public class adminAddStaffController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         userPhoto.setImage(new Image(StagesManager.getUserPhoto()));
         userPhotoCircle.setClip(new Circle(50, 50, 50));
+        setUserData();
+    }
+
+    private void setUserData() {
+        String query = "SELECT * FROM"; //جلب البيانات من view
+        fullName.setText("Ali Ben Mussa");
+//        type
+        userPhoto.setImage(new Image("/main/assets/images/users/user_01.jpg"));
+        birthDay.setValue(LocalDate.now());
+//        gender
+        address.setText("Anonymous, Tripoli, Libya");
+        nationality.setText("Libyan");
+        phoneNumber.setText("0915555555");
+        email.setText("alibenmussa@gmail.com");
+
+        major.setText("Software Engineering");
+        degree.setText("Bechlorice");
+        education.setText("University of Tripoli");
+
 
     }
 

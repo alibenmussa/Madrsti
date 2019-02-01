@@ -34,7 +34,7 @@ public class Dialog {
         dialogStage.initModality(Modality.WINDOW_MODAL);
         dialogStage.show();
 
-        StagesManager.window.setTitle(title);
+        dialogStage.setTitle(title);
         StagesManager.showBlackBG();
 
         StagesManager.blackBG.setOnMouseClicked(e -> {
@@ -68,7 +68,7 @@ public class Dialog {
         dialogStage.initStyle(StageStyle.TRANSPARENT);
         dialogStage.initModality(Modality.WINDOW_MODAL);
 
-        StagesManager.window.setTitle("Confirm Message");
+        dialogStage.setTitle("Confirm Message");
         StagesManager.showBlackBG();
 
         dialogStage.setOnCloseRequest(e -> {

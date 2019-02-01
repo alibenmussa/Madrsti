@@ -24,8 +24,14 @@
                            <VBox.margin>
                               <Insets bottom="5.0" top="5.0" />
                            </VBox.margin></Label>
-                        <TextField fx:id="username" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="50.0" prefWidth="320.0" promptText="Username" />
-                        <PasswordField id="password" fx:id="password" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="50.0" prefWidth="320.0" promptText="Password" />
+                        <TextField fx:id="username" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="50.0" prefWidth="320.0" promptText="Username">
+                           <VBox.margin>
+                              <Insets bottom="-5.0" />
+                           </VBox.margin></TextField>
+                        <PasswordField fx:id="password" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="50.0" prefWidth="320.0" promptText="Password">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin></PasswordField>
                         <Button fx:id="login" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#clickLogIn" prefHeight="50.0" styleClass="clickBtn" text="LOGIN">
                            <VBox.margin>
                               <Insets />
@@ -35,10 +41,10 @@
                            </padding></Button>
                      </children>
                      <padding>
-                        <Insets bottom="55.0" left="50.0" right="50.0" top="55.0" />
+                        <Insets bottom="55.0" left="50.0" right="50.0" top="75.0" />
                      </padding>
                      <StackPane.margin>
-                        <Insets top="90.0" />
+                        <Insets top="80.0" />
                      </StackPane.margin>
                   </VBox>
                </children>

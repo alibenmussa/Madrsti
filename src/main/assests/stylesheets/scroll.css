@@ -39,10 +39,13 @@
 
 .scroll-bar:vertical > .increment-button, .scroll-bar:vertical > .decrement-button {
     -fx-padding: 5 0 5 0;
+    -fx-opacity: 0;
+
 }
 
 /* Left- and Right-Button Padding */
 .scroll-bar:horizontal > .increment-button, .scroll-bar:horizontal > .decrement-button {
     -fx-padding: 0 5 0 5;
+    -fx-opacity: 0;
 }
 

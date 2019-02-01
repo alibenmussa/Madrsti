@@ -49,8 +49,22 @@
                               <String fx:id="parallel" fx:value="Employees" />
                            </FXCollections>
                            </items>
+                           <value>
+                              <String fx:value="All" />
+                           </value>
                         </ComboBox>
-                        <ComboBox minHeight="40.0" promptText="A-Z" />
+                        <ComboBox minHeight="40.0" promptText="A-Z">
+                           <items>
+                              <FXCollections fx:factory="observableArrayList">
+                                 <String fx:value="Last" />
+                                 <String fx:value="A-Z" />
+                                 <String fx:value="First" />
+                              </FXCollections>
+                           </items>
+                           <value>
+                              <String fx:value="Last" />
+                           </value>
+                        </ComboBox>
                      </children>
                   </HBox>
                </children>
