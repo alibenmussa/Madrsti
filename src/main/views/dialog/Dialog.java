@@ -32,15 +32,15 @@ public class Dialog {
         dialogStage.setScene(scene);
         dialogStage.initStyle(StageStyle.TRANSPARENT);
         dialogStage.initModality(Modality.WINDOW_MODAL);
+        StagesManager.window.setAlwaysOnTop(true);
+        dialogStage.setAlwaysOnTop(true);
+        dialogStage.setTitle(title);
         dialogStage.show();
 
-        dialogStage.setTitle(title);
         StagesManager.showBlackBG();
 
         StagesManager.blackBG.setOnMouseClicked(e -> {
-            dialogStage.hide();
-//            dialogStage = null;
-            StagesManager.hideBlackBG();
+            closeDialogWindow();
         });
 
         dialogStage.setOnShowing(e -> {
@@ -48,7 +48,7 @@ public class Dialog {
         });
 
         dialogStage.setOnCloseRequest(e -> {
-            StagesManager.hideBlackBG();
+            closeDialogWindow();
         });
     }
 
@@ -67,12 +67,13 @@ public class Dialog {
         dialogStage.setScene(scene);
         dialogStage.initStyle(StageStyle.TRANSPARENT);
         dialogStage.initModality(Modality.WINDOW_MODAL);
-
+        StagesManager.window.setAlwaysOnTop(true);
+        dialogStage.setAlwaysOnTop(true);
         dialogStage.setTitle("Confirm Message");
         StagesManager.showBlackBG();
 
         dialogStage.setOnCloseRequest(e -> {
-            StagesManager.hideBlackBG();
+            closeDialogWindow();
         });
 
         StagesManager.blackBG.setOnMouseClicked(e -> {
@@ -90,6 +91,10 @@ public class Dialog {
 
     public static void closeDialogWindow() {
         dialogStage.hide();
+        dialogStage.hide();
         StagesManager.hideBlackBG();
+        StagesManager.window.setAlwaysOnTop(false);
+        dialogStage.setAlwaysOnTop(false);
+
     }
 }

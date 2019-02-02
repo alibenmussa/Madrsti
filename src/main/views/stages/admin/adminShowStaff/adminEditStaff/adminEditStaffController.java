@@ -7,10 +7,12 @@ import javafx.scene.Group;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Circle;
 import javafx.stage.FileChooser;
 import main.StagesManager;
 import main.views.dialog.Dialog;
+import main.views.stages.ControllerFunctions;
 
 import java.io.File;
 import java.net.URL;
@@ -31,7 +33,7 @@ public class adminEditStaffController implements Initializable {
     private ComboBox<?> gender;
 
     @FXML
-    private Group userPhotoCircle;
+    private AnchorPane userPhotoCircle;
 
     @FXML
     private ImageView userPhoto;
@@ -41,6 +43,12 @@ public class adminEditStaffController implements Initializable {
 
     @FXML
     private TextField nationality;
+
+    @FXML
+    private TextField jobDescription;
+
+    @FXML
+    private TextField id;
 
     @FXML
     private TextField phoneNumber;
@@ -58,25 +66,35 @@ public class adminEditStaffController implements Initializable {
     private TextField major;
 
     @FXML
+    private ComboBox<?> graduateYear;
+
+    @FXML
     private TextField username;
 
     @FXML
     private PasswordField password;
 
+    private File selectedImage = null;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        userPhoto.setImage(new Image(StagesManager.getUserPhoto()));
+        userPhoto.setImage(new Image(StagesManager.getUserPhoto(), 100, 100, false, false));
         userPhotoCircle.setClip(new Circle(50, 50, 50));
+        userPhoto.setFitWidth(100);
         setUserData();
     }
 
-    private void setUserData() {
+    public void setUserData() {
         String query = "SELECT * FROM"; //جلب البيانات من view
         fullName.setText("Ali Ben Mussa");
 //        type
-        userPhoto.setImage(new Image("/main/assets/images/users/user_01.jpg"));
+        userPhoto.setImage(null);
+        userPhoto.setImage(new Image("/main/assests/images/users/user_01.jpg"));
+
         birthDay.setValue(LocalDate.now());
 //        gender
+        id.setText("1234567890");
+        jobDescription.setText("Graphic Designer");
         address.setText("Anonymous, Tripoli, Libya");
         nationality.setText("Libyan");
         phoneNumber.setText("0915555555");
@@ -86,35 +104,32 @@ public class adminEditStaffController implements Initializable {
         degree.setText("Bechlorice");
         education.setText("University of Tripoli");
 
+        username.setText("alibenmussa");
+        password.setText("1234");
 
     }
+
 
     @FXML
     void clickCreateAccount(ActionEvent event) {
-        if (((CheckBox) event.getSource()).isSelected()) {
-            username.setDisable(false);
-            password.setDisable(false);
-        } else {
-            username.setDisable(true);
-            password.setDisable(true);
-        }
+        ControllerFunctions.clickCreateAccount(event, username, password);
     }
 
+
     @FXML
-    void adminCancelAddStaff(ActionEvent event) {
+    void adminCancelEditStaff(ActionEvent event) {
         Dialog.closeDialogWindow();
     }
 
     @FXML
-    void adminSaveAddStaff(ActionEvent event) {
+    void adminSaveEditStaff(ActionEvent event) {
+//        ControllerFunctions.uploadPhotoToUsersFile(selectedImage);
 
     }
 
     @FXML
-    public void uploadPhoto(ActionEvent event) {
-        FileChooser chooser = new FileChooser();
-        File selectedImage = chooser.showOpenDialog(StagesManager.window);
-        System.out.println(selectedImage);
+    public void uploadPhoto(ActionEvent event) throws Exception {
+        selectedImage = ControllerFunctions.getPhotoFromUser(event, userPhoto);
 
     }
 }

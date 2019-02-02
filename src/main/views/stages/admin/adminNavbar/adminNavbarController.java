@@ -39,8 +39,9 @@ public class adminNavbarController {
     }
 
     @FXML
-    void adminShowResults(ActionEvent event) {
+    void adminShowResults(ActionEvent event) throws Exception {
         addActiveButton(adminShowResults);
+        Dialog.show("Edit Staff", "/main/views/stages/admin/adminShowStaff/adminEditStaff/adminEditStaff.fxml");
 
     }
 

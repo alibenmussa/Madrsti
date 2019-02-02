@@ -189,6 +189,10 @@
     -fx-min-height: 40;
 }
 
+.image-view {
+    -fx-background-color: #ffffff;
+}
+
 .button {
     -fx-cursor: hand;
     -fx-background-color: #3F4CF3;
@@ -200,8 +204,11 @@
 
 }
 
-.button #icon {
+.button .icon {
+    -fx-font-family: 'jdFontAwesome';
+    -fx-font-size: 14;
     -fx-text-fill: #ffffff;
+
 }
 
 .button:hover {
@@ -250,6 +257,8 @@
     -fx-box-border: transparent;
     -fx-faint-focus-color: transparent;
 }
+
+
 
 .title {
     -fx-font-size: 36;
