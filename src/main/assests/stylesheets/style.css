@@ -133,9 +133,9 @@
     -fx-border-radius: 5;
     -fx-background-radius: 5;
     -fx-font-size: 16;
-    -fx-text-fill: #7F8FA4;
+    -fx-text-fill: #2C343A;
     -fx-background-color: #ffffff;
-    -fx-prompt-text-fill: gray;
+    -fx-prompt-text-fill: #7F8FA4;
 }
 
 .combo-box {
@@ -311,4 +311,26 @@
     -fx-background-radius: 5;
     -fx-text-fill: -fx-text-inner-color;
     -fx-cursor: hand;
+}
+
+.showing-fields .text-field, .showing-fields .text-field:disabled {
+    -fx-background-color: #f8f8fb;
+    -fx-background-color: #E6E9F0;
+    -fx-text-fill: #2C343A;
+    -fx-padding: 0 10;
+    -fx-border-color: transparent;
+    -fx-min-height: 45;
+}
+
+
+.showing-fields .sub-heading {
+    -fx-font-size: 22;
+}
+
+.tag {
+    -fx-background-color: #3941dc;
+    -fx-text-fill: #7d97f4;
+    -fx-font-size: 16;
+    -fx-padding: 10 15;
+    -fx-background-radius: 8;
 }
