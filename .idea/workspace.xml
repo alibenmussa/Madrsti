@@ -2,18 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Adding: show employee profile">
-      <change afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/ControllerFunctions.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminShowStaff/adminEditStaff/adminEditStaff.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminShowStaff/adminShowStaffInformation/adminShowStaffInformation.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminShowStaff/adminShowStaffInformation/adminShowStaffInformation.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminShowStaff/adminShowStaffInformation/adminShowStaffInformationController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminShowStaffInformation/adminShowStaffInformation.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminShowStaffInformation/adminShowStaffInformation.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminShowStaffInformation/adminShowStaffInformationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Madrsti/META-INF/Madrsti.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminShowStudents/adminAddStudents/adminAddStudents.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminShowStudents/adminAddStudents/adminAddStudents.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminShowStudents/adminAddStudents/adminAddStudentsController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminShowStudents/adminEditStudents/adminEditStudents.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminShowStudents/adminEditStudents/adminEditStudents.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminShowStudents/adminEditStudents/adminEditStudentsController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminShowStudents/adminShowStudents.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminShowStudents/adminShowStudents.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminShowStudents/adminShowStudentsController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminShowStudents/adminShowStudentsInformation/adminShowStudentsInformation.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminShowStudents/adminShowStudentsInformation/adminShowStudentsInformation.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminShowStudents/adminShowStudentsInformation/adminShowStudentsInformationController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminAddStudents/adminAddStudents.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminAddStudents/adminAddStudents.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminAddStudents/adminAddStudentsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminEditStudents/adminEditStudents.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminEditStudents/adminEditStudents.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminEditStudents/adminEditStudentsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminShowStudents.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminShowStudents.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminShowStudentsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminShowStudentsInformation/adminShowStudentsInformation.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminShowStudentsInformation/adminShowStudentsInformation.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminShowStudentsInformation/adminShowStudentsInformationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/assests/stylesheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/assests/stylesheets/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminNavbar/adminNavbarController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminNavbar/adminNavbarController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/assests/stylesheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/assests/stylesheets/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminShowStaff/adminShowStaffInformation/adminShowStaffInformationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminShowStaff/adminShowStaffInformation/adminShowStaffInformationController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/views/stages/admin/adminNavbar/adminNavbarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/admin/adminNavbar/adminNavbarController.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
@@ -85,177 +101,91 @@
     <ui_properties converted="true" />
     <breakpoint_rules converted="true" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="1007320405">
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="css" value="2491" />
-          <entry key="dummy" value="85" />
-          <entry key="fxml" value="737" />
-          <entry key="java" value="5561" />
-          <entry key="txt" value="744" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="CSS" value="2491" />
-          <entry key="JAVA" value="5561" />
-          <entry key="PLAIN_TEXT" value="829" />
-          <entry key="XML" value="737" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="class" value="1" />
-          <entry key="css" value="45" />
-          <entry key="fxml" value="58" />
-          <entry key="java" value="116" />
-          <entry key="jpg" value="4" />
-          <entry key="png" value="1" />
-          <entry key="ttf" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="CLASS" value="1" />
-          <entry key="CSS" value="45" />
-          <entry key="Font" value="1" />
-          <entry key="Image" value="5" />
-          <entry key="JAVA" value="116" />
-          <entry key="XML" value="58" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="17" />
-          <entry key="project.open.time.1" value="2" />
-          <entry key="project.open.time.101" value="1" />
-          <entry key="project.open.time.103" value="1" />
-          <entry key="project.open.time.107" value="1" />
-          <entry key="project.open.time.115" value="1" />
-          <entry key="project.open.time.116" value="1" />
-          <entry key="project.open.time.17" value="1" />
-          <entry key="project.open.time.177" value="1" />
-          <entry key="project.open.time.18" value="1" />
-          <entry key="project.open.time.19" value="1" />
-          <entry key="project.open.time.2" value="2" />
-          <entry key="project.open.time.3" value="2" />
-          <entry key="project.open.time.4" value="1" />
-          <entry key="project.open.time.58" value="1" />
-          <entry key="project.open.time.64" value="1" />
-          <entry key="project.open.time.8" value="1" />
-          <entry key="project.open.time.84" value="1" />
-          <entry key="project.open.time.88" value="1" />
-          <entry key="project.open.time.97" value="1" />
-          <entry key="project.open.time.99" value="1" />
-          <entry key="project.opened" value="23" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="FavoritesManager">
     <favorites_list name="JavaFxApplication" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminAddStaff/adminAddStaff.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
+        <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminShowStudentsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="98">
-              <caret line="90" column="55" lean-forward="true" selection-start-line="90" selection-start-column="55" selection-end-line="90" selection-end-column="55" />
+            <state relative-caret-position="340">
+              <caret line="27" selection-start-line="27" selection-end-line="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminEditStudents/adminEditStudents.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="164" column="28" selection-start-line="164" selection-start-column="28" selection-end-line="164" selection-end-column="28" />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminShowStudents.css">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/views/dialog/dialog.fxml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="10" selection-start-line="13" selection-end-line="14" />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/views/dialog/confirmDialog.fxml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="21" column="96" selection-start-line="21" selection-start-column="96" selection-end-line="21" selection-end-column="96" />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminShowStaffController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminShowStudentsInformation/adminShowStudentsInformationController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1462">
+              <caret line="98" column="35" selection-start-line="98" selection-start-column="35" selection-end-line="98" selection-end-column="35" />
+              <folding>
+                <element signature="e#2274#2275#0" expanded="true" />
+                <element signature="e#2316#2317#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminShowStaffInformation/adminShowStaffInformationController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="72" column="53" selection-start-line="72" selection-start-column="53" selection-end-line="72" selection-end-column="53" />
-              <folding>
-                <element signature="e#2408#2409#0" expanded="true" />
-                <element signature="e#2450#2451#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminShowStaffInformation/adminShowStaffInformation.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="177" column="19" selection-start-line="177" selection-start-column="19" selection-end-line="177" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminShowStaffInformation/adminShowStaffInformation.css">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/admin.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="22" column="57" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="57" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminEditStaff/adminEditStaff.fxml">
-          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="92" column="57" lean-forward="true" selection-start-line="80" selection-start-column="48" selection-end-line="92" selection-end-column="57" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminAddStaff/adminAddStaffController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/views/stages/ControllerFunctions.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="614">
-              <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1141#1142#0" expanded="true" />
-                <element signature="e#1205#1206#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminNavbar/adminNavbarController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="43" column="128" selection-start-line="43" selection-start-column="128" selection-end-line="43" selection-end-column="128" />
+            <state relative-caret-position="151">
+              <caret line="35" column="17" lean-forward="true" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/assests/stylesheets/style.css">
+        <entry file="file://$PROJECT_DIR$/src/main/views/dialog/Dialog.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="321" column="22" selection-start-line="321" selection-start-column="22" selection-end-line="321" selection-end-column="22" />
+            <state relative-caret-position="160">
+              <caret line="23" column="89" selection-start-line="23" selection-start-column="89" selection-end-line="23" selection-end-column="89" />
             </state>
           </provider>
         </entry>
@@ -265,17 +195,15 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="package-info" />
         <option value="FxmlFile" />
         <option value="CSS File" />
         <option value="Class" />
+        <option value="package-info" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>claa</find>
-      <find>.bu</find>
       <find>scroll</find>
       <find>loginContainer</find>
       <find>LABEL</find>
@@ -304,6 +232,8 @@
       <find>phot</find>
       <find>.text</find>
       <find>:di</find>
+      <find>staff</find>
+      <find>tea</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -331,14 +261,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/views/confirmDialog/dialog.fxml" />
-        <option value="$PROJECT_DIR$/src/main/views/stages/admin/adminShowEmployees/adminAddEmployee/adminAddEmployee.css" />
-        <option value="$PROJECT_DIR$/src/main/views/stages/admin/adminShowEmployees/adminAddEmployee/adminAddEmployee.fxml" />
-        <option value="$PROJECT_DIR$/src/main/views/stages/admin/adminShowEmployees/adminShowEmployees.css" />
-        <option value="$PROJECT_DIR$/src/main/login/AuthenticationLogin.java" />
-        <option value="$PROJECT_DIR$/src/main/views/Employee.java" />
-        <option value="$PROJECT_DIR$/src/main/views/Teacher.java" />
-        <option value="$PROJECT_DIR$/src/main/views/Admin.java" />
         <option value="$PROJECT_DIR$/src/main/login/StagesManager.java" />
         <option value="$PROJECT_DIR$/src/main/views/stages/admin/adminShowEmployees/adminShowEmployees.fxml" />
         <option value="$PROJECT_DIR$/src/main/assests/stylesheets/titlebar.css" />
@@ -374,22 +296,24 @@
         <option value="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminEditStaff/adminEditStaffController.java" />
         <option value="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminAddStaff/adminAddStaffController.java" />
         <option value="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminEditStaff/adminEditStaff.fxml" />
-        <option value="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminAddStaff/adminAddStaff.fxml" />
         <option value="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminShowStaffInfomation/adminShowStaffInformationController.java" />
         <option value="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminShowStaffInfomation/adminShowStaffInformation.fxml" />
-        <option value="$PROJECT_DIR$/src/main/views/stages/admin/adminNavbar/adminNavbarController.java" />
         <option value="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminShowStaffInformation/adminShowStaffInformation.fxml" />
         <option value="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminShowStaffInformation/adminShowStaffInformation.css" />
         <option value="$PROJECT_DIR$/src/main/assests/stylesheets/style.css" />
         <option value="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminShowStaffInformation/adminShowStaffInformationController.java" />
+        <option value="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminAddStudents/adminAddStudentsController.java" />
+        <option value="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminAddStaff/adminAddStaff.fxml" />
+        <option value="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminShowStaffInformation/adminShowStaffInformation.fxml" />
+        <option value="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminShowStudentsInformation/adminShowStaffInformation.fxml" />
+        <option value="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminShowStudentsInformation/adminShowStudentsInformation.fxml" />
+        <option value="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminShowStudents.fxml" />
+        <option value="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminShowStudentsController.java" />
+        <option value="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminAddStudents/adminAddStudents.fxml" />
+        <option value="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminEditStudents/adminEditStudents.fxml" />
+        <option value="$PROJECT_DIR$/src/main/views/stages/admin/adminNavbar/adminNavbarController.java" />
       </list>
     </option>
-  </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
@@ -399,10 +323,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1386" />
-    <option name="height" value="788" />
+    <option name="x" value="276" />
+    <option name="y" value="155" />
+    <option name="width" value="1613" />
+    <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -410,6 +334,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -528,14 +453,45 @@
               <item name="stages" type="462c0819:PsiDirectoryNode" />
               <item name="admin" type="462c0819:PsiDirectoryNode" />
               <item name="adminShowStaff" type="462c0819:PsiDirectoryNode" />
-              <item name="adminShowStaffInformation" type="462c0819:PsiDirectoryNode" />
+              <item name="adminAddStaff" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Madrsti" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Madrsti" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="stages" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="adminShowStudents" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Madrsti" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Madrsti" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="stages" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="adminShowStudents" type="462c0819:PsiDirectoryNode" />
+              <item name="adminAddStudents" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Madrsti" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Madrsti" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="stages" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="adminShowStudents" type="462c0819:PsiDirectoryNode" />
+              <item name="adminEditStudents" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -548,9 +504,9 @@
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549150826324" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549227046187" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/R" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/School Management System" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
@@ -561,25 +517,25 @@
     <property name="settings.editor.selected.configurable" value="preferences.JavaFX" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="main.views.stages" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\projects\Madrsti\src\main\views\stages\admin\adminShowStudents\adminEditStudents" />
+      <recent name="D:\projects\Madrsti\src\main\views\stages\admin\adminShowStudents" />
+      <recent name="D:\projects\Madrsti\src\main\views\stages\admin" />
+      <recent name="D:\projects\Madrsti\src\main\views\stages\admin\adminShowStaff\adminShowStaffInfomation" />
+      <recent name="D:\projects\Madrsti\src\main\views\stages\admin\adminShowStaff\i" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="main.views.dialog" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\projects\Madrsti\src\main\assests\stylesheets" />
       <recent name="D:\projects\Madrsti\src\main\stylesheets\fonts" />
       <recent name="D:\projects\Madrsti\src\main\stylesheets" />
       <recent name="D:\projects\Madrsti\src\main\views\admin" />
       <recent name="D:\projects\Madrsti\src\main" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="main.views.stages" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="main.views.dialog" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\projects\Madrsti\src\main\views\stages\admin\adminShowStaff\adminShowStaffInfomation" />
-      <recent name="D:\projects\Madrsti\src\main\views\stages\admin\adminShowStaff\i" />
-      <recent name="D:\projects\Madrsti\src\main\views\stages\admin\adminShowStaff" />
-      <recent name="D:\projects\Madrsti\src\main\views\dialog" />
-      <recent name="D:\projects\Madrsti\src\main\views\stages\admin\adminShowEmployees\adminAddEmployee" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -607,7 +563,7 @@
       <Host>localhost</Host>
       <Port>5050</Port>
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
+    <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -643,7 +599,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
+    <configuration default="true" type="TestNG">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="moduleWithDependencies" />
@@ -654,11 +610,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
       <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file id="idea.log" enabled="true" />
+      <predefined_log_file enabled="true" id="idea.log" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -714,6 +670,8 @@
       <workItem from="1549055833449" duration="2359000" />
       <workItem from="1549065629664" duration="12286000" />
       <workItem from="1549129241576" duration="11691000" />
+      <workItem from="1549151305922" duration="2219000" />
+      <workItem from="1549201361537" duration="10467000" />
     </task>
     <task id="LOCAL-00001" summary="Add FXML header file into main FXML file">
       <created>1547240271430</created>
@@ -852,7 +810,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="249324000" />
+    <option name="totallyTimeSpent" value="262010000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -864,9 +822,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.27685326" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.28456375" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -875,7 +833,7 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32786885" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.28360656" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.28328612" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -888,7 +846,7 @@
       <window_info anchor="bottom" id="Event Log" order="12" weight="0.3295082" />
       <window_info anchor="bottom" id="Messages" order="13" weight="0.32786885" />
       <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="15" visible="true" weight="0.3295082" />
+      <window_info anchor="bottom" id="Terminal" order="15" visible="true" weight="0.3286119" />
       <window_info anchor="bottom" id="Docker" order="16" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24962178" />
@@ -980,9 +938,20 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
@@ -1017,57 +986,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/assests/images/users/user_01.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/assests/images/users/user_02.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/views/confirmDialog/dialog.css" />
-    <entry file="file://$PROJECT_DIR$/src/main/views/confirmDialog/dialogController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/views/confirmDialog/dialog.fxml" />
-    <entry file="file://$PROJECT_DIR$/src/main/views/confirmDialog/ConfirmDialog.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/views/dialog/ConfirmDialog.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/views/Employee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/assests/stylesheets/titlebar.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="38" column="29" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/views/Teacher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/assests/fonts/Ubuntu-Bold.ttf">
-      <provider selected="true" editor-type-id="fontseditor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="73" selection-start-line="73" selection-end-line="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/admin.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminAddStaff/adminAddStaff.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminShowStaff.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/assests/stylesheets/dialog.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -1103,20 +1021,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_141/jre/lib/rt.jar!/java/io/PrintStream.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="287" column="16" selection-start-line="287" selection-start-column="16" selection-end-line="287" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminShowStaffController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="25" column="104" selection-start-line="25" selection-start-column="104" selection-end-line="25" selection-end-column="104" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_141/jre/lib/rt.jar!/java/io/PrintStream.class" />
     <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminEditStaff/adminEditStaff.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1163,71 +1068,67 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/titlebar.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
           <caret line="38" column="60" selection-start-line="38" selection-start-column="60" selection-end-line="38" selection-end-column="60" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/login/login.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="261">
           <caret line="61" column="54" lean-forward="true" selection-start-line="61" selection-start-column="54" selection-end-line="61" selection-end-column="54" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/views/dialog/confirmDialog.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-242">
-          <caret line="21" column="96" selection-start-line="21" selection-start-column="96" selection-end-line="21" selection-end-column="96" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/views/dialog/dialog.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="10" lean-forward="true" selection-start-line="13" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminNavbar/adminNavbar.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="60" selection-start-line="60" selection-end-line="60" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/assests/images/users/ali.png" />
-    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminShowStaff.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1462">
-          <caret line="86" column="16" selection-start-line="86" selection-start-column="16" selection-end-line="86" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowHome/adminShowHome.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminAddStaff/adminAddStaffController.java___jb_tmp___">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/views/dialog/Dialog.java">
+    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminAddStaff/adminAddStaffController.java___jb_tmp___" />
+    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminEditStaff/adminEditStaffController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="50" column="32" selection-start-line="50" selection-start-column="32" selection-end-line="50" selection-end-column="32" />
+        <state relative-caret-position="334">
+          <caret line="90" column="33" lean-forward="true" selection-start-line="90" selection-start-column="33" selection-end-line="90" selection-end-column="33" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminShowStaffInformation/adminShowStaffInformation.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3009">
+          <caret line="177" column="19" selection-start-line="177" selection-start-column="19" selection-end-line="177" selection-end-column="19" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminShowStaffInformation/adminShowStaffInformation.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminShowStaffInformation/adminShowStaffInformationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="952">
+          <caret line="72" column="53" selection-start-line="72" selection-start-column="53" selection-end-line="72" selection-end-column="53" />
+          <folding>
+            <element signature="e#2408#2409#0" expanded="true" />
+            <element signature="e#2450#2451#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminShowStaff.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1003">
+          <caret line="59" column="37" selection-start-line="59" selection-start-column="37" selection-end-line="59" selection-end-column="37" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/StagesManager.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1236,92 +1137,200 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/admin.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
+    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminNavbar/adminNavbar.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
+        <state relative-caret-position="374">
+          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/admin.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
           <caret line="22" column="57" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="57" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminEditStaff/adminEditStaff.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
       <provider editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="92" column="57" lean-forward="true" selection-start-line="80" selection-start-column="48" selection-end-line="92" selection-end-column="57" />
+        <state relative-caret-position="1564">
+          <caret line="92" column="57" selection-start-line="80" selection-start-column="48" selection-end-line="92" selection-end-column="57" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/assests/stylesheets/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5457">
+          <caret line="321" column="22" selection-start-line="321" selection-start-column="22" selection-end-line="321" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminEditStaff/adminEditStaffController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminAddStudents/adminAddStudents.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="90" column="33" lean-forward="true" selection-start-line="90" selection-start-column="33" selection-end-line="90" selection-end-column="33" />
+        <state relative-caret-position="134">
+          <caret line="213" column="145" selection-start-line="213" selection-start-column="145" selection-end-line="213" selection-end-column="145" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminAddStaff/adminAddStaff.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2913">
+          <caret line="22" column="150" selection-start-line="22" selection-start-column="150" selection-end-line="22" selection-end-column="150" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/views/stages/ControllerFunctions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="614">
-          <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+        <state relative-caret-position="697">
+          <caret line="41" column="5" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1141#1142#0" expanded="true" />
-            <element signature="e#1205#1206#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminShowStaffInformation/adminShowStaffInformation.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
+    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminAddStudents/adminAddStudentsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="177" column="19" selection-start-line="177" selection-start-column="19" selection-end-line="177" selection-end-column="19" />
+        <state relative-caret-position="206">
+          <caret line="93" column="31" selection-start-line="93" selection-start-column="31" selection-end-line="93" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminAddStaff/adminAddStaff.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="90" column="55" lean-forward="true" selection-start-line="90" selection-start-column="55" selection-end-line="90" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminShowStaffInformation/adminShowStaffInformation.css">
+    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/package-info.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/assests/stylesheets/style.css">
+    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminAddStaff/adminAddStaffController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="321" column="22" selection-start-line="321" selection-start-column="22" selection-end-line="321" selection-end-column="22" />
+        <state relative-caret-position="152">
+          <caret line="83" selection-start-line="83" selection-end-line="83" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminShowStudentsInformation/adminShowStudentsInformation.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminAddStudents/adminAddStudents.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminShowStudentsInformation/adminShowStudentsInformation.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2454">
+          <caret line="9" column="191" selection-start-line="9" selection-start-column="191" selection-end-line="9" selection-end-column="191" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminEditStudents/adminEditStudentsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-901">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminShowStudents.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="54" column="35" selection-start-line="54" selection-start-column="35" selection-end-line="54" selection-end-column="35" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/views/dialog/dialog.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="10" selection-start-line="13" selection-end-line="14" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/views/dialog/confirmDialog.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="21" column="96" selection-start-line="21" selection-start-column="96" selection-end-line="21" selection-end-column="96" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminShowStaffController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminAddStudents/adminAddStudentsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminShowStudents.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminShowStudentsInformation/adminShowStudentsInformationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1462">
+          <caret line="98" column="35" selection-start-line="98" selection-start-column="35" selection-end-line="98" selection-end-column="35" />
+          <folding>
+            <element signature="e#2274#2275#0" expanded="true" />
+            <element signature="e#2316#2317#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminShowStudentsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminAddStudents/adminAddStudents.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="70" column="13" selection-start-line="70" selection-start-column="13" selection-end-line="70" selection-end-column="13" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminEditStudents/adminEditStudents.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="164" column="28" selection-start-line="164" selection-start-column="28" selection-end-line="164" selection-end-column="28" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/adminNavbarController.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="48" column="8" lean-forward="true" selection-start-line="48" selection-start-column="8" selection-end-line="49" selection-end-column="131" />
+          <folding>
+            <element signature="e#0#1956#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/views/dialog/Dialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="23" column="89" selection-start-line="23" selection-start-column="89" selection-end-line="23" selection-end-column="89" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminNavbar/adminNavbarController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="43" column="128" selection-start-line="43" selection-start-column="128" selection-end-line="43" selection-end-column="128" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminAddStaff/adminAddStaffController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminShowStaffInformation/adminShowStaffInformationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="72" column="53" selection-start-line="72" selection-start-column="53" selection-end-line="72" selection-end-column="53" />
-          <folding>
-            <element signature="e#2408#2409#0" expanded="true" />
-            <element signature="e#2450#2451#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="151">
+          <caret line="35" column="17" lean-forward="true" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
         </state>
       </provider>
     </entry>

@@ -34,13 +34,14 @@ public class adminNavbarController {
     @FXML
     void adminShowStudents(ActionEvent event) throws Exception {
         addActiveButton(adminShowStudents);
-        boolean delete = Dialog.showConfirm("Are you sure you want to delete this employee?");
-        System.out.println(delete);
+        Main.FXMLLoaderPane(StagesManager.stageContent, "/main/views/stages/admin/adminShowStudents/adminShowStudents.fxml");
+        /*boolean delete = Dialog.showConfirm("Are you sure you want to delete this employee?");
+        System.out.println(delete);*/
     }
 
     @FXML
     void adminShowResults(ActionEvent event) throws Exception {
-        addActiveButton(adminShowResults);
+        this.addActiveButton(this.adminShowResults);
         Dialog.show("Profile", "/main/views/stages/admin/adminShowStaff/adminShowStaffInformation/adminShowStaffInformation.fxml");
 
     }
