@@ -3,7 +3,6 @@ package main.views.stages.admin.adminNavbar;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.input.MouseEvent;
 import main.Main;
 import main.StagesManager;
 import main.views.dialog.Dialog;
@@ -34,7 +33,7 @@ public class adminNavbarController {
     @FXML
     void adminShowStudents(ActionEvent event) throws Exception {
         addActiveButton(adminShowStudents);
-        Main.FXMLLoaderPane(StagesManager.stageContent, "/main/views/stages/admin/adminShowStudents/adminShowStudents.fxml");
+        Main.FXMLLoaderPane(StagesManager.stageContent, "/main/views/stages/employee/employeeShowStudents/employeeShowStudents.fxml");
         /*boolean delete = Dialog.showConfirm("Are you sure you want to delete this employee?");
         System.out.println(delete);*/
     }

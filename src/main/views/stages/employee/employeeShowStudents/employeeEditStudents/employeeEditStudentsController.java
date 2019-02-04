@@ -1,12 +1,9 @@
-package main.views.stages.admin.adminShowStudents.adminEditStudents;
+package main.views.stages.employee.employeeShowStudents.employeeEditStudents;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
@@ -20,7 +17,7 @@ import java.net.URL;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
 
-public class adminEditStudentsController implements Initializable {
+public class employeeEditStudentsController implements Initializable {
     @FXML
     private TextField fullName;
 
@@ -28,7 +25,7 @@ public class adminEditStudentsController implements Initializable {
     private DatePicker birthDay;
 
     @FXML
-    private ComboBox<?> type;
+    private ComboBox<?> state;
 
     @FXML
     private ComboBox<?> gender;
@@ -43,37 +40,35 @@ public class adminEditStudentsController implements Initializable {
     private TextField address;
 
     @FXML
-    private TextField nationality;
-
-    @FXML
-    private TextField jobDescription;
+    private TextField relative;
 
     @FXML
     private TextField id;
 
     @FXML
+    private TextField nationality;
+
+    @FXML
+    private TextField relation;
+
+    @FXML
     private TextField phoneNumber;
 
     @FXML
-    private TextField email;
+    private ComboBox<?> year;
 
     @FXML
-    private TextField education;
+    private ComboBox<?> clas;
 
     @FXML
-    private TextField degree;
+    private ComboBox<?> healthStatus;
 
     @FXML
-    private TextField major;
+    private TextArea notes;
 
-    @FXML
-    private ComboBox<?> graduateYear;
 
-    @FXML
-    private TextField username;
 
-    @FXML
-    private PasswordField password;
+
 
     private File selectedImage = null;
 
@@ -87,43 +82,32 @@ public class adminEditStudentsController implements Initializable {
 
     public void setUserData() {
         String query = "SELECT * FROM"; //جلب البيانات من view
-        fullName.setText("Ali Ben Mussa");
+        fullName.setText("Yousef Breaka");
 //        type
         userPhoto.setImage(null);
-        userPhoto.setImage(new Image("/main/assests/images/users/user_01.jpg"));
-
+        userPhoto.setImage(new Image("/main/assests/images/users/user_02.jpg"));
         birthDay.setValue(LocalDate.now());
 //        gender
         id.setText("1234567890");
-        jobDescription.setText("Graphic Designer");
         address.setText("Anonymous, Tripoli, Libya");
         nationality.setText("Libyan");
+        relative.setText("Abdalkarim");
+        relation.setText("Father");
         phoneNumber.setText("0915555555");
-        email.setText("alibenmussa@gmail.com");
-
-        major.setText("Software Engineering");
-        degree.setText("Bechlorice");
-        education.setText("University of Tripoli");
-
-        username.setText("alibenmussa");
-        password.setText("1234");
 
     }
 
 
-    @FXML
-    void clickCreateAccount(ActionEvent event) {
-        ControllerFunctions.clickCreateAccount(event, username, password);
-    }
+
 
 
     @FXML
-    void adminCancelEditStaff(ActionEvent event) {
+    void employeeCancelEditStudent(ActionEvent event) {
         Dialog.closeDialogWindow();
     }
 
     @FXML
-    void adminSaveEditStaff(ActionEvent event) {
+    void employeeSaveEditStudent(ActionEvent event) {
 //        ControllerFunctions.uploadPhotoToUsersFile(selectedImage);
 
     }

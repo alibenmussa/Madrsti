@@ -1,4 +1,4 @@
-package main.views.stages.admin.adminShowStudents.adminShowStudentsInformation;
+package main.views.stages.employee.employeeShowStudents.employeeShowStudentsInformation;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -14,7 +14,7 @@ import main.views.dialog.Dialog;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class adminShowStudentsInformationController implements Initializable {
+public class employeeShowStudentsInformationController implements Initializable {
     @FXML
     private Label fullName;
 

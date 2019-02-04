@@ -19,7 +19,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.views.stages.admin.adminShowStudents.adminAddStudents.adminAddStudentsController">
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.views.stages.employee.employeeShowStudents.employeeEditStudents.employeeEditStudentsController">
    <children>
       <AnchorPane maxHeight="1.7976931348623157E308" minHeight="550.0" prefWidth="746.0">
          <children>
@@ -27,7 +27,7 @@
                <children>
                   <VBox>
                      <children>
-                        <Label styleClass="title" text="Add Student" />
+                        <Label styleClass="title" text="Edit Student" />
                         <GridPane alignment="CENTER" hgap="30.0" maxWidth="1.7976931348623157E308" vgap="20.0">
                            <columnConstraints>
                               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -128,7 +128,7 @@
                   </VBox>
                   <HBox alignment="CENTER_LEFT" spacing="15.0">
                      <children>
-                        <ComboBox prefWidth="220.0" promptText="YEAR" />
+                        <ComboBox fx:id="year" prefWidth="220.0" promptText="YEAR" />
                         <ComboBox fx:id="clas" prefWidth="220.0" promptText="Class" />
                         <ComboBox fx:id="healthStatus" prefWidth="220.0" promptText="Health status" />
                      </children>
@@ -141,8 +141,8 @@
                   </AnchorPane>
                   <HBox alignment="CENTER_RIGHT" prefWidth="200.0" spacing="20.0">
                      <children>
-                        <Button minWidth="120.0" mnemonicParsing="false" onAction="#adminCancelAddStaff" prefHeight="45.0" styleClass="gray-button" text="CANCEL" />
-                        <Button alignment="CENTER" graphicTextGap="15.0" minWidth="120.0" mnemonicParsing="false" onAction="#adminSaveAddStaff" prefHeight="45.0" styleClass="function-button" text="SAVE" textFill="WHITE">
+                        <Button minWidth="120.0" mnemonicParsing="false" onAction="#employeeCancelEditStudent" prefHeight="45.0" styleClass="gray-button" text="CANCEL" />
+                        <Button alignment="CENTER" graphicTextGap="15.0" minWidth="120.0" mnemonicParsing="false" onAction="#employeeSaveEditStudent" prefHeight="45.0" styleClass="function-button" text="SAVE" textFill="WHITE">
                            <padding>
                               <Insets left="20.0" right="20.0" />
                            </padding>
@@ -162,6 +162,5 @@
    </children>
    <stylesheets>
       <URL value="@../../../../../assests/stylesheets/style.css" />
-      <URL value="@adminAddStudents.css" />
    </stylesheets>
 </AnchorPane>

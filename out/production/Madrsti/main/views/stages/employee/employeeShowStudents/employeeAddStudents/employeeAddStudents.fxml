@@ -19,7 +19,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.views.stages.admin.adminShowStudents.adminEditStudents.adminEditStudentsController">
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.views.stages.employee.employeeShowStudents.employeeAddStudents.employeeAddStudentsController">
    <children>
       <AnchorPane maxHeight="1.7976931348623157E308" minHeight="550.0" prefWidth="746.0">
          <children>
@@ -27,7 +27,7 @@
                <children>
                   <VBox>
                      <children>
-                        <Label styleClass="title" text="Edit Student" />
+                        <Label styleClass="title" text="Add Student" />
                         <GridPane alignment="CENTER" hgap="30.0" maxWidth="1.7976931348623157E308" vgap="20.0">
                            <columnConstraints>
                               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -56,7 +56,7 @@
                                  <children>
                                     <VBox maxHeight="-Infinity" spacing="20.0" HBox.hgrow="ALWAYS">
                                        <children>
-                                          <ComboBox fx:id="type" maxWidth="1.7976931348623157E308" prefWidth="135.0" promptText="State">
+                                          <ComboBox fx:id="state" maxWidth="1.7976931348623157E308" prefWidth="135.0" promptText="State">
                                              <items>
                                                 <FXCollections fx:factory="observableArrayList">
                                                    <String fx:value="Teacher" />
@@ -99,7 +99,7 @@
                               </HBox>
                               <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="190.0" spacing="15.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
                                  <children>
-                                    <TextField fx:id="nationality1" prefHeight="40.0" prefWidth="318.0" promptText="Nationality" />
+                                    <TextField fx:id="relative" prefHeight="40.0" prefWidth="318.0" promptText="Name of a relative" />
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="250.0" spacing="15.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
@@ -114,12 +114,12 @@
                               </HBox>
                               <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="223.0" spacing="15.0" GridPane.rowIndex="5">
                                  <children>
-                                    <TextField fx:id="nationality2" prefHeight="40.0" prefWidth="318.0" promptText="Nationality" />
+                                    <TextField fx:id="relation" prefHeight="40.0" prefWidth="318.0" promptText="relative relation" />
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER_LEFT" layoutX="344.0" layoutY="223.0" spacing="15.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
                                  <children>
-                                    <TextField fx:id="nationality3" prefHeight="40.0" prefWidth="318.0" promptText="Nationality" />
+                                    <TextField fx:id="phoneNumber" prefHeight="40.0" prefWidth="318.0" promptText="Phone Number" />
                                  </children>
                               </HBox>
                            </children>
@@ -128,14 +128,14 @@
                   </VBox>
                   <HBox alignment="CENTER_LEFT" spacing="15.0">
                      <children>
-                        <ComboBox prefWidth="220.0" promptText="YEAR" />
-                        <ComboBox prefWidth="220.0" promptText="Class" />
-                        <ComboBox prefWidth="220.0" promptText="Health status" />
+                        <ComboBox fx:id="year" prefWidth="220.0" promptText="YEAR" />
+                        <ComboBox fx:id="clas" prefWidth="220.0" promptText="Class" />
+                        <ComboBox fx:id="healthStatus" prefWidth="220.0" promptText="Health status" />
                      </children>
                   </HBox>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <TextArea layoutY="42.0" prefHeight="212.0" prefWidth="665.0" styleClass="text-field" />
+                        <TextArea fx:id="notes" layoutY="42.0" prefHeight="212.0" prefWidth="665.0" styleClass="text-field" />
                         <Label layoutX="14.0" styleClass="title" text="NOTES" />
                      </children>
                   </AnchorPane>
@@ -162,6 +162,5 @@
    </children>
    <stylesheets>
       <URL value="@../../../../../assests/stylesheets/style.css" />
-      <URL value="@adminEditStudents.css" />
    </stylesheets>
 </AnchorPane>
