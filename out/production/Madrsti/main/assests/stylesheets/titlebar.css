@@ -42,10 +42,11 @@ AnchorPane {
 }
 
 
-.button:hover, #close:hover {
+.button:hover, #close:hover, #close:hover .glyph-icon {
     -fx-background-color: #ffffff;
     -fx-border-color: transparent;
     -fx-text-fill: #3F4CF3;
+    -fx-fill: #3F4CF3;
 }
 
 /*#signOut:hover {
@@ -67,4 +68,9 @@ VBox {
 .button {
     -fx-font-weight: lighter;
     -fx-background-color: transparent;
+}
+
+.glyph-icon {
+    -fx-text-fill: #ffffff;
+    -fx-fill: #ffffff;
 }

@@ -53,7 +53,6 @@ public class Main extends Application {
     public static void FXMLLoaderPane(ScrollPane mainPane, String fxmlFile) {
         try {
             mainPane.setContent(new AnchorPane(new Button("Wait")));
-            System.out.println("okkk");
             AnchorPane pane = FXMLLoader.load(Main.class.getResource(fxmlFile));
             mainPane.setContent(pane);
         } catch (Exception ex) {

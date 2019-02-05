@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.geometry.Insets?>
 <?import javafx.geometry.Rectangle2D?>
 <?import javafx.scene.Cursor?>
@@ -14,50 +15,54 @@
 <?import javafx.scene.layout.RowConstraints?>
 
 <AnchorPane fx:id="header" maxHeight="1.7976931348623157E308" onMouseDragged="#dragHeader" onMousePressed="#pressHeader" prefWidth="1024.0" stylesheets="@assests/stylesheets/titlebar.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.titlebarController">
-   <children>
-      <GridPane hgap="50.0" prefHeight="25.0" prefWidth="924.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="0.0">
-        <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="720.0" minWidth="10.0" prefWidth="512.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="490.0" minWidth="10.0" prefWidth="490.0" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints vgrow="SOMETIMES" />
-        </rowConstraints>
-         <children>
-            <ImageView cache="true" cacheHint="QUALITY" fitHeight="17.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@assests/images/logo.png" />
-               </image>
-               <viewport>
-                  <Rectangle2D height="80.0" />
-               </viewport>
-            </ImageView>
-            <AnchorPane fx:id="list" prefHeight="30.0" prefWidth="246.0" GridPane.columnIndex="1" />
-            <HBox alignment="CENTER_RIGHT" prefWidth="362.0" spacing="20.0" GridPane.columnIndex="2">
-               <children>
-                  <Button fx:id="signOut" onAction="#signOut" graphicTextGap="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="30.0" text="Hello, Sign Out">
-                     <graphic>
-                        <Group fx:id="userPhotoCircle">
-                           <children>
-                              <ImageView fx:id="userPhoto" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#userPhotoClick" pickOnBounds="true" preserveRatio="true">
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor>
-                              </ImageView>
-                           </children>
-                        </Group>
-                     </graphic>
-                     <padding>
-                        <Insets bottom="5.0" left="15.0" right="15.0" top="5.0" />
-                     </padding></Button>
-                  <Button id="close" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#closeApplication" prefWidth="40.0" text="x" textAlignment="CENTER" />
-               </children>
-            </HBox>
-         </children>
-      </GridPane>
-   </children>
-   <padding>
-      <Insets bottom="20.0" top="20.0" />
-   </padding>
+    <children>
+        <GridPane hgap="50.0" prefHeight="25.0" prefWidth="924.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="0.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="720.0" minWidth="10.0" prefWidth="512.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="490.0" minWidth="10.0" prefWidth="490.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <ImageView cache="true" cacheHint="QUALITY" fitHeight="17.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@assests/images/logo.png" />
+                    </image>
+                    <viewport>
+                        <Rectangle2D height="80.0" />
+                    </viewport>
+                </ImageView>
+                <AnchorPane fx:id="list" prefHeight="30.0" prefWidth="246.0" GridPane.columnIndex="1" />
+                <HBox alignment="CENTER_RIGHT" prefWidth="362.0" spacing="20.0" GridPane.columnIndex="2">
+                    <children>
+                        <Button fx:id="signOut" onAction="#signOut" graphicTextGap="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="30.0" text="Hello, Sign Out">
+                            <graphic>
+                                <Group fx:id="userPhotoCircle">
+                                    <children>
+                                        <ImageView fx:id="userPhoto" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#userPhotoClick" pickOnBounds="true" preserveRatio="true">
+                                            <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                            </cursor>
+                                        </ImageView>
+                                    </children>
+                                </Group>
+                            </graphic>
+                            <padding>
+                                <Insets bottom="5.0" left="15.0" right="15.0" top="5.0" />
+                            </padding></Button>
+                        <Button id="close" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#closeApplication" prefWidth="40.0" textAlignment="CENTER">
+                            <graphic>
+                                <FontAwesomeIconView glyphName="CLOSE" styleClass="icon" />
+                            </graphic>
+                        </Button>
+                    </children>
+                </HBox>
+            </children>
+        </GridPane>
+    </children>
+    <padding>
+        <Insets bottom="20.0" top="20.0" />
+    </padding>
 </AnchorPane>

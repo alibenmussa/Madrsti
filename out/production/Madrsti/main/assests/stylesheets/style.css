@@ -204,10 +204,11 @@
 
 }
 
-.button .icon {
+.button .glyph-icon {
     -fx-font-family: 'jdFontAwesome';
     -fx-font-size: 14;
     -fx-text-fill: #ffffff;
+    -fx-fill: #ffffff;
 
 }
 

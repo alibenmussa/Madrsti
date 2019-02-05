@@ -20,13 +20,13 @@
 .button .icon {
     -fx-fill: #7d97f4;
     -fx-font-family: 'jdFontAwesome';
-    -fx-font-size: 20;
+    -fx-font-size: 22;
 }
 
 .button.active .icon, .button:hover .icon {
     -fx-fill: #ffffff;
 
-    -fx-font-size: 20;
+    -fx-font-size: 22;
 }
 
 
