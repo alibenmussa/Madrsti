@@ -29,7 +29,7 @@
                   <Insets bottom="30.0" top="30.0" />
                </padding>
                <graphic>
-                  <FontAwesomeIconView glyphName="USER" size="25" styleClass="icon" />
+                  <FontAwesomeIconView glyphName="BRIEFCASE" size="25" styleClass="icon" />
                </graphic></Button>
             <Button fx:id="adminShowStudents" alignment="CENTER" contentDisplay="TOP" graphicTextGap="15.0" mnemonicParsing="false" onAction="#adminShowStudents" prefWidth="110.0" text="STUDENTS" VBox.vgrow="ALWAYS">
                <VBox.margin>

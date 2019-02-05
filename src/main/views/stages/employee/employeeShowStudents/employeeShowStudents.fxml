@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane maxWidth="-Infinity" minWidth="-Infinity" prefWidth="765.0" styleClass="pageContent" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.views.stages.employee.employeeShowStudents.employeeShowStudentsController">
+<AnchorPane maxWidth="-Infinity" minWidth="-Infinity" prefWidth="765.0" styleClass="pageContent" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.views.stages.employee.employeeShowStudents.employeeShowStudentsController">
    <children>
       <VBox prefWidth="715.0" spacing="35.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="60.0">
          <children>
@@ -41,33 +41,34 @@
                <children>
                   <HBox spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <TextField fx:id="search" minHeight="40.0" promptText="Search for..." HBox.hgrow="ALWAYS" />
-                        <ComboBox fx:id="year" minHeight="40.0" prefWidth="100.0" promptText="All">
+                        <TextField fx:id="search" minHeight="40.0" promptText="Search for Name..." HBox.hgrow="ALWAYS" />
+                        <ComboBox fx:id="year" maxWidth="-Infinity" minHeight="40.0" prefWidth="130.0">
                            <items>
                            <FXCollections fx:factory="observableArrayList">
-                              <String fx:id="reihe" fx:value="Year" />
-                              <String fx:id="teacher" fx:value="First Preparatory" />
-                              <String fx:id="parallel" fx:value="First secondary" />
+                              <String fx:value="All" />
+                              <String fx:value="1st Primary" />
+                              <String fx:value="2st Primary" />
+                              <String fx:value="3st Primary" />
+                              <String fx:value="4st Primary" />
+                              <String fx:value="5st Primary" />
+                              <String fx:value="6st Primary" />
                            </FXCollections>
                            </items>
                            <value>
-                              <String fx:value="Year" />
+                              <String fx:value="All" />
                            </value>
                         </ComboBox>
-                        <ComboBox fx:id="clas" minHeight="40.0" prefWidth="100.0">
+                        <ComboBox fx:id="clas" disable="true" maxWidth="-Infinity" minHeight="40.0" prefWidth="100.0" promptText="Class">
                            <items>
                               <FXCollections fx:factory="observableArrayList">
-                                 <String fx:value="Class" />
-                                 <String fx:value="1-3" />
-                                 <String fx:value="3-2" />
+                                 <String fx:value="A" />
+                                 <String fx:value="B" />
+                                 <String fx:value="C" />
                               </FXCollections>
                            </items>
-                           <value>
-                              <String fx:value="Class" />
-                           </value>
                         </ComboBox>
 
-                        <ComboBox minHeight="40.0" prefWidth="100.0" promptText="A-Z">
+                        <ComboBox maxWidth="-Infinity" minHeight="40.0" prefWidth="100.0" promptText="A-Z">
                            <items>
                               <FXCollections fx:factory="observableArrayList">
                                  <String fx:value="Last" />

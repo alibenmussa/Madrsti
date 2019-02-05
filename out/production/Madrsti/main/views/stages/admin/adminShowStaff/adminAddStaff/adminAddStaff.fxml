@@ -78,7 +78,7 @@
                                           </ComboBox>
                                        </children>
                                     </VBox>
-                                    <Button alignment="CENTER" contentDisplay="CENTER" defaultButton="true" maxHeight="1.7976931348623157E308" mnemonicParsing="false" onAction="#uploadPhoto" prefWidth="135.0" styleClass="gray-button">
+                                    <Button alignment="CENTER" contentDisplay="CENTER" defaultButton="true" maxHeight="1.7976931348623157E308" mnemonicParsing="false" onAction="#uploadPhoto" prefWidth="135.0">
                                        <graphic>
                                           <AnchorPane fx:id="userPhotoCircle" maxHeight="100.0" maxWidth="100.0" minHeight="100.0" minWidth="100.0" style="-fx-background-color: #ffffff;">
                                              <children>
@@ -231,6 +231,5 @@
    </children>
    <stylesheets>
       <URL value="@../../../../../assests/stylesheets/style.css" />
-      <URL value="@adminAddStaff.css" />
    </stylesheets>
 </AnchorPane>

@@ -22,7 +22,6 @@
    <stylesheets>
       <URL value="@../../../assests/stylesheets/style.css" />
       <URL value="@../../../assests/stylesheets/scroll.css" />
-      <URL value="@admin.css" />
    </stylesheets>
    <left>
       <AnchorPane prefHeight="600.0" prefWidth="250.0" BorderPane.alignment="CENTER">

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1024.0" style="-fx-border-radius: 15;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.views.login.loginController">
+   <center>
+      <ScrollPane cacheShape="false" fitToHeight="true" fitToWidth="true" focusTraversable="false" prefWidth="1024.0" BorderPane.alignment="CENTER">
+         <content>
+            <StackPane minHeight="-Infinity" prefWidth="1009.0" style="-fx-background-color: #F7F7FA;">
+               <children>
+                  <VBox fx:id="loginContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-alignment: center; -fx-spacing: 30;" StackPane.alignment="TOP_CENTER">
+                     <children>
+                        <Label fx:id="loginSubject" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="320.0" text="Welcome,">
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </VBox.margin></Label>
+                        <TextField fx:id="username" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="50.0" prefWidth="320.0" promptText="Username">
+                           <VBox.margin>
+                              <Insets bottom="-5.0" />
+                           </VBox.margin></TextField>
+                        <PasswordField fx:id="password" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="50.0" prefWidth="320.0" promptText="Password">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin></PasswordField>
+                        <Button fx:id="login" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#clickLogIn" prefHeight="50.0" styleClass="clickBtn" text="LOGIN">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <padding>
+                              <Insets left="60.0" right="60.0" />
+                           </padding></Button>
+                     </children>
+                     <padding>
+                        <Insets bottom="55.0" left="50.0" right="50.0" top="75.0" />
+                     </padding>
+                     <StackPane.margin>
+                        <Insets top="80.0" />
+                     </StackPane.margin>
+                  </VBox>
+               </children>
+            </StackPane>
+         </content>
+      </ScrollPane>
+   </center>
+   <top>
+      <AnchorPane fx:id="navbar" prefHeight="80.0" prefWidth="1024.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane fx:id="header" prefHeight="80.0" prefWidth="1024.0" style="-fx-border-radius: 15;" />
+         </children></AnchorPane>
+   </top>
+   <stylesheets>
+      <URL value="@../../assests/stylesheets/style.css" />
+      <URL value="@login.css" />
+   </stylesheets>
+</BorderPane>

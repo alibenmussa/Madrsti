@@ -41,7 +41,7 @@ public class employeeShowStudentsController implements Initializable {
 
     @FXML
     void employeeAddStudent(ActionEvent event) throws Exception {
-        Dialog.show("Add Students", "/main/views/stages/employee/employeeShowStudents/employeeAddStudents/employeeAddStudents.fxml");
+        Dialog.show("Add Students", "/main/views/stages/employee/employeeShowStudents/employeeAddStudent/employeeAddStudent.fxml");
     }
 
 }

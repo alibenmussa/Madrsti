@@ -80,7 +80,23 @@
     -fx-text-fill: #7d97f4;
 }
 
-.blue .text-field:disabled {
+
+#dialogContent .text-field {
+    -fx-background-color: #f8f8fb;
+    -fx-text-fill: #2C343A;
+    -fx-prompt-text-fill: #7F8FA4;
+    -fx-padding: 0 10;
+    -fx-border-color: transparent;
+    -fx-min-height: 45;
+
+}
+
+
+#dialogContent .showing-fields .text-field, .showing-fields .text-field:disabled {
+    -fx-background-color: #E6E9F0;
+}
+
+#dialogContent .blue .text-field:disabled {
     -fx-opacity: 1;
     -fx-background-color: #3941dc;
     -fx-prompt-text-fill: #3F4CF3;
@@ -88,7 +104,7 @@
 }
 
 
-.blue .check-box {
+#dialogContent .blue .check-box {
     -fx-text-fill: #7d97f4;
     -fx-font-family: 'Ubuntu', sans-serif;
     -fx-font-size: 14;
@@ -188,6 +204,8 @@
 .text-field, .combo-box {
     -fx-min-height: 40;
 }
+
+
 
 .image-view {
     -fx-background-color: #ffffff;
@@ -293,6 +311,14 @@
     -fx-effect: dropshadow(gaussian, rgba(134, 139, 142, 0.1), 10, 0.2, 0, 5);
 }
 
+/*
+.combo-box .text-field {
+    -fx-text-fill: #2C343A;
+    -fx-prompt-text-fill: grayr;
+}
+*/
+
+
 .combo-box-popup .list-view .list-cell
 {
     -fx-padding: 10 15;
@@ -314,14 +340,13 @@
     -fx-cursor: hand;
 }
 
-.showing-fields .text-field, .showing-fields .text-field:disabled {
-    -fx-background-color: #f8f8fb;
-    -fx-background-color: #E6E9F0;
-    -fx-text-fill: #2C343A;
-    -fx-padding: 0 10;
-    -fx-border-color: transparent;
-    -fx-min-height: 45;
+.combo-box {
+    -fx-prompt-text-fill: rgba(255, 0, 0, 0.5) ;
 }
+.combo-box .text-field:focused {
+    -fx-prompt-text-fill: transparent ;
+}
+
 
 
 .showing-fields .sub-heading {

@@ -21,7 +21,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         window = primaryStage;
-        Pane root = FXMLLoader.load(getClass().getResource("/main/login/login.fxml"));
+        Pane root = FXMLLoader.load(getClass().getResource("/main/views/login/login.fxml"));
         Rectangle page = new Rectangle(1024, 680);
         page.setArcWidth(20);
         page.setArcHeight(20);
@@ -29,11 +29,11 @@ public class Main extends Application {
         Scene scene = new Scene(root, 1024, 680);
         scene.setFill(Color.TRANSPARENT);
         window.setScene(scene);
-        window.setTitle("Madrasti System");
+        window.setTitle("Madrasti Madrsti");
         window.initStyle(StageStyle.TRANSPARENT);
         StagesManager.blackBG.setStyle("-fx-background-color: rgba(53, 57, 89, 0.75)");
 
-//        window.show();
+        window.show();
         System.out.println("Let Game Starts!");
     }
 

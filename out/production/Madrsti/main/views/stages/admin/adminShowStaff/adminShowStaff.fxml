@@ -45,9 +45,9 @@
                         <ComboBox minHeight="40.0" promptText="All">
                            <items>
                            <FXCollections fx:factory="observableArrayList">
-                              <String fx:id="reihe" fx:value="All" />
-                              <String fx:id="teacher" fx:value="Teachers" />
-                              <String fx:id="parallel" fx:value="Employees" />
+                              <String fx:value="All" />
+                              <String fx:value="Teachers" />
+                              <String fx:value="Employees" />
                            </FXCollections>
                            </items>
                            <value>
