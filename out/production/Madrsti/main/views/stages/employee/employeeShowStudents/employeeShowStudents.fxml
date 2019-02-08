@@ -87,14 +87,15 @@
             </AnchorPane>
             <AnchorPane maxWidth="1.7976931348623157E308" prefWidth="680.0" styleClass="content">
                <children>
-                  <TableView layoutX="50.0" layoutY="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <TableView fx:id="studentsTable" layoutX="50.0" layoutY="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <columns>
-                      <TableColumn prefWidth="75.0" text="NAME" />
-                      <TableColumn prefWidth="75.0" text="GENDER" />
-                        <TableColumn prefWidth="75.0" text="DOB" />
-                        <TableColumn prefWidth="75.0" text="PHONE" />
-                        <TableColumn prefWidth="75.0" text="EDIT" />
-                        <TableColumn prefWidth="75.0" text="DELETE" />
+                      <TableColumn prefWidth="75.0" text="NAME" fx:id="name"/>
+                      <TableColumn prefWidth="75.0" text="GENDER" fx:id="gender"/>
+                      <TableColumn prefWidth="75.0" text="GRADE" fx:id="grade"/>
+                        <TableColumn prefWidth="75.0" text="CLASS" fx:id="class"/>
+                        <TableColumn prefWidth="75.0" text="CONTACT" fx:id="contact"/>
+                        <TableColumn prefWidth="75.0" text="EDIT" fx:id="edit"/>
+                        <TableColumn prefWidth="75.0" text="DELETE" fx:id="delete"/>
                     </columns>
                      <columnResizePolicy>
                         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />

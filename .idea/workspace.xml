@@ -2,88 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Adding: teacher stage, showS">
-      <change afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/Madrsti.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/login/loginController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminShowStudents/adminShowStudentInformation/adminShowStudentInformation.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminShowStudents/adminShowStudentInformation/adminShowStudentInformationController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminShowStudents/adminShowStudents.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminShowStudents/adminShowStudentsController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/employee/employee.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/employee/employeeController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/employee/employeeNavbar/employeeNavbar.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/employee/employeeNavbar/employeeNavbarController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/employee/employeeShowHome/employeeShowHome.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/employee/employeeShowHome/employeeShowHomeController.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/employee/employeeShowStudents/employeeShowStudentInformation/employeeShowStudentInformationController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/teacher/teacher.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/teacher/teacherController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/teacher/teacherNavbar/teacherNavbar.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/teacher/teacherNavbar/teacherNavbarController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/teacher/teacherShowHome/teacherShowHome.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/teacher/teacherShowHome/teacherShowHomeController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminShowStudentInformation/adminShowStudentInformation.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminShowStudentInformation/adminShowStudentInformationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminShowStudents.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminShowStudentsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/views/stages/employee/employee.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/views/stages/employee/employeeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/views/stages/employee/employeeNavbar/employeeNavbar.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/views/stages/employee/employeeNavbar/employeeNavbarController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowHome/employeeShowHome.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowHome/employeeShowHomeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/views/stages/teacher/teacher.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/views/stages/teacher/teacherController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/views/stages/teacher/teacherNavbar/teacherNavbar.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/views/stages/teacher/teacherNavbar/teacherNavbarController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/views/stages/teacher/teacherShowHome/teacherShowHome.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/views/stages/teacher/teacherShowHome/teacherShowHomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/views/dialog/alertDialog.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/views/dialog/alertDialogController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/assests/stylesheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/assests/stylesheets/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/login/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/login/login.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/login/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/login/login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/login/loginController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/Admin.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/Employee.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/Teacher.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/admin.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/admin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/admin.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminNavbar/adminNavbar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminNavbar/adminNavbar.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/dialog/Dialog.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/dialog/Dialog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/dialog/confirmDialogController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/dialog/confirmDialogController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/login/loginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/login/loginController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminNavbar/adminNavbarController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminNavbar/adminNavbarController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminShowStaff/adminAddStaff/adminAddStaff.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminShowStaff/adminAddStaff/adminAddStaff.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminShowStaff/adminAddStaff/adminAddStaff.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminShowStaff/adminShowStaff.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminShowStaff/adminShowStaff.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminShowStudents/adminShowStudents.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminShowStudents/adminShowStudents.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/employee/employeeNavbar/employeeNavbarController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/employee/employeeNavbar/employeeNavbarController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/employee/employeeShowStudents/employeeAddStudents/employeeAddStudents.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/employee/employeeShowStudents/employeeAddStudent/employeeAddStudent.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/employee/employeeShowStudents/employeeAddStudents/employeeAddStudentsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/employee/employeeShowStudents/employeeAddStudent/employeeAddStudentController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/employee/employeeShowStudents/employeeEditStudents/employeeEditStudents.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/employee/employeeShowStudents/employeeEditStudent/employeeEditStudent.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/employee/employeeShowStudents/employeeEditStudents/employeeEditStudentsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/employee/employeeShowStudents/employeeEditStudent/employeeEditStudentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/employee/employeeShowStudents/employeeShowStudents.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/employee/employeeShowStudents/employeeShowStudents.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/employee/employeeShowStudents/employeeShowStudentsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/employee/employeeShowStudents/employeeShowStudentsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/employee/employeeShowStudents/employeeShowStudentsInformation/employeeShowStudentsInformation.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowStudents/employeeShowStudentInformation/employeeShowStudentInformation.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/employee/employeeShowStudents/employeeShowStudentsInformation/employeeShowStudentsInformationController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/assests/stylesheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/assests/stylesheets/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/login/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/login/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/login/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/login/login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/login/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/login/loginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/views/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/Madrsti.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/views/Employee.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/views/Teacher.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/views/stages/admin/admin.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/views/stages/admin/admin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/admin/admin.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/views/stages/admin/adminNavbar/adminNavbar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/admin/adminNavbar/adminNavbar.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/teacher/teacherNavbar/teacherNavbar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/teacher/teacherNavbar/teacherNavbar.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/teacher/teacherNavbar/teacherNavbarController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/teacher/teacherNavbar/teacherNavbarController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/views/dialog/Dialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/dialog/Dialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/views/dialog/confirmDialogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/dialog/confirmDialogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/views/login/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/login/loginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/views/stages/admin/adminNavbar/adminNavbarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/admin/adminNavbar/adminNavbarController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminAddStaff/adminAddStaff.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminAddStaff/adminAddStaff.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminAddStaff/adminAddStaff.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowHome/adminShowHome.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowHome/adminShowHome.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminShowStaff.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminShowStaff.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowStudents/employeeAddStudents/employeeAddStudents.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowStudents/employeeAddStudent/employeeAddStudent.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowStudents/employeeAddStudents/employeeAddStudentsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowStudents/employeeAddStudent/employeeAddStudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowStudents/employeeEditStudents/employeeEditStudents.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowStudents/employeeEditStudent/employeeEditStudent.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowStudents/employeeEditStudents/employeeEditStudentsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowStudents/employeeEditStudent/employeeEditStudentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminShowStudents.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminShowStudents.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowHome/employeeShowHome.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowHome/employeeShowHome.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowStudents/employeeShowStudents.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowStudents/employeeShowStudents.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowStudents/employeeShowStudentsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowStudents/employeeShowStudentsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowStudents/employeeShowStudentsInformation/employeeShowStudentsInformation.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/employee/employeeShowStudents/employeeShowStudentInformation/employeeShowStudentInformation.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowStudents/employeeShowStudentsInformation/employeeShowStudentsInformationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowStudents/employeeShowStudentInformation/employeeShowStudentInformationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/views/stages/teacher/teacherNavbar/teacherNavbar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/teacher/teacherNavbar/teacherNavbar.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/views/stages/teacher/teacherShowHome/teacherShowHome.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/teacher/teacherShowHome/teacherShowHome.fxml" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -159,40 +106,44 @@
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.78" value="1" />
+          <entry key="project.open.time.88" value="1" />
+          <entry key="project.open.time.91" value="1" />
+          <entry key="project.open.time.94" value="1" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="1" />
           <entry key="css" value="7" />
-          <entry key="fxml" value="24" />
-          <entry key="java" value="27" />
+          <entry key="fxml" value="32" />
+          <entry key="java" value="33" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="1" />
           <entry key="CSS" value="7" />
-          <entry key="JAVA" value="27" />
-          <entry key="XML" value="24" />
+          <entry key="JAVA" value="33" />
+          <entry key="XML" value="32" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="60" />
-          <entry key="dummy" value="76" />
-          <entry key="fxml" value="254" />
-          <entry key="java" value="350" />
+          <entry key="dummy" value="81" />
+          <entry key="fxml" value="593" />
+          <entry key="java" value="614" />
           <entry key="txt" value="105" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="60" />
-          <entry key="JAVA" value="350" />
-          <entry key="PLAIN_TEXT" value="181" />
-          <entry key="XML" value="254" />
+          <entry key="JAVA" value="614" />
+          <entry key="PLAIN_TEXT" value="186" />
+          <entry key="XML" value="593" />
         </counts>
       </usages-collector>
     </session>
@@ -203,69 +154,88 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/views/stages/teacher/teacherNavbar/teacherNavbarController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminShowStudents.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/views/stages/teacher/teacherShowHome/teacherShowHome.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
-            </state>
-          </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/views/stages/employee/employeeShowStudents/employeeShowStudentInformation/employeeShowStudentInformation.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="169" selection-start-line="9" selection-start-column="169" selection-end-line="9" selection-end-column="169" />
+            <state relative-caret-position="136">
+              <caret line="8" column="174" selection-start-line="8" selection-end-line="8" selection-end-column="174" />
             </state>
           </provider>
           <provider editor-type-id="JavaFX-Scene-Builder" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/Main.java">
+        <entry file="file://$PROJECT_DIR$/src/main/views/stages/teacher/teacherShowHome/teacherShowHome.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
+            <state relative-caret-position="191">
+              <caret line="16" column="63" selection-start-line="16" selection-start-column="63" selection-end-line="16" selection-end-column="63" />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/views/stages/employee/employeeShowHome/employeeShowHome.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="191">
+              <caret line="16" column="64" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowHome/adminShowHome.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="191">
+              <caret line="16" column="61" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="61" />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/views/stages/employee/employeeShowStudents/employeeShowStudents.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="148">
+              <caret line="89" column="18" selection-start-line="89" selection-start-column="18" selection-end-line="98" selection-end-column="30" />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/views/dialog/Dialog.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1428">
+              <caret line="92" column="32" selection-start-line="92" selection-start-column="32" selection-end-line="92" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/titlebarController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/views/dialog/confirmDialog.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="66" column="37" lean-forward="true" selection-start-line="24" selection-start-column="9" selection-end-line="66" selection-end-column="37" />
+            <state relative-caret-position="297">
+              <caret line="35" column="37" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminShowStaffController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/views/login/loginController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminShowStaff.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="72" column="34" selection-start-line="72" selection-start-column="34" selection-end-line="72" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/views/stages/teacher/teacherNavbar/teacherNavbar.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="29" column="55" selection-start-line="29" selection-start-column="55" selection-end-line="29" selection-end-column="55" />
+            <state relative-caret-position="114">
+              <caret line="74" column="46" selection-start-line="74" selection-start-column="46" selection-end-line="74" selection-end-column="46" />
             </state>
           </provider>
           <provider editor-type-id="JavaFX-Scene-Builder" />
@@ -274,7 +244,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/views/login/login.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
+            <state relative-caret-position="1037">
               <caret line="61" column="25" selection-start-line="61" selection-start-column="25" selection-end-line="61" selection-end-column="25" />
             </state>
           </provider>
@@ -354,13 +324,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminShowStudentsInformation/adminShowStaffInformation.fxml" />
-        <option value="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminShowStudentsInformation/adminShowStudentsInformation.fxml" />
-        <option value="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminAddStudents/adminAddStudents.fxml" />
-        <option value="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminEditStudents/adminEditStudents.fxml" />
-        <option value="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowStudents/employeeShowStudentsInformation/employeeShowStudentsInformation.fxml" />
-        <option value="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowStudents/employeeAddStudents/employeeAddStudents.fxml" />
-        <option value="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowStudents/employeeEditStudents/employeeEditStudents.fxml" />
         <option value="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowStudents/employeeEditStudents/employeeEditStudentsController.java" />
         <option value="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowStudents/employeeAddStudents/employeeAddStudentsController.java" />
         <option value="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowStudents/employeeShowStudentsController.java" />
@@ -380,18 +343,14 @@
         <option value="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/employeeShowStudents/employeeAddStudents/employeeAddStudents.fxml" />
         <option value="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminShowStudentsController.java" />
         <option value="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminShowStudentInformation/adminShowStudentInformation.fxml" />
-        <option value="$PROJECT_DIR$/src/main/views/stages/admin/adminNavbar/adminNavbarController.java" />
         <option value="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminAddStaff/adminAddStaff.fxml" />
         <option value="$PROJECT_DIR$/src/main/assests/stylesheets/style.css" />
         <option value="$PROJECT_DIR$/src/main/login/loginController.java" />
         <option value="$PROJECT_DIR$/src/main/views/stages/employee/employeeController.java" />
         <option value="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowHome/employeeShowHomeController.java" />
         <option value="$PROJECT_DIR$/src/main/views/stages/employee/employeeNavbar/employeeNavbarController.java" />
-        <option value="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminShowStaff.fxml" />
         <option value="$PROJECT_DIR$/src/main/views/stages/employee/employeeNavbar/employeeNavbar.fxml" />
-        <option value="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowStudents/employeeShowStudents.fxml" />
         <option value="$PROJECT_DIR$/src/main/views/stages/admin/adminNavbar/adminNavbar.fxml" />
-        <option value="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminShowStudents.fxml" />
         <option value="$PROJECT_DIR$/src/main/views/stages/teacher/employeeNavbar/employeeNavbar.fxml" />
         <option value="$PROJECT_DIR$/src/main/views/stages/teacher/employeeNavbar/teacherNavbarController.java" />
         <option value="$PROJECT_DIR$/src/main/views/stages/teacher/employeeNavbar/teacherNavbar.fxml" />
@@ -401,10 +360,21 @@
         <option value="$PROJECT_DIR$/src/main/views/stages/teacher/employeeShowHome/employeeShowHome.fxml" />
         <option value="$PROJECT_DIR$/src/main/views/stages/teacher/employeeShowHome/teacherShowHome.fxml" />
         <option value="$PROJECT_DIR$/src/main/views/stages/teacher/teacherNavbar/teacherNavbarController.java" />
-        <option value="$PROJECT_DIR$/src/main/views/stages/teacher/teacherShowHome/teacherShowHome.fxml" />
         <option value="$PROJECT_DIR$/src/main/views/login/login.fxml" />
         <option value="$PROJECT_DIR$/src/main/views/login/loginController.java" />
+        <option value="$PROJECT_DIR$/src/main/views/dialog/alert/confirmDialog.fxml" />
+        <option value="$PROJECT_DIR$/src/main/views/dialog/alertDialogController.java" />
+        <option value="$PROJECT_DIR$/src/main/views/stages/admin/adminNavbar/adminNavbarController.java" />
+        <option value="$PROJECT_DIR$/src/main/views/dialog/Dialog.java" />
+        <option value="$PROJECT_DIR$/src/main/views/dialog/alertDialog.fxml" />
         <option value="$PROJECT_DIR$/src/main/views/stages/teacher/teacherNavbar/teacherNavbar.fxml" />
+        <option value="$PROJECT_DIR$/src/main/views/dialog/confirmDialog.fxml" />
+        <option value="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminShowStaff.fxml" />
+        <option value="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowStudents/employeeShowStudents.fxml" />
+        <option value="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminShowStudents.fxml" />
+        <option value="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowHome/employeeShowHome.fxml" />
+        <option value="$PROJECT_DIR$/src/main/views/stages/admin/adminShowHome/adminShowHome.fxml" />
+        <option value="$PROJECT_DIR$/src/main/views/stages/teacher/teacherShowHome/teacherShowHome.fxml" />
       </list>
     </option>
   </component>
@@ -433,8 +403,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -460,10 +428,135 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Madrsti" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Madrsti" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="dialog" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Madrsti" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Madrsti" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="stages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Madrsti" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Madrsti" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="stages" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Madrsti" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Madrsti" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="stages" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="adminNavbar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Madrsti" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Madrsti" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="stages" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="adminShowHome" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Madrsti" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Madrsti" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="stages" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="adminShowStaff" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Madrsti" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Madrsti" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="stages" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="adminShowStudents" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Madrsti" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Madrsti" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="stages" type="462c0819:PsiDirectoryNode" />
+              <item name="employee" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Madrsti" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Madrsti" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="stages" type="462c0819:PsiDirectoryNode" />
+              <item name="employee" type="462c0819:PsiDirectoryNode" />
+              <item name="employeeShowHome" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Madrsti" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Madrsti" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="stages" type="462c0819:PsiDirectoryNode" />
+              <item name="employee" type="462c0819:PsiDirectoryNode" />
+              <item name="employeeShowStudents" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Madrsti" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Madrsti" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="stages" type="462c0819:PsiDirectoryNode" />
+              <item name="teacher" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Madrsti" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Madrsti" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="stages" type="462c0819:PsiDirectoryNode" />
+              <item name="teacher" type="462c0819:PsiDirectoryNode" />
+              <item name="teacherNavbar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Madrsti" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Madrsti" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="stages" type="462c0819:PsiDirectoryNode" />
+              <item name="teacher" type="462c0819:PsiDirectoryNode" />
+              <item name="teacherShowHome" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -476,9 +569,9 @@
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549408866930" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549627014540" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/fontawesomefx-examples-master" />
+    <property name="last_opened_file_path" value="$USER_HOME$/AppData/Local/SceneBuilder/SceneBuilder.exe" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
@@ -489,26 +582,26 @@
     <property name="settings.editor.selected.configurable" value="preferences.JavaFX" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="main.views.stages.employee" />
-      <recent name="main.views.stages" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\projects\FX\Madrsti\src\main\views\stages\teacher" />
-      <recent name="D:\projects\FX\Madrsti\src\main\views\stages\admin\adminShowStudents" />
-      <recent name="D:\projects\FX\Madrsti\src\main\views\stages\employee\employeeShowHome" />
-      <recent name="D:\projects\FX\Madrsti\src\main\views\stages\employee" />
-      <recent name="D:\projects\FX\Madrsti\src\main\views\stages\employee\employeeNavbar" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="main.views.dialog" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\projects\FX\Madrsti\src\main\views\dialog" />
       <recent name="D:\projects\Madrsti\src\main\assests\stylesheets" />
       <recent name="D:\projects\Madrsti\src\main\stylesheets\fonts" />
       <recent name="D:\projects\Madrsti\src\main\stylesheets" />
       <recent name="D:\projects\Madrsti\src\main\views\admin" />
-      <recent name="D:\projects\Madrsti\src\main" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="main.views.stages.employee" />
+      <recent name="main.views.stages" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="main.views.dialog" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\projects\FX\Madrsti\src\main\views\dialog\alert" />
+      <recent name="D:\projects\FX\Madrsti\src\main\views\dialog" />
+      <recent name="D:\projects\FX\Madrsti\src\main\views\stages\teacher" />
+      <recent name="D:\projects\FX\Madrsti\src\main\views\stages\admin\adminShowStudents" />
+      <recent name="D:\projects\FX\Madrsti\src\main\views\stages\employee\employeeShowHome" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -647,7 +740,11 @@
       <workItem from="1549201361537" duration="11703000" />
       <workItem from="1549271801755" duration="1995000" />
       <workItem from="1549273976736" duration="2251000" />
-      <workItem from="1549388107303" duration="16855000" />
+      <workItem from="1549388107303" duration="17542000" />
+      <workItem from="1549444751221" duration="424000" />
+      <workItem from="1549473118725" duration="3279000" />
+      <workItem from="1549564640757" duration="4604000" />
+      <workItem from="1549629582266" duration="3743000" />
     </task>
     <task id="LOCAL-00001" summary="Add FXML header file into main FXML file">
       <created>1547240271430</created>
@@ -796,11 +893,18 @@
       <option name="project" value="LOCAL" />
       <updated>1549388517505</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Adding: teacher stage, employee pages and more css style">
+      <created>1549408956341</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1549408956341</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="284347000" />
+    <option name="totallyTimeSpent" value="297084000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -813,8 +917,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.301059" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.27836612" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -823,7 +928,7 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32786885" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.28196722" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28196722" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -836,7 +941,7 @@
       <window_info anchor="bottom" id="Event Log" order="12" weight="0.3295082" />
       <window_info anchor="bottom" id="Messages" order="13" weight="0.32786885" />
       <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="15" visible="true" weight="0.32786885" />
+      <window_info anchor="bottom" id="Terminal" order="15" weight="0.32786885" />
       <window_info anchor="bottom" id="Docker" order="16" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24962178" />
@@ -968,51 +1073,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/views/stages/employee/employeeShowStudents/adminShowStudents.css" />
-    <entry file="file://$PROJECT_DIR$/src/main/StagesManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
-          <folding>
-            <element signature="e#647#648#0" expanded="true" />
-            <element signature="e#694#695#0" expanded="true" />
-            <element signature="e#784#785#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/views/stages/ControllerFunctions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="22" column="38" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/views/stages/employee/employeeShowStudents/employeeShowStudentsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="43" column="119" selection-start-line="43" selection-start-column="119" selection-end-line="43" selection-end-column="119" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/views/stages/employee/employeeShowStudents/employeeAddStudent/employeeAddStudent.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="44" column="59" selection-start-line="44" selection-start-column="59" selection-end-line="44" selection-end-column="59" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/views/stages/employee/employeeShowStudents/employeeAddStudent/employeeAddStudentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1224">
-          <caret line="88" column="20" selection-start-line="88" selection-start-column="20" selection-end-line="88" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/views/stages/employee/employeeShowStudents/employeeEditStudent/employeeEditStudent.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2448">
@@ -1064,16 +1124,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/admin.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/views/Teacher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/admin.css" />
+    <entry file="file://$PROJECT_DIR$/src/main/views/Teacher.java" />
     <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/admin.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
@@ -1085,23 +1137,11 @@
     <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminShowStudentInformation/adminShowStudentInformationController.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/employeeShowStudents/employeeEditStudents/employeeEditStudentsController.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/employeeShowStudents/employeeAddStudents/employeeAddStudentsController.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/employeeShowStudents/employeeEditStudents/employeeEditStudents.fxml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/employeeShowStudents/employeeAddStudents/employeeAddStudents.fxml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminAddStaff/adminAddStaff.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/employeeShowStudents/employeeEditStudents/employeeEditStudentsController.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/employeeShowStudents/employeeAddStudents/employeeAddStudentsController.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/employeeShowStudents/employeeEditStudents/employeeEditStudents.fxml" />
+    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/employeeShowStudents/employeeAddStudents/employeeAddStudents.fxml" />
+    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminAddStaff/adminAddStaff.css" />
     <entry file="file://$PROJECT_DIR$/src/main/assests/stylesheets/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="223">
@@ -1132,27 +1172,12 @@
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminNavbar/adminNavbarController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="46" selection-start-line="40" selection-end-line="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/views/stages/employee/employeeController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/views/stages/employee/employeeShowHome/employeeShowHome.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="252" selection-start-line="7" selection-start-column="252" selection-end-line="7" selection-end-column="252" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/views/stages/employee/employee.fxml">
       <provider selected="true" editor-type-id="text-editor">
@@ -1199,30 +1224,6 @@
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminShowStaff.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="44" column="24" selection-start-line="44" selection-start-column="24" selection-end-line="67" selection-end-column="35" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminShowStudents.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="49" column="35" selection-start-line="49" selection-start-column="35" selection-end-line="49" selection-end-column="35" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/views/stages/employee/employeeShowStudents/employeeShowStudents.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/views/stages/teacher/teacher.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1245,70 +1246,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/views/stages/teacher/teacherController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="29" column="108" selection-start-line="29" selection-start-column="108" selection-end-line="29" selection-end-column="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/views/stages/teacher/teacherShowHome/teacherShowHome.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/titlebarController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="66" column="37" lean-forward="true" selection-start-line="24" selection-start-column="9" selection-end-line="66" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/views/stages/teacher/teacherNavbar/teacherNavbarController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/views/login/login.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="61" column="25" selection-start-line="61" selection-start-column="25" selection-end-line="61" selection-end-column="25" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/fontawesomefx-examples-master/src/main/java/de/jensd/fx/glyphs/examples/GlyphsFXMLDemoPane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-294">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/views/login/loginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="72" column="34" selection-start-line="72" selection-start-column="34" selection-end-line="72" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/views/stages/teacher/teacherNavbar/teacherNavbar.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="29" column="55" selection-start-line="29" selection-start-column="55" selection-end-line="29" selection-end-column="55" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
+    <entry file="file://$USER_HOME$/Desktop/fontawesomefx-examples-master/src/main/java/de/jensd/fx/glyphs/examples/GlyphsFXMLDemoPane.java" />
     <entry file="file://$PROJECT_DIR$/src/main/views/stages/employee/employeeShowStudents/employeeShowStudentInformation/employeeShowStudentInformation.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -1319,10 +1257,149 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
+        <state relative-caret-position="374">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/titlebarController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="66" column="37" selection-start-line="24" selection-start-column="9" selection-end-line="66" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/views/login/loginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="36" column="16" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/views/dialog/alertDialogController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/views/stages/teacher/teacherNavbar/teacherNavbar.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminNavbar/adminNavbarController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="43" column="76" selection-start-line="43" selection-start-column="76" selection-end-line="43" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/views/dialog/alertDialog.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" column="14" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/views/stages/teacher/teacherController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="29" column="108" selection-start-line="29" selection-start-column="108" selection-end-line="29" selection-end-column="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/views/stages/teacher/teacherNavbar/teacherNavbarController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="13" column="37" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/views/dialog/Dialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1428">
+          <caret line="92" column="32" selection-start-line="92" selection-start-column="32" selection-end-line="92" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/views/login/login.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1037">
+          <caret line="61" column="25" selection-start-line="61" selection-start-column="25" selection-end-line="61" selection-end-column="25" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/views/dialog/confirmDialog.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="35" column="37" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminShowStaffController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminShowStaff.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="74" column="46" selection-start-line="74" selection-start-column="46" selection-end-line="74" selection-end-column="46" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/views/stages/employee/employeeShowStudents/employeeShowStudents.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="89" column="18" selection-start-line="89" selection-start-column="18" selection-end-line="98" selection-end-column="30" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminShowStudents.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="174" selection-start-line="8" selection-end-line="8" selection-end-column="174" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/views/stages/employee/employeeShowHome/employeeShowHome.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="16" column="64" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowHome/adminShowHome.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="16" column="61" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="61" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/views/stages/teacher/teacherShowHome/teacherShowHome.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="16" column="63" selection-start-line="16" selection-start-column="63" selection-end-line="16" selection-end-column="63" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
   </component>
   <component name="masterDetails">

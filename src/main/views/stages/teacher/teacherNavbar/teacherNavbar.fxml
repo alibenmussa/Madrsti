@@ -19,7 +19,7 @@
                <graphic>
                   <FontAwesomeIconView glyphName="HOME" styleClass="icon" />
                </graphic></Button>
-            <Button fx:id="teacherShowStudents" alignment="CENTER" contentDisplay="TOP" graphicTextGap="15.0" mnemonicParsing="false" onAction="#teacherShowProfile" prefWidth="110.0" text="PROFILE" VBox.vgrow="ALWAYS">
+            <Button fx:id="teacherShowProfile" alignment="CENTER" contentDisplay="TOP" graphicTextGap="15.0" mnemonicParsing="false" onAction="#teacherShowProfile" prefWidth="110.0" text="PROFILE" VBox.vgrow="ALWAYS">
                <VBox.margin>
                   <Insets bottom="20.0" />
                </VBox.margin>

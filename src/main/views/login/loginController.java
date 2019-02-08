@@ -33,6 +33,8 @@ public class loginController implements Initializable {
         Main.shadowMaker(loginContainer);
         Main.FXMLLoaderPane(header, "/main/titlebar.fxml");
         setLoginSubjectText();
+        username.setText("");
+        password.setText("");
     }
 
     @FXML

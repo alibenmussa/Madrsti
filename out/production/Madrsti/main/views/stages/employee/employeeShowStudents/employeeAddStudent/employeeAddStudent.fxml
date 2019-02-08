@@ -19,7 +19,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.views.stages.employee.employeeShowStudents.employeeAddStudents.employeeAddStudentsController">
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.views.stages.employee.employeeShowStudents.employeeAddStudent.employeeAddStudentController">
    <children>
       <AnchorPane maxHeight="1.7976931348623157E308" minHeight="550.0" prefWidth="746.0">
          <children>

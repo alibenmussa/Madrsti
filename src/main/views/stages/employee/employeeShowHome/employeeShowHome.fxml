@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-
-<?import javafx.scene.chart.AreaChart?>
-<?import javafx.scene.chart.CategoryAxis?>
-<?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.layout.AnchorPane?>
-<AnchorPane maxWidth="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="762.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.views.stages.employee.employeeShowHome.employeeShowHomeController">
-   <children>
-      <AreaChart layoutX="150.0" layoutY="66.0" prefHeight="313.0" prefWidth="516.0">
-        <xAxis>
-          <CategoryAxis side="BOTTOM" />
-        </xAxis>
-        <yAxis>
-          <NumberAxis side="LEFT" />
-        </yAxis>
-      </AreaChart>
-   </children>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+<AnchorPane maxWidth="-Infinity" minWidth="-Infinity" prefWidth="765.0" styleClass="pageContent" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.views.stages.employee.employeeShowHome.employeeShowHomeController">
+    <children>
+        <VBox prefWidth="715.0" spacing="35.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="60.0">
+            <children>
+                <BorderPane>
+                    <VBox.margin>
+                        <Insets bottom="10.0" />
+                    </VBox.margin>
+                    <left>
+                        <Label styleClass="title" text="Employee" BorderPane.alignment="CENTER" />
+                    </left>
+                </BorderPane>
+            </children>
+        </VBox>
+    </children>
+
 </AnchorPane>
