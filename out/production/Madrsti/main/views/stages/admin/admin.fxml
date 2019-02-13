@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.net.URL?>
 <?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1024.0" style="-fx-border-radius: 15;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.views.stages.admin.adminController">
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1024.0" style="-fx-border-radius: 15;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.views.stages.admin.adminController">
    <center>
       <ScrollPane fx:id="content" cacheShape="false" hbarPolicy="NEVER" fitToHeight="true" fitToWidth="true" focusTraversable="false" BorderPane.alignment="CENTER">
          <content>
-            
+
          </content>
       </ScrollPane>
    </center>
@@ -24,7 +22,7 @@
       <URL value="@../../../assests/stylesheets/scroll.css" />
    </stylesheets>
    <left>
-      <AnchorPane prefHeight="600.0" prefWidth="250.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="640.0" prefWidth="250.0" BorderPane.alignment="CENTER">
          <children>
             <AnchorPane fx:id="navbar" />
          </children>

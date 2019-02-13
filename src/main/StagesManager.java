@@ -14,6 +14,7 @@ public final class StagesManager {
     public static Pane blackBG = new Pane();
     public static Stage window = Main.window;
     public static ScrollPane stageContent = null;
+    public static double windowHeight = 720;
 
     public static String getUserPhoto() {
         return "/main/assests/images/users/user_02.jpg"; //ستستبدل بكويري من الداتابيز

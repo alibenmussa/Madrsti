@@ -44,7 +44,7 @@
                         <Insets bottom="55.0" left="50.0" right="50.0" top="75.0" />
                      </padding>
                      <StackPane.margin>
-                        <Insets top="80.0" />
+                        <Insets top="110.0" />
                      </StackPane.margin>
                   </VBox>
                </children>

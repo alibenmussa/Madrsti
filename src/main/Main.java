@@ -22,11 +22,11 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         window = primaryStage;
         Pane root = FXMLLoader.load(getClass().getResource("/main/views/login/login.fxml"));
-        Rectangle page = new Rectangle(1024, 680);
+        Rectangle page = new Rectangle(1024, StagesManager.windowHeight);
         page.setArcWidth(20);
         page.setArcHeight(20);
         root.setClip(page);
-        Scene scene = new Scene(root, 1024, 680);
+        Scene scene = new Scene(root, 1024, StagesManager.windowHeight);
         scene.setFill(Color.TRANSPARENT);
         window.setScene(scene);
         window.setTitle("Madrasti Madrsti");

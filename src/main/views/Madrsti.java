@@ -34,14 +34,14 @@ public class Madrsti {
 
         Pane mainView = FXMLLoader.load(Madrsti.class.getResource(path));
 
-        Rectangle page = new Rectangle(1024, 680);
+        Rectangle page = new Rectangle(1024, StagesManager.windowHeight);
         page.setArcWidth(20);
         page.setArcHeight(20);
 
         StackPane root = new StackPane(mainView);
         root.setClip(page);
 
-        Scene scene = new Scene(root, 1024, 680);
+        Scene scene = new Scene(root, 1024, StagesManager.windowHeight);
         scene.setFill(Color.TRANSPARENT);
 
         StagesManager.username = username;
