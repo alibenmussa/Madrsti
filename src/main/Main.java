@@ -61,7 +61,7 @@ public class Main extends Application {
     }
 
     public static void shadowMaker(Pane element) {
-        DropShadow shadow = new DropShadow(70, 0 , 70, Color.rgb(134, 139, 142, 0.1)); //Color.web("F0F2F6")
+        DropShadow shadow = new DropShadow(80, 0 , 70, Color.rgb(134, 139, 142, 0.15)); //Color.web("F0F2F6")
         element.setEffect(shadow);
     }
 

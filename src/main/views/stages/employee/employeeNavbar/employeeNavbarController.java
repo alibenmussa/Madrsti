@@ -34,30 +34,22 @@ public class employeeNavbarController {
     }
 
     @FXML
-    void employeeShowClasses(ActionEvent event) throws Exception {
+    void employeeShowClasses(ActionEvent event) {
         addActiveButton(employeeShowClasses);
-        Dialog.show("Profile", "/main/views/stages/employee/employeeShowStaff/employeeShowStaffInformation/employeeShowStaffInformation.fxml");
+        Main.FXMLLoaderPane(StagesManager.stageContent, "/main/views/stages/employee/employeeShowClasses/employeeShowClasses.fxml");
 
     }
 
     @FXML
     void employeeShowSubjects(ActionEvent event) throws Exception {
-        addActiveButton(employeeShowSubjects);
-        Dialog.show("Profile", "/main/views/stages/admin/adminShowStaff/adminShowStaffInformation/adminShowStaffInformation.fxml");
+        addActiveButton(employeeShowResults);
+        Dialog.show("Profile", "/main/views/stages/employee/employeeShowClasses/employeeShowClasses.fxml");
 
     }
 
     @FXML
-    void setEmployeeShowResults(ActionEvent event) throws Exception {
+    void employeeShowResults(ActionEvent event) {
         addActiveButton(employeeShowResults);
-        Dialog.show("Profile", "/main/views/stages/admin/adminShowStaff/adminShowStaffInformation/adminShowStaffInformation.fxml");
-
-    }
-
-    @FXML
-    void employeeShowResults(ActionEvent event) throws Exception {
-        addActiveButton(employeeShowResults);
-        Dialog.show("Profile", "/main/views/stages/admin/adminShowStaff/adminShowStaffInformation/adminShowStaffInformation.fxml");
 
     }
 

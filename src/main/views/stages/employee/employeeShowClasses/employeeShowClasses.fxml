@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<AnchorPane maxWidth="-Infinity" minWidth="-Infinity" prefWidth="765.0" styleClass="pageContent" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.views.stages.employee.employeeShowClasses.employeeShowClassesController">
+   <children>
+      <VBox fx:id="classesList" prefWidth="715.0" spacing="35.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="60.0">
+         <children>
+            <BorderPane>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+               <right>
+                  <Button alignment="CENTER" graphicTextGap="15.0" onAction="#addClass" minWidth="120.0" mnemonicParsing="false" prefHeight="40.0" styleClass="function-button" text="ADD CLASS" textFill="WHITE" BorderPane.alignment="CENTER">
+                     <padding>
+                        <Insets left="20.0" right="20.0" />
+                     </padding>
+                     <graphic>
+                        <FontAwesomeIconView glyphName="PLUS" styleClass="icon" />
+                     </graphic>
+                  </Button>
+               </right>
+               <left>
+                  <Label styleClass="title" text="Classes" BorderPane.alignment="CENTER" />
+               </left>
+            </BorderPane>
+            <AnchorPane maxWidth="1.7976931348623157E308">
+               <styleClass>
+                  <String fx:value="content" />
+               </styleClass>
+               <children>
+                  <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label styleClass="title-h2" text="1st Primary">
+                           <VBox.margin>
+                              <Insets bottom="35.0" />
+                           </VBox.margin>
+                        </Label>
+                        <GridPane hgap="30.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="100.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Button mnemonicParsing="false" prefHeight="100.0" text="A" GridPane.halignment="CENTER">
+                                 <styleClass>
+                                    <String fx:value="big-button" />
+                                    <String fx:value="gray-button" />
+                                 </styleClass>
+                              </Button>
+                              <Button mnemonicParsing="false" prefHeight="100.0" text="B" GridPane.columnIndex="1">
+                                 <styleClass>
+                                    <String fx:value="big-button" />
+                                    <String fx:value="gray-button" />
+                                 </styleClass>
+                              </Button>
+                              <Button mnemonicParsing="false" prefHeight="100.0" text="C" GridPane.columnIndex="2">
+                                 <styleClass>
+                                    <String fx:value="big-button" />
+                                    <String fx:value="gray-button" />
+                                 </styleClass>
+                              </Button>
+                              <Button mnemonicParsing="false" prefHeight="100.0" text="D" GridPane.columnIndex="3">
+                                 <styleClass>
+                                    <String fx:value="big-button" />
+                                    <String fx:value="gray-button" />
+                                 </styleClass>
+                              </Button>
+                              <Button mnemonicParsing="false" prefHeight="100.0" text="E" GridPane.columnIndex="4">
+                                 <styleClass>
+                                    <String fx:value="big-button" />
+                                    <String fx:value="gray-button" />
+                                 </styleClass>
+                              </Button>
+                           </children>
+                        </GridPane>
+                     </children>
+                     <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </padding>
+                  </VBox>
+               </children></AnchorPane>
+
+         </children>
+      </VBox>
+   </children>
+   <stylesheets>
+      <URL value="@../../../../assests/stylesheets/style.css" />
+   </stylesheets>
+</AnchorPane>

@@ -254,9 +254,26 @@
     -fx-text-fill: #7F8FA4;
 }
 
+.gray-button.big-button:hover {
+    -fx-background-color: #3841DC;
+    -fx-text-fill: #ffffff;
+}
+
 
 #content .gray-button:pressed, #loginContainer .gray-button:pressed, #dialogContent .gray-button:pressed {
     -fx-border-color: #eff2f9;
+}
+
+#content .gray-button.big-button:pressed {
+    -fx-border-color: #8EB9ED;
+}
+
+.big-button {
+    -fx-pref-width: 100;
+    -fx-pref-height: 100;
+    -fx-min-height: 100;
+    -fx-font-size: 42;
+    -fx-font-weight: lighter;
 }
 
 .function-button {
@@ -278,9 +295,14 @@
 }
 
 
-
 .title {
     -fx-font-size: 36;
+    -fx-font-weight: lighter;
+}
+
+.title-h2 {
+    -fx-font-size: 28;
+    -fx-text-fill: #2C343A;
     -fx-font-weight: lighter;
 }
 
@@ -359,4 +381,8 @@
     -fx-font-size: 16;
     -fx-padding: 10 15;
     -fx-background-radius: 8;
+}
+
+.repeat-content {
+    -fx-padding: 20;
 }

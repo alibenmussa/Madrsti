@@ -1,7 +1,6 @@
 package main.views.stages.admin.adminShowHome;
 
 import javafx.fxml.Initializable;
-import main.views.dialog.Dialog;
 
 import java.net.URL;
 import java.util.ResourceBundle;

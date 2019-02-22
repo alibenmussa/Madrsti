@@ -15,7 +15,8 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane maxWidth="-Infinity" minWidth="-Infinity" prefWidth="765.0" styleClass="pageContent" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.views.stages.employee.employeeShowStudents.employeeShowStudentsController">
+<?import java.net.URL?>
+<AnchorPane maxWidth="-Infinity" minWidth="-Infinity" prefWidth="765.0" styleClass="pageContent" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.views.stages.employee.employeeShowStudents.employeeShowStudentsController">
    <children>
       <VBox prefWidth="715.0" spacing="35.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="60.0">
          <children>
@@ -106,4 +107,7 @@
          </children>
       </VBox>
    </children>
+   <stylesheets>
+      <URL value="@../../../../assests/stylesheets/style.css"/>
+   </stylesheets>
 </AnchorPane>
