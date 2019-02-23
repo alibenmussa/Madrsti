@@ -2,19 +2,19 @@ package main.views.stages.employee.employeeShowClasses;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import main.StagesManager;
 import main.views.dialog.Dialog;
+import main.views.stages.employee.employeeShowClasses.employeeShowSchedule.employeeShowScheduleController;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -38,8 +38,16 @@ public class employeeShowClassesController implements Initializable {
 
         int i = 0;
         for (char c = 'A'; c < 'E'; c++) {
-            Button btn = new Button(String.valueOf(c));
+            String clas = String.valueOf(c);
+            Button btn = new Button(clas);
             btn.getStyleClass().addAll("gray-button", "big-button");
+            btn.setOnAction(e -> {
+                try {
+                    showClassSchedule(clas);
+                } catch (Exception ex) {
+
+                }
+            });
             GridPane.setHalignment(btn, HPos.CENTER);
             gp.add(btn, (i % 5), (i / 5));
             i++;
@@ -63,5 +71,15 @@ public class employeeShowClassesController implements Initializable {
     @FXML
     void addClass(ActionEvent event) throws Exception {
         Dialog.show("Add Class", "/main/views/stages/employee/employeeShowClasses/employeeAddClass/employeeAddClass.fxml");
+    }
+
+    private void showClassSchedule(String clas) throws Exception {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/main/views/stages/employee/employeeShowClasses/employeeShowSchedule/employeeShowSchedule.fxml"));
+        loader.load();
+        employeeShowScheduleController sc = loader.getController();
+        sc.createScheduleTable(clas);
+        StagesManager.stageContent.setContent(loader.getRoot());
+
     }
 }

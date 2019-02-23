@@ -41,9 +41,9 @@ public class employeeNavbarController {
     }
 
     @FXML
-    void employeeShowSubjects(ActionEvent event) throws Exception {
+    void employeeShowSubjects(ActionEvent event) {
         addActiveButton(employeeShowResults);
-        Dialog.show("Profile", "/main/views/stages/employee/employeeShowClasses/employeeShowClasses.fxml");
+//        Dialog.show("Profile", "/main/views/stages/employee/employeeShowClasses/employeeShowClasses.fxml");
 
     }
 

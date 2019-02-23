@@ -92,8 +92,12 @@
 }
 
 
-#dialogContent .showing-fields .text-field, .showing-fields .text-field:disabled {
+.showing-fields .text-field:disabled {
     -fx-background-color: #E6E9F0;
+}
+
+#dialogContent .showing-fields .text-field {
+    -fx-background-color: #f8f8fb;
 }
 
 #dialogContent .blue .text-field:disabled {
@@ -254,9 +258,14 @@
     -fx-text-fill: #7F8FA4;
 }
 
-.gray-button.big-button:hover {
+.gray-button.big-button:hover, .gray-button.cell-schedule:hover {
     -fx-background-color: #3841DC;
     -fx-text-fill: #ffffff;
+}
+
+.gray-button .glyph-icon {
+    -fx-text-fill: #7F8FA4;
+    -fx-fill: #7F8FA4;
 }
 
 
@@ -264,15 +273,15 @@
     -fx-border-color: #eff2f9;
 }
 
-#content .gray-button.big-button:pressed {
+#content .gray-button.big-button:pressed, #content .gray-button.cell-schedule:pressed {
     -fx-border-color: #8EB9ED;
 }
 
 .big-button {
     -fx-pref-width: 100;
-    -fx-pref-height: 100;
-    -fx-min-height: 100;
-    -fx-font-size: 42;
+    -fx-pref-height: 60;
+    -fx-min-height: 60;
+    -fx-font-size: 28;
     -fx-font-weight: lighter;
 }
 
@@ -383,6 +392,15 @@
     -fx-background-radius: 8;
 }
 
-.repeat-content {
-    -fx-padding: 20;
+.cell-time {
+    -fx-font-size: 13;
+    -fx-text-fill: #7F8FA4;
 }
+
+.cell-day {
+    -fx-font-size: 16;
+    -fx-text-fill: #7F8FA4;
+    /*Gray: #7F8FA4*/
+    /*l-gray: #E6E9F0*/
+}
+
