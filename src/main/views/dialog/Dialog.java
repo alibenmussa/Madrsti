@@ -15,11 +15,11 @@ public class Dialog {
     public static String dialogPane;
     public static String subject;
     public static String message;
-    public static boolean confirm = false;
+    public static boolean success = false;
 
-    public static void show(String title, String path) throws Exception{
+    public static boolean show(String title, String path) throws Exception{
         dialogStage = new Stage();
-
+        success = false;
         dialogPane = path;
         Pane root = FXMLLoader.load(Main.class.getResource("/main/views/dialog/dialog.fxml"));
 
@@ -27,15 +27,13 @@ public class Dialog {
         scene.setFill(Color.TRANSPARENT);
 
         dialogStage.setX(StagesManager.window.getX() + ((1024 - 760) / 2));
-        dialogStage.setY(StagesManager.window.getY() + ((680 - 540) / 2));
+        dialogStage.setY(StagesManager.window.getY() + ((720 - 540) / 2));
 
         dialogStage.setScene(scene);
         dialogStage.initStyle(StageStyle.TRANSPARENT);
         dialogStage.initModality(Modality.WINDOW_MODAL);
-        StagesManager.window.setAlwaysOnTop(true);
-        dialogStage.setAlwaysOnTop(true);
         dialogStage.setTitle(title);
-        dialogStage.show();
+
 
         StagesManager.showBlackBG();
 
@@ -43,19 +41,25 @@ public class Dialog {
             closeDialogWindow();
         });
 
+        dialogStage.setOnCloseRequest(e -> {
+            closeDialogWindow();
+        });
+
+        dialogStage.showAndWait();
+
         dialogStage.setOnShowing(e -> {
             StagesManager.showBlackBG();
         });
 
-        dialogStage.setOnCloseRequest(e -> {
-            closeDialogWindow();
-        });
+        return success;
+
     }
 
-    public static boolean showConfirm(String message) throws Exception {
+    public static boolean showConfirm(String subject, String message) throws Exception {
         dialogStage = new Stage();
-        Dialog.subject = "Confirm Message";
+        Dialog.subject = subject;
         Dialog.message = message;
+        success = false;
 
         Pane root = FXMLLoader.load(Main.class.getResource("/main/views/dialog/confirmDialog.fxml"));
 
@@ -63,14 +67,11 @@ public class Dialog {
         scene.setFill(Color.TRANSPARENT);
 
         dialogStage.setX(StagesManager.window.getX() + ((1024 - 450) / 2));
-        dialogStage.setY(StagesManager.window.getY() + ((680 - 264) / 2));
+        dialogStage.setY(StagesManager.window.getY() + ((720 - 264) / 2));
 
         dialogStage.setScene(scene);
         dialogStage.initStyle(StageStyle.TRANSPARENT);
         dialogStage.initModality(Modality.WINDOW_MODAL);
-        StagesManager.window.setAlwaysOnTop(true);
-        dialogStage.setAlwaysOnTop(true);
-        dialogStage.setTitle("Confirm Message");
         StagesManager.showBlackBG();
 
         dialogStage.setOnCloseRequest(e -> {
@@ -87,7 +88,7 @@ public class Dialog {
             StagesManager.showBlackBG();
         });
 
-        return confirm;
+        return success;
     }
 
     public static void showAlert(String subject, String message) throws Exception {
@@ -101,14 +102,11 @@ public class Dialog {
         scene.setFill(Color.TRANSPARENT);
 
         dialogStage.setX(StagesManager.window.getX() + ((1024 - 450) / 2));
-        dialogStage.setY(StagesManager.window.getY() + ((680 - 264) / 2));
+        dialogStage.setY(StagesManager.window.getY() + ((720 - 264) / 2));
 
         dialogStage.setScene(scene);
         dialogStage.initStyle(StageStyle.TRANSPARENT);
         dialogStage.initModality(Modality.WINDOW_MODAL);
-        StagesManager.window.setAlwaysOnTop(true);
-        dialogStage.setAlwaysOnTop(true);
-        dialogStage.setTitle("Confirm Message");
         StagesManager.showBlackBG();
 
         dialogStage.setOnCloseRequest(e -> {

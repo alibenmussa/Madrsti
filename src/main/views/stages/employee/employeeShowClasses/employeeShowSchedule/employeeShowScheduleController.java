@@ -39,10 +39,14 @@ public class employeeShowScheduleController implements Initializable {
             for (int j = 1; j <= 7; j++) {
                 Button btn = new Button("Arabic");
                 btn.getStyleClass().addAll("gray-button", "cell-schedule");
-                btn.setStyle("-fx-max-height: Infinity; -fx-max-width: Infinity");
+                btn.setId(i + "" + j);
                 btn.setOnAction(e -> {
                     try {
-                        Dialog.showConfirm("Do you want to delete this subject?");
+                        System.out.println(btn.getId());
+                        boolean ok = Dialog.showConfirm("Delete Sub", "Do you want to delete this subject?");
+                        if (ok) {
+                            btn.setVisible(false);
+                        }
                     } catch (Exception ex) {
 
                     }
@@ -55,7 +59,8 @@ public class employeeShowScheduleController implements Initializable {
 
     @FXML
     void addSubject(ActionEvent event) throws Exception {
-        Dialog.show("Add Subject", "/main/views/stages/employee/employeeShowClasses/employeeShowSchedule/employeeAddSubject/employeeAddSubject.fxml");
+        boolean addSubject = Dialog.show("Add Subject", "/main/views/stages/employee/employeeShowClasses/employeeShowSchedule/employeeAddSubject/employeeAddSubject.fxml");
+        System.out.println(addSubject);
     }
 
     @FXML

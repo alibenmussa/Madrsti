@@ -1,4 +1,4 @@
-package main.views.stages.employee.employeeShowClasses.employeeShowSchedule.employeeAddSubject;
+package main.views.stages.employee.employeeShowSubjects.employeeAddSubject;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -13,16 +13,16 @@ import java.util.ResourceBundle;
 public class employeeAddSubjectController implements Initializable {
 
     @FXML
-    private ComboBox<?> subject;
+    private TextField subject;
 
     @FXML
-    private ComboBox<?> teacher;
+    private ComboBox<?> grade;
 
     @FXML
-    private ComboBox<?> day;
+    private TextField fullMark;
 
     @FXML
-    private ComboBox<?> time;
+    private TextField passingMark;
 
 
     @Override

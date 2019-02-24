@@ -54,7 +54,7 @@ public class employeeShowClassesController implements Initializable {
         }
 
         VBox vb = new VBox(label, gp);
-        vb.setPadding(new Insets(15));
+        vb.setPadding(new Insets(25, 15, 15, 15));
         setAnchorsToEdge(vb);
         ap.getChildren().add(vb);
         classesList.getChildren().add(ap);

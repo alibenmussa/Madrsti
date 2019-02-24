@@ -293,6 +293,40 @@
     -fx-background-color: #30beab;
 }
 
+.delete-button {
+    -fx-background-color: #faeaeb;
+    -fx-text-fill: #db193e;
+    -fx-max-width: 30;
+    -fx-max-height: 30;
+    -fx-min-width: 30;
+    -fx-min-height: 30;
+    -fx-background-radius: 7;
+    -fx-cursor: hand;
+    -fx-padding: 0;
+}
+
+.delete-button:hover {
+    -fx-background-color: #db193e;
+    -fx-text-fill: #ffffff;
+}
+.delete-button > .glyph-icon {
+    -fx-font-size: 14;
+    -fx-text-fill: #db193e;
+    -fx-fill: #db193e;
+}
+
+.delete-button:hover > .glyph-icon {
+    -fx-text-fill: #ffffff;
+    -fx-fill: #ffffff;
+}
+
+#content .delete-button:pressed, #loginContainer .delete-button:pressed, #dialogContent .delete-button:pressed {
+    -fx-border-color: rgba(250, 181, 195, 0.67);
+    -fx-border-radius: 9;
+}
+
+
+
 #content .function-button:pressed, #loginContainer .function-button:pressed, #dialogContent .function-button:pressed {
     /*-fx-border-color: #8EB9ED;*/
     -fx-border-color: #aee7d7;
@@ -319,6 +353,8 @@
     -fx-background-radius: 15;
 }
 
+
+
 .combo-box .list-cell
 {
     -fx-background: white;
@@ -341,6 +377,14 @@
     -fx-background-insets: 5;
     -fx-effect: dropshadow(gaussian, rgba(134, 139, 142, 0.1), 10, 0.2, 0, 5);
 }
+
+#dialogContent .combo-box, #dialogContent .combo-box > * {
+    -fx-min-height: 40;
+}
+
+/*.content:hover {*/
+    /*-fx-effect: dropshadow(gaussian, rgba(134, 139, 142, 0.05), 35, 0, 0, 25);*/
+/*}*/
 
 /*
 .combo-box .text-field {
@@ -392,6 +436,11 @@
     -fx-background-radius: 8;
 }
 
+.cell-schedule {
+    -fx-max-height: Infinity;
+    -fx-max-width: Infinity
+}
+
 .cell-time {
     -fx-font-size: 13;
     -fx-text-fill: #7F8FA4;
@@ -404,3 +453,8 @@
     /*l-gray: #E6E9F0*/
 }
 
+.small-subject {
+    -fx-font-size: 18;
+    -fx-font-weight: lighter;
+    -fx-text-fill: #7F8FA4;
+}

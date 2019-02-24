@@ -7,6 +7,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -14,7 +15,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.views.stages.employee.employeeShowClasses.employeeShowSchedule.employeeAddSubject.employeeAddSubjectController">
+<AnchorPane xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.views.stages.employee.employeeShowSubjects.employeeAddSubject.employeeAddSubjectController">
     <children>
         <AnchorPane maxHeight="1.7976931348623157E308" minHeight="550.0" prefWidth="746.0" styleClass="showing-fields">
             <children>
@@ -59,15 +60,8 @@
                                     </rowConstraints>
                                     <children>
                                         <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="250.0" spacing="15.0" />
-                              <ComboBox fx:id="subject" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="135.0" promptText="Subject" GridPane.vgrow="ALWAYS">
-                                 <items>
-                                    <FXCollections fx:factory="observableArrayList">
-                                       <String fx:value="Male" />
-                                       <String fx:value="Female" />
-                                    </FXCollections>
-                                 </items>
-                              </ComboBox>
-                                          <ComboBox fx:id="teacher" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="40.0" prefWidth="135.0" promptText="Teacher" GridPane.columnIndex="1">
+                              <TextField fx:id="subject" promptText="Subject Name" />
+                                          <ComboBox fx:id="grade" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="40.0" prefWidth="135.0" promptText="Grade" GridPane.columnIndex="1">
                                               <items>
                                                   <FXCollections fx:factory="observableArrayList">
                                                       <String fx:value="Male" />
@@ -75,22 +69,8 @@
                                                   </FXCollections>
                                               </items>
                                           </ComboBox>
-                              <ComboBox fx:id="day" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefWidth="135.0" promptText="Day" GridPane.rowIndex="1">
-                                 <items>
-                                    <FXCollections fx:factory="observableArrayList">
-                                       <String fx:value="Male" />
-                                       <String fx:value="Female" />
-                                    </FXCollections>
-                                 </items>
-                              </ComboBox>
-                              <ComboBox fx:id="time" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefWidth="135.0" promptText="Time" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                                 <items>
-                                    <FXCollections fx:factory="observableArrayList">
-                                       <String fx:value="Male" />
-                                       <String fx:value="Female" />
-                                    </FXCollections>
-                                 </items>
-                              </ComboBox>
+                              <TextField fx:id="fullMark" promptText="Full Mark" GridPane.rowIndex="1" />
+                              <TextField fx:id="passingMark" promptText="Passing Mark" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                                     </children>
                                 </GridPane>
                             </children>
@@ -117,6 +97,6 @@
         </AnchorPane>
     </children>
     <stylesheets>
-        <URL value="@../../../../../../assests/stylesheets/style.css" />
+        <URL value="@../../../../../assests/stylesheets/style.css" />
     </stylesheets>
 </AnchorPane>

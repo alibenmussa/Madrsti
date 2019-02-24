@@ -15,9 +15,9 @@ public class employeeNavbarController {
     @FXML
     private Button employeeShowClasses;
     @FXML
-    private Button employeeShowResults;
-    @FXML
     private Button employeeShowSubjects;
+    @FXML
+    private Button employeeShowResults;
 
 
     @FXML
@@ -42,8 +42,8 @@ public class employeeNavbarController {
 
     @FXML
     void employeeShowSubjects(ActionEvent event) {
-        addActiveButton(employeeShowResults);
-//        Dialog.show("Profile", "/main/views/stages/employee/employeeShowClasses/employeeShowClasses.fxml");
+        addActiveButton(employeeShowSubjects);
+        Main.FXMLLoaderPane(StagesManager.stageContent, "/main/views/stages/employee/employeeShowSubjects/employeeShowSubjects.fxml");
 
     }
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 13, 2019 at 10:02 AM
+-- Generation Time: Feb 24, 2019 at 03:05 AM
 -- Server version: 10.1.34-MariaDB
 -- PHP Version: 7.2.7
 
@@ -30,7 +30,8 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `classes` (
   `grade_id` int(11) NOT NULL,
-  `class_id` varchar(32) NOT NULL
+  `class_id` varchar(32) NOT NULL,
+  `capacity` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -68,6 +69,7 @@ CREATE TABLE `results` (
 
 CREATE TABLE `schedules` (
   `subject_id` varchar(32) NOT NULL,
+  `staff_id` int(10) NOT NULL,
   `grade_id` int(11) NOT NULL,
   `class_id` varchar(32) NOT NULL,
   `day` int(1) NOT NULL,
@@ -88,7 +90,7 @@ CREATE TABLE `staff` (
   `birthday` date NOT NULL,
   `address` varchar(160) NOT NULL,
   `job_description` varchar(32) NOT NULL,
-  `nationality` int(10) NOT NULL,
+  `nationality` varchar(100) NOT NULL,
   `phone_number` int(10) NOT NULL,
   `email` varchar(100) NOT NULL,
   `major` varchar(100) NOT NULL,
@@ -96,6 +98,13 @@ CREATE TABLE `staff` (
   `education` varchar(64) NOT NULL,
   `graduate_year` varchar(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `staff`
+--
+
+INSERT INTO `staff` (`staff_id`, `full_name`, `type`, `gender`, `birthday`, `address`, `job_description`, `nationality`, `phone_number`, `email`, `major`, `degree`, `education`, `graduate_year`) VALUES
+(1111111111, 'Ali Jamal Aldien Ben Mussa', 'Staff', 'Male', '1999-09-16', 'Airport road, Tripoli, Libya', 'Admistrator', 'Libyan', 915023739, 'alibenmussa@gmail.com', 'Software Engineering', 'Bachelor', 'Tripoli University', '2020');
 
 -- --------------------------------------------------------
 
@@ -105,16 +114,16 @@ CREATE TABLE `staff` (
 
 CREATE TABLE `students` (
   `student_id` int(10) NOT NULL,
-  `full_name` int(100) NOT NULL,
-  `state` int(32) NOT NULL,
-  `gender` int(32) NOT NULL,
+  `full_name` varchar(100) NOT NULL,
+  `state` varchar(32) NOT NULL,
+  `gender` varchar(32) NOT NULL,
   `birthday` date NOT NULL,
-  `address` int(11) NOT NULL,
-  `nationality` int(100) NOT NULL,
-  `relative_name` int(100) NOT NULL,
+  `address` varchar(200) NOT NULL,
+  `nationality` varchar(100) NOT NULL,
+  `relative_name` varchar(100) NOT NULL,
   `relation` varchar(100) NOT NULL,
   `phone_number` int(10) NOT NULL,
-  `email` varchar(100) NOT NULL,
+  `email` varchar(160) NOT NULL,
   `grade_id` int(11) DEFAULT NULL,
   `class_id` varchar(32) DEFAULT NULL,
   `health_status` varchar(100) NOT NULL,
@@ -132,8 +141,7 @@ CREATE TABLE `subjects` (
   `name` varchar(32) NOT NULL,
   `grade_id` int(11) NOT NULL,
   `full_mark` double NOT NULL,
-  `passing_grade` double NOT NULL,
-  `teacher` int(10) NOT NULL
+  `passing_mark` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -197,7 +205,6 @@ ALTER TABLE `students`
 --
 ALTER TABLE `subjects`
   ADD PRIMARY KEY (`subject_id`),
-  ADD KEY `subjects_ibfk_2` (`teacher`),
   ADD KEY `grade_id` (`grade_id`);
 
 --
@@ -240,7 +247,6 @@ ALTER TABLE `students`
 -- Constraints for table `subjects`
 --
 ALTER TABLE `subjects`
-  ADD CONSTRAINT `subjects_ibfk_2` FOREIGN KEY (`teacher`) REFERENCES `staff` (`staff_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `subjects_ibfk_3` FOREIGN KEY (`grade_id`) REFERENCES `grades` (`grade_id`);
 
 --

@@ -14,12 +14,12 @@
          <children>
             <VBox alignment="CENTER" prefWidth="450.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <Label style="-fx-font-weight: bold;" styleClass="title" text="Confirm Message">
+                  <Label fx:id="subject" style="-fx-font-weight: bold;" styleClass="title" text="Subject">
                      <VBox.margin>
                         <Insets />
                      </VBox.margin>
                   </Label>
-                  <Label fx:id="message" alignment="TOP_CENTER" maxWidth="1.7976931348623157E308" styleClass="text" text="Are you sure to Delete this employeee?" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+                  <Label fx:id="message" alignment="TOP_CENTER" maxWidth="1.7976931348623157E308" styleClass="text" text="Message" textAlignment="CENTER" wrapText="true" VBox.vgrow="ALWAYS">
                      <VBox.margin>
                         <Insets bottom="15.0" />
                      </VBox.margin>

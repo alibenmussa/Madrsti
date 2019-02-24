@@ -10,10 +10,13 @@ import java.util.ResourceBundle;
 
 public class confirmDialogController implements Initializable {
     @FXML
+    private Label subject;
+    @FXML
     private Label message;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        subject.setText(Dialog.subject);
         message.setText(Dialog.message);
     }
 
@@ -24,7 +27,7 @@ public class confirmDialogController implements Initializable {
 
     @FXML
     void clickYes(ActionEvent event) {
-        Dialog.confirm = true;
+        Dialog.success = true;
         Dialog.closeDialogWindow();
     }
 
