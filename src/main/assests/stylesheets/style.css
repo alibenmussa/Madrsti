@@ -81,6 +81,11 @@
 }
 
 
+#dialogContent .text-area, #dialogContent .text-area > * {
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+}
+
 #dialogContent .text-field {
     -fx-background-color: #f8f8fb;
     -fx-text-fill: #2C343A;
@@ -88,7 +93,6 @@
     -fx-padding: 0 10;
     -fx-border-color: transparent;
     -fx-min-height: 45;
-
 }
 
 
@@ -147,7 +151,7 @@
     -fx-font-size: 14;
 }
 
-.text-field, .combo-box, .date-picker {
+.text-field, .combo-box, .date-picker, .text-area {
     -fx-border-width: 1;
     -fx-border-color: #E6E9F0;
     -fx-border-radius: 5;

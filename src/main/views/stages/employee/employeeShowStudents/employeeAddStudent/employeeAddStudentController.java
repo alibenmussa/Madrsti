@@ -71,7 +71,7 @@ public class employeeAddStudentController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        userPhoto.setImage(new Image(StagesManager.getUserPhoto(), 100, 100, false, false));
+        userPhoto.setImage(new Image("/main/assests/images/users/default.jpg", 100, 100, false, false));
         userPhotoCircle.setClip(new Circle(50, 50, 50));
         userPhoto.setFitWidth(100);
 

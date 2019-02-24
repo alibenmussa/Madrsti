@@ -55,6 +55,7 @@ public class Main extends Application {
             mainPane.setContent(new AnchorPane(new Button("Wait")));
             AnchorPane pane = FXMLLoader.load(Main.class.getResource(fxmlFile));
             mainPane.setContent(pane);
+            mainPane.setVvalue(0);
         } catch (Exception ex) {
             ex.printStackTrace();
         }
