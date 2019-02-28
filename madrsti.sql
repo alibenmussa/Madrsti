@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 24, 2019 at 03:05 AM
+-- Generation Time: Feb 28, 2019 at 04:07 PM
 -- Server version: 10.1.34-MariaDB
 -- PHP Version: 7.2.7
 
@@ -185,7 +185,8 @@ ALTER TABLE `results`
 --
 ALTER TABLE `schedules`
   ADD PRIMARY KEY (`subject_id`,`grade_id`,`class_id`),
-  ADD KEY `schedules_ibfk_1` (`grade_id`,`class_id`);
+  ADD KEY `schedules_ibfk_1` (`grade_id`,`class_id`),
+  ADD KEY `staff_id` (`staff_id`);
 
 --
 -- Indexes for table `staff`
@@ -235,7 +236,8 @@ ALTER TABLE `results`
 --
 ALTER TABLE `schedules`
   ADD CONSTRAINT `schedules_ibfk_1` FOREIGN KEY (`grade_id`,`class_id`) REFERENCES `classes` (`grade_id`, `class_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `schedules_ibfk_2` FOREIGN KEY (`subject_id`) REFERENCES `subjects` (`subject_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `schedules_ibfk_2` FOREIGN KEY (`subject_id`) REFERENCES `subjects` (`subject_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `schedules_ibfk_3` FOREIGN KEY (`staff_id`) REFERENCES `staff` (`staff_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `students`

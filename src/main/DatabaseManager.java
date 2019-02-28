@@ -2,9 +2,8 @@ package main;
 
 import main.views.dialog.Dialog;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
+import java.util.ArrayList;
 
 public class DatabaseManager {
     public static final String DB = "jdbc:mysql://localhost/madrsti";
@@ -22,4 +21,35 @@ public class DatabaseManager {
             return null;
         }
     }
+
+    public static ResultSet executeSQLResultSet(String query, ArrayList<String> data) {
+        int length = data.size();
+        try {
+            Connection con = createConnection();
+            PreparedStatement ps = con.prepareStatement(query);
+            for (int i = 0; i < length; i++) {
+                ps.setString(i, data.get(i));
+            }
+            ResultSet rs = ps.executeQuery();
+            return rs;
+        } catch (SQLException ex) {
+            return null;
+        }
+    }
+
+    public static int executeSQLRows(String query, ArrayList<String> data) {
+        int length = data.size();
+        try {
+            Connection con = createConnection();
+            PreparedStatement ps = con.prepareStatement(query);
+            for (int i = 0; i < length; i++) {
+                ps.setString(i, data.get(i));
+            }
+            int rs = ps.executeUpdate();
+            return rs;
+        } catch (SQLException ex) {
+            return 0;
+        }
+    }
+
 }
