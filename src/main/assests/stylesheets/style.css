@@ -5,6 +5,8 @@
     Gray: #f8f8fb
     Green: #32C9B6
 
+    Dark Icon: #57535b
+
     *TEXT:
     Dark: #2C343A
     Gray: #7F8FA4
@@ -461,4 +463,40 @@
     -fx-font-size: 18;
     -fx-font-weight: lighter;
     -fx-text-fill: #7F8FA4;
+}
+
+
+.statistic-box {
+    -fx-background-color: transparent;
+    -fx-background-radius: 10;
+    -fx-font-size: 18;
+    -fx-padding: 15 auto;
+    -fx-text-fill: #7f8995;
+
+}
+
+.statistic-box:hover {
+    -fx-background-color: #3F4CF3;
+}
+
+.statistic-box .label {
+    -fx-text-fill: #7f8995;
+}
+
+.statistic-box .percent {
+    -fx-font-weight: bold;
+
+}
+
+.statistic-box .glyph-icon {
+    -fx-font-family: 'jdFontAwesome';
+    -fx-font-size: 38;
+    -fx-text-fill: #57535b;
+    -fx-fill: #57535b;
+
+}
+
+.statistic-box:hover .label, .statistic-box:hover .glyph-icon {
+    -fx-text-fill: #ffffff;
+    -fx-fill: #ffffff;
 }
