@@ -23,12 +23,14 @@ public class DatabaseManager {
     }
 
     public static ResultSet executeSQLResultSet(String query, ArrayList<String> data) {
-        int length = data.size();
+
         try {
             Connection con = createConnection();
             PreparedStatement ps = con.prepareStatement(query);
-            for (int i = 0; i < length; i++) {
-                ps.setString(i, data.get(i));
+            if (data != null) {
+                for (int i = 0; i < data.size(); i++){
+                    ps.setString(i, data.get(i));
+                }
             }
             ResultSet rs = ps.executeQuery();
             return rs;
