@@ -84,6 +84,8 @@ public class adminAddStaffController implements Initializable {
 
     }
 
+
+
     @FXML
     void clickCreateAccount(ActionEvent event) {
         ControllerFunctions.clickCreateAccount(event, username, password);
@@ -104,6 +106,7 @@ public class adminAddStaffController implements Initializable {
     public void uploadPhoto(ActionEvent event) throws Exception {
         selectedImage = ControllerFunctions.getPhotoFromUser(event, userPhoto);
         userPhotoCircle.setClip(new Circle(50, 50, 50));
+
 
 
     }

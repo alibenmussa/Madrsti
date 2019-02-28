@@ -8,11 +8,11 @@ import java.util.ArrayList;
 public class DatabaseManager {
     public static final String DB = "jdbc:mysql://localhost/madrsti";
     public static final String USER = "root";
-    public static final String PASSWORD = "root";
+    public static final String PASSWORD = "";
 
     public static Connection createConnection() {
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             Connection connection = DriverManager.getConnection(DB, USER, PASSWORD);
             return connection;
         } catch (ClassNotFoundException | SQLException ex) {
@@ -28,8 +28,8 @@ public class DatabaseManager {
             Connection con = createConnection();
             PreparedStatement ps = con.prepareStatement(query);
             if (data != null) {
-                for (int i = 0; i < data.size(); i++){
-                    ps.setString(i, data.get(i));
+                for (int i = 1; i <= data.size(); i++){
+                    ps.setString(i, data.get(i - 1));
                 }
             }
             ResultSet rs = ps.executeQuery();
@@ -40,12 +40,14 @@ public class DatabaseManager {
     }
 
     public static int executeSQLRows(String query, ArrayList<String> data) {
-        int length = data.size();
+
         try {
             Connection con = createConnection();
             PreparedStatement ps = con.prepareStatement(query);
-            for (int i = 0; i < length; i++) {
-                ps.setString(i, data.get(i));
+            if (data != null) {
+                for (int i = 1; i <= data.size(); i++) {
+                    ps.setString(i, data.get(i - 1));
+                }
             }
             int rs = ps.executeUpdate();
             return rs;
