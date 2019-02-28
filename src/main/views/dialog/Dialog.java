@@ -10,6 +10,8 @@ import javafx.stage.StageStyle;
 import main.Main;
 import main.StagesManager;
 
+import java.io.IOException;
+
 public class Dialog {
     public static Stage dialogStage;
     public static String dialogPane;
@@ -91,12 +93,17 @@ public class Dialog {
         return success;
     }
 
-    public static void showAlert(String subject, String message) throws Exception {
+    public static void showAlert(String subject, String message) {
         dialogStage = new Stage();
         Dialog.subject = subject;
         Dialog.message = message;
 
-        Pane root = FXMLLoader.load(Main.class.getResource("/main/views/dialog/alertDialog.fxml"));
+        Pane root = null;
+        try {
+            root = FXMLLoader.load(Main.class.getResource("/main/views/dialog/alertDialog.fxml"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         Scene scene = new Scene(root);
         scene.setFill(Color.TRANSPARENT);
