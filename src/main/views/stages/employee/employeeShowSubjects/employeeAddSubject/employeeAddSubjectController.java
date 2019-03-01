@@ -34,17 +34,9 @@ public class employeeAddSubjectController {
 
     ObservableList<Grade> gradesName;
 
-    public void initialize(ArrayList<String> data) {
-        ResultSet rs1 = DatabaseManager.executeSQLResultSet("SELECT `grades`.`name` FROM grades", null);
-        if (rs1 != null) {
-            try {
-                while (rs1.next()) {
-                    grade.getItems().add(rs1.getString(1));
-                }
-            } catch (SQLException ex) {
-
-            }
-        }
+    public void initialize() {
+        String subjectQuery = "SELECT `grades`.`name` FROM grades";
+        DatabaseManager.addComboBoxData(grade, subjectQuery, null);
     }
 
     @FXML
@@ -55,7 +47,6 @@ public class employeeAddSubjectController {
         String rs1 = DatabaseManager.getResultOneRow("SELECT `grade_id` FROM `grades` WHERE `name` = ?", data1,1).get(0);
         data2.add(subject.getText());
         data2.add(rs1);
-        System.out.println(rs1);
         data2.add(fullMark.getText());
         data2.add(passingMark.getText());
         int rs2 = DatabaseManager.executeSQLRows("INSERT INTO `subjects`(`name`, `grade_id`, `full_mark`, `passing_mark`) VALUES(?, ?, ?, ?)", data2);

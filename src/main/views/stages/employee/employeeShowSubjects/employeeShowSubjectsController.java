@@ -20,6 +20,8 @@ import javafx.scene.layout.VBox;
 import main.DatabaseManager;
 import main.Main;
 import main.views.dialog.Dialog;
+
+import java.io.IOException;
 import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -32,11 +34,8 @@ public class employeeShowSubjectsController implements Initializable {
     @FXML
     private GridPane subjects;
 
-    String g = "Hello";
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        System.out.println("Welcome");
         ResultSet rs1 = DatabaseManager.executeSQLResultSet("SELECT DISTINCT `subjects`.`grade_id`, `grades`.name FROM subjects INNER JOIN grades USING(grade_id)", null);
         if (rs1 != null) {
             try {
@@ -96,14 +95,18 @@ public class employeeShowSubjectsController implements Initializable {
     }
 
     @FXML
-    void addSubject(ActionEvent event) throws Exception {
+    void addSubject(ActionEvent event) {
         String path = "/main/views/stages/employee/employeeShowSubjects/employeeAddSubject/employeeAddSubject.fxml";
         FXMLLoader loader = new FXMLLoader(Main.class.getResource(path));
-        loader.load();
+        try {
+            loader.load();
+        } catch (IOException ex) {
+            System.out.println("pla");
+        }
         employeeAddSubjectController controller = loader.getController();
-        controller.initialize(null);
-        boolean add = Dialog.showAndPass("Add Subject", loader.getRoot());
-        if (add) {
+        controller.initialize();
+        boolean addSubject = Dialog.showAndPass("Add Subject", loader.getRoot());
+        if (addSubject) {
             Main.FXMLLoaderPane(StagesManager.stageContent, "/main/views/stages/employee/employeeShowSubjects/employeeShowSubjects.fxml");
         }
     }

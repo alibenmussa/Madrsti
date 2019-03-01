@@ -5,34 +5,60 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
+import main.DatabaseManager;
 import main.views.dialog.Dialog;
 
 import java.net.URL;
+import java.sql.DriverManager;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-public class employeeAddSubjectController implements Initializable {
+public class employeeAddSubjectController {
 
     @FXML
-    private ComboBox<?> subject;
+    private ComboBox subject;
 
     @FXML
-    private ComboBox<?> teacher;
+    private ComboBox teacher;
 
     @FXML
-    private ComboBox<?> day;
+    private ComboBox day;
 
     @FXML
-    private ComboBox<?> time;
+    private ComboBox time;
 
+    private String grade;
+    private String clas;
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
+    public void initialize(String gradeID, String className) {
+        grade = gradeID;
+        clas = className;
+        String subjectQuery = "SELECT DISTINCT `subjects`.`name` FROM `subjects` WHERE `grade_id` = ?";
+        String teacherQuery = "SELECT DISTINCT `staff`.`full_name` FROM `staff`";
+        ArrayList<String> data1 = new ArrayList<>();
+        data1.add(gradeID);
+        DatabaseManager.addComboBoxData(subject, subjectQuery, data1);
+        DatabaseManager.addComboBoxData(teacher, teacherQuery, null);
 
     }
 
     @FXML
     void employeeSaveAddSubject(ActionEvent event) {
-        Dialog.success = true;
+        ArrayList<String> data = new ArrayList<>();
+        String selectedDay = String.valueOf(day.getSelectionModel().getSelectedIndex() + 1);
+        String selectedTime = String.valueOf(time.getSelectionModel().getSelectedIndex() + 1);
+        data.add(grade);
+        data.add(clas);
+        data.add(selectedDay);
+        data.add(selectedTime);
+        System.out.println(data);
+        /*int rs = DatabaseManager.executeSQLRows("INSERT INTO `schedules` VALUES(?, ?, ?, ?, ?, ?)", data);
+        if (rs == 1) {
+            Dialog.success = true;
+            Dialog.closeDialogWindow();
+        } else {
+            System.out.println("Error Input");
+        }*/
         Dialog.closeDialogWindow();
     }
 

@@ -34,7 +34,7 @@ public class DatabaseManager {
                 ResultSet rs = ps.executeQuery();
                 return rs;
             } catch (SQLException ex) {
-
+                System.out.println(ex.getMessage());
             }
         }
         return null;
@@ -74,5 +74,13 @@ public class DatabaseManager {
             }
         }
         return result;
+    }
+
+    public static void addComboBoxData(javafx.scene.control.ComboBox comboBox, String query, ArrayList<String> data) {
+        ArrayList<String> items = getResultOneRow(query, data, 1);
+
+        for (int i = 0; i < items.size(); i++) {
+            comboBox.getItems().add(items.get(i));
+        }
     }
 }

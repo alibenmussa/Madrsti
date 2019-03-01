@@ -58,13 +58,18 @@ public class Dialog {
 
     }
 
-    public static boolean showAndPass(String title, Pane contnet) throws Exception{
+    public static boolean showAndPass(String title, Pane contnet){
         dialogStage = new Stage();
         success = false;
         dialogPath = null;
         dialogPane = contnet;
-        Pane root = FXMLLoader.load(Main.class.getResource("/main/views/dialog/dialog.fxml"));
 
+        Pane root = null;
+        try {
+            root = FXMLLoader.load(Main.class.getResource("/main/views/dialog/dialog.fxml"));
+        } catch (IOException ex) {
+
+        }
         Scene scene = new Scene(root);
         scene.setFill(Color.TRANSPARENT);
 

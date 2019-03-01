@@ -2,23 +2,26 @@ package main.views.stages.employee.employeeShowClasses.employeeShowSchedule;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
-import javafx.geometry.HPos;
-import javafx.geometry.Insets;
-import javafx.scene.Node;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.TextAlignment;
+import main.DatabaseManager;
 import main.Main;
 import main.StagesManager;
 import main.views.dialog.Dialog;
+import main.views.stages.employee.employeeShowClasses.employeeShowSchedule.employeeAddSubject.employeeAddSubjectController;
 
+import java.io.IOException;
 import java.net.URL;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-public class employeeShowScheduleController implements Initializable {
+public class employeeShowScheduleController {
     @FXML
     private VBox classesList;
 
@@ -28,39 +31,66 @@ public class employeeShowScheduleController implements Initializable {
     @FXML
     private GridPane schedule;
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
+    String grade;
+    String clas;
 
-    }
+    public void initialize(String gradeId, String gradeName, String className) {
+        grade = gradeId;
+        clas = className;
+        name.setText("Group " + className + " - " + gradeName);
+        ArrayList<String> data = new ArrayList<>();
+        data.add(gradeId);
+        data.add(className);
+        ResultSet rs1 = DatabaseManager.executeSQLResultSet("SELECT `subjects`.`name`, `day`, `time`, `staff_id`, `schedules`.`subject_id` FROM `schedules` INNER JOIN `subjects` USING(`subject_id`) WHERE `schedules`.`grade_id` = ? AND `class_id` = ?", data);
+        if (rs1 != null) {
+            try {
+                while (rs1.next()) {
+                    String subjectName = rs1.getString(1);
+                    int day = rs1.getInt(2);
+                    int time = rs1.getInt(3);
+                    String staffId = rs1.getString(4);
+                    String subjectId = rs1.getString(5);
 
-    public void createScheduleTable(String clas) {
-        name.setText("1st Primary - Group " + clas);
-        for (int i = 1; i <= 5; i++) {
-            for (int j = 1; j <= 7; j++) {
-                Button btn = new Button("Arabic");
-                btn.getStyleClass().addAll("gray-button", "cell-schedule");
-                btn.setId(i + "" + j);
-                btn.setOnAction(e -> {
-                    try {
-                        System.out.println(btn.getId());
-                        boolean ok = Dialog.showConfirm("Delete Sub", "Do you want to delete this subject?");
-                        if (ok) {
-                            btn.setVisible(false);
+                    Button btn = new Button(subjectName);
+                    btn.setWrapText(true);
+                    btn.setTextAlignment(TextAlignment.CENTER);
+                    btn.getStyleClass().addAll("gray-button", "cell-schedule");
+                    btn.setOnAction(e -> {
+                        ArrayList<String> data2 = new ArrayList<>();
+                        data2.add(subjectId);
+                        data2.add(staffId);
+                        data2.add(gradeId);
+                        data2.add(className);
+                        boolean deleteSubject = Dialog.showConfirm("Delete Subject", "Do you want to delete " + subjectName + "?");
+                        if (deleteSubject) {
+                            int rowsAffected = DatabaseManager.executeSQLRows("DELETE FROM `schedules` WHERE `subject_id` = ? AND `staff_id` = ? AND `grade_id` = ? AND `class_id` = ?", data2);
+                            if (rowsAffected > 0) {
+                                btn.setVisible(false);
+                            }
                         }
-                    } catch (Exception ex) {
-
-                    }
-                });
-                schedule.add(btn, i, j);
+                    });
+                    schedule.add(btn, day, time);
+                }
+            } catch (SQLException ex) {
             }
         }
-
     }
 
     @FXML
-    void addSubject(ActionEvent event) throws Exception {
-        boolean addSubject = Dialog.show("Add Subject", "/main/views/stages/employee/employeeShowClasses/employeeShowSchedule/employeeAddSubject/employeeAddSubject.fxml");
-        System.out.println(addSubject);
+    void addSubject(ActionEvent event) {
+        String path = "/main/views/stages/employee/employeeShowClasses/employeeShowSchedule/employeeAddSubject/employeeAddSubject.fxml";
+        FXMLLoader loader = new FXMLLoader(Main.class.getResource(path));
+        try {
+            loader.load();
+        } catch (IOException ex) {
+
+        }
+        employeeAddSubjectController controller = loader.getController();
+        controller.initialize(grade, clas);
+        boolean addSubject = Dialog.showAndPass("Add Subject", loader.getRoot());
+        if (addSubject) {
+            Main.FXMLLoaderPane(StagesManager.stageContent, "/main/views/stages/employee/employeeShowSubjects/employeeShowSubjects.fxml");
+        }
     }
 
     @FXML

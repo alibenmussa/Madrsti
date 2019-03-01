@@ -59,36 +59,30 @@
                                     </rowConstraints>
                                     <children>
                                         <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="250.0" spacing="15.0" />
-                              <ComboBox fx:id="subject" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="135.0" promptText="Subject" GridPane.vgrow="ALWAYS">
-                                 <items>
-                                    <FXCollections fx:factory="observableArrayList">
-                                       <String fx:value="Male" />
-                                       <String fx:value="Female" />
-                                    </FXCollections>
-                                 </items>
-                              </ComboBox>
-                                          <ComboBox fx:id="teacher" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="40.0" prefWidth="135.0" promptText="Teacher" GridPane.columnIndex="1">
-                                              <items>
-                                                  <FXCollections fx:factory="observableArrayList">
-                                                      <String fx:value="Male" />
-                                                      <String fx:value="Female" />
-                                                  </FXCollections>
-                                              </items>
-                                          </ComboBox>
+                              <ComboBox fx:id="subject" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="135.0" promptText="Subject" GridPane.vgrow="ALWAYS"/>
+                              <ComboBox fx:id="teacher" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="40.0" prefWidth="135.0" promptText="Teacher" GridPane.columnIndex="1"/>
                               <ComboBox fx:id="day" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefWidth="135.0" promptText="Day" GridPane.rowIndex="1">
                                  <items>
                                     <FXCollections fx:factory="observableArrayList">
-                                       <String fx:value="Male" />
-                                       <String fx:value="Female" />
+                                       <String fx:value="Sunday" />
+                                       <String fx:value="Monday" />
+                                       <String fx:value="Tuesday" />
+                                       <String fx:value="Wednesday" />
+                                       <String fx:value="Thursday" />
                                     </FXCollections>
                                  </items>
                               </ComboBox>
                               <ComboBox fx:id="time" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefWidth="135.0" promptText="Time" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                  <items>
-                                    <FXCollections fx:factory="observableArrayList">
-                                       <String fx:value="Male" />
-                                       <String fx:value="Female" />
-                                    </FXCollections>
+                                     <FXCollections fx:factory="observableArrayList">
+                                         <String fx:id="1" fx:value="8:15 - 9:00" />
+                                         <String fx:value="9:00 - 9:45" />
+                                         <String fx:value="9:45 - 10:30" />
+                                         <String fx:value="11:00 - 11:45" />
+                                         <String fx:value="11:45 - 12:30" />
+                                         <String fx:value="12:30 - 1:15" />
+                                         <String fx:value="1:15 - 2:00" />
+                                     </FXCollections>
                                  </items>
                               </ComboBox>
                                     </children>
