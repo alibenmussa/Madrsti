@@ -1,11 +1,18 @@
 package main.views.stages.admin.adminShowStudents;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.HBox;
+import javafx.util.Callback;
+import main.DatabaseManager;
+import main.views.stages.template.Students;
 
 import java.net.URL;
+import java.sql.ResultSet;
 import java.util.ResourceBundle;
 
 public class adminShowStudentsController implements Initializable {
@@ -28,10 +35,120 @@ public class adminShowStudentsController implements Initializable {
     @FXML
     private ComboBox<?> clas;
 
+    @FXML
+    private TableView<Students> studentsTable;
+
+    @FXML
+    private TableColumn<Students, String> name;
+
+    @FXML
+    private TableColumn<Students, String> grade;
+
+    @FXML
+    private TableColumn<Students, String> classs;
+
+    @FXML
+    private TableColumn<Students, Button> operations;
+
+    ObservableList<Students> data;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        setUpTable();
+    }
+
+
+    public void setUpTable() {
+
+
+
+        this.name.setCellValueFactory(new PropertyValueFactory<>("full_name"));
+        this.grade.setCellValueFactory(new PropertyValueFactory<>("grade_id"));
+        this.classs.setCellValueFactory(new PropertyValueFactory<>("class_id"));
+        this.operations.setCellValueFactory(new PropertyValueFactory<Students, Button>(""));
+
+        Callback<TableColumn<Students, Button>, TableCell<Students, Button>> cellFactory
+                = //
+                new Callback<TableColumn<Students, Button>, TableCell<Students, Button>>() {
+                    @Override
+                    public TableCell call(final TableColumn<Students, Button> param) {
+                        final TableCell<Students, Button> cell = new TableCell<Students, Button>() {
+
+                            final Button showBtn = new Button("E");
+
+
+                            @Override
+                            public void updateItem(Button item, boolean empty) {
+                                super.updateItem(item, empty);
+                                if (empty) {
+                                    setGraphic(null);
+                                    setText(null);
+                                } else {
+                                    showBtn.setOnAction(event -> {
+                                        System.out.println("heloo");
+                                        /*System.out.println("hello");
+                                        Staff subject = getTableView().getItems().get(getIndex());
+                                        System.out.println(subject.getFull_name()
+                                                + "   " + subject.getState()
+                                                + "   " + subject.getBirthday());*/
+                                    });
+                                    setGraphic(showBtn);
+
+
+                                    setText(null);
+                                }
+                            }
+                        };
+                        return cell;
+                    }
+                };
+
+        operations.setCellFactory(cellFactory);
+
+        studentsTable.setItems(getStudentList());
+
+
+
+
 
     }
 
+
+    public ObservableList<Students> getStudentList() {
+
+        data  = FXCollections.observableArrayList();
+
+        String query = "SElECT * FROM `students`";
+        ResultSet rw = DatabaseManager.executeSQLResultSet(query,null);
+        try {
+            while (rw.next()) {
+                System.out.println("blahblah");
+                Students students = new Students();
+                students.setStu_id(rw.getInt("student_id"));
+                students.setPhone_number(rw.getInt("phone_number"));
+                students.setBirthday(rw.getDate("birthday"));
+                students.setGrade_id(rw.getInt("grade_id"));
+                students.setEmail(rw.getString("email"));
+                students.setFull_name(rw.getString("full_name"));
+                students.setState(rw.getString("state"));
+                students.setGender(rw.getString("gender"));
+                students.setLiving_address(rw.getString("address"));
+                students.setClass_id(rw.getString("class_id"));
+                students.setNationality(rw.getString("nationality"));
+                students.setHealth_status(rw.getString("health_status"));
+                students.setNotes(rw.getString("notes"));
+                students.setRelative_name(rw.getString("relative_name"));
+                students.setRelation(rw.getString("relation"));
+
+                data.add(students);
+            }
+
+
+        }catch (Exception e){
+            e.printStackTrace();
+
+        }
+        return data;
+    }
 
 }
