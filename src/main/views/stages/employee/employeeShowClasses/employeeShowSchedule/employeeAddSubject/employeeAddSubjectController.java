@@ -33,8 +33,10 @@ public class employeeAddSubjectController {
     public void initialize(String gradeID, String className) {
         grade = gradeID;
         clas = className;
+        day.setVisibleRowCount(5);
+        time.setVisibleRowCount(5);
         String subjectQuery = "SELECT DISTINCT `subjects`.`name` FROM `subjects` WHERE `grade_id` = ?";
-        String teacherQuery = "SELECT DISTINCT `staff`.`full_name` FROM `staff`";
+        String teacherQuery = "SELECT DISTINCT `staff`.`full_name` FROM `staff` WHERE `type` = 'Teacher'";
         ArrayList<String> data1 = new ArrayList<>();
         data1.add(gradeID);
         DatabaseManager.addComboBoxData(subject, subjectQuery, data1);

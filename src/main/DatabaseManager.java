@@ -4,6 +4,7 @@ import main.views.dialog.Dialog;
 
 import java.sql.*;
 import java.util.ArrayList;
+import javafx.scene.control.ComboBox;
 
 public class DatabaseManager {
     public static final String DB = "jdbc:mysql://localhost/madrsti";
@@ -76,9 +77,10 @@ public class DatabaseManager {
         return result;
     }
 
-    public static void addComboBoxData(javafx.scene.control.ComboBox comboBox, String query, ArrayList<String> data) {
+    public static void addComboBoxData(ComboBox comboBox, String query, ArrayList<String> data) {
         ArrayList<String> items = getResultOneRow(query, data, 1);
-
+        comboBox.getItems().clear();
+        comboBox.setVisibleRowCount(6);
         for (int i = 0; i < items.size(); i++) {
             comboBox.getItems().add(items.get(i));
         }

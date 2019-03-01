@@ -18,7 +18,7 @@ import java.io.*;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class adminAddStaffController implements Initializable {
+public class adminAddStaffController {
 
     @FXML
     private TextField fullName;
@@ -76,12 +76,10 @@ public class adminAddStaffController implements Initializable {
 
     private File selectedImage = null;
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
+    public void initialize() {
         userPhoto.setImage(new Image(StagesManager.getUserPhoto(), 100, 100, false, false));
         userPhotoCircle.setClip(new Circle(50, 50, 50));
         userPhoto.setFitWidth(100);
-
     }
 
 

@@ -32,11 +32,10 @@ public class employeeAddSubjectController {
     @FXML
     private TextField passingMark;
 
-    ObservableList<Grade> gradesName;
-
     public void initialize() {
-        String subjectQuery = "SELECT `grades`.`name` FROM grades";
-        DatabaseManager.addComboBoxData(grade, subjectQuery, null);
+        System.out.println("welcom");
+        String gradeQuery = "SELECT `name` FROM `grades`";
+        DatabaseManager.addComboBoxData(grade, gradeQuery, null);
     }
 
     @FXML

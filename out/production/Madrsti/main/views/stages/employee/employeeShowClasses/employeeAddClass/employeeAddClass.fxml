@@ -38,7 +38,7 @@
                                     <RowConstraints minHeight="40.0" vgrow="SOMETIMES" />
                                  </rowConstraints>
                                  <children>
-                                    <Label fx:id="fullName" styleClass="title" text="Add Class" />
+                                    <Label styleClass="title" text="Add Class" />
                                  </children>
                               </GridPane>
                            </children>
@@ -67,7 +67,7 @@
                               </HBox>
                               <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="250.0" spacing="15.0">
                                  <children>
-                                    <ComboBox fx:id="gender1" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefWidth="135.0" promptText="Grade" HBox.hgrow="ALWAYS">
+                                    <ComboBox fx:id="grade" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefWidth="135.0" promptText="Grade" HBox.hgrow="ALWAYS">
                                        <items>
                                           <FXCollections fx:factory="observableArrayList">
                                              <String fx:value="Male" />

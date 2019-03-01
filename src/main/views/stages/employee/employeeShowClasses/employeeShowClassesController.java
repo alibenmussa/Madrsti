@@ -13,10 +13,11 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import main.DatabaseManager;
+import main.Main;
 import main.StagesManager;
 import main.views.dialog.Dialog;
 import main.views.stages.employee.employeeShowClasses.employeeShowSchedule.employeeShowScheduleController;
-
+import main.views.stages.employee.employeeShowClasses.employeeAddClass.employeeAddClassController;
 import java.io.EOFException;
 import java.io.IOException;
 import java.net.URL;
@@ -90,8 +91,20 @@ public class employeeShowClassesController implements Initializable {
     }
 
     @FXML
-    void addClass(ActionEvent event) throws Exception {
-        Dialog.show("Add Class", "/main/views/stages/employee/employeeShowClasses/employeeAddClass/employeeAddClass.fxml");
+    void addClass(ActionEvent event) {
+        String path = "/main/views/stages/employee/employeeShowClasses/employeeAddClass/employeeAddClass.fxml";
+        FXMLLoader loader = new FXMLLoader(Main.class.getResource(path));
+        try {
+            loader.load();
+        } catch (IOException ex) {
+
+        }
+        employeeAddClassController controller = loader.getController();
+        controller.initialize();
+        boolean addSubject = Dialog.showAndPass("Add Subject", loader.getRoot());
+        if (addSubject) {
+            Main.FXMLLoaderPane(StagesManager.stageContent, "/main/views/stages/employee/employeeShowSubjects/employeeShowSubjects.fxml");
+        }
     }
 
     private void showClassSchedule(String gradeId, String gradeName, String className) {

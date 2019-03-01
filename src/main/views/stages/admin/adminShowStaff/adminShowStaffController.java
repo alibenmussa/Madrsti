@@ -4,15 +4,19 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.HBox;
 import javafx.util.Callback;
 import main.DatabaseManager;
+import main.Main;
+import main.StagesManager;
 import main.views.dialog.Dialog;
 import main.views.stages.template.Staff;
-
+import main.views.stages.admin.adminShowStaff.adminAddStaff.adminAddStaffController;
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -114,7 +118,7 @@ public class adminShowStaffController implements Initializable {
 
         data  = FXCollections.observableArrayList();
 
-        String query = "SElECT * FROM `staff`";
+        String query = "SELECT * FROM `staff`";
         ResultSet rw = DatabaseManager.executeSQLResultSet(query,null);
         try {
             while (rw.next()) {
@@ -145,7 +149,20 @@ public class adminShowStaffController implements Initializable {
     }
 
     @FXML
-    void adminAddStaff(ActionEvent event) throws Exception {
-        Dialog.show("Add Staff", "/main/views/stages/admin/adminShowStaff/adminAddStaff/adminAddStaff.fxml");
+    void adminAddStaff(ActionEvent event) {
+        String path = "/main/views/stages/admin/adminShowStaff/adminAddStaff/adminAddStaff.fxml";
+        FXMLLoader loader = new FXMLLoader(Main.class.getResource(path));
+        try {
+            loader.load();
+        } catch (IOException ex) {
+
+        }
+        adminAddStaffController controller = loader.getController();
+        controller.initialize();
+        boolean addStaff = Dialog.showAndPass("Add Staff", loader.getRoot());
+        if (addStaff) {
+            //إعادة تحميل الصفحة عند نجاح الإضافة
+            Main.FXMLLoaderPane(StagesManager.stageContent, "/main/views/stages/admin/adminShowStaff/adminShowStaff.fxml");
+        }
     }
 }

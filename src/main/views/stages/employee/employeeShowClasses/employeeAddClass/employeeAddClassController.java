@@ -5,20 +5,24 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.shape.Circle;
+import javafx.scene.control.ComboBox;
 import main.views.dialog.Dialog;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class employeeAddClassController implements Initializable {
+public class employeeAddClassController {
 
+    @FXML
+    private TextField clas;
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
+    @FXML
+    private TextField capacity;
+
+    @FXML
+    private ComboBox grade;
+
+    public void initialize() {
 
     }
 

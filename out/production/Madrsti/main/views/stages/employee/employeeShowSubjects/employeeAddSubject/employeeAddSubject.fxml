@@ -60,10 +60,10 @@
                                     </rowConstraints>
                                     <children>
                                         <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="250.0" spacing="15.0" />
-                              <TextField fx:id="subject" promptText="Subject Name" />
-                                          <ComboBox fx:id="grade" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="40.0" prefWidth="135.0" promptText="Grade" GridPane.columnIndex="1"/>
-                              <TextField fx:id="fullMark" promptText="Full Mark" GridPane.rowIndex="1" />
-                              <TextField fx:id="passingMark" promptText="Passing Mark" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <TextField fx:id="subject" promptText="Subject Name" />
+                                        <ComboBox fx:id="grade" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="40.0" prefWidth="135.0" promptText="Grade" GridPane.columnIndex="1"/>
+                                          <TextField fx:id="fullMark" promptText="Full Mark" GridPane.rowIndex="1" />
+                                          <TextField fx:id="passingMark" promptText="Passing Mark" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                                     </children>
                                 </GridPane>
                             </children>

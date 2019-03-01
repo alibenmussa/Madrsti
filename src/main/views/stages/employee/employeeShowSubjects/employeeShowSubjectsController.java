@@ -101,10 +101,8 @@ public class employeeShowSubjectsController implements Initializable {
         try {
             loader.load();
         } catch (IOException ex) {
-            System.out.println("pla");
+
         }
-        employeeAddSubjectController controller = loader.getController();
-        controller.initialize();
         boolean addSubject = Dialog.showAndPass("Add Subject", loader.getRoot());
         if (addSubject) {
             Main.FXMLLoaderPane(StagesManager.stageContent, "/main/views/stages/employee/employeeShowSubjects/employeeShowSubjects.fxml");
