@@ -33,7 +33,7 @@ public  class titlebarController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         if (StagesManager.stageContent != null) {
-            signOut.setText(StagesManager.name + "? Sign Out");
+            signOut.setText(StagesManager.name.split(" ")[0] + "? Sign Out");
             userPhoto.setImage(new Image(StagesManager.getUserPhoto()));
             userPhotoCircle.setClip(new Circle(15, 15, 15));
             signOut.setVisible(true);
@@ -48,7 +48,6 @@ public  class titlebarController implements Initializable {
         yAxis = event.getScreenY()  - y;
         StagesManager.window.setX(xAxis);
         StagesManager.window.setY(yAxis);
-
     }
 
     @FXML

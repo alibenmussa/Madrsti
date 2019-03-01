@@ -7,13 +7,14 @@ import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 public final class StagesManager {
-
+    public static String userId;
     public static String username;
-    public static String name = "Yousef";
-    public static StackPane root;
+    public static String name;
     public static Pane blackBG = new Pane();
+    public static StackPane root;
     public static Stage window = Main.window;
     public static ScrollPane stageContent = null;
+    public static double windowWidth = 1024;
     public static double windowHeight = 720;
 
     public static String getUserPhoto() {

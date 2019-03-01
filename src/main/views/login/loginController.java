@@ -4,14 +4,19 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
+import main.DatabaseManager;
 import main.Main;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.AnchorPane;
+import main.StagesManager;
 import main.views.Madrsti;
 
 import java.net.URL;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class loginController implements Initializable {
@@ -43,29 +48,32 @@ public class loginController implements Initializable {
         String password = this.password.getText();
         int authenticationState = checkAuthentication(username, password);
         if(authenticationState != 0) {
-            switch (Integer.parseInt(username + "")) {
-                case 1:
-                    Madrsti.displayStage(username, 1);
-                    break;
-                case 2:
-                    Madrsti.displayStage(username, 2);
-                    break;
-                case 3:
-                    Madrsti.displayStage(username, 3);
-                    break;
-                default:
-                    Madrsti.displayStage(username, 1);
-
-            }
+            Madrsti.displayStage(authenticationState);
         } else {
-            java.lang.System.out.println("Your Enter is Error!"); //مؤقتا لين ما نديروا رسالة خطأ
-            this.username.setStyle("-fx-border-color: red");
-            this.password.setStyle("-fx-border-color: red");
+            this.username.getStyleClass().add("error-field");
+            this.password.getStyleClass().add("error-field");
         }
     }
 
     private int checkAuthentication(String username, String password) {
-        return 1;    //مؤقتا بس، بعدين حنربطوا بالداتابيز
+        ArrayList<String> data = new ArrayList<>();
+        data.add(username);
+        data.add(password);
+        int permission = 0;
+        ResultSet rs = DatabaseManager.executeSQLResultSet("SELECT * FROM `users` INNER JOIN `staff` ON `user_id` = `staff_id` WHERE `username` = ? AND `password` = ?", data);
+        if (rs != null) {
+            try {
+                while (rs.next()) {
+                    StagesManager.userId = rs.getString("user_id");
+                    StagesManager.username = rs.getString("username");
+                    StagesManager.name = rs.getString("full_name");
+                    permission = rs.getInt("permission");
+                    System.out.println(StagesManager.name);
+                }
+            } catch (SQLException ex) {
+            }
+        }
+        return permission;
     }
 
 

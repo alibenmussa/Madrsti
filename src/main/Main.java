@@ -9,6 +9,7 @@ import javafx.scene.control.ScrollPane;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
@@ -19,17 +20,23 @@ public class Main extends Application {
     public static Stage window;
 
     @Override
-    public void start(Stage primaryStage) throws Exception{
+    public void start(Stage primaryStage){
         window = primaryStage;
-        Pane root = FXMLLoader.load(getClass().getResource("/main/views/login/login.fxml"));
-        Rectangle page = new Rectangle(1024, StagesManager.windowHeight);
+        StackPane root = null;
+        try {
+            root = FXMLLoader.load(getClass().getResource("/main/views/login/login.fxml"));
+        } catch (Exception ex) {
+
+        }
+        StagesManager.root = root;
+        Rectangle page = new Rectangle(StagesManager.windowWidth, StagesManager.windowHeight);
         page.setArcWidth(20);
         page.setArcHeight(20);
         root.setClip(page);
-        Scene scene = new Scene(root, 1024, StagesManager.windowHeight);
+        Scene scene = new Scene(root, StagesManager.windowWidth, StagesManager.windowHeight);
         scene.setFill(Color.TRANSPARENT);
         window.setScene(scene);
-        window.setTitle("Madrasti Madrsti");
+        window.setTitle("Madrasti");
         window.initStyle(StageStyle.TRANSPARENT);
         StagesManager.blackBG.setStyle("-fx-background-color: rgba(53, 57, 89, 0.75)");
 

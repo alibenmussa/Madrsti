@@ -14,15 +14,16 @@ import java.io.IOException;
 
 public class Dialog {
     public static Stage dialogStage;
-    public static String dialogPane;
+    public static String dialogPath;
     public static String subject;
     public static String message;
     public static boolean success = false;
+    public static Pane dialogPane;
 
     public static boolean show(String title, String path) throws Exception{
         dialogStage = new Stage();
         success = false;
-        dialogPane = path;
+        dialogPath = path;
         Pane root = FXMLLoader.load(Main.class.getResource("/main/views/dialog/dialog.fxml"));
 
         Scene scene = new Scene(root);
@@ -57,14 +58,58 @@ public class Dialog {
 
     }
 
-    public static boolean showConfirm(String subject, String message) throws Exception {
+    public static boolean showAndPass(String title, Pane contnet) throws Exception{
+        dialogStage = new Stage();
+        success = false;
+        dialogPath = null;
+        dialogPane = contnet;
+        Pane root = FXMLLoader.load(Main.class.getResource("/main/views/dialog/dialog.fxml"));
+
+        Scene scene = new Scene(root);
+        scene.setFill(Color.TRANSPARENT);
+
+        dialogStage.setX(StagesManager.window.getX() + ((1024 - 760) / 2));
+        dialogStage.setY(StagesManager.window.getY() + ((720 - 540) / 2));
+
+        dialogStage.setScene(scene);
+        dialogStage.initStyle(StageStyle.TRANSPARENT);
+        dialogStage.initModality(Modality.WINDOW_MODAL);
+        dialogStage.setTitle(title);
+
+
+        StagesManager.showBlackBG();
+
+        StagesManager.blackBG.setOnMouseClicked(e -> {
+            closeDialogWindow();
+        });
+
+        dialogStage.setOnCloseRequest(e -> {
+            closeDialogWindow();
+        });
+        dialogPane = null;
+        dialogStage.showAndWait();
+
+        dialogStage.setOnShowing(e -> {
+            StagesManager.showBlackBG();
+        });
+
+        return success;
+
+    }
+
+
+    public static boolean showConfirm(String subject, String message) {
         dialogStage = new Stage();
         Dialog.subject = subject;
         Dialog.message = message;
         success = false;
+        Pane root = null;
 
-        Pane root = FXMLLoader.load(Main.class.getResource("/main/views/dialog/confirmDialog.fxml"));
-
+        try {
+            root = FXMLLoader.load(Main.class.getResource("/main/views/dialog/confirmDialog.fxml"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         Scene scene = new Scene(root);
         scene.setFill(Color.TRANSPARENT);
 

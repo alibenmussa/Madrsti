@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 28, 2019 at 04:07 PM
+-- Generation Time: Mar 01, 2019 at 07:12 PM
 -- Server version: 10.1.34-MariaDB
 -- PHP Version: 7.2.7
 
@@ -34,6 +34,16 @@ CREATE TABLE `classes` (
   `capacity` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `classes`
+--
+
+INSERT INTO `classes` (`grade_id`, `class_id`, `capacity`) VALUES
+(1, 'A', 30),
+(1, 'B', 40),
+(2, 'A', 50),
+(3, 'A', 50);
+
 -- --------------------------------------------------------
 
 --
@@ -45,6 +55,18 @@ CREATE TABLE `grades` (
   `name` varchar(32) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `grades`
+--
+
+INSERT INTO `grades` (`grade_id`, `name`) VALUES
+(1, '1st Primary'),
+(2, '2st Primary'),
+(3, '3st Primary'),
+(4, '4st Primary'),
+(5, '5st Primary'),
+(6, '6st Primary');
+
 -- --------------------------------------------------------
 
 --
@@ -53,13 +75,20 @@ CREATE TABLE `grades` (
 
 CREATE TABLE `results` (
   `student_id` int(10) NOT NULL,
-  `subject_id` varchar(32) NOT NULL,
+  `subject_id` int(11) NOT NULL,
   `year` varchar(4) NOT NULL,
   `first_midterm_exam` double NOT NULL,
   `first_final_exam` double NOT NULL,
   `second_midterm_exam` double NOT NULL,
   `second_final_exam` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `results`
+--
+
+INSERT INTO `results` (`student_id`, `subject_id`, `year`, `first_midterm_exam`, `first_final_exam`, `second_midterm_exam`, `second_final_exam`) VALUES
+(444444444, 1, '2019', 25, 25, 50, 70);
 
 -- --------------------------------------------------------
 
@@ -68,8 +97,8 @@ CREATE TABLE `results` (
 --
 
 CREATE TABLE `schedules` (
-  `subject_id` varchar(32) NOT NULL,
-  `staff_id` int(10) NOT NULL,
+  `subject_id` int(11) NOT NULL,
+  `staff_id` bigint(20) UNSIGNED NOT NULL,
   `grade_id` int(11) NOT NULL,
   `class_id` varchar(32) NOT NULL,
   `day` int(1) NOT NULL,
@@ -83,7 +112,7 @@ CREATE TABLE `schedules` (
 --
 
 CREATE TABLE `staff` (
-  `staff_id` int(10) NOT NULL,
+  `staff_id` bigint(20) UNSIGNED NOT NULL,
   `full_name` varchar(80) NOT NULL,
   `type` varchar(8) NOT NULL,
   `gender` varchar(6) NOT NULL,
@@ -104,7 +133,9 @@ CREATE TABLE `staff` (
 --
 
 INSERT INTO `staff` (`staff_id`, `full_name`, `type`, `gender`, `birthday`, `address`, `job_description`, `nationality`, `phone_number`, `email`, `major`, `degree`, `education`, `graduate_year`) VALUES
-(1111111111, 'Ali Jamal Aldien Ben Mussa', 'Staff', 'Male', '1999-09-16', 'Airport road, Tripoli, Libya', 'Admistrator', 'Libyan', 915023739, 'alibenmussa@gmail.com', 'Software Engineering', 'Bachelor', 'Tripoli University', '2020');
+(1111111111, 'Ali Jamal Aldien Ben Mussa', 'Staff', 'Male', '1999-09-16', 'Airport road, Tripoli, Libya', 'Admistrator', 'Libyan', 915023739, 'alibenmussa@gmail.com', 'Software Engineering', 'Bachelor', 'Tripoli University', '2020'),
+(2222222222, 'Yousef Abdelkarim Breka', 'Employee', 'Male', '1999-09-16', 'Airport road, Tripoli, Libya', 'Admistrator', 'Libyan', 915023739, 'alibenmussa@gmail.com', 'Software Engineering', 'Bachelor', 'Tripoli University', '2020'),
+(3333333333, 'Anonymous', 'Employee', 'Male', '1999-09-16', 'Airport road, Tripoli, Libya', 'Admistrator', 'Libyan', 915023739, 'alibenmussa@gmail.com', 'Software Engineering', 'Bachelor', 'Tripoli University', '2020');
 
 -- --------------------------------------------------------
 
@@ -130,6 +161,13 @@ CREATE TABLE `students` (
   `notes` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `students`
+--
+
+INSERT INTO `students` (`student_id`, `full_name`, `state`, `gender`, `birthday`, `address`, `nationality`, `relative_name`, `relation`, `phone_number`, `email`, `grade_id`, `class_id`, `health_status`, `notes`) VALUES
+(444444444, 'Ali Jamal Aldien Ben Mussa', 'Mustajed', 'Male', '1999-09-16', 'Tripoli, Libya', 'Libyan', 'Jamal Ben Mussa', 'Father', 926360268, 'trytrytry@gmail.com', 1, 'B', 'True', 'OK');
+
 -- --------------------------------------------------------
 
 --
@@ -137,12 +175,22 @@ CREATE TABLE `students` (
 --
 
 CREATE TABLE `subjects` (
-  `subject_id` varchar(32) NOT NULL,
+  `subject_id` int(11) NOT NULL,
   `name` varchar(32) NOT NULL,
   `grade_id` int(11) NOT NULL,
   `full_mark` double NOT NULL,
   `passing_mark` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `subjects`
+--
+
+INSERT INTO `subjects` (`subject_id`, `name`, `grade_id`, `full_mark`, `passing_mark`) VALUES
+(2, 'Arabic', 1, 200, 120),
+(6, 'Paint', 1, 200, 120),
+(8, 'History', 6, 200, 120),
+(10, 'Arabic Language', 2, 220, 100);
 
 -- --------------------------------------------------------
 
@@ -151,11 +199,20 @@ CREATE TABLE `subjects` (
 --
 
 CREATE TABLE `users` (
-  `user_id` int(10) NOT NULL,
+  `user_id` bigint(20) UNSIGNED NOT NULL,
   `username` varchar(64) NOT NULL,
   `password` varchar(32) NOT NULL,
   `permission` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`user_id`, `username`, `password`, `permission`) VALUES
+(1111111111, '1', '1', 1),
+(2222222222, '2', '2', 2),
+(3333333333, '3', '3', 3);
 
 --
 -- Indexes for dumped tables
@@ -184,9 +241,9 @@ ALTER TABLE `results`
 -- Indexes for table `schedules`
 --
 ALTER TABLE `schedules`
-  ADD PRIMARY KEY (`subject_id`,`grade_id`,`class_id`),
-  ADD KEY `schedules_ibfk_1` (`grade_id`,`class_id`),
-  ADD KEY `staff_id` (`staff_id`);
+  ADD PRIMARY KEY (`subject_id`,`staff_id`,`grade_id`,`class_id`),
+  ADD KEY `staff_id` (`staff_id`),
+  ADD KEY `grade_id` (`grade_id`,`class_id`);
 
 --
 -- Indexes for table `staff`
@@ -215,6 +272,28 @@ ALTER TABLE `users`
   ADD PRIMARY KEY (`user_id`);
 
 --
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `results`
+--
+ALTER TABLE `results`
+  MODIFY `subject_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `schedules`
+--
+ALTER TABLE `schedules`
+  MODIFY `subject_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `subjects`
+--
+ALTER TABLE `subjects`
+  MODIFY `subject_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
 -- Constraints for dumped tables
 --
 
@@ -228,28 +307,21 @@ ALTER TABLE `classes`
 -- Constraints for table `results`
 --
 ALTER TABLE `results`
-  ADD CONSTRAINT `results_ibfk_1` FOREIGN KEY (`student_id`) REFERENCES `students` (`student_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `results_ibfk_2` FOREIGN KEY (`subject_id`) REFERENCES `subjects` (`subject_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `results_ibfk_1` FOREIGN KEY (`student_id`) REFERENCES `students` (`student_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `schedules`
 --
 ALTER TABLE `schedules`
-  ADD CONSTRAINT `schedules_ibfk_1` FOREIGN KEY (`grade_id`,`class_id`) REFERENCES `classes` (`grade_id`, `class_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `schedules_ibfk_2` FOREIGN KEY (`subject_id`) REFERENCES `subjects` (`subject_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `schedules_ibfk_3` FOREIGN KEY (`staff_id`) REFERENCES `staff` (`staff_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `schedules_ibfk_2` FOREIGN KEY (`staff_id`) REFERENCES `staff` (`staff_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `schedules_ibfk_3` FOREIGN KEY (`grade_id`,`class_id`) REFERENCES `classes` (`grade_id`, `class_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `schedules_ibfk_4` FOREIGN KEY (`subject_id`) REFERENCES `subjects` (`subject_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `students`
 --
 ALTER TABLE `students`
   ADD CONSTRAINT `students_ibfk_1` FOREIGN KEY (`grade_id`,`class_id`) REFERENCES `classes` (`grade_id`, `class_id`) ON DELETE SET NULL ON UPDATE SET NULL;
-
---
--- Constraints for table `subjects`
---
-ALTER TABLE `subjects`
-  ADD CONSTRAINT `subjects_ibfk_3` FOREIGN KEY (`grade_id`) REFERENCES `grades` (`grade_id`);
 
 --
 -- Constraints for table `users`

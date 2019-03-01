@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class DatabaseManager {
     public static final String DB = "jdbc:mysql://localhost/madrsti";
     public static final String USER = "root";
-    public static final String PASSWORD = "root";
+    public static final String PASSWORD = "";
 
     public static Connection createConnection() {
         try {
@@ -17,41 +17,62 @@ public class DatabaseManager {
             return connection;
         } catch (ClassNotFoundException | SQLException ex) {
             Dialog.showAlert("Connection Error", "Madrsti can't connect to database");
-            Main.closeApplication();
             return null;
         }
     }
 
     public static ResultSet executeSQLResultSet(String query, ArrayList<String> data) {
-
-        try {
-            Connection con = createConnection();
-            PreparedStatement ps = con.prepareStatement(query);
-            if (data != null) {
-                for (int i = 0; i < data.size(); i++){
-                    ps.setString(i, data.get(i));
+        Connection con = createConnection();
+        if (con != null) {
+            try {
+                PreparedStatement ps = con.prepareStatement(query);
+                if (data != null) {
+                    for (int i = 1; i <= data.size(); i++) {
+                        ps.setString(i, data.get(i - 1));
+                    }
                 }
+                ResultSet rs = ps.executeQuery();
+                return rs;
+            } catch (SQLException ex) {
+
             }
-            ResultSet rs = ps.executeQuery();
-            return rs;
-        } catch (SQLException ex) {
-            return null;
         }
+        return null;
     }
 
     public static int executeSQLRows(String query, ArrayList<String> data) {
-        int length = data.size();
-        try {
-            Connection con = createConnection();
-            PreparedStatement ps = con.prepareStatement(query);
-            for (int i = 0; i < length; i++) {
-                ps.setString(i, data.get(i));
+        Connection con = createConnection();
+        if (con != null) {
+            try {
+                PreparedStatement ps = con.prepareStatement(query);
+                if (data != null) {
+                    for (int i = 1; i <= data.size(); i++) {
+                        ps.setString(i, data.get(i - 1));
+                    }
+                }
+                int rs = ps.executeUpdate();
+                return rs;
+            } catch (SQLException ex) {
+
             }
-            int rs = ps.executeUpdate();
-            return rs;
-        } catch (SQLException ex) {
-            return 0;
         }
+        return 0;
     }
 
+    public static ArrayList<String> getResultOneRow(String query, ArrayList<String> data, int output) {
+        ArrayList<String> result = new ArrayList<>();
+        ResultSet rs = DatabaseManager.executeSQLResultSet(query, data);
+        if (rs != null) {
+            try {
+                while (rs.next()) {
+                    for (int i = 1; i <= output; i++) {
+                        result.add(rs.getString(i));
+                    }
+                }
+            } catch (SQLException ex) {
+
+            }
+        }
+        return result;
+    }
 }

@@ -15,7 +15,7 @@ public class Madrsti {
 
 
 
-    public static void displayStage(String username, int access) throws Exception {
+    public static void displayStage(int access) throws Exception {
         Stage window = new Stage();
         String path;
         switch (access) {
@@ -44,7 +44,6 @@ public class Madrsti {
         Scene scene = new Scene(root, 1024, StagesManager.windowHeight);
         scene.setFill(Color.TRANSPARENT);
 
-        StagesManager.username = username;
         StagesManager.window = window;
         StagesManager.root = root;
 

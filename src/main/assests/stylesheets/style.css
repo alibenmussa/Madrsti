@@ -467,10 +467,10 @@
 
 
 .statistic-box {
-    -fx-background-color: transparent;
+    -fx-background-color: #ffffff;
     -fx-background-radius: 10;
-    -fx-font-size: 18;
-    -fx-padding: 15 auto;
+    -fx-font-size: 14;
+    -fx-padding: 20 10;
     -fx-text-fill: #7f8995;
 
 }
@@ -490,10 +490,14 @@
 
 .statistic-box .glyph-icon {
     -fx-font-family: 'jdFontAwesome';
-    -fx-font-size: 38;
+    -fx-font-size: 28;
     -fx-text-fill: #57535b;
     -fx-fill: #57535b;
 
+}
+
+.error-field {
+    -fx-border-color: #db193e;
 }
 
 .statistic-box:hover .label, .statistic-box:hover .glyph-icon {
