@@ -8,6 +8,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Circle;
+import main.DatabaseManager;
 import main.StagesManager;
 import main.views.dialog.Dialog;
 import main.views.stages.ControllerFunctions;
@@ -78,6 +79,8 @@ public class employeeEditStudentController  {
         userPhotoCircle.setClip(new Circle(50, 50, 50));
         userPhoto.setFitWidth(100);
 
+        String gradeQuery = "SELECT `name` FROM `grades`";
+        DatabaseManager.addComboBoxData(year, gradeQuery, null);
     }
 
     public void setUserData() {
