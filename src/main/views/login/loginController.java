@@ -6,6 +6,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.VBox;
+import javafx.scene.control.Button;
 import main.DatabaseManager;
 import main.Main;
 import javafx.fxml.FXML;
@@ -26,6 +27,8 @@ public class loginController implements Initializable {
     private AnchorPane header;
     @FXML
     private Label loginSubject;
+    @FXML
+    private Button login;
     @FXML
     private TextField username;
     @FXML

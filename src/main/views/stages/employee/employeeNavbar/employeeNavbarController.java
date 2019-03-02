@@ -50,7 +50,7 @@ public class employeeNavbarController {
     @FXML
     void employeeShowResults(ActionEvent event) {
         addActiveButton(employeeShowResults);
-
+        Main.FXMLLoaderPane(StagesManager.stageContent, "/main/views/stages/employee/employeeShowStudents/employeeShowStudentInformation/employeeShowStudentInformation.fxml");
     }
 
 

@@ -175,6 +175,5 @@
    </children>
    <stylesheets>
       <URL value="@../../../../../assests/stylesheets/style.css" />
-      <URL value="@adminShowStaffInformation.css" />
    </stylesheets>
 </AnchorPane>

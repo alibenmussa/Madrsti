@@ -98,7 +98,7 @@
 }
 
 
-.showing-fields .text-field:disabled {
+.showing-fields .text-field:disabled  {
     -fx-background-color: #E6E9F0;
 }
 
@@ -428,7 +428,9 @@
     -fx-prompt-text-fill: transparent ;
 }
 
-
+#dialogContent .showing-fields .area-disable {
+    -fx-background-color: red;
+}
 
 .showing-fields .sub-heading {
     -fx-font-size: 22;

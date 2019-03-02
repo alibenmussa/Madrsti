@@ -54,7 +54,7 @@ public class DatabaseManager {
                 int rs = ps.executeUpdate();
                 return rs;
             } catch (SQLException ex) {
-
+                System.out.println(ex.getMessage());
             }
         }
         return 0;
