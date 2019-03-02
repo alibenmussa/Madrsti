@@ -11,11 +11,12 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import main.StagesManager;
 
+import java.io.IOException;
+
 public class Madrsti {
 
 
-
-    public static void displayStage(int access) throws Exception {
+    public static void displayStage(int access) {
         Stage window = new Stage();
         String path;
         switch (access) {
@@ -32,7 +33,12 @@ public class Madrsti {
                 return;
         }
 
-        Pane mainView = FXMLLoader.load(Madrsti.class.getResource(path));
+        Pane mainView = null;
+        try {
+            mainView = FXMLLoader.load(Madrsti.class.getResource(path));
+        } catch (IOException ex) {
+
+        }
 
         Rectangle page = new Rectangle(1024, StagesManager.windowHeight);
         page.setArcWidth(20);

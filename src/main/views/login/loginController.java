@@ -3,6 +3,8 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.VBox;
 import main.DatabaseManager;
 import main.Main;
@@ -43,7 +45,7 @@ public class loginController implements Initializable {
     }
 
     @FXML
-    public void clickLogIn(ActionEvent event) throws Exception {
+    public void clickLogIn(ActionEvent event) {
         String username = this.username.getText();
         String password = this.password.getText();
         int authenticationState = checkAuthentication(username, password);
@@ -52,6 +54,12 @@ public class loginController implements Initializable {
         } else {
             this.username.getStyleClass().add("error-field");
             this.password.getStyleClass().add("error-field");
+        }
+    }
+
+    public void pressLogIn(KeyEvent event) {
+        if (event.getCode() == KeyCode.ENTER) {
+            clickLogIn(null);
         }
     }
 

@@ -33,7 +33,6 @@ public class employeeAddSubjectController {
     private TextField passingMark;
 
     public void initialize() {
-        System.out.println("welcom");
         String gradeQuery = "SELECT `name` FROM `grades`";
         DatabaseManager.addComboBoxData(grade, gradeQuery, null);
     }

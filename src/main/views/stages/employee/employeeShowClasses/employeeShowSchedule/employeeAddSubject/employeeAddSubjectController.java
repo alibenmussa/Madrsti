@@ -47,8 +47,14 @@ public class employeeAddSubjectController {
     @FXML
     void employeeSaveAddSubject(ActionEvent event) {
         ArrayList<String> data = new ArrayList<>();
+        String selectedSubject = String.valueOf(subject.getSelectionModel().getSelectedItem());
+        String selectedTeacher = String.valueOf(teacher.getSelectionModel().getSelectedItem());
         String selectedDay = String.valueOf(day.getSelectionModel().getSelectedIndex() + 1);
         String selectedTime = String.valueOf(time.getSelectionModel().getSelectedIndex() + 1);
+        System.out.println(subject.getValue());
+        System.out.println(subject.getSelectionModel().getSelectedItem());
+        data.add(selectedSubject);
+        data.add(selectedTeacher);
         data.add(grade);
         data.add(clas);
         data.add(selectedDay);

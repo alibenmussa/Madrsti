@@ -99,11 +99,9 @@ public class employeeShowClassesController implements Initializable {
         } catch (IOException ex) {
 
         }
-        employeeAddClassController controller = loader.getController();
-        controller.initialize();
         boolean addSubject = Dialog.showAndPass("Add Subject", loader.getRoot());
         if (addSubject) {
-            Main.FXMLLoaderPane(StagesManager.stageContent, "/main/views/stages/employee/employeeShowSubjects/employeeShowSubjects.fxml");
+            Main.FXMLLoaderPane(StagesManager.stageContent, "/main/views/stages/employee/employeeShowClasses/employeeShowClasses.fxml");
         }
     }
 

@@ -1,12 +1,23 @@
 package main.views.dialog;
 
+import javafx.animation.FadeTransition;
+import javafx.animation.KeyFrame;
+import javafx.animation.KeyValue;
+import javafx.animation.Timeline;
+import javafx.application.Platform;
+import javafx.beans.property.DoubleProperty;
+import javafx.beans.property.SimpleDoubleProperty;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Rectangle2D;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.stage.Modality;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import javafx.util.Duration;
 import main.Main;
 import main.StagesManager;
 
@@ -48,6 +59,9 @@ public class Dialog {
             closeDialogWindow();
         });
 
+        Platform.runLater(() -> {
+            animateDialog();
+        });
         dialogStage.showAndWait();
 
         dialogStage.setOnShowing(e -> {
@@ -91,7 +105,12 @@ public class Dialog {
         dialogStage.setOnCloseRequest(e -> {
             closeDialogWindow();
         });
+
         dialogPane = null;
+        Platform.runLater(() -> {
+                animateDialog();
+        });
+
         dialogStage.showAndWait();
 
         dialogStage.setOnShowing(e -> {
@@ -134,6 +153,10 @@ public class Dialog {
             closeDialogWindow();
         });
 
+        Platform.runLater(() -> {
+            animateDialog();
+        });
+
         dialogStage.showAndWait();
 
         dialogStage.setOnShowing(e -> {
@@ -174,6 +197,9 @@ public class Dialog {
             closeDialogWindow();
         });
 
+        Platform.runLater(() -> {
+            animateDialog();
+        });
         dialogStage.showAndWait();
 
         dialogStage.setOnShowing(e -> {
@@ -188,5 +214,28 @@ public class Dialog {
         StagesManager.window.setAlwaysOnTop(false);
         dialogStage.setAlwaysOnTop(false);
 
+    }
+
+    private static void animateDialog() {
+        dialogStage.setOpacity(0);
+        FadeTransition fade = new FadeTransition(Duration.seconds(0.5), dialogStage.getScene().getRoot());
+        fade.setFromValue(0);
+        fade.setToValue(1);
+        fade.play();
+
+        Rectangle2D primaryScreenBounds = Screen.getPrimary().getVisualBounds();
+        double centerY = primaryScreenBounds.getMinY() + (primaryScreenBounds.getHeight() - dialogStage.getScene().getHeight()) * 1.0f / 2;
+        double startPos = primaryScreenBounds.getMinY() + centerY + (int) (dialogStage.getHeight() / 2);
+        double endPos = primaryScreenBounds.getMinY() + centerY;
+        DoubleProperty y = new SimpleDoubleProperty(startPos);
+        y.addListener((obs, oldValue, newValue) ->
+                dialogStage.setY(newValue.doubleValue()));
+
+        KeyFrame kf1 = new KeyFrame(Duration.seconds(0.5), new KeyValue(y, endPos));
+        KeyFrame kf2 = new KeyFrame(Duration.seconds(0.5), new KeyValue(dialogStage.opacityProperty(), 1));
+
+        Timeline timeline = new Timeline();
+        timeline.getKeyFrames().addAll(kf1, kf2);
+        timeline.play();
     }
 }

@@ -28,12 +28,12 @@
                                               <Insets bottom="5.0" top="5.0" />
                                           </VBox.margin>
                               </Label>
-                                      <TextField fx:id="username" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="50.0" prefWidth="320.0" promptText="Username">
+                                      <TextField fx:id="username" maxHeight="-Infinity" maxWidth="-Infinity" onKeyPressed="#pressLogIn" prefHeight="50.0" prefWidth="320.0" promptText="Username">
                                           <VBox.margin>
                                               <Insets bottom="-5.0" />
                                           </VBox.margin>
                               </TextField>
-                                      <PasswordField fx:id="password" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="50.0" prefWidth="320.0" promptText="Password">
+                                      <PasswordField fx:id="password" maxHeight="-Infinity" maxWidth="-Infinity" onKeyPressed="#pressLogIn" prefHeight="50.0" prefWidth="320.0" promptText="Password">
                                           <VBox.margin>
                                               <Insets />
                                           </VBox.margin>
