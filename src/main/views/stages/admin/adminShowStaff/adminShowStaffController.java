@@ -14,14 +14,13 @@ import main.DatabaseManager;
 import main.Main;
 import main.StagesManager;
 import main.views.dialog.Dialog;
+import main.views.stages.admin.adminShowStaff.adminEditStaff.adminEditStaffController;
+import main.views.stages.admin.adminShowStaff.adminShowStaffInformation.adminShowStaffInformationController;
 import main.views.stages.template.Staff;
 import main.views.stages.admin.adminShowStaff.adminAddStaff.adminAddStaffController;
 import java.io.IOException;
 import java.net.URL;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
@@ -59,8 +58,6 @@ public class adminShowStaffController implements Initializable {
 
     public void setUpTable() {
 
-
-
         this.name.setCellValueFactory(new PropertyValueFactory<>("full_name"));
         this.section.setCellValueFactory(new PropertyValueFactory<>("state"));
         this.phone.setCellValueFactory(new PropertyValueFactory<>("phone_number"));
@@ -89,12 +86,21 @@ public class adminShowStaffController implements Initializable {
                                         Staff selectedItem = getTableView().getItems().get(getIndex());
                                         System.out.println(selectedItem  == null);
                                         ArrayList<String> list = new ArrayList<>();
-                                        list.add(selectedItem.getNational_id().toString());
+                                        list.add(selectedItem.getNational_id());
                                         System.out.println(list);
                                         String query = "DELETE FROM `staff` WHERE staff_id = ?";
-                                        int affectedRows = DatabaseManager.executeSQLRows(query, list);
-
+                                        if(Dialog.showConfirm("blah","delete")) {
+                                            int affectedRows = DatabaseManager.executeSQLRows(query, list);
+                                        }
                                         setUpTable();
+                                    });
+                                    editBtn.setOnAction(event -> {
+                                        Staff Item = getTableView().getItems().get(getIndex());
+                                        EditStaff(Item.getNational_id());
+                                    });
+                                    showBtn.setOnAction(event -> {
+                                        Staff selected = getTableView().getItems().get(getIndex());
+                                        ShowStaff(selected.getNational_id());
                                     });
                                     setGraphic(h);
                                     setText(null);
@@ -117,27 +123,30 @@ public class adminShowStaffController implements Initializable {
 
     public ObservableList<Staff> getStaffList() {
 
-        data  = FXCollections.observableArrayList();
+        data = FXCollections.observableArrayList();
+
+    Connection connection = DatabaseManager.createConnection();
 
         String query = "SELECT * FROM `staff`";
-        ResultSet rw = DatabaseManager.executeSQLResultSet(query,null);
+        ResultSet rs = DatabaseManager.executeSQLResultSet(query,null);
         try {
-            while (rw.next()) {
+
+            while (rs.next()) {
                 Staff staff = new Staff();
-                staff.setNational_id(rw.getInt("staff_id"));
-                staff.setPhone_number(rw.getInt("phone_number"));
-                staff.setBirthday(rw.getDate("birthday"));
-                staff.setDegree(rw.getString("degree"));
-                staff.setEmail(rw.getString("email"));
-                staff.setFull_name(rw.getString("full_name"));
-                staff.setState(rw.getString("type"));
-                staff.setGender(rw.getString("gender"));
-                staff.setLiving_address(rw.getString("address"));
-                staff.setJob_description(rw.getString("job_description"));
-                staff.setNationality(rw.getString("nationality"));
-                staff.setMajor(rw.getString("major"));
-                staff.setUniversity(rw.getString("education"));
-                staff.setGraduateYear(rw.getString("graduate_year"));
+                staff.setNational_id(rs.getString("staff_id"));
+                staff.setPhone_number(rs.getInt("phone_number"));
+                staff.setBirthday(rs.getDate("birthday"));
+                staff.setDegree(rs.getString("degree"));
+                staff.setEmail(rs.getString("email"));
+                staff.setFull_name(rs.getString("full_name"));
+                staff.setState(rs.getString("type"));
+                staff.setGender(rs.getString("gender"));
+                staff.setLiving_address(rs.getString("address"));
+                staff.setJob_description(rs.getString("job_description"));
+                staff.setNationality(rs.getString("nationality"));
+                staff.setMajor(rs.getString("major"));
+                staff.setUniversity(rs.getString("education"));
+                staff.setGraduateYear(rs.getString("graduate_year"));
 
                 data.add(staff);
           }
@@ -158,12 +167,45 @@ public class adminShowStaffController implements Initializable {
         } catch (IOException ex) {
 
         }
-        adminAddStaffController controller = loader.getController();
-        controller.initialize();
+        /*adminAddStaffController controller = loader.getController();
+        controller.initialize();*/
         boolean addStaff = Dialog.showAndPass("Add Staff", loader.getRoot());
         if (addStaff) {
             //إعادة تحميل الصفحة عند نجاح الإضافة
             Main.FXMLLoaderPane(StagesManager.stageContent, "/main/views/stages/admin/adminShowStaff/adminShowStaff.fxml");
         }
+    }
+
+    private void EditStaff(String Id) {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/main/views/stages/admin/adminShowStaff/adminEditStaff/adminEditStaff.fxml"));
+        try {
+            loader.load();
+        } catch (IOException ex) {
+
+        }
+        adminEditStaffController controller = loader.getController();
+        controller.initialize(Id);
+        boolean editStaff = Dialog.showAndPass("Edit Staff", loader.getRoot());
+        if (editStaff) {
+            //إعادة تحميل الصفحة عند نجاح الإضافة
+            Main.FXMLLoaderPane(StagesManager.stageContent, "/main/views/stages/admin/adminShowStaff/adminShowStaff.fxml");
+        }
+
+    }
+    private void ShowStaff(String Id) {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/main/views/stages/admin/adminShowStaff/adminShowStaffInformation/adminShowStaffInformation.fxml"));
+        try {
+            loader.load();
+        } catch (IOException ex) {
+
+        }
+        adminShowStaffInformationController controller = loader.getController();
+        controller.initialize(Id);
+        boolean showStaff = Dialog.showAndPass("Show Staff", loader.getRoot());
+        if (showStaff) {
+            //إعادة تحميل الصفحة عند نجاح الإضافة
+            Main.FXMLLoaderPane(StagesManager.stageContent, "/main/views/stages/admin/adminShowStaff/adminShowStaff.fxml");
+        }
+
     }
 }

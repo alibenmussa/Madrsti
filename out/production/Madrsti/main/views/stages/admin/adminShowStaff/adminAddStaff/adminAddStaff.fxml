@@ -65,7 +65,7 @@
                                                 </FXCollections>
                                              </items>
                                              <value>
-                                                <String fx:value="Teacher" />
+                                                <String fx:value="Staff" />
                                              </value>
                                           </ComboBox>
                                           <ComboBox fx:id="gender" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefWidth="135.0" promptText="Gender">
@@ -75,6 +75,9 @@
                                                    <String fx:value="Female" />
                                                 </FXCollections>
                                              </items>
+                                             <value>
+                                                <String fx:value="Gender" />
+                                             </value>
                                           </ComboBox>
                                        </children>
                                     </VBox>

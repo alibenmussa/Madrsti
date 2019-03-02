@@ -65,16 +65,22 @@
                                                                 </FXCollections>
                                                             </items>
                                                             <value>
-                                                                <String fx:value="Teacher" />
+                                                                <String fx:value="Staff" />
+                                                            </value>
+                                                            <value>
+                                                                <String fx:value="Staff" />
                                                             </value>
                                                         </ComboBox>
                                                         <ComboBox fx:id="gender" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefWidth="135.0" promptText="Gender">
                                                             <items>
                                                                 <FXCollections fx:factory="observableArrayList">
-                                                                    <String fx:value="Male" />
-                                                                    <String fx:value="Female" />
+                                                                    <String fx:value="Teacher" />
+                                                                    <String fx:value="Employee" />
                                                                 </FXCollections>
                                                             </items>
+                                                            <value>
+                                                                <String fx:value="Gender" />
+                                                            </value>
                                                         </ComboBox>
                                                     </children>
                                                 </VBox>
@@ -150,6 +156,7 @@
                                 <HBox alignment="CENTER_LEFT" layoutX="344.0" layoutY="223.0" spacing="15.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                     <children>
                                         <ComboBox fx:id="graduateYear" maxWidth="1.7976931348623157E308" promptText="Graduate Year" HBox.hgrow="ALWAYS" />
+
                                     </children>
                                 </HBox>
                                 <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="223.0" spacing="15.0">
