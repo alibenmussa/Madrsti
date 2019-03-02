@@ -35,7 +35,6 @@ public class DatabaseManager {
                 ResultSet rs = ps.executeQuery();
                 return rs;
             } catch (SQLException ex) {
-
                 System.out.println(ex.getMessage());
             }
         }
@@ -55,7 +54,7 @@ public class DatabaseManager {
                 int rs = ps.executeUpdate();
                 return rs;
             } catch (SQLException ex) {
-                ex.printStackTrace();
+                System.out.println(ex.getMessage());
             }
         }
         return 0;

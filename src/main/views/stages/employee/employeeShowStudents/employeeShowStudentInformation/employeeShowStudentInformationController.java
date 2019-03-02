@@ -5,7 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
+import javafx.scene.control.TextArea;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Circle;
@@ -19,13 +19,10 @@ public class employeeShowStudentInformationController implements Initializable {
     private Label fullName;
 
     @FXML
-    private TextField birthDay;
+    private Label jobDescription;
 
     @FXML
-    private Label type;
-
-    @FXML
-    private TextField gender;
+    private Label state;
 
     @FXML
     private AnchorPane userPhotoCircle;
@@ -37,31 +34,32 @@ public class employeeShowStudentInformationController implements Initializable {
     private TextField address;
 
     @FXML
+    private TextField id;
+
+    @FXML
+    private TextField birthDay;
+
+    @FXML
+    private TextField gender;
+
+    @FXML
     private TextField nationality;
 
     @FXML
-    private Label jobDescription;
+    private TextField relativeName;
 
     @FXML
-    private TextField id;
+    private TextField relativeRelation;
 
     @FXML
     private TextField phoneNumber;
 
     @FXML
-    private TextField email;
-
-    @FXML
-    private TextField education;
-
-    @FXML
     private TextField degree;
 
     @FXML
-    private TextField major;
+    private TextArea notes;
 
-    @FXML
-    private TextField graduateYear;
 
 
     @Override
@@ -72,24 +70,6 @@ public class employeeShowStudentInformationController implements Initializable {
     }
 
     public void setUserData() {
-        String query = "SELECT * FROM"; //جلب البيانات من view
-        fullName.setText("Ali Ben Mussa");
-        type.setText("Employee");
-        jobDescription.setText("Graphic Designer");
-        userPhoto.setImage(new Image("/main/assests/images/users/user_01.jpg"));
-
-        gender.setText("Male");
-        birthDay.setText("16/9/1999");
-        id.setText("99999999999");
-        address.setText("Anonymous, Tripoli, Libya");
-        nationality.setText("Libyan");
-        phoneNumber.setText("0915555555");
-        email.setText("alibenmussa@gmail.com");
-
-        major.setText("Software Engineering");
-        degree.setText("Bechlorice");
-        education.setText("University of Tripoli");
-        graduateYear.setText("2020");
 
     }
 

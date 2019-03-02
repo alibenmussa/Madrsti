@@ -40,9 +40,6 @@ public class Dialog {
         Scene scene = new Scene(root);
         scene.setFill(Color.TRANSPARENT);
 
-        dialogStage.setX(StagesManager.window.getX() + ((1024 - 760) / 2));
-        dialogStage.setY(StagesManager.window.getY() + ((720 - 540) / 2));
-
         dialogStage.setScene(scene);
         dialogStage.initStyle(StageStyle.TRANSPARENT);
         dialogStage.initModality(Modality.WINDOW_MODAL);
@@ -86,9 +83,6 @@ public class Dialog {
         }
         Scene scene = new Scene(root);
         scene.setFill(Color.TRANSPARENT);
-
-        dialogStage.setX(StagesManager.window.getX() + ((1024 - 760) / 2));
-        dialogStage.setY(StagesManager.window.getY() + ((720 - 540) / 2));
 
         dialogStage.setScene(scene);
         dialogStage.initStyle(StageStyle.TRANSPARENT);
@@ -137,9 +131,6 @@ public class Dialog {
         Scene scene = new Scene(root);
         scene.setFill(Color.TRANSPARENT);
 
-        dialogStage.setX(StagesManager.window.getX() + ((1024 - 450) / 2));
-        dialogStage.setY(StagesManager.window.getY() + ((720 - 264) / 2));
-
         dialogStage.setScene(scene);
         dialogStage.initStyle(StageStyle.TRANSPARENT);
         dialogStage.initModality(Modality.WINDOW_MODAL);
@@ -181,9 +172,6 @@ public class Dialog {
         Scene scene = new Scene(root);
         scene.setFill(Color.TRANSPARENT);
 
-        dialogStage.setX(StagesManager.window.getX() + ((1024 - 450) / 2));
-        dialogStage.setY(StagesManager.window.getY() + ((720 - 264) / 2));
-
         dialogStage.setScene(scene);
         dialogStage.initStyle(StageStyle.TRANSPARENT);
         dialogStage.initModality(Modality.WINDOW_MODAL);
@@ -217,22 +205,23 @@ public class Dialog {
     }
 
     private static void animateDialog() {
+        double duration = 0.35;
+
         dialogStage.setOpacity(0);
-        FadeTransition fade = new FadeTransition(Duration.seconds(0.5), dialogStage.getScene().getRoot());
+        FadeTransition fade = new FadeTransition(Duration.seconds(duration), dialogStage.getScene().getRoot());
         fade.setFromValue(0);
         fade.setToValue(1);
         fade.play();
 
-        Rectangle2D primaryScreenBounds = Screen.getPrimary().getVisualBounds();
-        double centerY = primaryScreenBounds.getMinY() + (primaryScreenBounds.getHeight() - dialogStage.getScene().getHeight()) * 1.0f / 2;
-        double startPos = primaryScreenBounds.getMinY() + centerY + (int) (dialogStage.getHeight() / 2);
-        double endPos = primaryScreenBounds.getMinY() + centerY;
-        DoubleProperty y = new SimpleDoubleProperty(startPos);
-        y.addListener((obs, oldValue, newValue) ->
-                dialogStage.setY(newValue.doubleValue()));
+        Rectangle2D screen = Screen.getPrimary().getVisualBounds();
+        double centerY = screen.getMinY() + (screen.getHeight() - dialogStage.getScene().getHeight()) * 1.0f / 2;
+        double start = screen.getMinY() + centerY + (int) (dialogStage.getHeight() / 2);
+        double endPos = screen.getMinY() + centerY;
+        DoubleProperty y = new SimpleDoubleProperty(start);
+        y.addListener((obs, oldValue, newValue) -> dialogStage.setY(newValue.doubleValue()));
 
-        KeyFrame kf1 = new KeyFrame(Duration.seconds(0.5), new KeyValue(y, endPos));
-        KeyFrame kf2 = new KeyFrame(Duration.seconds(0.5), new KeyValue(dialogStage.opacityProperty(), 1));
+        KeyFrame kf1 = new KeyFrame(Duration.seconds(duration), new KeyValue(y, endPos));
+        KeyFrame kf2 = new KeyFrame(Duration.seconds(duration), new KeyValue(dialogStage.opacityProperty(), 1));
 
         Timeline timeline = new Timeline();
         timeline.getKeyFrames().addAll(kf1, kf2);
