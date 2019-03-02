@@ -3,14 +3,20 @@ package main.views.stages.admin.adminShowStudents;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.HBox;
 import javafx.util.Callback;
 import main.DatabaseManager;
+import main.Main;
+import main.StagesManager;
+import main.views.dialog.Dialog;
+import main.views.stages.admin.adminShowStudents.adminShowStudentInformation.adminShowStudentInformationController;
 import main.views.stages.template.Students;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.ResultSet;
 import java.util.ResourceBundle;
@@ -85,12 +91,8 @@ public class adminShowStudentsController implements Initializable {
                                     setText(null);
                                 } else {
                                     showBtn.setOnAction(event -> {
-                                        System.out.println("heloo");
-                                        /*System.out.println("hello");
-                                        Staff subject = getTableView().getItems().get(getIndex());
-                                        System.out.println(subject.getFull_name()
-                                                + "   " + subject.getState()
-                                                + "   " + subject.getBirthday());*/
+                                        Students selected = getTableView().getItems().get(getIndex());
+                                        ShowStudent(selected.getStu_id());
                                     });
                                     setGraphic(showBtn);
 
@@ -149,6 +151,22 @@ public class adminShowStudentsController implements Initializable {
 
         }
         return data;
+    }
+    private void ShowStudent(String Id) {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/main/views/stages/admin/adminShowStudents/adminShowStudentInformation/adminShowStudentInformation.fxml"));
+        try {
+            loader.load();
+        } catch (IOException ex) {
+
+        }
+        adminShowStudentInformationController controller = loader.getController();
+        controller.initialize(Id);
+        boolean showStudent = Dialog.showAndPass("Show Student", loader.getRoot());
+        if (showStudent) {
+            //إعادة تحميل الصفحة عند نجاح الإضافة
+            Main.FXMLLoaderPane(StagesManager.stageContent, "/main/views/stages/admin/adminShowStudent/adminShowStudent.fxml");
+        }
+
     }
 
 }

@@ -103,6 +103,10 @@ public class adminAddStaffController {
     void clickCreateAccount(ActionEvent event) {
         ControllerFunctions.clickCreateAccount(event, username, password);
 
+
+
+
+
     }
 
 
@@ -155,7 +159,11 @@ public class adminAddStaffController {
         if (affectedrow > 0){
             Dialog.success = true;
             Dialog.closeDialogWindow();
-        }
+
+            }
+
+
+
     }
 
     @FXML

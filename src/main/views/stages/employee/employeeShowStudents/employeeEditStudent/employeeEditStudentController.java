@@ -17,7 +17,7 @@ import java.net.URL;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
 
-public class employeeEditStudentController implements Initializable {
+public class employeeEditStudentController  {
     @FXML
     private TextField fullName;
 
@@ -72,12 +72,12 @@ public class employeeEditStudentController implements Initializable {
 
     private File selectedImage = null;
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
+
+    public void initialize(String ID) {
         userPhoto.setImage(new Image(StagesManager.getUserPhoto(), 100, 100, false, false));
         userPhotoCircle.setClip(new Circle(50, 50, 50));
         userPhoto.setFitWidth(100);
-        setUserData();
+
     }
 
     public void setUserData() {

@@ -25,10 +25,10 @@ public class employeeAddStudentController implements Initializable {
     private DatePicker birthDay;
 
     @FXML
-    private ComboBox<?> state;
+    private ComboBox state;
 
     @FXML
-    private ComboBox<?> gender;
+    private ComboBox gender;
 
     @FXML
     private AnchorPane userPhotoCircle;
@@ -55,13 +55,13 @@ public class employeeAddStudentController implements Initializable {
     private TextField phoneNumber;
 
     @FXML
-    private ComboBox<?> year;
+    private ComboBox year;
 
     @FXML
-    private ComboBox<?> clas;
+    private ComboBox clas;
 
     @FXML
-    private ComboBox<?> healthStatus;
+    private ComboBox healthStatus;
 
     @FXML
     private TextArea notes;
