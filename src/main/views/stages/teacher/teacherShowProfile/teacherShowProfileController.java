@@ -70,6 +70,9 @@ public class teacherShowProfileController implements Initializable {
     @FXML
     private Button edit;
 
+    @FXML
+    private Button cancelEdit;
+
 
     private boolean isEditMode;
 
@@ -77,6 +80,8 @@ public class teacherShowProfileController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         isEditMode = false;
+        cancelEdit.setVisible(false);
+
         userPhotoCircle.setClip(new Circle(60, 60, 60));
         userPhoto.setFitWidth(120);
         setUserData();
@@ -133,11 +138,12 @@ public class teacherShowProfileController implements Initializable {
             education.setDisable(false);
             graduateYear.setDisable(false);
 
-
-
             edit.setText("SAVE");
+            cancelEdit.setVisible(true);
             isEditMode = true;
         } else {
+            saveNewInformation();
+
             username.setDisable(true);
             password.setDisable(true);
 
@@ -151,11 +157,32 @@ public class teacherShowProfileController implements Initializable {
             education.setDisable(true);
             graduateYear.setDisable(true);
 
-            saveNewInformation();
-
             edit.setText("EDIT");
+            cancelEdit.setVisible(false);
             isEditMode = false;
         }
+    }
+
+    @FXML
+    void teacherCancelEditInformation(ActionEvent event) {
+        setUserData();
+
+        username.setDisable(true);
+        password.setDisable(true);
+
+        address.setDisable(true);
+        nationality.setDisable(true);
+        phoneNumber.setDisable(true);
+        email.setDisable(true);
+
+        major.setDisable(true);
+        degree.setDisable(true);
+        education.setDisable(true);
+        graduateYear.setDisable(true);
+
+        edit.setText("EDIT");
+        cancelEdit.setVisible(false);
+        isEditMode = false;
     }
 
     private void saveNewInformation() {
@@ -181,4 +208,6 @@ public class teacherShowProfileController implements Initializable {
 
         }
     }
+
+
 }

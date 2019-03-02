@@ -20,7 +20,7 @@
    <children>
       <AnchorPane maxHeight="1.7976931348623157E308" minHeight="550.0" prefWidth="746.0" styleClass="showing-fields">
          <children>
-            <VBox spacing="70.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <VBox spacing="70.0" styleClass="showing-fields" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
                   <AnchorPane>
                      <styleClass>
