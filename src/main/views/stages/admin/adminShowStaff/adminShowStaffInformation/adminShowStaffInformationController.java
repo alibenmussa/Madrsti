@@ -9,12 +9,16 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Circle;
+import main.DatabaseManager;
 import main.views.dialog.Dialog;
 
 import java.net.URL;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.time.LocalDate;
 import java.util.ResourceBundle;
 
-public class adminShowStaffInformationController implements Initializable {
+public class adminShowStaffInformationController {
     @FXML
     private Label fullName;
 
@@ -64,20 +68,42 @@ public class adminShowStaffInformationController implements Initializable {
     private TextField graduateYear;
 
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
+
+    public void initialize(String stf_id) {
         userPhotoCircle.setClip(new Circle(60, 60, 60));
         userPhoto.setFitWidth(120);
-        setUserData();
-    }
 
+
+        String querey = "SELECT * FROM `staff` WHERE `staff_id` =" +stf_id;
+        ResultSet rs = DatabaseManager.executeSQLResultSet(querey,null);
+        try {
+            while (rs.next()) {
+                fullName.setText(String.valueOf(rs.getString("full_name")));
+                type.setText(rs.getString("type"));
+                userPhoto.setImage(new Image("/main/assests/images/users/user_01.jpg"));
+                birthDay.setText(String.valueOf(rs.getDate("birthday")));
+                gender.setText(rs.getString("gender"));
+                id.setText(String.valueOf(rs.getInt("staff_id")));
+                jobDescription.setText(rs.getString("job_description"));
+                address.setText(rs.getString("address"));
+                nationality.setText(rs.getString("nationality"));
+                phoneNumber.setText(String.valueOf(rs.getInt("phone_number")));
+                email.setText(rs.getString("email"));
+                major.setText(rs.getString("major"));
+                degree.setText(rs.getString("degree"));
+                education.setText(rs.getString("education"));
+                graduateYear.setText(rs.getString("graduate_year"));
+            }
+
+        } catch (SQLException e) {
+        }
+    }
     public void setUserData() {
         String query = "SELECT * FROM"; //جلب البيانات من view
         fullName.setText("Ali Ben Mussa");
         type.setText("Employee");
         jobDescription.setText("Graphic Designer");
         userPhoto.setImage(new Image("/main/assests/images/users/user_01.jpg"));
-
         gender.setText("Male");
         birthDay.setText("16/9/1999");
         id.setText("99999999999");
@@ -85,7 +111,6 @@ public class adminShowStaffInformationController implements Initializable {
         nationality.setText("Libyan");
         phoneNumber.setText("0915555555");
         email.setText("alibenmussa@gmail.com");
-
         major.setText("Software Engineering");
         degree.setText("Bechlorice");
         education.setText("University of Tripoli");

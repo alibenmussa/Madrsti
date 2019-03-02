@@ -124,7 +124,7 @@ public class adminShowStudentsController implements Initializable {
             while (rw.next()) {
                 System.out.println("blahblah");
                 Students students = new Students();
-                students.setStu_id(rw.getInt("student_id"));
+                students.setStu_id(rw.getString("student_id"));
                 students.setPhone_number(rw.getInt("phone_number"));
                 students.setBirthday(rw.getDate("birthday"));
                 students.setGrade_id(rw.getInt("grade_id"));

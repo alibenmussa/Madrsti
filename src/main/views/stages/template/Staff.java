@@ -14,7 +14,7 @@ public class Staff {
     private String state;
     private String gender;
     private String living_address;
-    private Integer national_id;
+    private String national_id;
     private String nationality;
     private String job_description;
     private String email;
@@ -76,11 +76,11 @@ public class Staff {
         this.living_address = living_address;
     }
 
-    public Integer getNational_id() {
+    public String getNational_id() {
         return national_id;
     }
 
-    public void setNational_id(Integer national_id) {
+    public void setNational_id(String national_id) {
         this.national_id = national_id;
     }
 
