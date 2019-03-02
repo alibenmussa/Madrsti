@@ -92,7 +92,8 @@ public class adminShowStaffController implements Initializable {
                                         list.add(selectedItem.getNational_id().toString());
                                         System.out.println(list);
                                         String query = "DELETE FROM `staff` WHERE staff_id = ?";
-                                        int affectedRows = DatabaseManager.executeSQLRows(query,list);
+                                        int affectedRows = DatabaseManager.executeSQLRows(query, list);
+
                                         setUpTable();
                                     });
                                     setGraphic(h);
