@@ -124,13 +124,11 @@ public class adminShowStudentsController implements Initializable {
         ResultSet rw = DatabaseManager.executeSQLResultSet(query,null);
         try {
             while (rw.next()) {
-                System.out.println("blahblah");
                 Students students = new Students();
                 students.setStu_id(rw.getString("student_id"));
                 students.setPhone_number(rw.getInt("phone_number"));
                 students.setBirthday(rw.getDate("birthday"));
                 students.setGrade_id(rw.getInt("grade_id"));
-                students.setEmail(rw.getString("email"));
                 students.setFull_name(rw.getString("full_name"));
                 students.setState(rw.getString("state"));
                 students.setGender(rw.getString("gender"));

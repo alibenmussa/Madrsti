@@ -14,8 +14,6 @@ public class Students {
     private String relative_name;
     private String relation;
     private Integer phone_number;
-
-    private String email;
     private String health_status;
     private Integer grade_id;
     private String class_id;
@@ -99,14 +97,6 @@ public class Students {
 
     public void setPhone_number(Integer phone_number) {
         this.phone_number = phone_number;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 
     public String getHealth_status() {
