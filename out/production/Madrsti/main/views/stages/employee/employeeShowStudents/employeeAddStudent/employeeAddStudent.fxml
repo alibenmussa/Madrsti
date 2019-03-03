@@ -19,7 +19,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.views.stages.employee.employeeShowStudents.employeeAddStudent.employeeAddStudentController">
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.views.stages.employee.employeeShowStudents.employeeAddStudent.employeeAddStudentController">
    <children>
       <AnchorPane maxHeight="1.7976931348623157E308" minHeight="550.0" prefWidth="746.0">
          <children>
@@ -91,8 +91,8 @@
                                     <ComboBox fx:id="state" maxWidth="1.7976931348623157E308" promptText="State" value="State" HBox.hgrow="ALWAYS">
                                        <items>
                                           <FXCollections fx:factory="observableArrayList">
-                                             <String fx:value="Teacher" />
-                                             <String fx:value="Employee" />
+                                             <String fx:value="mustajid" />
+                                             <String fx:value="mo3ed" />
                                           </FXCollections>
                                        </items>
                                     </ComboBox>
@@ -151,9 +151,16 @@
                   </VBox>
                   <HBox alignment="CENTER_LEFT" spacing="15.0">
                      <children>
-                        <ComboBox fx:id="year" maxWidth="1.7976931348623157E308" promptText="Grade" HBox.hgrow="ALWAYS" />
-                        <ComboBox fx:id="clas" disable="true" maxWidth="1.7976931348623157E308" promptText="Class" HBox.hgrow="ALWAYS" />
-                        <ComboBox fx:id="healthStatus" maxWidth="1.7976931348623157E308" promptText="Health status" HBox.hgrow="ALWAYS" />
+                        <ComboBox fx:id="year" maxWidth="1.7976931348623157E308" onAction="#gradeAction" promptText="Grade" HBox.hgrow="ALWAYS" />
+                        <ComboBox fx:id="clas" maxWidth="1.7976931348623157E308" promptText="Class" HBox.hgrow="ALWAYS" />
+                        <ComboBox fx:id="healthStatus" maxWidth="1.7976931348623157E308" promptText="Health status" HBox.hgrow="ALWAYS" >
+                        <items>
+                           <FXCollections fx:factory="observableArrayList">
+                              <String fx:value="Good" />
+                              <String fx:value="Sick" />
+                           </FXCollections>
+                        </items>
+                        </ComboBox>
                      </children>
                   </HBox>
                   <AnchorPane style="-fx-background-color: #f8f8fb;" styleClass="content">

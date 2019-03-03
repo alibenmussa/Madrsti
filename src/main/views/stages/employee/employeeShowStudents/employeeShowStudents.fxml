@@ -2,6 +2,7 @@
 
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import java.lang.String?>
+<?import java.net.URL?>
 <?import javafx.collections.FXCollections?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
@@ -15,7 +16,6 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<?import java.net.URL?>
 <AnchorPane maxWidth="-Infinity" minWidth="-Infinity" prefWidth="765.0" styleClass="pageContent" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.views.stages.employee.employeeShowStudents.employeeShowStudentsController">
    <children>
       <VBox prefWidth="715.0" spacing="35.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="60.0">
@@ -90,13 +90,10 @@
                <children>
                   <TableView fx:id="studentsTable" layoutX="50.0" layoutY="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <columns>
-                      <TableColumn prefWidth="75.0" text="NAME" fx:id="name"/>
-                      <TableColumn prefWidth="75.0" text="GENDER" fx:id="gender"/>
-                      <TableColumn prefWidth="75.0" text="GRADE" fx:id="grade"/>
-                        <TableColumn prefWidth="75.0" text="CLASS" fx:id="class"/>
-                        <TableColumn prefWidth="75.0" text="CONTACT" fx:id="contact"/>
-                        <TableColumn prefWidth="75.0" text="EDIT" fx:id="edit"/>
-                        <TableColumn prefWidth="75.0" text="DELETE" fx:id="delete"/>
+                      <TableColumn fx:id="name" prefWidth="75.0" text="NAME" />
+                      <TableColumn fx:id="grade" prefWidth="75.0" text="GRADE" />
+                        <TableColumn fx:id="classs" prefWidth="75.0" text="CLASS" />
+                        <TableColumn fx:id="operations" prefWidth="75.0" text="OPERATIONS" />
                     </columns>
                      <columnResizePolicy>
                         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
@@ -108,6 +105,6 @@
       </VBox>
    </children>
    <stylesheets>
-      <URL value="@../../../../assests/stylesheets/style.css"/>
+      <URL value="@../../../../assests/stylesheets/style.css" />
    </stylesheets>
 </AnchorPane>

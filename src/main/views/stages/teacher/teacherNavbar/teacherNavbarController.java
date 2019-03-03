@@ -17,7 +17,7 @@ public class teacherNavbarController {
     @FXML
     void teacherShowHome(ActionEvent event) {
         addActiveButton(teacherShowHome);
-        Main.FXMLLoaderPane(StagesManager.stageContent, "/main/views/stages/teacher/teacherShowHome");
+        Main.FXMLLoaderPane(StagesManager.stageContent, "/main/views/stages/teacher/teacherShowHome/teacherShowHome.fxml");
     }
 
 

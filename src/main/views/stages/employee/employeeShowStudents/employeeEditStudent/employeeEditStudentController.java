@@ -8,6 +8,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Circle;
+import main.DatabaseManager;
 import main.StagesManager;
 import main.views.dialog.Dialog;
 import main.views.stages.ControllerFunctions;
@@ -17,7 +18,7 @@ import java.net.URL;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
 
-public class employeeEditStudentController implements Initializable {
+public class employeeEditStudentController  {
     @FXML
     private TextField fullName;
 
@@ -72,12 +73,14 @@ public class employeeEditStudentController implements Initializable {
 
     private File selectedImage = null;
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
+
+    public void initialize(String ID) {
         userPhoto.setImage(new Image(StagesManager.getUserPhoto(), 100, 100, false, false));
         userPhotoCircle.setClip(new Circle(50, 50, 50));
         userPhoto.setFitWidth(100);
-        setUserData();
+
+        String gradeQuery = "SELECT `name` FROM `grades`";
+        DatabaseManager.addComboBoxData(year, gradeQuery, null);
     }
 
     public void setUserData() {

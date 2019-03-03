@@ -14,7 +14,7 @@ import main.views.dialog.Dialog;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class employeeShowStudentInformationController implements Initializable {
+public class employeeShowStudentInformationController{
     @FXML
     private Label fullName;
 
@@ -62,8 +62,8 @@ public class employeeShowStudentInformationController implements Initializable {
 
 
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
+
+    public void initialize(String ID) {
         userPhotoCircle.setClip(new Circle(60, 60, 60));
         userPhoto.setFitWidth(120);
         setUserData();
