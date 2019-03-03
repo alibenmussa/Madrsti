@@ -75,7 +75,7 @@ public class employeeShowStudentInformationController implements Initializable {
 
 
     @FXML
-    public void adminOk(ActionEvent event) {
+    public void employeeOk(ActionEvent event) {
         Dialog.closeDialogWindow();
     }
 }

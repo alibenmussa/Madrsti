@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 
 import javafx.fxml.Initializable;
 import javafx.scene.Group;
+import javafx.stage.Stage;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -64,8 +65,9 @@ public  class titlebarController implements Initializable {
     @FXML
     public void signOut(ActionEvent event) {
         StagesManager.window.close();
+        StagesManager.stageContent = null;
+        Main.showMain(new Stage());
         StagesManager.window = Main.window;
-        Main.window.show();
     }
 
     @FXML
