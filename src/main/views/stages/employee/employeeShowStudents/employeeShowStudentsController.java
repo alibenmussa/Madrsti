@@ -147,7 +147,6 @@ public class employeeShowStudentsController implements Initializable {
                 students.setStu_id(rw.getString("student_id"));
                 students.setPhone_number(rw.getInt("phone_number"));
                 students.setBirthday(rw.getDate("birthday"));
-                students.setGrade_id(rw.getInt("grade_id"));
                 students.setEmail(rw.getString("email"));
                 students.setFull_name(rw.getString("full_name"));
                 students.setState(rw.getString("state"));
@@ -159,6 +158,19 @@ public class employeeShowStudentsController implements Initializable {
                 students.setNotes(rw.getString("notes"));
                 students.setRelative_name(rw.getString("relative_name"));
                 students.setRelation(rw.getString("relation"));
+                int t = rw.getInt("grade_id");
+                if (t == 1)
+                    students.setGrade_id("1st Primary");
+                else if (t == 2)
+                    students.setGrade_id("2st Primary");
+                else if (t == 3)
+                    students.setGrade_id("3st Primary");
+                else if (t == 4)
+                    students.setGrade_id("4st Primary");
+                else if (t == 5)
+                    students.setGrade_id("5st Primary");
+                else if (t == 6)
+                    students.setGrade_id("6st Primary");
 
                 data.add(students);
             }

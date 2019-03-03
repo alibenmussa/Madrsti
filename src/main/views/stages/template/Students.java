@@ -17,7 +17,7 @@ public class Students {
 
     private String email;
     private String health_status;
-    private Integer grade_id;
+    private String grade_id;
     private String class_id;
     private String notes;
 
@@ -117,11 +117,11 @@ public class Students {
         this.health_status = health_status;
     }
 
-    public Integer getGrade_id() {
+    public String getGrade_id() {
         return grade_id;
     }
 
-    public void setGrade_id(Integer grade_id) {
+    public void setGrade_id(String grade_id) {
         this.grade_id = grade_id;
     }
 
