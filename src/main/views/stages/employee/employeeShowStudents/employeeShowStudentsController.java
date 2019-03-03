@@ -13,6 +13,7 @@ import main.DatabaseManager;
 import main.Main;
 import main.StagesManager;
 import main.views.dialog.Dialog;
+import main.views.stages.admin.adminShowStudents.adminShowStudentsController;
 import main.views.stages.employee.employeeShowStudents.employeeEditStudent.employeeEditStudentController;
 import main.views.stages.employee.employeeShowStudents.employeeShowStudentInformation.employeeShowStudentInformationController;
 import main.views.stages.template.Students;
@@ -70,25 +71,9 @@ public class employeeShowStudentsController implements Initializable {
         String query = "SELECT * FROM `students`";
         ResultSet rw = DatabaseManager.executeSQLResultSet(query,null);
         try {
-            while (rw.next()) {
-                Students students = new Students();
-                students.setStu_id(rw.getString("student_id"));
-                students.setPhone_number(rw.getInt("phone_number"));
-                students.setBirthday(rw.getDate("birthday"));
-                students.setGrade_id(rw.getString("grade_id"));
-                students.setFull_name(rw.getString("full_name"));
-                students.setState(rw.getString("state"));
-                students.setGender(rw.getString("gender"));
-                students.setLiving_address(rw.getString("address"));
-                students.setClass_id(rw.getString("class_id"));
-                students.setNationality(rw.getString("nationality"));
-                students.setHealth_status(rw.getString("health_status"));
-                students.setNotes(rw.getString("notes"));
-                students.setRelative_name(rw.getString("relative_name"));
-                students.setRelation(rw.getString("relation"));
+            adminShowStudentsController.getstudents(rw, data);
 
-                data.add(students);
-            }
+
         } catch (Exception e){
 
         }

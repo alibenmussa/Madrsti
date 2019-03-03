@@ -19,6 +19,7 @@ import main.views.stages.template.Students;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class adminShowStudentsController implements Initializable {
@@ -123,33 +124,49 @@ public class adminShowStudentsController implements Initializable {
         String query = "SElECT * FROM `students`";
         ResultSet rw = DatabaseManager.executeSQLResultSet(query,null);
         try {
-            while (rw.next()) {
-                Students students = new Students();
-                students.setStu_id(rw.getString("student_id"));
-                students.setPhone_number(rw.getInt("phone_number"));
-                students.setBirthday(rw.getDate("birthday"));
-                students.setGrade_id(rw.getString("grade_id"));
-                students.setFull_name(rw.getString("full_name"));
-                students.setState(rw.getString("state"));
-                students.setGender(rw.getString("gender"));
-                students.setLiving_address(rw.getString("address"));
-                students.setClass_id(rw.getString("class_id"));
-                students.setNationality(rw.getString("nationality"));
-                students.setHealth_status(rw.getString("health_status"));
-                students.setNotes(rw.getString("notes"));
-                students.setRelative_name(rw.getString("relative_name"));
-                students.setRelation(rw.getString("relation"));
-
-                data.add(students);
-            }
-
-
+            getstudents(rw, data);
         }catch (Exception e){
             e.printStackTrace();
 
         }
         return data;
     }
+
+    public static void getstudents(ResultSet rw, ObservableList<Students> data) throws SQLException {
+        while (rw.next()) {
+            Students students = new Students();
+            students.setStu_id(rw.getString("student_id"));
+            students.setPhone_number(rw.getInt("phone_number"));
+            students.setBirthday(rw.getDate("birthday"));
+            students.setFull_name(rw.getString("full_name"));
+            students.setState(rw.getString("state"));
+            students.setGender(rw.getString("gender"));
+            students.setLiving_address(rw.getString("address"));
+            students.setClass_id(rw.getString("class_id"));
+            students.setNationality(rw.getString("nationality"));
+            students.setHealth_status(rw.getString("health_status"));
+            students.setNotes(rw.getString("notes"));
+            students.setRelative_name(rw.getString("relative_name"));
+            students.setRelation(rw.getString("relation"));
+
+            int grade = rw.getInt("grade_id");
+            if (grade == 1)
+                students.setGrade_id("1st Primary");
+            if (grade == 2)
+                students.setGrade_id("2st Primary");
+            if (grade == 3)
+                students.setGrade_id("3st Primary");
+            if (grade == 4)
+                students.setGrade_id("4st Primary");
+            if (grade == 5)
+                students.setGrade_id("5st Primary");
+            if (grade == 6)
+                students.setGrade_id("6st Primary");
+
+            data.add(students);
+        }
+    }
+
     private void ShowStudent(String Id) {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/main/views/stages/admin/adminShowStudents/adminShowStudentInformation/adminShowStudentInformation.fxml"));
         try {
