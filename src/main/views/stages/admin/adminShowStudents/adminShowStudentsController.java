@@ -128,7 +128,7 @@ public class adminShowStudentsController implements Initializable {
                 students.setStu_id(rw.getString("student_id"));
                 students.setPhone_number(rw.getInt("phone_number"));
                 students.setBirthday(rw.getDate("birthday"));
-                students.setGrade_id(rw.getInt("grade_id"));
+                students.setGrade_id(rw.getString("grade_id"));
                 students.setFull_name(rw.getString("full_name"));
                 students.setState(rw.getString("state"));
                 students.setGender(rw.getString("gender"));

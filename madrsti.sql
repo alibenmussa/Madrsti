@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 01, 2019 at 07:12 PM
+-- Generation Time: Mar 03, 2019 at 03:30 AM
 -- Server version: 10.1.34-MariaDB
 -- PHP Version: 7.2.7
 
@@ -41,8 +41,16 @@ CREATE TABLE `classes` (
 INSERT INTO `classes` (`grade_id`, `class_id`, `capacity`) VALUES
 (1, 'A', 30),
 (1, 'B', 40),
+(1, 'C', 30),
+(1, 'D', 10),
 (2, 'A', 50),
-(3, 'A', 50);
+(2, 'B', 40),
+(2, 'C', 50),
+(2, 'D', 40),
+(3, 'A', 50),
+(4, 'A', 100),
+(5, 'A', 50),
+(6, 'A', 40);
 
 -- --------------------------------------------------------
 
@@ -105,6 +113,18 @@ CREATE TABLE `schedules` (
   `time` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `schedules`
+--
+
+INSERT INTO `schedules` (`subject_id`, `staff_id`, `grade_id`, `class_id`, `day`, `time`) VALUES
+(6, 1111111111, 1, 'A', 2, 3),
+(10, 1111111111, 1, 'A', 5, 3),
+(13, 1111111111, 1, 'A', 4, 3),
+(15, 1111111111, 1, 'A', 2, 1),
+(16, 1111111111, 1, 'A', 1, 2),
+(18, 1111111111, 1, 'A', 3, 5);
+
 -- --------------------------------------------------------
 
 --
@@ -133,9 +153,12 @@ CREATE TABLE `staff` (
 --
 
 INSERT INTO `staff` (`staff_id`, `full_name`, `type`, `gender`, `birthday`, `address`, `job_description`, `nationality`, `phone_number`, `email`, `major`, `degree`, `education`, `graduate_year`) VALUES
-(1111111111, 'Ali Jamal Aldien Ben Mussa', 'Staff', 'Male', '1999-09-16', 'Airport road, Tripoli, Libya', 'Admistrator', 'Libyan', 915023739, 'alibenmussa@gmail.com', 'Software Engineering', 'Bachelor', 'Tripoli University', '2020'),
-(2222222222, 'Yousef Abdelkarim Breka', 'Employee', 'Male', '1999-09-16', 'Airport road, Tripoli, Libya', 'Admistrator', 'Libyan', 915023739, 'alibenmussa@gmail.com', 'Software Engineering', 'Bachelor', 'Tripoli University', '2020'),
-(3333333333, 'Anonymous', 'Employee', 'Male', '1999-09-16', 'Airport road, Tripoli, Libya', 'Admistrator', 'Libyan', 915023739, 'alibenmussa@gmail.com', 'Software Engineering', 'Bachelor', 'Tripoli University', '2020');
+(1111111111, 'Ali Jamal Aldien Ben Mussa', 'Employee', 'Male', '1999-09-16', 'Airport road, Tripoli, Libya', 'Admistrator', 'Libyan', 915023739, 'alibenmussa@gmail.com', 'Software Engineering', 'Bachelor', 'Tripoli University', '2020'),
+(2222222222, 'Yousef Abdelkarim Breka', 'Employee', 'Male', '1999-09-16', 'Airport road, Tripoli, Libya', 'Admistrator', 'Libyan', 915023739, 'alibenmussa@gmail.com', 'Software Engineering', 'Libyan', 'Benghazi University', '2020'),
+(3333333333, 'Anonymous', 'Teacher', 'Male', '1999-09-16', 'Airport road, Tripoli, Libya', 'Admistrator', 'Libyan', 915023739, 'alibenmussa@gmail.com', 'Software Engineering', 'Bachelor', 'Tripoli University', '2020'),
+(4444444444, 'Hamza Bashir', 'Teacher', 'Male', '1999-09-16', 'Airport road, Tripoli, Libya', 'Admistrator', 'Libyan', 915023739, 'alibenmussa@gmail.com', 'Software Engineering', 'Bachelor', 'Tripoli University', '2020'),
+(5555555555, 'Mohammed Alosta', 'Teacher', 'Male', '1999-09-16', 'Airport road, Tripoli, Libya', 'Admistrator', 'Libyan', 915023739, 'alibenmussa@gmail.com', 'Software Engineering', 'Bachelor', 'Tripoli University', '2020'),
+(6666666666, 'Anwer Elhaj', 'Teacher', 'Male', '1999-09-16', 'Airport road, Tripoli, Libya', 'Admistrator', 'Libyan', 915023739, 'alibenmussa@gmail.com', 'Software Engineering', 'Bachelor', 'Tripoli University', '2020');
 
 -- --------------------------------------------------------
 
@@ -154,7 +177,6 @@ CREATE TABLE `students` (
   `relative_name` varchar(100) NOT NULL,
   `relation` varchar(100) NOT NULL,
   `phone_number` int(10) NOT NULL,
-  `email` varchar(160) NOT NULL,
   `grade_id` int(11) DEFAULT NULL,
   `class_id` varchar(32) DEFAULT NULL,
   `health_status` varchar(100) NOT NULL,
@@ -165,8 +187,9 @@ CREATE TABLE `students` (
 -- Dumping data for table `students`
 --
 
-INSERT INTO `students` (`student_id`, `full_name`, `state`, `gender`, `birthday`, `address`, `nationality`, `relative_name`, `relation`, `phone_number`, `email`, `grade_id`, `class_id`, `health_status`, `notes`) VALUES
-(444444444, 'Ali Jamal Aldien Ben Mussa', 'Mustajed', 'Male', '1999-09-16', 'Tripoli, Libya', 'Libyan', 'Jamal Ben Mussa', 'Father', 926360268, 'trytrytry@gmail.com', 1, 'B', 'True', 'OK');
+INSERT INTO `students` (`student_id`, `full_name`, `state`, `gender`, `birthday`, `address`, `nationality`, `relative_name`, `relation`, `phone_number`, `grade_id`, `class_id`, `health_status`, `notes`) VALUES
+(1234, 'Yousef breaka', 'Mustajed', 'Male', '1999-09-16', 'Tripoli, Libya', 'Libyan', 'Jamal Ben Mussa', 'Father', 926360268, 1, 'B', 'True', 'OK'),
+(444444444, 'Ali Jamal Aldien Ben Mussa', 'Mustajed', 'Male', '1999-09-16', 'Tripoli, Libya', 'Libyan', 'Jamal Ben Mussa', 'Father', 926360268, 1, 'B', 'True', 'OK');
 
 -- --------------------------------------------------------
 
@@ -187,10 +210,12 @@ CREATE TABLE `subjects` (
 --
 
 INSERT INTO `subjects` (`subject_id`, `name`, `grade_id`, `full_mark`, `passing_mark`) VALUES
-(2, 'Arabic', 1, 200, 120),
 (6, 'Paint', 1, 200, 120),
-(8, 'History', 6, 200, 120),
-(10, 'Arabic Language', 2, 220, 100);
+(10, 'Arabic Language', 2, 220, 100),
+(13, 'Science', 1, 200, 100),
+(15, 'Islam', 1, 180, 60),
+(16, 'English Language', 5, 200, 100),
+(18, 'Arabic Language', 2, 200, 100);
 
 -- --------------------------------------------------------
 
@@ -242,8 +267,8 @@ ALTER TABLE `results`
 --
 ALTER TABLE `schedules`
   ADD PRIMARY KEY (`subject_id`,`staff_id`,`grade_id`,`class_id`),
-  ADD KEY `staff_id` (`staff_id`),
-  ADD KEY `grade_id` (`grade_id`,`class_id`);
+  ADD KEY `grade_id` (`grade_id`,`class_id`),
+  ADD KEY `staff_id` (`staff_id`);
 
 --
 -- Indexes for table `staff`
@@ -285,13 +310,13 @@ ALTER TABLE `results`
 -- AUTO_INCREMENT for table `schedules`
 --
 ALTER TABLE `schedules`
-  MODIFY `subject_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `subject_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `subjects`
 --
 ALTER TABLE `subjects`
-  MODIFY `subject_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `subject_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- Constraints for dumped tables
@@ -313,9 +338,9 @@ ALTER TABLE `results`
 -- Constraints for table `schedules`
 --
 ALTER TABLE `schedules`
-  ADD CONSTRAINT `schedules_ibfk_2` FOREIGN KEY (`staff_id`) REFERENCES `staff` (`staff_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `schedules_ibfk_3` FOREIGN KEY (`grade_id`,`class_id`) REFERENCES `classes` (`grade_id`, `class_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `schedules_ibfk_4` FOREIGN KEY (`subject_id`) REFERENCES `subjects` (`subject_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `schedules_ibfk_4` FOREIGN KEY (`subject_id`) REFERENCES `subjects` (`subject_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `schedules_ibfk_5` FOREIGN KEY (`staff_id`) REFERENCES `staff` (`staff_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `students`
