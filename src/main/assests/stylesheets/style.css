@@ -88,6 +88,15 @@
     -fx-background-radius: 10;
 }
 
+
+#dialogContent .text-area:disabled {
+    -fx-opacity: 1;
+}
+#dialogContent .text-area:disabled .text-field {
+    -fx-opacity: 0;
+}
+
+
 #dialogContent .text-field, .showing-fields .text-field, .showing-fields .text-area:disabled {
     -fx-background-color: #f8f8fb;
     -fx-text-fill: #2C343A;
@@ -95,10 +104,12 @@
     -fx-padding: 0 10;
     -fx-border-color: transparent;
     -fx-min-height: 45;
+    -fx-opacity: 1;
 }
 
 .showing-fields .dialog-in-page .text-field, .showing-fields .dialog-in-page .text-area {
     -fx-background-color: #ffffff;
+    -fx-opacity: 1;
 }
 
 .showing-fields .text-field:disabled  {

@@ -21,13 +21,19 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage){
+        Main.showMain(primaryStage);
+
+    }
+
+    public static void showMain(Stage primaryStage) {
         window = primaryStage;
         StackPane root = null;
         try {
-            root = FXMLLoader.load(getClass().getResource("/main/views/login/login.fxml"));
+            root = FXMLLoader.load(Main.class.getResource("/main/views/login/login.fxml"));
         } catch (Exception ex) {
 
         }
+
         StagesManager.root = root;
         Rectangle page = new Rectangle(StagesManager.windowWidth, StagesManager.windowHeight);
         page.setArcWidth(20);

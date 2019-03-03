@@ -62,7 +62,7 @@ public class loginController implements Initializable {
 
     public void pressLogIn(KeyEvent event) {
         if (event.getCode() == KeyCode.ENTER) {
-            clickLogIn(null);
+            login.fire();
         }
     }
 

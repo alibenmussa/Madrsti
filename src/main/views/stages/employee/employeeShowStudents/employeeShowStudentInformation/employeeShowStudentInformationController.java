@@ -114,7 +114,7 @@ public class employeeShowStudentInformationController{
 
 
     @FXML
-    public void adminOk(ActionEvent event) {
+    public void employeeOk(ActionEvent event) {
         Dialog.closeDialogWindow();
     }
 }

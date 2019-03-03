@@ -140,12 +140,12 @@
                      </rowConstraints>
                      <children>
                         <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="113.0" spacing="15.0" GridPane.columnIndex="1" />
-                        <TextArea fx:id="notes" disable="true" editable="false" prefHeight="150.0" promptText="Notes" styleClass="area-diable" GridPane.columnSpan="2" />
+                        <TextArea fx:id="notes" disable="true" prefHeight="150.0" promptText="Notes" GridPane.columnSpan="2" />
                      </children>
                   </GridPane>
                   <HBox alignment="CENTER_RIGHT" prefWidth="200.0" spacing="20.0">
                      <children>
-                        <Button alignment="CENTER" focusTraversable="false" graphicTextGap="15.0" minWidth="120.0" mnemonicParsing="false" onAction="#adminOk" prefHeight="45.0" styleClass="function-button" text="OK" textFill="WHITE">
+                        <Button alignment="CENTER" focusTraversable="false" graphicTextGap="15.0" minWidth="120.0" mnemonicParsing="false" onAction="#employeeOk" prefHeight="45.0" styleClass="function-button" text="OK" textFill="WHITE">
                            <padding>
                               <Insets left="20.0" right="20.0" />
                            </padding>

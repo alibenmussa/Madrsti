@@ -48,9 +48,9 @@ public class employeeNavbarController {
     }
 
     @FXML
-    void employeeShowResults(ActionEvent event) {
+    void employeeShowResults(ActionEvent event) throws Exception {
         addActiveButton(employeeShowResults);
-        Main.FXMLLoaderPane(StagesManager.stageContent, "/main/views/stages/employee/employeeShowStudents/employeeShowStudentInformation/employeeShowStudentInformation.fxml");
+        Dialog.show("Show Ali", "/main/views/stages/employee/employeeShowStudents/employeeShowStudentInformation/employeeShowStudentInformation.fxml");
     }
 
 
