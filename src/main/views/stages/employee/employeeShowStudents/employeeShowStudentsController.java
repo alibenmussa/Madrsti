@@ -62,22 +62,7 @@ public class employeeShowStudentsController implements Initializable {
         grade.setCellValueFactory(new PropertyValueFactory<>("grade_id"));
         classs.setCellValueFactory(new PropertyValueFactory<>("class_id"));
         operations.setCellFactory((Callback<TableColumn<Students, Boolean>, TableCell<Students, Boolean>>) p -> new ButtonsCell(this));
-        studentsTable.setItems(getStudentList());
-    }
-
-
-    public ObservableList<Students> getStudentList() {
-        data  = FXCollections.observableArrayList();
-        String query = "SELECT * FROM `students`";
-        ResultSet rw = DatabaseManager.executeSQLResultSet(query,null);
-        try {
-            adminShowStudentsController.getstudents(rw, data);
-
-
-        } catch (Exception e){
-
-        }
-        return data;
+        studentsTable.setItems(adminShowStudentsController.getStudentsList());
     }
 
     @FXML

@@ -7,7 +7,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.layout.HBox;
 import javafx.util.Callback;
 import main.DatabaseManager;
 import main.Main;
@@ -57,7 +56,7 @@ public class adminShowStudentsController implements Initializable {
     @FXML
     private TableColumn<Students, Button> operations;
 
-    ObservableList<Students> data;
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -93,7 +92,7 @@ public class adminShowStudentsController implements Initializable {
                                 } else {
                                     showBtn.setOnAction(event -> {
                                         Students selected = getTableView().getItems().get(getIndex());
-                                        ShowStudent(selected.getStu_id());
+                                        showStudent(selected.getStu_id());
                                     });
                                     setGraphic(showBtn);
 
@@ -108,66 +107,47 @@ public class adminShowStudentsController implements Initializable {
 
         operations.setCellFactory(cellFactory);
 
-        studentsTable.setItems(getStudentList());
-
-
-
-
-
+        studentsTable.setItems(getStudentsList());
     }
 
+    public static ObservableList<Students> getStudentsList() {
+        ObservableList<Students> data = FXCollections.observableArrayList();
 
-    public ObservableList<Students> getStudentList() {
+        String query = "SELECT * FROM `students` INNER JOIN `grades` USING(`grade_id`)";
+        ResultSet rs = DatabaseManager.executeSQLResultSet(query,null);
+        if (rs != null) {
+            try {
+                while (rs.next()) {
+                    Students students = new Students();
+                    students.setStu_id(rs.getString("student_id"));
+                    students.setPhone_number(rs.getInt("phone_number"));
+                    students.setBirthday(rs.getDate("birthday"));
+                    students.setFull_name(rs.getString("full_name"));
+                    students.setState(rs.getString("state"));
+                    students.setGender(rs.getString("gender"));
+                    students.setLiving_address(rs.getString("address"));
+                    students.setClass_id(rs.getString("class_id"));
+                    students.setNationality(rs.getString("nationality"));
+                    students.setHealth_status(rs.getString("health_status"));
+                    students.setNotes(rs.getString("notes"));
+                    students.setRelative_name(rs.getString("relative_name"));
+                    students.setRelation(rs.getString("relation"));
 
-        data  = FXCollections.observableArrayList();
 
-        String query = "SElECT * FROM `students`";
-        ResultSet rw = DatabaseManager.executeSQLResultSet(query,null);
-        try {
-            getstudents(rw, data);
-        }catch (Exception e){
-            e.printStackTrace();
 
+                    //grade name ----> ya nooop :))
+                    students.setGrade_id(rs.getString("name"));
+
+
+                    data.add(students);
+                }
+            } catch (SQLException ex) {
+            }
         }
         return data;
     }
 
-    public static void getstudents(ResultSet rw, ObservableList<Students> data) throws SQLException {
-        while (rw.next()) {
-            Students students = new Students();
-            students.setStu_id(rw.getString("student_id"));
-            students.setPhone_number(rw.getInt("phone_number"));
-            students.setBirthday(rw.getDate("birthday"));
-            students.setFull_name(rw.getString("full_name"));
-            students.setState(rw.getString("state"));
-            students.setGender(rw.getString("gender"));
-            students.setLiving_address(rw.getString("address"));
-            students.setClass_id(rw.getString("class_id"));
-            students.setNationality(rw.getString("nationality"));
-            students.setHealth_status(rw.getString("health_status"));
-            students.setNotes(rw.getString("notes"));
-            students.setRelative_name(rw.getString("relative_name"));
-            students.setRelation(rw.getString("relation"));
-
-            int grade = rw.getInt("grade_id");
-            if (grade == 1)
-                students.setGrade_id("1st Primary");
-            if (grade == 2)
-                students.setGrade_id("2st Primary");
-            if (grade == 3)
-                students.setGrade_id("3st Primary");
-            if (grade == 4)
-                students.setGrade_id("4st Primary");
-            if (grade == 5)
-                students.setGrade_id("5st Primary");
-            if (grade == 6)
-                students.setGrade_id("6st Primary");
-
-            data.add(students);
-        }
-    }
-
-    private void ShowStudent(String Id) {
+    private void showStudent(String Id) {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/main/views/stages/admin/adminShowStudents/adminShowStudentInformation/adminShowStudentInformation.fxml"));
         try {
             loader.load();
