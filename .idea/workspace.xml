@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="updating : show Staff">
-      <change afterPath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/ButtonsCell.java" afterDir="false" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="fixing : adminShow students , staff&#10;employeeEditStudents , adminEditStaff">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminShowStaff/adminAddStaff/adminAddStaff.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminShowStaff/adminAddStaff/adminAddStaff.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminShowStaff/adminEditStaff/adminEditStaff.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminShowStaff/adminEditStaff/adminEditStaff.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminAddStaff/adminAddStaff.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminAddStaff/adminAddStaff.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminAddStaff/adminAddStaffController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminAddStaff/adminAddStaffController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminEditStaff/adminEditStaff.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminEditStaff/adminEditStaff.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminEditStaff/adminEditStaffController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminEditStaff/adminEditStaffController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminShowStudentInformation/adminShowStudentInformationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminShowStudentInformation/adminShowStudentInformationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminShowStudentsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminShowStudentsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowStudents/employeeEditStudent/employeeEditStudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowStudents/employeeEditStudent/employeeEditStudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowStudents/employeeShowStudentInformation/employeeShowStudentInformationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowStudents/employeeShowStudentInformation/employeeShowStudentInformationController.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -87,8 +87,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/views/stages/ControllerFunctions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="27" column="32" lean-forward="true" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+            <state relative-caret-position="85">
+              <caret line="17" column="22" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -96,8 +96,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminAddStaff/adminAddStaffController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="154" column="64" lean-forward="true" selection-start-line="154" selection-start-column="64" selection-end-line="154" selection-end-column="64" />
+            <state relative-caret-position="255">
+              <caret line="75" column="35" lean-forward="true" selection-start-line="74" selection-start-column="4" selection-end-line="75" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -120,15 +120,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/ButtonsCell.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="27" column="60" lean-forward="true" selection-start-line="27" selection-start-column="60" selection-end-line="27" selection-end-column="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminShowStudentsController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1001">
@@ -140,17 +131,36 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminEditStaff/adminEditStaffController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1443">
-              <caret line="124" column="37" selection-start-line="124" selection-start-column="37" selection-end-line="124" selection-end-column="37" />
+            <state relative-caret-position="1800">
+              <caret line="210" column="121" selection-start-line="210" selection-start-column="121" selection-end-line="210" selection-end-column="121" />
               <folding>
-                <element signature="e#3577#3578#0" expanded="true" />
-                <element signature="e#3658#3659#0" expanded="true" />
-                <element signature="e#3721#3722#0" expanded="true" />
-                <element signature="e#3763#3764#0" expanded="true" />
+                <element signature="e#4235#4236#0" expanded="true" />
+                <element signature="e#4340#4341#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/views/dialog/Dialog.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1416">
+              <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/views/stages/employee/employeeShowHome/employeeShowHomeController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="33" column="43" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -292,14 +302,12 @@
         <option value="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminAddStaff/adminAddStaff.fxml" />
         <option value="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminEditStaff/adminEditStaff.fxml" />
         <option value="$PROJECT_DIR$/src/main/views/stages/teacher/teacherNavbar/teacherNavbarController.java" />
-        <option value="$PROJECT_DIR$/src/main/views/stages/ControllerFunctions.java" />
         <option value="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminShowStudentInformation/adminShowStudentInformation.fxml" />
         <option value="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowStudents/employeeAddStudent/employeeAddStudent.fxml" />
         <option value="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowStudents/employeeAddStudent/employeeAddStudentController.java" />
         <option value="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowStudents/employeeEditStudent/employeeEditStudent.fxml" />
         <option value="$PROJECT_DIR$/src/main/views/stages/template/Students.java" />
         <option value="$PROJECT_DIR$/src/main/assests/stylesheets/style.css" />
-        <option value="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminAddStaff/adminAddStaffController.java" />
         <option value="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowStudents/employeeShowStudentsController.java" />
         <option value="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowHome/employeeShowHomeController.java" />
         <option value="$PROJECT_DIR$/src/main/views/stages/admin/adminShowHome/adminShowHomeController.java" />
@@ -312,6 +320,8 @@
         <option value="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowStudents/employeeShowStudentInformation/employeeShowStudentInformationController.java" />
         <option value="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminShowStudentInformation/adminShowStudentInformationController.java" />
         <option value="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowStudents/employeeEditStudent/employeeEditStudentController.java" />
+        <option value="$PROJECT_DIR$/src/main/views/stages/ControllerFunctions.java" />
+        <option value="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminAddStaff/adminAddStaffController.java" />
         <option value="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminEditStaff/adminEditStaffController.java" />
       </list>
     </option>
@@ -514,70 +524,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="stages" type="462c0819:PsiDirectoryNode" />
-              <item name="employee" type="462c0819:PsiDirectoryNode" />
-              <item name="employeeShowStudents" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Madrsti" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Madrsti" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="stages" type="462c0819:PsiDirectoryNode" />
-              <item name="employee" type="462c0819:PsiDirectoryNode" />
-              <item name="employeeShowStudents" type="462c0819:PsiDirectoryNode" />
-              <item name="employeeAddStudent" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Madrsti" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Madrsti" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="stages" type="462c0819:PsiDirectoryNode" />
-              <item name="employee" type="462c0819:PsiDirectoryNode" />
-              <item name="employeeShowStudents" type="462c0819:PsiDirectoryNode" />
-              <item name="employeeEditStudent" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Madrsti" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Madrsti" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="stages" type="462c0819:PsiDirectoryNode" />
-              <item name="employee" type="462c0819:PsiDirectoryNode" />
-              <item name="employeeShowStudents" type="462c0819:PsiDirectoryNode" />
-              <item name="employeeShowStudentInformation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Madrsti" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Madrsti" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="stages" type="462c0819:PsiDirectoryNode" />
-              <item name="employee" type="462c0819:PsiDirectoryNode" />
-              <item name="employeeShowSubjects" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Madrsti" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Madrsti" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="stages" type="462c0819:PsiDirectoryNode" />
-              <item name="employee" type="462c0819:PsiDirectoryNode" />
-              <item name="employeeShowSubjects" type="462c0819:PsiDirectoryNode" />
-              <item name="employeeAddSubject" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Madrsti" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Madrsti" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="stages" type="462c0819:PsiDirectoryNode" />
               <item name="teacher" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -643,7 +589,7 @@
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552350583445" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552411875833" />
     <property name="dynamic.classpath" value="false" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.idea/libraries/mysql-connector-java-5.1.46.jar!/" />
@@ -849,7 +795,7 @@
       <workItem from="1551825782288" duration="24000" />
       <workItem from="1552143912365" duration="719000" />
       <workItem from="1552251786907" duration="4187000" />
-      <workItem from="1552324271239" duration="10532000" />
+      <workItem from="1552324271239" duration="16808000" />
     </task>
     <task id="LOCAL-00001" summary="Add FXML header file into main FXML file">
       <created>1547240271430</created>
@@ -1096,11 +1042,18 @@
       <option name="project" value="LOCAL" />
       <updated>1552257193814</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="fixing : adminShow students , staff&#10;employeeEditStudents , adminEditStaff">
+      <created>1552350773247</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1552350773298</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="469089000" />
+    <option name="totallyTimeSpent" value="475365000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1210,7 +1163,6 @@
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
-    <MESSAGE value="Updating: can call dialog from fxml controller" />
     <MESSAGE value="Adding: hierarchical of showEmployees page" />
     <MESSAGE value="Updating: passing data between stages" />
     <MESSAGE value="Adding: confirm dialog and add staff function" />
@@ -1235,7 +1187,8 @@
     <MESSAGE value="adding : employee edit , delete , show students" />
     <MESSAGE value="updating : show Students , home" />
     <MESSAGE value="updating : show Staff" />
-    <option name="LAST_COMMIT_MESSAGE" value="updating : show Staff" />
+    <MESSAGE value="fixing : adminShow students , staff&#10;employeeEditStudents , adminEditStaff" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixing : adminShow students , staff&#10;employeeEditStudents , adminEditStaff" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -1355,13 +1308,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="164">
           <caret line="87" selection-start-line="87" selection-end-line="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/views/dialog/Dialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="107" selection-start-line="107" selection-end-line="107" />
         </state>
       </provider>
     </entry>
@@ -1509,13 +1455,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/views/stages/employee/employeeShowHome/employeeShowHomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="33" column="43" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/views/stages/employee/employeeShowStudents/employeeShowStudentsController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -1566,23 +1505,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3196">
           <caret line="188" column="25" selection-start-line="188" selection-start-column="25" selection-end-line="188" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/views/stages/ControllerFunctions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="27" column="32" lean-forward="true" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminAddStaff/adminAddStaffController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="154" column="64" lean-forward="true" selection-start-line="154" selection-start-column="64" selection-end-line="154" selection-end-column="64" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1650,16 +1572,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/views/stages/ControllerFunctions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="17" column="22" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminAddStaff/adminAddStaffController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="75" column="35" lean-forward="true" selection-start-line="74" selection-start-column="4" selection-end-line="75" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminEditStaff/adminEditStaffController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1443">
-          <caret line="124" column="37" selection-start-line="124" selection-start-column="37" selection-end-line="124" selection-end-column="37" />
+        <state relative-caret-position="1800">
+          <caret line="210" column="121" selection-start-line="210" selection-start-column="121" selection-end-line="210" selection-end-column="121" />
           <folding>
-            <element signature="e#3577#3578#0" expanded="true" />
-            <element signature="e#3658#3659#0" expanded="true" />
-            <element signature="e#3721#3722#0" expanded="true" />
-            <element signature="e#3763#3764#0" expanded="true" />
+            <element signature="e#4235#4236#0" expanded="true" />
+            <element signature="e#4340#4341#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/views/dialog/Dialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1416">
+          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/views/stages/employee/employeeShowHome/employeeShowHomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="33" column="43" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
         </state>
       </provider>
     </entry>

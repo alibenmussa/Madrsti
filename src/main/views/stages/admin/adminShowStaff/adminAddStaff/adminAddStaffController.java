@@ -2,8 +2,6 @@ package main.views.stages.admin.adminShowStaff.adminAddStaff;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
-import javafx.scene.Group;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -74,8 +72,11 @@ public class adminAddStaffController {
 
     @FXML
     private PasswordField password;
+    @FXML
+    private CheckBox createAccount;
 
     private File selectedImage = null;
+
 
     public void initialize() {
         userPhoto.setImage(new Image(StagesManager.getUserPhoto(), 100, 100, false, false));
@@ -154,6 +155,28 @@ public class adminAddStaffController {
                 "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         int affectedrow = DatabaseManager.executeSQLRows(query,data);
         System.out.println(affectedrow);
+
+
+        if (createAccount.isSelected()) {
+            ArrayList<String> userData = new ArrayList<>();
+            String permission;
+            String userID = id.getText();
+            String userName = username.getText();
+            String Pass = password.getText();
+            if (type.getSelectionModel().getSelectedItem().toString().equals("Employee")) {
+                 permission = "3";
+            } else {
+                 permission = "2";
+            }
+            userData.add(userID);
+            userData.add(userName);
+            userData.add(Pass);
+            userData.add(permission);
+
+            String accountquery = "INSERT INTO `users`(`user_id`, `username`, `password`, `permission`) VALUES (?,?,?,?)";
+            DatabaseManager.executeSQLRows(accountquery,userData);
+        }
+
         if (affectedrow > 0){
             Dialog.success = true;
             Dialog.closeDialogWindow();
@@ -172,6 +195,9 @@ public class adminAddStaffController {
 
 
     }
+
+
+
 
 
 }

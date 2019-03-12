@@ -78,6 +78,9 @@ public class adminEditStaffController  {
 
     @FXML
     private PasswordField password;
+    @FXML
+    private CheckBox createAccount;
+
     private Date bDay;
 
     private File selectedImage = null;
@@ -88,7 +91,6 @@ public class adminEditStaffController  {
         userPhotoCircle.setClip(new Circle(50, 50, 50));
         userPhoto.setFitWidth(100);
         sta_Id = stf_id;
-
 
 
         ArrayList arrayList = new ArrayList();
@@ -102,8 +104,8 @@ public class adminEditStaffController  {
         DatabaseManager.addComboBoxData(type, gradeQuery, null);*/
 
 
-        String query = "SELECT * FROM `staff` WHERE `staff_id` =" +sta_Id;
-        ResultSet rs = DatabaseManager.executeSQLResultSet(query,null);
+        String query = "SELECT * FROM `staff` WHERE `staff_id` =" + sta_Id;
+        ResultSet rs = DatabaseManager.executeSQLResultSet(query, null);
         try {
             while (rs.next()) {
                 fullName.setText(String.valueOf(rs.getString("full_name")));
@@ -124,14 +126,20 @@ public class adminEditStaffController  {
                 gender.setValue(rs.getString("gender"));
                 graduateYear.setValue(rs.getString("graduate_year"));
 
-                username.setText("alibenmussa");
-                password.setText("1234");
-            }
+                String query2 = "SELECT * FROM users WHERE `user_id` =" +stf_id;
+                ResultSet rw = DatabaseManager.executeSQLResultSet(query2, null);
+                try {
+                    while (rw.next()) {
+                        username.setText(rw.getString("username"));
+                        password.setText(rw.getString("password"));
+                    }
+                } catch (SQLException e) {
+                }
 
-        } catch (SQLException e) {
+            }
+        }catch(SQLException e){
         }
     }
-
 
     @FXML
     void clickCreateAccount(ActionEvent event) {
@@ -183,6 +191,27 @@ public class adminEditStaffController  {
                 " `phone_number`= ?, `email`= ?, `major`= ?, `degree`= ?, `education`= ? ,`type`= ? ,`gender`= ?  WHERE `staff_id`="+sta_Id;
         int affectedrow = DatabaseManager.executeSQLRows(query,data);
         System.out.println(affectedrow);
+
+        if (createAccount.isSelected()) {
+            ArrayList<String> userData = new ArrayList<>();
+            String permission;
+            String userID = id.getText();
+            String userName = username.getText();
+            String Pass = password.getText();
+            if (type.getSelectionModel().getSelectedItem().toString().equals("Employee")) {
+                permission = "3";
+            } else {
+                permission = "2";
+            }
+            userData.add(userID);
+            userData.add(userName);
+            userData.add(Pass);
+            userData.add(permission);
+
+            String accountquery = "UPDATE `users` SET `user_id`=?,`username`=?,`password`=?,`permission`=? WHERE  user_id ="+sta_Id;
+            DatabaseManager.executeSQLRows(accountquery,userData);
+        }
+
         if (affectedrow > 0){
             Dialog.success = true;
             Dialog.closeDialogWindow();
