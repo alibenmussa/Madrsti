@@ -31,10 +31,10 @@ public class employeeEditStudentController  {
     private DatePicker birthDay;
 
     @FXML
-    private ComboBox<?> state;
+    private ComboBox state;
 
     @FXML
-    private ComboBox<?> gender;
+    private ComboBox gender;
 
     @FXML
     private AnchorPane userPhotoCircle;
@@ -61,13 +61,13 @@ public class employeeEditStudentController  {
     private TextField phoneNumber;
 
     @FXML
-    private ComboBox<?> year;
+    private ComboBox year;
 
     @FXML
-    private ComboBox<?> clas;
+    private ComboBox clas;
 
     @FXML
-    private ComboBox<?> healthStatus;
+    private ComboBox healthStatus;
 
     @FXML
     private TextArea notes;
@@ -84,9 +84,15 @@ public class employeeEditStudentController  {
         userPhotoCircle.setClip(new Circle(50, 50, 50));
         userPhoto.setFitWidth(100);
         std_id = ID;
+
+
         String gradeQuery = "SELECT `name` FROM `grades`";
         DatabaseManager.addComboBoxData(year, gradeQuery, null);
         clas.disableProperty().bind(year.valueProperty().isNull());
+        String classquery = "select  classes.class_id from students inner join classes using(grade_id) where student_id ="+std_id ;
+        DatabaseManager.addComboBoxData(clas, classquery, null);
+
+
 
 
 
@@ -106,6 +112,13 @@ public class employeeEditStudentController  {
                 relative.setText(rs.getString("relative_name"));
                 relation.setText(rs.getString("relation"));
                 notes.setText(rs.getString("notes"));
+                state.setValue(rs.getString("state"));
+                gender.setValue(rs.getString("gender"));
+                healthStatus.setValue(rs.getString("health_status"));
+                year.setValue(rs.getString("grade_id")+"st Primary");
+                clas.setValue(rs.getString("class_id"));
+
+
             }
 
         } catch (SQLException e) {
@@ -121,7 +134,6 @@ public class employeeEditStudentController  {
         int index = year.getSelectionModel().getSelectedIndex() +1;
         list.add(String.valueOf(index));
         DatabaseManager.addComboBoxData(clas, query, list);
-
     }
 
 

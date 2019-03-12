@@ -88,29 +88,16 @@ public class employeeShowStudentInformationController{
                 notes.setText(rs.getString("notes"));
                 state.setText(rs.getString("state"));
                 gender.setText(rs.getString("gender"));
+                jobDescription.setText(rs.getString("grade_id")+"st Primary - Group " +rs.getString("class_id"));
+                degree.setText(rs.getString("grade_id")+"st Primary");
 
-                int t = rs.getInt("grade_id");
-                if (t == 1)
-                    degree.setText("1st Primary");
-                else if (t == 2)
-                    degree.setText("2st Primary");
-                else if (t == 3)
-                    degree.setText("3st Primary");
-                else if (t == 4)
-                    degree.setText("4st Primary");
-                else if (t == 5)
-                    degree.setText("5st Primary");
-                else if (t == 6)
-                    degree.setText("6st Primary");
             }
 
         } catch (SQLException e) {
         }
     }
 
-    public void setUserData() {
 
-    }
 
 
     @FXML

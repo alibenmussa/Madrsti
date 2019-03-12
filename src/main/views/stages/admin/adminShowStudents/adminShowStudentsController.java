@@ -12,6 +12,7 @@ import main.DatabaseManager;
 import main.Main;
 import main.StagesManager;
 import main.views.dialog.Dialog;
+import main.views.stages.admin.adminShowStudents.ButtonsCell;
 import main.views.stages.admin.adminShowStudents.adminShowStudentInformation.adminShowStudentInformationController;
 import main.views.stages.template.Students;
 
@@ -54,7 +55,7 @@ public class adminShowStudentsController implements Initializable {
     private TableColumn<Students, String> classs;
 
     @FXML
-    private TableColumn<Students, Button> operations;
+    private TableColumn operations;
 
 
 
@@ -68,44 +69,12 @@ public class adminShowStudentsController implements Initializable {
 
 
 
-        this.name.setCellValueFactory(new PropertyValueFactory<>("full_name"));
-        this.grade.setCellValueFactory(new PropertyValueFactory<>("grade_id"));
-        this.classs.setCellValueFactory(new PropertyValueFactory<>("class_id"));
-        this.operations.setCellValueFactory(new PropertyValueFactory<Students, Button>(""));
-
-        Callback<TableColumn<Students, Button>, TableCell<Students, Button>> cellFactory
-                = //
-                new Callback<TableColumn<Students, Button>, TableCell<Students, Button>>() {
-                    @Override
-                    public TableCell call(final TableColumn<Students, Button> param) {
-                        final TableCell<Students, Button> cell = new TableCell<Students, Button>() {
-
-                            final Button showBtn = new Button("E");
+        name.setCellValueFactory(new PropertyValueFactory<>("full_name"));
+        grade.setCellValueFactory(new PropertyValueFactory<>("grade_id"));
+        classs.setCellValueFactory(new PropertyValueFactory<>("class_id"));
+        operations.setCellFactory((Callback<TableColumn<Students, Boolean>, TableCell<Students, Boolean>>) p -> new ButtonsCell(this));
 
 
-                            @Override
-                            public void updateItem(Button item, boolean empty) {
-                                super.updateItem(item, empty);
-                                if (empty) {
-                                    setGraphic(null);
-                                    setText(null);
-                                } else {
-                                    showBtn.setOnAction(event -> {
-                                        Students selected = getTableView().getItems().get(getIndex());
-                                        showStudent(selected.getStu_id());
-                                    });
-                                    setGraphic(showBtn);
-
-
-                                    setText(null);
-                                }
-                            }
-                        };
-                        return cell;
-                    }
-                };
-
-        operations.setCellFactory(cellFactory);
 
         studentsTable.setItems(getStudentsList());
     }
@@ -147,7 +116,7 @@ public class adminShowStudentsController implements Initializable {
         return data;
     }
 
-    private void showStudent(String Id) {
+    public void showStudent(String Id) {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/main/views/stages/admin/adminShowStudents/adminShowStudentInformation/adminShowStudentInformation.fxml"));
         try {
             loader.load();

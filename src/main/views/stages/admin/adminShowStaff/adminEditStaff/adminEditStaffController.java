@@ -120,6 +120,9 @@ public class adminEditStaffController  {
                 major.setText(rs.getString("major"));
                 degree.setText(rs.getString("degree"));
                 education.setText(rs.getString("education"));
+                type.setValue(rs.getString("type"));
+                gender.setValue(rs.getString("gender"));
+                graduateYear.setValue(rs.getString("graduate_year"));
 
                 username.setText("alibenmussa");
                 password.setText("1234");

@@ -64,29 +64,33 @@ public class adminShowStudentInformationController  {
     @FXML
     private TextArea notes;
 
-
+    private String std_id;
 
     public void initialize(String Id) {
         userPhotoCircle.setClip(new Circle(60, 60, 60));
         userPhoto.setFitWidth(120);
+        std_id =Id;
 
-        String querey = "SELECT * FROM `students` WHERE `student_id` =" +Id;
-        ResultSet rs = DatabaseManager.executeSQLResultSet(querey,null);
+        String query = "SELECT * FROM `students` WHERE `student_id` =" +std_id;
+        ResultSet rs = DatabaseManager.executeSQLResultSet(query,null);
         try {
             while (rs.next()) {
-                fullName.setText(String.valueOf(rs.getString("full_name")));
-                userPhoto.setImage(new Image("/main/assests/images/users/user_01.jpg"));
+
+
+                id.setText(rs.getString("student_id"));
+                fullName.setText(rs.getString("full_name"));
                 birthDay.setText(String.valueOf(rs.getDate("birthday")));
-                gender.setText(rs.getString("gender"));
-                id.setText(String.valueOf(rs.getInt("student_id")));
                 address.setText(rs.getString("address"));
                 nationality.setText(rs.getString("nationality"));
-                phoneNumber.setText(String.valueOf(rs.getInt("phone_number")));
-                notes.setText(rs.getString("notes"));
+                phoneNumber.setText(rs.getString("phone_number"));
                 relativeName.setText(rs.getString("relative_name"));
-                degree.setText(rs.getString("degree"));
                 relativeRelation.setText(rs.getString("relation"));
+                notes.setText(rs.getString("notes"));
                 state.setText(rs.getString("state"));
+                gender.setText(rs.getString("gender"));
+                jobDescription.setText(rs.getString("grade_id")+"st Primary - Group " +rs.getString("class_id"));
+                degree.setText(rs.getString("grade_id")+"st Primary");
+
             }
 
         } catch (SQLException e) {
