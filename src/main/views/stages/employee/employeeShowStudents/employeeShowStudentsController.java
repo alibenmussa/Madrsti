@@ -15,6 +15,7 @@ import main.views.dialog.Dialog;
 import main.views.stages.admin.adminShowStudents.adminShowStudentsController;
 import main.views.stages.employee.employeeShowStudents.employeeEditStudent.employeeEditStudentController;
 import main.views.stages.employee.employeeShowStudents.employeeShowStudentInformation.employeeShowStudentInformationController;
+import main.views.stages.employee.employeeShowStudents.employeeShowStudentResult.employeeShowStudentResultController;
 import main.views.stages.template.Student;
 
 import java.io.IOException;
@@ -107,7 +108,24 @@ public class employeeShowStudentsController implements Initializable {
 
         employeeShowStudentInformationController controller = loader.getController();
         controller.initialize(id);
-        boolean showStudent = Dialog.showAndPass("Student Information", loader.getRoot());
+        boolean resultStudent = Dialog.showAndPass("Student Information", loader.getRoot());
+        if (resultStudent) {
+            Main.FXMLLoaderPane(StagesManager.stageContent, "/main/views/stages/employee/employeeShowStudents/employeeShowStudents.fxml");
+        }
+
+    }
+
+    public void employeeShowResult(String id) {
+        FXMLLoader loader = new FXMLLoader(Main.class.getResource("/main/views/stages/employee/employeeShowStudents/employeeShowStudentResult/employeeShowStudentResult.fxml"));
+        try {
+            loader.load();
+        } catch (IOException ex) {
+
+        }
+
+        employeeShowStudentResultController controller = loader.getController();
+        controller.initialize(id);
+        boolean showStudent = Dialog.showAndPass("Student Result", loader.getRoot());
         if (showStudent) {
             Main.FXMLLoaderPane(StagesManager.stageContent, "/main/views/stages/employee/employeeShowStudents/employeeShowStudents.fxml");
         }

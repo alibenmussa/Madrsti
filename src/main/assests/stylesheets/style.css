@@ -237,7 +237,7 @@
     -fx-background-color: #ffffff;
 }
 
-.button {
+.button, .result-header {
     -fx-cursor: hand;
     -fx-background-color: #3F4CF3;
     -fx-text-fill: #ffffff;
@@ -315,9 +315,7 @@
     -fx-background-color: #30beab;
 }
 
-.delete-button {
-    -fx-background-color: #faeaeb;
-    -fx-text-fill: #db193e;
+.mini-button {
     -fx-max-width: 30;
     -fx-max-height: 30;
     -fx-min-width: 30;
@@ -327,12 +325,22 @@
     -fx-padding: 0;
 }
 
+.mini-button > .glyph-icon {
+    -fx-font-size: 14;
+
+}
+
+.delete-button {
+    -fx-background-color: #faeaeb;
+    -fx-text-fill: #db193e;
+
+}
+
 .delete-button:hover {
     -fx-background-color: #db193e;
     -fx-text-fill: #ffffff;
 }
 .delete-button > .glyph-icon {
-    -fx-font-size: 14;
     -fx-text-fill: #db193e;
     -fx-fill: #db193e;
 }
@@ -539,4 +547,14 @@
 .statistic-box:hover .label, .statistic-box:hover .glyph-icon {
     -fx-text-fill: #ffffff;
     -fx-fill: #ffffff;
+}
+
+.result-header {
+    -fx-cursor: default;
+    -fx-padding: 0 5;
+}
+
+.result-header > * {
+    -fx-font-size: 12;
+    -fx-font-weight: bold;
 }
