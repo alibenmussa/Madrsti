@@ -29,9 +29,9 @@
                 </BorderPane>
             <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="content">
                <children>
-                  <LineChart layoutX="80.0" layoutY="16.0" minHeight="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <LineChart fx:id="employeeChart" layoutX="80.0" layoutY="16.0" minHeight="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <xAxis>
-                      <CategoryAxis side="BOTTOM" />
+                      <NumberAxis side="BOTTOM" />
                     </xAxis>
                     <yAxis>
                       <NumberAxis side="LEFT" />

@@ -2,6 +2,8 @@ package main.views.stages.admin.adminShowHome;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.chart.LineChart;
+import javafx.scene.chart.XYChart;
 import javafx.scene.control.Label;
 import main.DatabaseManager;
 
@@ -19,6 +21,8 @@ public class adminShowHomeController implements Initializable {
 
     @FXML
     private Label employee;
+    @FXML
+    private LineChart<Number, Number> adminChart;
 
 
     @Override
@@ -32,7 +36,22 @@ public class adminShowHomeController implements Initializable {
 
         String Staffquery = "select count(*) as Employee FROM staff where type='Employee'";
         result(Staffquery, employee,"  EMPLOYEE");
+        getChartData();
 
+    }
+
+
+    public void getChartData() {
+        adminChart.getData().clear();
+        XYChart.Series<Number, Number> series = new XYChart.Series<>();
+        series.setName("Series 1");
+        series.getData().add(new XYChart.Data<>(1, 20));
+        series.getData().add(new XYChart.Data<>(2, 100));
+        series.getData().add(new XYChart.Data<>(3, 80));
+        series.getData().add(new XYChart.Data<>(4, 180));
+        series.getData().add(new XYChart.Data<>(5, 20));
+        series.getData().add(new XYChart.Data<>(6, -10));
+        adminChart.getData().add(series);
 
     }
 

@@ -57,7 +57,7 @@
                                  <children>
                                     <VBox maxHeight="-Infinity" spacing="20.0" HBox.hgrow="ALWAYS">
                                        <children>
-                                          <ComboBox fx:id="type" maxWidth="1.7976931348623157E308" onAction="#type" prefWidth="135.0" promptText="Teacher">
+                                          <ComboBox fx:id="type" maxWidth="1.7976931348623157E308" prefWidth="135.0" promptText="Teacher">
                                              <items>
                                                 <FXCollections fx:factory="observableArrayList">
                                                    <String fx:value="Teacher" />
