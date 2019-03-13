@@ -42,6 +42,7 @@ public class adminShowStaffController implements Initializable {
     @FXML
     private TableColumn operations;
 
+
     ObservableList<Staff> data;
 
 
@@ -59,17 +60,27 @@ public class adminShowStaffController implements Initializable {
         section.setCellValueFactory(new PropertyValueFactory<>("state"));
         phone.setCellValueFactory(new PropertyValueFactory<>("phone_number"));
         operations.setCellFactory((Callback<TableColumn<Staff, Boolean>, TableCell<Staff, Boolean>>) p -> new ButtonsCell(this));
-        staffTable.setItems(getStaffList());
+
+        staffTable.setItems(getStaffList(search));
+
+
     }
 
-    public ObservableList<Staff> getStaffList() {
+    public ObservableList<Staff> getStaffList(TextField searach) {
 
+        String staffquery ;
         data = FXCollections.observableArrayList();
 
-    Connection connection = DatabaseManager.createConnection();
 
-        String query = "SELECT * FROM `staff`";
-        ResultSet rs = DatabaseManager.executeSQLResultSet(query,null);
+        if (searach == null) {
+            staffquery = "SELECT * FROM `staff`";
+            System.out.println("hi");
+        } else {
+            staffquery = "SELECT * FROM `staff` WHERE `full_name` LIKE '%" + search + "' ORDER BY `staff_id` ASC";
+            System.out.println("hiiii");
+        }
+
+        ResultSet rs = DatabaseManager.executeSQLResultSet(staffquery,null);
         try {
 
             while (rs.next()) {
@@ -105,8 +116,9 @@ public class adminShowStaffController implements Initializable {
         FXMLLoader loader = new FXMLLoader(Main.class.getResource(path));
         try {
             loader.load();
+            System.out.println("here");
         } catch (IOException ex) {
-
+            ex.printStackTrace();
         }
         boolean addStaff = Dialog.showAndPass("Add Staff", loader.getRoot());
         if (addStaff) {
