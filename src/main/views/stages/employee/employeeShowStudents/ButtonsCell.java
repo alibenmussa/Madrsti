@@ -11,12 +11,12 @@ public class ButtonsCell extends TableCell<Student, Boolean> {
     final Button deleteButton = new Button();
     final Button editButton = new Button("E");
     final Button showInformationButton = new Button("S");
+    final Button showResultButton = new Button("R");
 
     public ButtonsCell(employeeShowStudentsController controller) {
-        deleteButton.getStyleClass().add("delete-button");
+        deleteButton.getStyleClass().addAll("mini-button", "delete-button");
         deleteButton.setGraphic(new FontAwesomeIconView(FontAwesomeIcon.CLOSE));
         deleteButton.setOnAction(e -> {
-//          Student currentPerson = ButtonsCell.this.getTableView().getItems().get(ButtonsCell.this.getIndex());
             Student selected = getTableView().getItems().get(getIndex());
             controller.employeeDeleteStudent(selected.getStu_id());
         });
@@ -28,13 +28,17 @@ public class ButtonsCell extends TableCell<Student, Boolean> {
             Student selected = getTableView().getItems().get(getIndex());
             controller.employeeShowStudent(selected.getStu_id());
         });
+        showResultButton.setOnAction(event -> {
+            Student selected = getTableView().getItems().get(getIndex());
+            controller.employeeShowResult(selected.getStu_id());
+        });
     }
 
     @Override
     protected void updateItem(Boolean t, boolean empty) {
         super.updateItem(t, empty);
         if(!empty){
-            setGraphic(new HBox(10, deleteButton, editButton, showInformationButton));
+            setGraphic(new HBox(10, showInformationButton, showResultButton, editButton, deleteButton));
         }
     }
 }

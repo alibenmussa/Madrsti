@@ -1394,36 +1394,44 @@ class_id</RefColNames>
       <ColNames>subject_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="319" parent="249" name="user_id">
+    <foreign-key id="319" parent="248" name="subjects_ibfk_1">
+      <ColNames>grade_id</ColNames>
+      <RefSchemaName>madrsti</RefSchemaName>
+      <RefTableName>grades</RefTableName>
+      <RefColNames>grade_id</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="320" parent="249" name="user_id">
       <Position>1</Position>
       <DataType>bigint(20) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="320" parent="249" name="username">
+    <column id="321" parent="249" name="username">
       <Position>2</Position>
       <DataType>varchar(64)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="321" parent="249" name="password">
+    <column id="322" parent="249" name="password">
       <Position>3</Position>
       <DataType>varchar(32)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="322" parent="249" name="permission">
+    <column id="323" parent="249" name="permission">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="323" parent="249" name="PRIMARY">
+    <key id="324" parent="249" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>user_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="324" parent="249" name="users_ibfk_1">
+    <foreign-key id="325" parent="249" name="users_ibfk_1">
       <ColNames>user_id</ColNames>
       <RefSchemaName>madrsti</RefSchemaName>
       <RefTableName>staff</RefTableName>

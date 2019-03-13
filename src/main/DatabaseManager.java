@@ -77,7 +77,7 @@ public class DatabaseManager {
                     }
                 }
             } catch (SQLException ex) {
-
+                System.out.println(ex.getMessage());
             }
         }
         return result;

@@ -24,7 +24,7 @@
                   <Insets bottom="10.0" />
                </VBox.margin>
                <right>
-                  <HBox spacing="20.0" BorderPane.alignment="CENTER">
+                  <HBox fx:id="buttons" spacing="20.0" BorderPane.alignment="CENTER">
                      <children>
                         <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#goBack" prefHeight="40.0" styleClass="gray-button" textFill="WHITE">
                             <padding>
@@ -34,7 +34,8 @@
                                 <!--<FontAwesomeIconView glyphName="CHEVRON_LEFT" styleClass="icon" />-->
                             </graphic>
                         </Button>
-                        <Button alignment="CENTER" graphicTextGap="15.0" layoutX="10.0" layoutY="10.0" minWidth="120.0" mnemonicParsing="false" onAction="#editResults" prefHeight="40.0" styleClass="function-button" text="EDIT" textFill="WHITE">
+                         <Button fx:id="cancelEdit" minWidth="120.0" mnemonicParsing="false" prefHeight="40.0" styleClass="gray-button" text="CANCEL" />
+                        <Button fx:id="editButton" alignment="CENTER" graphicTextGap="15.0" layoutX="10.0" layoutY="10.0" minWidth="120.0" mnemonicParsing="false" prefHeight="40.0" styleClass="function-button" text="EDIT" textFill="WHITE">
                            <padding>
                               <Insets left="20.0" right="20.0" />
                            </padding>
@@ -47,7 +48,12 @@
                   </HBox>
                </right>
                <left>
-                  <Label fx:id="name" styleClass="title" text="1st Primary - A" BorderPane.alignment="CENTER" />
+                  <VBox spacing="10.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label fx:id="subject" styleClass="title" text="Arabic Language" />
+                        <Label fx:id="clas" styleClass="small-subject" text="1st Primary - A" />
+                     </children>
+                  </VBox>
                </left>
             </BorderPane>
             <AnchorPane maxWidth="1.7976931348623157E308">
@@ -55,68 +61,52 @@
                   <String fx:value="content" />
                </styleClass>
                <children>
-                  <GridPane fx:id="schedule" hgap="10.0" vgap="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <GridPane fx:id="resultTable" alignment="CENTER_LEFT" hgap="10.0" vgap="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <columnConstraints>
-                      <ColumnConstraints hgrow="SOMETIMES" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="20.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="20.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="20.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="20.0" />
                     </columnConstraints>
                     <rowConstraints>
-                      <RowConstraints minHeight="60.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="60.0" vgrow="SOMETIMES" />
-                      <RowConstraints minHeight="60.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="60.0" vgrow="SOMETIMES" />
-                      <RowConstraints minHeight="60.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="60.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="60.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="60.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Label styleClass="cell-time" text="8:15 - 9:00" GridPane.halignment="CENTER" GridPane.rowIndex="1">
-                           <GridPane.margin>
-                              <Insets />
-                           </GridPane.margin>
-                        </Label>
-                        <Label styleClass="cell-time" text="9:00 - 9:45" GridPane.halignment="CENTER" GridPane.rowIndex="2">
-                           <GridPane.margin>
-                              <Insets />
-                           </GridPane.margin>
-                        </Label>
-                        <Label styleClass="cell-time" text="9:45 - 10:30" GridPane.halignment="CENTER" GridPane.rowIndex="3">
-                           <GridPane.margin>
-                              <Insets />
-                           </GridPane.margin>
-                        </Label>
-                        <Label styleClass="cell-time" text="11:00 - 11:45" GridPane.halignment="CENTER" GridPane.rowIndex="4">
-                           <GridPane.margin>
-                              <Insets />
-                           </GridPane.margin>
-                        </Label>
-                        <Label styleClass="cell-time" text="11:45 - 12:30" GridPane.halignment="CENTER" GridPane.rowIndex="5">
-                           <GridPane.margin>
-                              <Insets />
-                           </GridPane.margin>
-                        </Label>
-                        <Label styleClass="cell-time" text="12:30 - 1:15" GridPane.halignment="CENTER" GridPane.rowIndex="6">
-                           <GridPane.margin>
-                              <Insets />
-                           </GridPane.margin>
-                        </Label>
-                        <Label styleClass="cell-time" text="1:15 - 2:00" GridPane.halignment="CENTER" GridPane.rowIndex="7">
-                           <GridPane.margin>
-                              <Insets />
-                           </GridPane.margin>
-                        </Label>
-                        <Label styleClass="cell-day" text="Sunday" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
-                           <GridPane.margin>
-                              <Insets bottom="10.0" />
-                           </GridPane.margin></Label>
+                        <AnchorPane>
+                           <children>
+                              <Label alignment="CENTER" prefHeight="60.0" styleClass="result-header" text="NAME" textAlignment="CENTER" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane GridPane.columnIndex="1">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="60.0" styleClass="result-header" text="FIRST MIDTERM" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane GridPane.columnIndex="2">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="60.0" styleClass="result-header" text="FIRST FINAL" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane GridPane.columnIndex="3">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="60.0" styleClass="result-header" text="SECOND MIDTERM" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane GridPane.columnIndex="4">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="60.0" styleClass="result-header" text="SECOND FINAL" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
                      </children>
+                     <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </padding>
                   </GridPane>
-               </children></AnchorPane>
+               </children>
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </padding></AnchorPane>
 
          </children>
       </VBox>

@@ -70,7 +70,7 @@ public class loginController implements Initializable {
         ArrayList<String> data = new ArrayList<>();
         data.add(username);
         data.add(password);
-        int permission = 0;
+        int permission = -1;
         ResultSet rs = DatabaseManager.executeSQLResultSet("SELECT * FROM `users` INNER JOIN `staff` ON `user_id` = `staff_id` WHERE `username` = ? AND `password` = ?", data);
         if (rs != null) {
             try {
@@ -82,7 +82,10 @@ public class loginController implements Initializable {
                     System.out.println(StagesManager.name);
                 }
             } catch (SQLException ex) {
+                permission = -1;
             }
+        } else {
+            permission = 0;
         }
         return permission;
     }
