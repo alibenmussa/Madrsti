@@ -12,9 +12,8 @@ import main.DatabaseManager;
 import main.Main;
 import main.StagesManager;
 import main.views.dialog.Dialog;
-import main.views.stages.admin.adminShowStudents.ButtonsCell;
 import main.views.stages.admin.adminShowStudents.adminShowStudentInformation.adminShowStudentInformationController;
-import main.views.stages.template.Students;
+import main.views.stages.template.Student;
 
 import java.io.IOException;
 import java.net.URL;
@@ -43,16 +42,16 @@ public class adminShowStudentsController implements Initializable {
     private ComboBox<?> clas;
 
     @FXML
-    private TableView<Students> studentsTable;
+    private TableView<Student> studentsTable;
 
     @FXML
-    private TableColumn<Students, String> name;
+    private TableColumn<Student, String> name;
 
     @FXML
-    private TableColumn<Students, String> grade;
+    private TableColumn<Student, String> grade;
 
     @FXML
-    private TableColumn<Students, String> classs;
+    private TableColumn<Student, String> classs;
 
     @FXML
     private TableColumn operations;
@@ -72,43 +71,43 @@ public class adminShowStudentsController implements Initializable {
         name.setCellValueFactory(new PropertyValueFactory<>("full_name"));
         grade.setCellValueFactory(new PropertyValueFactory<>("grade_id"));
         classs.setCellValueFactory(new PropertyValueFactory<>("class_id"));
-        operations.setCellFactory((Callback<TableColumn<Students, Boolean>, TableCell<Students, Boolean>>) p -> new ButtonsCell(this));
+        operations.setCellFactory((Callback<TableColumn<Student, Boolean>, TableCell<Student, Boolean>>) p -> new ButtonsCell(this));
 
 
 
         studentsTable.setItems(getStudentsList());
     }
 
-    public static ObservableList<Students> getStudentsList() {
-        ObservableList<Students> data = FXCollections.observableArrayList();
+    public static ObservableList<Student> getStudentsList() {
+        ObservableList<Student> data = FXCollections.observableArrayList();
 
         String query = "SELECT * FROM `students` INNER JOIN `grades` USING(`grade_id`)";
         ResultSet rs = DatabaseManager.executeSQLResultSet(query,null);
         if (rs != null) {
             try {
                 while (rs.next()) {
-                    Students students = new Students();
-                    students.setStu_id(rs.getString("student_id"));
-                    students.setPhone_number(rs.getInt("phone_number"));
-                    students.setBirthday(rs.getDate("birthday"));
-                    students.setFull_name(rs.getString("full_name"));
-                    students.setState(rs.getString("state"));
-                    students.setGender(rs.getString("gender"));
-                    students.setLiving_address(rs.getString("address"));
-                    students.setClass_id(rs.getString("class_id"));
-                    students.setNationality(rs.getString("nationality"));
-                    students.setHealth_status(rs.getString("health_status"));
-                    students.setNotes(rs.getString("notes"));
-                    students.setRelative_name(rs.getString("relative_name"));
-                    students.setRelation(rs.getString("relation"));
+                    Student student = new Student();
+                    student.setStu_id(rs.getString("student_id"));
+                    student.setPhone_number(rs.getInt("phone_number"));
+                    student.setBirthday(rs.getDate("birthday"));
+                    student.setFull_name(rs.getString("full_name"));
+                    student.setState(rs.getString("state"));
+                    student.setGender(rs.getString("gender"));
+                    student.setLiving_address(rs.getString("address"));
+                    student.setClass_id(rs.getString("class_id"));
+                    student.setNationality(rs.getString("nationality"));
+                    student.setHealth_status(rs.getString("health_status"));
+                    student.setNotes(rs.getString("notes"));
+                    student.setRelative_name(rs.getString("relative_name"));
+                    student.setRelation(rs.getString("relation"));
 
 
 
                     //grade name ----> ya nooop :))
-                    students.setGrade_id(rs.getString("name"));
+                    student.setGrade_id(rs.getString("name"));
 
 
-                    data.add(students);
+                    data.add(student);
                 }
             } catch (SQLException ex) {
             }

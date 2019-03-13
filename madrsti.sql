@@ -163,10 +163,10 @@ INSERT INTO `staff` (`staff_id`, `full_name`, `type`, `gender`, `birthday`, `add
 -- --------------------------------------------------------
 
 --
--- Table structure for table `students`
+-- Table structure for table `student`
 --
 
-CREATE TABLE `students` (
+CREATE TABLE `student` (
   `student_id` int(10) NOT NULL,
   `full_name` varchar(100) NOT NULL,
   `state` varchar(32) NOT NULL,
@@ -184,10 +184,10 @@ CREATE TABLE `students` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `students`
+-- Dumping data for table `student`
 --
 
-INSERT INTO `students` (`student_id`, `full_name`, `state`, `gender`, `birthday`, `address`, `nationality`, `relative_name`, `relation`, `phone_number`, `grade_id`, `class_id`, `health_status`, `notes`) VALUES
+INSERT INTO `student` (`student_id`, `full_name`, `state`, `gender`, `birthday`, `address`, `nationality`, `relative_name`, `relation`, `phone_number`, `grade_id`, `class_id`, `health_status`, `notes`) VALUES
 (1234, 'Yousef breaka', 'Mustajed', 'Male', '1999-09-16', 'Tripoli, Libya', 'Libyan', 'Jamal Ben Mussa', 'Father', 926360268, 1, 'B', 'True', 'OK'),
 (444444444, 'Ali Jamal Aldien Ben Mussa', 'Mustajed', 'Male', '1999-09-16', 'Tripoli, Libya', 'Libyan', 'Jamal Ben Mussa', 'Father', 926360268, 1, 'B', 'True', 'OK');
 
@@ -277,9 +277,9 @@ ALTER TABLE `staff`
   ADD PRIMARY KEY (`staff_id`);
 
 --
--- Indexes for table `students`
+-- Indexes for table `student`
 --
-ALTER TABLE `students`
+ALTER TABLE `student`
   ADD PRIMARY KEY (`student_id`),
   ADD KEY `students_ibfk_1` (`grade_id`,`class_id`);
 
@@ -332,7 +332,7 @@ ALTER TABLE `classes`
 -- Constraints for table `results`
 --
 ALTER TABLE `results`
-  ADD CONSTRAINT `results_ibfk_1` FOREIGN KEY (`student_id`) REFERENCES `students` (`student_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `results_ibfk_1` FOREIGN KEY (`student_id`) REFERENCES `student` (`student_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `schedules`
@@ -343,9 +343,9 @@ ALTER TABLE `schedules`
   ADD CONSTRAINT `schedules_ibfk_5` FOREIGN KEY (`staff_id`) REFERENCES `staff` (`staff_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `students`
+-- Constraints for table `student`
 --
-ALTER TABLE `students`
+ALTER TABLE `student`
   ADD CONSTRAINT `students_ibfk_1` FOREIGN KEY (`grade_id`,`class_id`) REFERENCES `classes` (`grade_id`, `class_id`) ON DELETE SET NULL ON UPDATE SET NULL;
 
 --

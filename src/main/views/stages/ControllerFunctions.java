@@ -9,10 +9,13 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.shape.Circle;
 import javafx.stage.FileChooser;
+import main.Main;
 import main.StagesManager;
 
 import java.io.File;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
 
 public class ControllerFunctions {
     public static void clickCreateAccount(ActionEvent event, TextField username, PasswordField password) {
@@ -41,11 +44,19 @@ public class ControllerFunctions {
         return null;
     }
 
-        public static void uploadPhotoToUsersFile(File selectedImage) {
+        public static void uploadPhotoToUsersFile(File selectedImage, String userId) {
         String selectedImageExtension = getFileExtension(selectedImage.getName());
-        String image = StagesManager.username + "." + selectedImageExtension;
-        selectedImage.renameTo(new File("D:\\projects\\Madrsti\\src\\main\\assests\\images\\users\\" + image));
-    }
+        String image = userId + "." + selectedImageExtension;
+        File path = new File(Main.class.getResource("/main/assests/images/users/").toExternalForm() + image);
+//        selectedImage.renameTo(path);
+        try {
+            Files.copy(selectedImage.toPath(), path.toPath(), StandardCopyOption.REPLACE_EXISTING);
+        } catch (Exception ex) {
+
+        }
+        System.out.println(path.toString());
+
+        }
 
     public static String getFileExtension(String file) {
         return file.substring(file.lastIndexOf(".") + 1);

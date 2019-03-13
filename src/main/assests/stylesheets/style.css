@@ -97,7 +97,7 @@
 }
 
 
-#dialogContent .text-field, .showing-fields .text-field, .showing-fields .text-area:disabled {
+.text-field, .text-area:disabled {
     -fx-background-color: #f8f8fb;
     -fx-text-fill: #2C343A;
     -fx-prompt-text-fill: #7F8FA4;
@@ -109,11 +109,13 @@
 
 .showing-fields .dialog-in-page .text-field, .showing-fields .dialog-in-page .text-area {
     -fx-background-color: #ffffff;
+    -fx-text-fill: #7F8FA4;
     -fx-opacity: 1;
 }
 
-.showing-fields .text-field:disabled  {
+.text-field:disabled  {
     -fx-background-color: #E6E9F0;
+    -fx-text-fill: #7F8FA4;
 }
 
 #dialogContent .showing-fields .text-field {
@@ -167,7 +169,7 @@
     -fx-font-size: 14;
 }
 
-.text-field, .date-picker, .text-area {
+#loginContainer .text-field, .date-picker, .text-area {
     -fx-border-width: 1;
     -fx-border-color: #E6E9F0;
     -fx-border-radius: 5;
@@ -176,6 +178,10 @@
     -fx-text-fill: #2C343A;
     -fx-background-color: #ffffff;
     -fx-prompt-text-fill: #7F8FA4;
+}
+
+#loginContainer .text-field {
+
 }
 
 .date-picker:editable > .arrow-button > * {
@@ -443,7 +449,7 @@
     -fx-text-fill: #7F8FA4;
 }
 
-.combo-box {
+.combo-box, .text-field {
     -fx-border-width: 0;
     -fx-border-color: transparent;
     -fx-border-radius: 5;

@@ -2,7 +2,7 @@ package main.views.stages.template;
 
 import java.sql.Date;
 
-public class Students {
+public class Student {
 
     private String stu_id;
     private String full_name;

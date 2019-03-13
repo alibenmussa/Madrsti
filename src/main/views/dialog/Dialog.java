@@ -205,7 +205,7 @@ public class Dialog {
     }
 
     private static void animateDialog() {
-        double duration = 0.35;
+        double duration = 0.5;
 
         dialogStage.setOpacity(0);
         FadeTransition fade = new FadeTransition(Duration.seconds(duration), dialogStage.getScene().getRoot());

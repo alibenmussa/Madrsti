@@ -1,22 +1,18 @@
 package main.views.stages.admin.adminShowStudents;
 
-import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon;
-import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableCell;
 import javafx.scene.layout.HBox;
-import main.views.stages.admin.adminShowStaff.adminShowStaffController;
-import main.views.stages.template.Staff;
-import main.views.stages.template.Students;
+import main.views.stages.template.Student;
 
 
-public class ButtonsCell extends TableCell<Students, Boolean> {
+public class ButtonsCell extends TableCell<Student, Boolean> {
 
     final Button showInformationButton = new Button("S");
 
     public ButtonsCell(adminShowStudentsController controller) {
         showInformationButton.setOnAction(event -> {
-            Students selected = getTableView().getItems().get(getIndex());
+            Student selected = getTableView().getItems().get(getIndex());
             controller.showStudent(selected.getStu_id());
         });
     }

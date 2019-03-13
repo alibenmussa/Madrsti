@@ -10,7 +10,6 @@ import javafx.scene.control.SingleSelectionModel;
 import javafx.scene.control.TextField;
 import main.DatabaseManager;
 import main.views.dialog.Dialog;
-import main.views.stages.template.Grade;
 
 import java.net.URL;
 import java.sql.ResultSet;

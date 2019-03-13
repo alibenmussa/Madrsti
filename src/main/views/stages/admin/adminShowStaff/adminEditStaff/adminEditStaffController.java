@@ -2,7 +2,6 @@ package main.views.stages.admin.adminShowStaff.adminEditStaff;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -12,17 +11,13 @@ import main.DatabaseManager;
 import main.StagesManager;
 import main.views.dialog.Dialog;
 import main.views.stages.ControllerFunctions;
-import main.views.stages.template.ComboSubject;
 
 import java.io.File;
-import java.net.URL;
 import java.sql.Date;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.ResourceBundle;
 
 public class adminEditStaffController  {
     @FXML

@@ -31,11 +31,14 @@ public class employeeShowScheduleController {
     @FXML
     private GridPane schedule;
 
-    String grade;
-    String clas;
+    static String grade;
+    static String nameGrade;
+    static String clas;
 
     public void initialize(String gradeId, String gradeName, String className) {
+        System.out.println("hello");
         grade = gradeId;
+        nameGrade = gradeName;
         clas = className;
         name.setText("Group " + className + " - " + gradeName);
         ArrayList<String> data = new ArrayList<>();
@@ -89,7 +92,8 @@ public class employeeShowScheduleController {
         controller.initialize(grade, clas);
         boolean addSubject = Dialog.showAndPass("Add Subject", loader.getRoot());
         if (addSubject) {
-            Main.FXMLLoaderPane(StagesManager.stageContent, "/main/views/stages/employee/employeeShowSubjects/employeeShowSubjects.fxml");
+            initialize(grade, nameGrade, clas);
+
         }
     }
 

@@ -1,6 +1,5 @@
 package main.views.stages.employee.employeeShowStudents;
 
-import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -16,11 +15,10 @@ import main.views.dialog.Dialog;
 import main.views.stages.admin.adminShowStudents.adminShowStudentsController;
 import main.views.stages.employee.employeeShowStudents.employeeEditStudent.employeeEditStudentController;
 import main.views.stages.employee.employeeShowStudents.employeeShowStudentInformation.employeeShowStudentInformationController;
-import main.views.stages.template.Students;
+import main.views.stages.template.Student;
 
 import java.io.IOException;
 import java.net.URL;
-import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
@@ -35,21 +33,21 @@ public class employeeShowStudentsController implements Initializable {
     @FXML
     private ComboBox clas;
     @FXML
-    private TableView<Students> studentsTable;
+    private TableView<Student> studentsTable;
 
     @FXML
-    private TableColumn<Students, String> name;
+    private TableColumn<Student, String> name;
 
     @FXML
-    private TableColumn<Students, String> grade;
+    private TableColumn<Student, String> grade;
 
     @FXML
-    private TableColumn<Students, String> classs;
+    private TableColumn<Student, String> classs;
 
     @FXML
     private TableColumn operations;
 
-    ObservableList<Students> data;
+    ObservableList<Student> data;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -61,7 +59,7 @@ public class employeeShowStudentsController implements Initializable {
         name.setCellValueFactory(new PropertyValueFactory<>("full_name"));
         grade.setCellValueFactory(new PropertyValueFactory<>("grade_id"));
         classs.setCellValueFactory(new PropertyValueFactory<>("class_id"));
-        operations.setCellFactory((Callback<TableColumn<Students, Boolean>, TableCell<Students, Boolean>>) p -> new ButtonsCell(this));
+        operations.setCellFactory((Callback<TableColumn<Student, Boolean>, TableCell<Student, Boolean>>) p -> new ButtonsCell(this));
         studentsTable.setItems(adminShowStudentsController.getStudentsList());
     }
 

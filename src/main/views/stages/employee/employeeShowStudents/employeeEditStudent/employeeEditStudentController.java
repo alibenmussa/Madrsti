@@ -2,7 +2,6 @@ package main.views.stages.employee.employeeShowStudents.employeeEditStudent;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -12,16 +11,14 @@ import main.DatabaseManager;
 import main.StagesManager;
 import main.views.dialog.Dialog;
 import main.views.stages.ControllerFunctions;
-import main.views.stages.template.Students;
 
 import java.io.File;
-import java.net.URL;
 import java.sql.Date;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.ResourceBundle;
+
+import static main.views.stages.ControllerFunctions.uploadPhotoToUsersFile;
 
 public class employeeEditStudentController  {
     @FXML
@@ -186,8 +183,8 @@ public class employeeEditStudentController  {
                 "`nationality`=?,`relative_name`=?,`relation`=?,`phone_number`=?,`grade_id`=?,`class_id`=?,`health_status`=?,"+
                 "`notes`=? WHERE `student_id`= "+std_id;
         int affectedrow = DatabaseManager.executeSQLRows(query,data);
-        System.out.println(affectedrow);
         if (affectedrow > 0){
+            ControllerFunctions.uploadPhotoToUsersFile(selectedImage, std_id);
             Dialog.success = true;
             Dialog.closeDialogWindow();
 
