@@ -2,12 +2,15 @@ package main.views.stages.admin.adminShowStaff;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.KeyEvent;
 import javafx.util.Callback;
 import main.DatabaseManager;
 import main.Main;
@@ -17,11 +20,14 @@ import main.views.stages.admin.adminShowStaff.adminEditStaff.adminEditStaffContr
 import main.views.stages.admin.adminShowStaff.adminShowStaffInformation.adminShowStaffInformationController;
 import main.views.stages.template.Staff;
 
+
 import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.ResourceBundle;
+import java.util.function.Predicate;
 
 public class adminShowStaffController implements Initializable {
     @FXML
@@ -43,6 +49,8 @@ public class adminShowStaffController implements Initializable {
     private TableColumn operations;
 
 
+
+
     ObservableList<Staff> data;
 
 
@@ -60,19 +68,26 @@ public class adminShowStaffController implements Initializable {
         section.setCellValueFactory(new PropertyValueFactory<>("state"));
         phone.setCellValueFactory(new PropertyValueFactory<>("phone_number"));
         operations.setCellFactory((Callback<TableColumn<Staff, Boolean>, TableCell<Staff, Boolean>>) p -> new ButtonsCell(this));
-
-        staffTable.setItems(getStaffList(search));
+        search = null;
+        staffTable.setItems(getStaffList());
 
 
     }
 
-    public ObservableList<Staff> getStaffList(TextField searach) {
+
+    @FXML
+    void searchKey(KeyEvent event) {
+
+    }
+
+
+
+    public ObservableList<Staff> getStaffList() {
 
         String staffquery ;
         data = FXCollections.observableArrayList();
 
-
-        if (searach == null) {
+        if (search == null) {
             staffquery = "SELECT * FROM `staff`";
             System.out.println("hi");
         } else {
@@ -104,11 +119,14 @@ public class adminShowStaffController implements Initializable {
           }
 
 
+
+
       }catch (Exception e){
 
       }
       return data;
     }
+
 
     @FXML
     void adminAddStaff(ActionEvent event) {
@@ -172,4 +190,6 @@ public class adminShowStaffController implements Initializable {
             }
         }
     }
+
+
 }

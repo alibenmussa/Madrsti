@@ -41,7 +41,7 @@
                <children>
                   <HBox spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <TextField fx:id="search" minHeight="40.0" promptText="Search for..." HBox.hgrow="ALWAYS" />
+                        <TextField fx:id="search" minHeight="40.0" onKeyPressed="#searchKey" promptText="Search for..." HBox.hgrow="ALWAYS" />
                         <ComboBox minHeight="40.0" promptText="All">
                            <items>
                            <FXCollections fx:factory="observableArrayList">

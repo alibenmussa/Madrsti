@@ -105,7 +105,4 @@
             </children>
         </VBox>
     </children>
-    <stylesheets>
-        <URL value="@../../../../assests/stylesheets/style.css" />
-    </stylesheets>
 </AnchorPane>
