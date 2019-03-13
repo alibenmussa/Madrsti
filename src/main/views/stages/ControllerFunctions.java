@@ -55,7 +55,6 @@ public class ControllerFunctions {
 
         }
         System.out.println(path.toString());
-
         }
 
     public static String getFileExtension(String file) {

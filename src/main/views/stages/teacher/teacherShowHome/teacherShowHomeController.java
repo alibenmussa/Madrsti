@@ -40,8 +40,7 @@ public class teacherShowHomeController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         ArrayList<String> data1 = new ArrayList<>();
         data1.add(StagesManager.userId);
-        System.out.println(StagesManager.userId);
-        ResultSet rs1 = DatabaseManager.executeSQLResultSet("SELECT DISTINCT `schedules`.`grade_id`, `grades`.`name`, `subjects`.`name` FROM `schedules` INNER JOIN `grades` USING(`grade_id`) INNER JOIN `subjects` USING(`subject_id`) WHERE `schedules`.`staff_id` = ? ORDER BY `grade_id` ASC", data1);
+        ResultSet rs1 = DatabaseManager.executeSQLResultSet("SELECT DISTINCT `schedules`.`grade_id`, `grades`.`name`, `schedules`.`subject_id`, `subjects`.`name` FROM `schedules` INNER JOIN `grades` USING(`grade_id`) INNER JOIN `subjects` USING(`subject_id`) WHERE `schedules`.`staff_id` = ? ORDER BY `grade_id` ASC", data1);
         if (rs1 != null) {
             try {
                 int position = 0;
@@ -52,8 +51,10 @@ public class teacherShowHomeController implements Initializable {
                     vb.setPadding(new Insets(25, 15, 15, 15));
 
                     String currentGradeName = rs1.getString(2);
+                    String currentSubjectId = rs1.getString(3);
+                    String currentSubjectName = rs1.getString(4);
 
-                    Label subjectName = new Label(rs1.getString(3));
+                    Label subjectName = new Label(currentSubjectName);
                     subjectName.getStyleClass().add("title-h2");
                     Label gradeName = new Label(currentGradeName);
                     gradeName.getStyleClass().add("small-subject");
@@ -75,9 +76,9 @@ public class teacherShowHomeController implements Initializable {
                             while (rs2.next()) {
                                 String currentClass = rs2.getString(1);
                                 Button btn = new Button(currentClass);
-                                btn.getStyleClass().addAll("function-button", "big-button");
+                                btn.getStyleClass().addAll("gray-button", "big-button");
                                 btn.setOnAction(e -> {
-                                    showClassSchedule(currentGradeId, currentGradeName, currentClass);
+                                    showClassSchedule(currentGradeId, currentGradeName, currentClass, currentSubjectId, currentSubjectName);
                                 });
                                 GridPane.setHalignment(btn, HPos.CENTER);
                                 gp.add(btn, (i % 2), (i / 2));
@@ -108,15 +109,15 @@ public class teacherShowHomeController implements Initializable {
         AnchorPane.setRightAnchor(node, 0.0);
     }
 
-    private void showClassSchedule(String gradeId, String gradeName, String className) {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/main/views/stages/employee/employeeShowClasses/employeeShowSchedule/employeeShowSchedule.fxml"));
+    private void showClassSchedule(String gradeId, String gradeName, String className, String subjectId, String subjectName) {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/main/views/stages/teacher/teacherShowHome/teacherShowResult/teacherShowResult.fxml"));
         try {
             loader.load();
         } catch (IOException ex) {
 
         }
         teacherShowResultController controller = loader.getController();
-        controller.initialize(gradeId, gradeName, className);
+        controller.initialize(gradeId, gradeName, className, subjectId, subjectName);
         StagesManager.stageContent.setContent(loader.getRoot());
         StagesManager.stageContent.setVvalue(0);
 
