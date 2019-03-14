@@ -5,8 +5,11 @@ import javafx.fxml.Initializable;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.Label;
+import javafx.stage.FileChooser;
 import main.DatabaseManager;
+import main.Main;
 
+import java.io.File;
 import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -39,6 +42,7 @@ public class employeeShowHomeController implements Initializable {
 
         String Staffquery = "SELECT COUNT(*) FROM classes";
         result(Staffquery, classes,"  CLASS");
+
 
         getChartData();
     }
