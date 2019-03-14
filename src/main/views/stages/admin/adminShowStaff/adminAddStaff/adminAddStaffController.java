@@ -9,6 +9,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Circle;
 import javafx.stage.FileChooser;
 import main.DatabaseManager;
+import main.Main;
 import main.StagesManager;
 import main.views.dialog.Dialog;
 import main.views.stages.ControllerFunctions;
@@ -189,7 +190,40 @@ public class adminAddStaffController {
 
     @FXML
     public void uploadPhoto(ActionEvent event) throws Exception {
-        selectedImage = ControllerFunctions.getPhotoFromUser(event, userPhoto);
+        try {
+
+
+            FileChooser fch = new FileChooser();
+            String path = fch.showOpenDialog(Main.window).toURI().toString();
+            String n = path.toLowerCase();
+            String a="";
+            for (int i = 0; i < n.length(); i++) {
+                if (i>5) {
+                    a = a + n.charAt(i);
+                }
+            }
+
+            File file = new File(a);
+            String path2 = "D:\\projects\\Madrsti\\src\\main\\assests\\images\\users";
+            File file2 = new File(path2);
+            BufferedInputStream bis = new BufferedInputStream(new FileInputStream(file));
+            BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(file2 + StagesManager.name + ".jpg"));
+
+
+            int d;
+            while ((d=bis.read()) != -1 ) {
+                bos.write(d);
+                System.out.println("blah");
+            }
+
+            bis.close();
+            bos.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+
+        }
+       // selectedImage = ControllerFunctions.getPhotoFromUser(event, userPhoto);
         userPhotoCircle.setClip(new Circle(50, 50, 50));
 
 
