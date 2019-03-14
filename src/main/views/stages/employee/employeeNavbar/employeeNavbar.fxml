@@ -51,12 +51,12 @@
                <padding>
                   <Insets bottom="25.0" top="25.0" />
                </padding></Button>
-            <Button fx:id="employeeShowProfile" alignment="CENTER" contentDisplay="TOP" graphicTextGap="10.0" mnemonicParsing="false" onAction="#employeeShowProfile" prefWidth="100.0" text="RESULTS" VBox.vgrow="ALWAYS">
+            <Button fx:id="employeeShowProfile" alignment="CENTER" contentDisplay="TOP" graphicTextGap="10.0" mnemonicParsing="false" onAction="#employeeShowProfile" prefWidth="100.0" text="PROFILE" VBox.vgrow="ALWAYS">
                <VBox.margin>
                   <Insets bottom="10.0" top="10.0" />
                </VBox.margin>
                <graphic>
-                  <FontAwesomeIconView glyphName="FILE_TEXT_ALT" size="25" styleClass="icon" />
+                  <FontAwesomeIconView glyphName="USER" size="25" styleClass="icon" />
                </graphic>
                <padding>
                   <Insets bottom="25.0" top="25.0" />

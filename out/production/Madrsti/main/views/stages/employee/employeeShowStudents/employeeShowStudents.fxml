@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<!--<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>-->
+
 <?import java.lang.String?>
-<?import java.net.URL?>
 <?import javafx.collections.FXCollections?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane maxWidth="-Infinity" minWidth="-Infinity" prefWidth="765.0" styleClass="pageContent" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.views.stages.employee.employeeShowStudents.employeeShowStudentsController">
+<AnchorPane maxWidth="-Infinity" minWidth="-Infinity" prefWidth="765.0" styleClass="pageContent" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.views.stages.employee.employeeShowStudents.employeeShowStudentsController">
    <children>
       <VBox prefWidth="715.0" spacing="35.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="60.0">
          <children>
@@ -30,7 +30,7 @@
                         <Insets left="20.0" right="20.0" />
                      </padding>
                      <graphic>
-                        <FontAwesomeIconView glyphName="PLUS" styleClass="icon" />
+                        <!--<FontAwesomeIconView glyphName="PLUS" styleClass="icon" />-->
                      </graphic>
                   </Button>
                </right>
@@ -42,8 +42,8 @@
                <children>
                   <HBox spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <TextField fx:id="search" minHeight="40.0" promptText="Search for Name..." HBox.hgrow="ALWAYS" />
-                        <ComboBox fx:id="year" maxWidth="-Infinity" minHeight="40.0" prefWidth="130.0">
+                        <TextField fx:id="search" minHeight="40.0" onKeyReleased="#keySearch" promptText="Search for Name..." HBox.hgrow="ALWAYS" />
+                        <ComboBox fx:id="grades" maxWidth="-Infinity" minHeight="40.0" prefWidth="130.0">
                            <items>
                            <FXCollections fx:factory="observableArrayList">
                               <String fx:value="All" />
@@ -67,19 +67,6 @@
                                  <String fx:value="C" />
                               </FXCollections>
                            </items>
-                        </ComboBox>
-
-                        <ComboBox maxWidth="-Infinity" minHeight="40.0" prefWidth="100.0" promptText="A-Z">
-                           <items>
-                              <FXCollections fx:factory="observableArrayList">
-                                 <String fx:value="Last" />
-                                 <String fx:value="A-Z" />
-                                 <String fx:value="First" />
-                              </FXCollections>
-                           </items>
-                           <value>
-                              <String fx:value="Last" />
-                           </value>
                         </ComboBox>
 
                      </children>

@@ -84,17 +84,13 @@ public class employeeAddStudentController implements Initializable {
         clas.disableProperty().bind(year.valueProperty().isNull());
 
 
-
-
-
-
     }
 
     @FXML
     void gradeAction(ActionEvent event) {
         ArrayList<String> list = new ArrayList<>();
         String query = "SELECT class_id FROM classes WHERE grade_id = ?";
-        int index = year.getSelectionModel().getSelectedIndex() +1;
+        int index = year.getSelectionModel().getSelectedIndex() + 1;
         list.add(String.valueOf(index));
         DatabaseManager.addComboBoxData(clas, query, list);
     }

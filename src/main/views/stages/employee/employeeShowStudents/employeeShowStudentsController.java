@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.KeyEvent;
 import javafx.util.Callback;
 import main.DatabaseManager;
 import main.Main;
@@ -16,6 +17,7 @@ import main.views.stages.admin.adminShowStudents.adminShowStudentsController;
 import main.views.stages.employee.employeeShowStudents.employeeEditStudent.employeeEditStudentController;
 import main.views.stages.employee.employeeShowStudents.employeeShowStudentInformation.employeeShowStudentInformationController;
 import main.views.stages.employee.employeeShowStudents.employeeShowStudentResult.employeeShowStudentResultController;
+import main.views.stages.template.ComboForm;
 import main.views.stages.template.Student;
 
 import java.io.IOException;
@@ -29,10 +31,10 @@ public class employeeShowStudentsController implements Initializable {
     private TextField search;
 
     @FXML
-    private ComboBox year;
+    private ComboBox<ComboForm> grades;
 
     @FXML
-    private ComboBox clas;
+    private ComboBox<ComboForm> clas;
     @FXML
     private TableView<Student> studentsTable;
 
@@ -52,16 +54,59 @@ public class employeeShowStudentsController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        setupTable();
+
+        String gradeQuery = "SELECT `grade_id`, `name` FROM `grades`";
+        DatabaseManager.addComboBoxDataWithId(grades, gradeQuery, null);
+        grades.getItems().add(0, new ComboForm("-1", "All"));
+        grades.getSelectionModel().selectFirst();
+        clas.setDisable(true);
+        clas.getItems().clear();
+//        clas.disableProperty().bind(grades.valueProperty().isNull());
+        grades.setOnAction(e -> {
+            clas.setDisable(false);
+            ArrayList<String> data = new ArrayList<>();
+            data.add(grades.getValue().getId());
+            String query = "SELECT `class_id`, `class_id` FROM classes WHERE grade_id = ?";
+            DatabaseManager.addComboBoxDataWithId(clas, query, data);
+            clas.getItems().add(0, new ComboForm("-1", "All"));
+            clas.getSelectionModel().selectFirst();
+        });
+            setupTable(null);
     }
 
 
-    public void setupTable() {
+    public void setupTable(String key) {
+        String selectedGrade = grades.getValue().getId();
+        String selectedClass = "-1";
+        if (!clas.isDisable()){
+            selectedClass = clas.getValue().getId();
+        }
+
+        studentsTable.getItems().clear();
+        String query1 = null;
+        String where = "";
+        /*
+        if (key != null) {
+            where += "WHERE `students`.`full_name` LIKE '" + key + "'";
+            if (selectedGrade.equals("-1")) {
+                where += " AND students.grade_id = '" + selectedGrade;
+                if (selectedClass.equals("-1")) {
+                    where += " AND `students`.`class_id` = '" + selectedClass;
+                }
+            }
+        } else {
+            if (selectedGrade.equals("-1")) {
+                where += " WHERE students.grade_id = '" + selectedGrade;
+                if (selectedClass.equals("-1")) {
+                    where += " AND `students`.`class_id` = '" + selectedClass;
+                }
+            }
+        }*/
         name.setCellValueFactory(new PropertyValueFactory<>("full_name"));
         grade.setCellValueFactory(new PropertyValueFactory<>("grade_id"));
         classs.setCellValueFactory(new PropertyValueFactory<>("class_id"));
         operations.setCellFactory((Callback<TableColumn<Student, Boolean>, TableCell<Student, Boolean>>) p -> new ButtonsCell(this));
-        studentsTable.setItems(adminShowStudentsController.getStudentsList());
+        studentsTable.setItems(adminShowStudentsController.getStudentsList(where));
     }
 
     @FXML
@@ -140,8 +185,13 @@ public class employeeShowStudentsController implements Initializable {
         if(deleteStudent) {
             int affectedRows = DatabaseManager.executeSQLRows(query, list);
             if (affectedRows > 0) {
-                setupTable();
+                setupTable(null);
             }
         }
+    }
+
+    @FXML
+    void keySearch(KeyEvent event) {
+        setupTable(search.getText());
     }
 }

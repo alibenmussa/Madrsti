@@ -10,5 +10,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="fontawesomefx-8.8" level="application" />
     <orderEntry type="library" exported="" name="mysql-connector-java-5.1.46" level="project" />
+    <orderEntry type="library" exported="" name="fontawesomefx-8.81" level="project" />
   </component>
 </module>

@@ -75,13 +75,13 @@ public class adminShowStudentsController implements Initializable {
 
 
 
-        studentsTable.setItems(getStudentsList());
+        studentsTable.setItems(getStudentsList(""));
     }
 
-    public static ObservableList<Student> getStudentsList() {
+    public static ObservableList<Student> getStudentsList(String whereQuery) {
         ObservableList<Student> data = FXCollections.observableArrayList();
 
-        String query = "SELECT * FROM `students` INNER JOIN `grades` USING(`grade_id`)";
+        String query = "SELECT * FROM `students` INNER JOIN `grades` USING(`grade_id`) " + whereQuery;
         ResultSet rs = DatabaseManager.executeSQLResultSet(query,null);
         if (rs != null) {
             try {
