@@ -95,7 +95,7 @@ public class adminShowStaffController implements Initializable {
 
         data = FXCollections.observableArrayList();
 
-        if (type.getSelectionModel().getSelectedIndex() == 0 && start.getSelectionModel().getSelectedIndex() == 0) {
+        if (type.getSelectionModel().getSelectedIndex() == 0) {
             staffquery = "SELECT * FROM `staff`";
         }else if (type.getSelectionModel().getSelectedIndex() > 0 ) {
             staffquery = "SELECT * FROM `staff` WHERE type LIKE '%"+ type.getSelectionModel().getSelectedItem()+"%' ORDER BY full_name ASC";
@@ -103,7 +103,7 @@ public class adminShowStaffController implements Initializable {
         }
 
 
-         else {
+        else {
             staffquery = "SELECT * FROM `staff`";
         }
 
@@ -129,15 +129,15 @@ public class adminShowStaffController implements Initializable {
                 staff.setGraduateYear(rs.getString("graduate_year"));
 
                 data.add(staff);
-          }
+            }
 
 
 
 
-      }catch (Exception e){
+        }catch (Exception e){
 
-      }
-      return data;
+        }
+        return data;
     }
 
     @FXML

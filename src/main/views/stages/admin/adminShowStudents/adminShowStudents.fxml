@@ -30,7 +30,7 @@
                   <HBox spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
                         <TextField fx:id="search" minHeight="40.0" promptText="Search for..." HBox.hgrow="ALWAYS" />
-                        <ComboBox fx:id="year" maxWidth="-Infinity" minHeight="40.0" prefWidth="130.0">
+                        <ComboBox fx:id="grades" maxWidth="-Infinity" minHeight="40.0" prefWidth="130.0">
                            <items>
                               <FXCollections fx:factory="observableArrayList">
 

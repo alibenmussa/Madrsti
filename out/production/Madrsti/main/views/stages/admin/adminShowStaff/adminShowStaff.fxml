@@ -54,20 +54,6 @@
                               <String fx:value="All" />
                            </value>
                         </ComboBox>
-                        <ComboBox fx:id="start" minHeight="40.0" onAction="#startOnAction">
-                           <items>
-                              <FXCollections fx:factory="observableArrayList">
-                                 <String fx:value="A-Z" />
-                                 <String fx:value="First" />
-
-
-
-                              </FXCollections>
-                           </items>
-                           <value>
-                              <String fx:value="A-Z" />
-                           </value>
-                        </ComboBox>
                      </children>
                   </HBox>
                </children>

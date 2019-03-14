@@ -13,6 +13,7 @@ import main.DatabaseManager;
 import main.Main;
 import main.StagesManager;
 import main.views.dialog.Dialog;
+import main.views.stages.template.TextFieldForm;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -48,6 +49,8 @@ public class teacherShowResultController {
     public String subjectId;
     public String subjectName;
 
+    ArrayList<TextFieldForm> tf;
+
 
 
     public void initialize(String gradeId, String gradeName, String className, String subjectId, String subjectName) {
@@ -56,6 +59,8 @@ public class teacherShowResultController {
         this.className = className;
         this.subjectId = subjectId;
         this.subjectName = subjectName;
+
+        tf = new ArrayList<>();
 
         buttons.getChildren().remove(cancelEdit);
 
@@ -87,6 +92,12 @@ public class teacherShowResultController {
                     secondMidtermExam.setAlignment(Pos.CENTER);
                     secondFinalExam.setAlignment(Pos.CENTER);
 
+                    firstFinalExam.setAlignment(Pos.CENTER);
+                    secondMidtermExam.setAlignment(Pos.CENTER);
+                    secondFinalExam.setAlignment(Pos.CENTER);
+
+                    tf.add(new TextFieldForm(studentId, firstMidtermExam, firstFinalExam, secondMidtermExam, secondFinalExam));
+
                     resultTable.add(studentName, 0, position);
                     resultTable.add(firstMidtermExam, 1, position);
                     resultTable.add(firstFinalExam, 2, position);
@@ -98,56 +109,11 @@ public class teacherShowResultController {
                     secondMidtermExam.setDisable(true);
                     secondFinalExam.setDisable(true);
 
-                    editButton.setOnAction(e -> {
-                        if (editToggle == true) {
-                            editButton.setText("EDIT");
-                            buttons.getChildren().remove(cancelEdit);
-                            firstMidtermExam.setDisable(true);
-                            firstFinalExam.setDisable(true);
-                            secondMidtermExam.setDisable(true);
-                            secondFinalExam.setDisable(true);
-                            editToggle = false;
-
-                            ArrayList<String> data2 = new ArrayList<>();
-                            data2.add(firstMidtermExam.getText());
-                            data2.add(firstFinalExam.getText());
-                            data2.add(secondMidtermExam.getText());
-                            data2.add(secondFinalExam.getText());
-                            data2.add(studentId);
-                            data2.add(subjectId);
-
-
-                            String query2 = "UPDATE `results` SET `first_midterm_exam` = ?, `first_final_exam` = ?, `second_midterm_exam` = ?, `second_final_exam` = ? WHERE `student_id` = ? AND `subject_id` = ? AND year = 2019";
-                            int rowsAffected = DatabaseManager.executeSQLRows(query2, data2);
-                            if (rowsAffected > 0) {
-                                Dialog.showAlert("Successful", "Your data has been updated!");
-                                initialize(gradeId, gradeName, className, subjectId, subjectName);
-                            }
-                        } else {
-                            editButton.setText("SAVE");
-                            buttons.getChildren().add(1, cancelEdit);
-                            firstMidtermExam.setDisable(false);
-                            firstFinalExam.setDisable(false);
-                            secondMidtermExam.setDisable(false);
-                            secondFinalExam.setDisable(false);
-                            editToggle = true;
-                        }
-                    });
-
-                    cancelEdit.setOnAction(e -> {
-                        editButton.setText("EDIT");
-                        buttons.getChildren().remove(cancelEdit);
-                        firstMidtermExam.setDisable(true);
-                        firstFinalExam.setDisable(true);
-                        secondMidtermExam.setDisable(true);
-                        secondFinalExam.setDisable(true);
-                        editToggle = false;
-                    });
-
                     position++;
                 }
             } catch (SQLException ex) {
             }
+
         } else {
             resultTable.setVisible(false);
         }
@@ -156,5 +122,65 @@ public class teacherShowResultController {
     @FXML
     void goBack(ActionEvent event) {
         Main.FXMLLoaderPane(StagesManager.stageContent, "/main/views/stages/teacher/teacherShowHome/teacherShowHome.fxml");
+    }
+
+    @FXML
+    void cancelResults(ActionEvent event) {
+        for (int i = 0; i < tf.size(); i++) {
+            TextFieldForm field = tf.get(i);
+            editButton.setText("EDIT");
+            buttons.getChildren().remove(cancelEdit);
+            field.firstMidtermExam.setDisable(true);
+            field.firstFinalExam.setDisable(true);
+            field.secondMidtermExam.setDisable(true);
+            field.secondFinalExam.setDisable(true);
+        }
+        editToggle = false;
+    }
+
+    @FXML
+    void editResults(ActionEvent event) {
+
+            System.out.println(editToggle);
+            if (editToggle == true) {
+                editButton.setText("EDIT");
+                buttons.getChildren().remove(cancelEdit);
+                for (int i = 0; i < tf.size(); i++) {
+                    TextFieldForm field = tf.get(i);
+                    field.firstMidtermExam.setDisable(true);
+                    field.firstFinalExam.setDisable(true);
+                    field.secondMidtermExam.setDisable(true);
+                    field.secondFinalExam.setDisable(true);
+
+
+                    ArrayList<String> data2 = new ArrayList<>();
+                    data2.add(field.firstMidtermExam.getText());
+                    data2.add(field.firstFinalExam.getText());
+                    data2.add(field.secondMidtermExam.getText());
+                    data2.add(field.secondFinalExam.getText());
+                    data2.add(field.studentId);
+                    data2.add(subjectId);
+
+
+                    String query2 = "UPDATE `results` SET `first_midterm_exam` = ?, `first_final_exam` = ?, `second_midterm_exam` = ?, `second_final_exam` = ? WHERE `student_id` = ? AND `subject_id` = ? AND year = 2019";
+                    int rowsAffected = DatabaseManager.executeSQLRows(query2, data2);
+
+                }
+                Dialog.showAlert("Successful", "Your data has been updated!");
+                initialize(gradeId, gradeName, className, subjectId, subjectName);
+                editToggle = false;
+            } else {
+                editButton.setText("SAVE");
+                buttons.getChildren().add(1, cancelEdit);
+                for (int i = 0; i < tf.size(); i++) {
+                    TextFieldForm field = tf.get(i);
+                    field.firstMidtermExam.setDisable(false);
+                    field.firstFinalExam.setDisable(false);
+                    field.secondMidtermExam.setDisable(false);
+                    field.secondFinalExam.setDisable(false);
+                }
+                editToggle = true;
+            }
+
     }
 }
