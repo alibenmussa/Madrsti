@@ -184,7 +184,7 @@ public class employeeEditStudentController  {
                 "`notes`=? WHERE `student_id`= "+std_id;
         int affectedrow = DatabaseManager.executeSQLRows(query,data);
         if (affectedrow > 0){
-            ControllerFunctions.uploadPhotoToUsersFile(selectedImage, std_id);
+           // ControllerFunctions.uploadPhotoToUsersFile(selectedImage, std_id);
             Dialog.success = true;
             Dialog.closeDialogWindow();
 

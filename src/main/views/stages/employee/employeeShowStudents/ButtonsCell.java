@@ -18,13 +18,14 @@ public class ButtonsCell extends TableCell<Student, Boolean> {
         deleteButton.setGraphic(new FontAwesomeIconView(FontAwesomeIcon.CLOSE));
 
         editButton.getStyleClass().addAll("mini-button", "edit-button");
-        editButton.setGraphic(new FontAwesomeIconView(FontAwesomeIcon.CLOSE));
+        editButton.setGraphic(new FontAwesomeIconView(FontAwesomeIcon.EDIT));
 
         showInformationButton.getStyleClass().addAll("mini-button", "profile-button");
-        showInformationButton.setGraphic(new FontAwesomeIconView(FontAwesomeIcon.CLOSE));
+        showInformationButton.setGraphic(new FontAwesomeIconView(FontAwesomeIcon.USER));
 
         showResultButton.getStyleClass().addAll("mini-button", "show-button");
-        showResultButton.setGraphic(new FontAwesomeIconView(FontAwesomeIcon.CLOSE));
+        showResultButton.setGraphic(new FontAwesomeIconView(FontAwesomeIcon.LIST_ALT));
+
 
 
         deleteButton.setOnAction(e -> {

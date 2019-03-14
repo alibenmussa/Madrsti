@@ -30,7 +30,7 @@
                   <HBox spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
                         <TextField fx:id="search" minHeight="40.0" promptText="Search for..." HBox.hgrow="ALWAYS" />
-                        <ComboBox fx:id="year" maxWidth="-Infinity" minHeight="40.0"  prefWidth="130.0">
+                        <ComboBox fx:id="year" maxWidth="-Infinity" minHeight="40.0" prefWidth="130.0">
                            <items>
                               <FXCollections fx:factory="observableArrayList">
 
@@ -41,7 +41,7 @@
 
                            </value>
                         </ComboBox>
-                        <ComboBox fx:id="clas" maxWidth="-Infinity" minHeight="40.0"  prefWidth="100.0" promptText="Class">
+                        <ComboBox fx:id="clas" maxWidth="-Infinity" minHeight="40.0" prefWidth="100.0" promptText="Class">
                            <items>
                               <FXCollections fx:factory="observableArrayList">
 
@@ -65,7 +65,7 @@
             </AnchorPane>
             <AnchorPane maxWidth="1.7976931348623157E308" prefWidth="680.0" styleClass="content">
                <children>
-                   <TableView fx:id="studentsTable" layoutX="50.0" layoutY="50.0" maxHeight="1.7976931348623157E308" minHeight="400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                   <TableView fx:id="studentsTable" layoutX="50.0" layoutY="50.0" maxHeight="1.7976931348623157E308" minHeight="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                        <columns>
                            <TableColumn fx:id="name" prefWidth="75.0" text="NAME" />
                            <TableColumn fx:id="grade" prefWidth="75.0" text="GRADE" />

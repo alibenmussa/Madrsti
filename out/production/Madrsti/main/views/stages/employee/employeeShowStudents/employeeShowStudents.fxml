@@ -2,7 +2,6 @@
 
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import java.lang.String?>
-<?import java.net.URL?>
 <?import javafx.collections.FXCollections?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
@@ -88,7 +87,7 @@
             </AnchorPane>
             <AnchorPane maxWidth="1.7976931348623157E308" prefWidth="680.0" styleClass="content">
                <children>
-                  <TableView fx:id="studentsTable" layoutX="50.0" layoutY="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <TableView fx:id="studentsTable" layoutX="50.0" layoutY="50.0" minHeight="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <columns>
                       <TableColumn fx:id="name" prefWidth="75.0" text="NAME" />
                       <TableColumn fx:id="grade" prefWidth="75.0" text="GRADE" />

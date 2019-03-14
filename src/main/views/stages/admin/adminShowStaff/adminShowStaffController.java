@@ -97,15 +97,11 @@ public class adminShowStaffController implements Initializable {
 
         if (type.getSelectionModel().getSelectedIndex() == 0 && start.getSelectionModel().getSelectedIndex() == 0) {
             staffquery = "SELECT * FROM `staff`";
-        }else if (type.getSelectionModel().getSelectedIndex() > 0 && start.getSelectionModel().getSelectedItem().equals("A-Z")) {
+        }else if (type.getSelectionModel().getSelectedIndex() > 0 ) {
             staffquery = "SELECT * FROM `staff` WHERE type LIKE '%"+ type.getSelectionModel().getSelectedItem()+"%' ORDER BY full_name ASC";
 
         }
-        else if (type.getSelectionModel().getSelectedIndex() > 0 && start.getSelectionModel().getSelectedIndex() == 0) {
-            System.out.println("here");
-                    staffquery = "SELECT * FROM `staff` WHERE type LIKE '%"+ type.getSelectionModel().getSelectedItem()+"%' ";
 
-                }
 
          else {
             staffquery = "SELECT * FROM `staff`";

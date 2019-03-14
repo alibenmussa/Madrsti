@@ -13,6 +13,7 @@ import main.Main;
 import main.StagesManager;
 import main.views.dialog.Dialog;
 import main.views.stages.admin.adminShowStudents.adminShowStudentInformation.adminShowStudentInformationController;
+import main.views.stages.employee.employeeShowStudents.employeeShowStudentResult.employeeShowStudentResultController;
 import main.views.stages.template.Student;
 
 import java.io.IOException;
@@ -128,6 +129,22 @@ public class adminShowStudentsController implements Initializable {
         if (showStudent) {
             //إعادة تحميل الصفحة عند نجاح الإضافة
             Main.FXMLLoaderPane(StagesManager.stageContent, "/main/views/stages/admin/adminShowStudent/adminShowStudent.fxml");
+        }
+
+    }
+    public void adminShowResult(String id) {
+        FXMLLoader loader = new FXMLLoader(Main.class.getResource("/main/views/stages/employee/employeeShowStudents/employeeShowStudentResult/employeeShowStudentResult.fxml"));
+        try {
+            loader.load();
+        } catch (IOException ex) {
+
+        }
+
+        employeeShowStudentResultController controller = loader.getController();
+        controller.initialize(id);
+        boolean showStudent = Dialog.showAndPass("Student Result", loader.getRoot());
+        if (showStudent) {
+            Main.FXMLLoaderPane(StagesManager.stageContent, "/main/views/stages/employee/employeeShowStudents/employeeShowStudents.fxml");
         }
 
     }

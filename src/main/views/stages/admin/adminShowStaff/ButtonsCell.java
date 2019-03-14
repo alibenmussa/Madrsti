@@ -10,14 +10,21 @@ import main.views.stages.template.Staff;
 
 public class ButtonsCell extends TableCell<Staff, Boolean> {
     final Button deleteButton = new Button();
-    final Button editButton = new Button("E");
-    final Button showInformationButton = new Button("S");
+    final Button editButton = new Button();
+    final Button showInformationButton = new Button();
 
     public ButtonsCell(adminShowStaffController controller) {
-        deleteButton.getStyleClass().add("delete-button");
-        deleteButton.setGraphic(new FontAwesomeIconView(FontAwesomeIcon.CLOSE));
-        deleteButton.setOnAction(e -> {
 
+        deleteButton.getStyleClass().addAll("mini-button", "delete-button");
+        deleteButton.setGraphic(new FontAwesomeIconView(FontAwesomeIcon.CLOSE));
+
+        editButton.getStyleClass().addAll("mini-button", "edit-button");
+        editButton.setGraphic(new FontAwesomeIconView(FontAwesomeIcon.EDIT));
+
+        showInformationButton.getStyleClass().addAll("mini-button", "profile-button");
+        showInformationButton.setGraphic(new FontAwesomeIconView(FontAwesomeIcon.USER));
+
+        deleteButton.setOnAction(e -> {
             Staff selected = getTableView().getItems().get(getIndex());
             controller.adminDeleteStaff(selected.getNational_id());
         });

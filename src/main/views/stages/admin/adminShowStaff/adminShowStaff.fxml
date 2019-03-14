@@ -54,27 +54,13 @@
                               <String fx:value="All" />
                            </value>
                         </ComboBox>
-                        <ComboBox fx:id="start" minHeight="40.0" onAction="#startOnAction" >
-                           <items>
-                              <FXCollections fx:factory="observableArrayList">
-                                 <String fx:value="A-Z" />
-                                 <String fx:value="First" />
-
-
-
-                              </FXCollections>
-                           </items>
-                           <value>
-                              <String fx:value="A-Z" />
-                           </value>
-                        </ComboBox>
                      </children>
                   </HBox>
                </children>
             </AnchorPane>
             <AnchorPane maxWidth="1.7976931348623157E308" prefWidth="680.0" styleClass="content">
                <children>
-                  <TableView fx:id="staffTable" layoutX="50.0" layoutY="50.0" maxHeight="-Infinity" minHeight="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <TableView fx:id="staffTable" layoutX="50.0" layoutY="50.0" maxHeight="-Infinity" minHeight="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <columns>
                       <TableColumn fx:id="name" prefWidth="75.0" text="NAME" />
                       <TableColumn fx:id="section" prefWidth="75.0" text="SECTION" />

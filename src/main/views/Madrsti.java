@@ -44,6 +44,7 @@ public class Madrsti {
         page.setArcWidth(20);
         page.setArcHeight(20);
 
+
         StackPane root = new StackPane(mainView);
         root.setClip(page);
 

@@ -11,6 +11,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Circle;
 import main.DatabaseManager;
 import main.views.dialog.Dialog;
+import main.views.stages.ControllerFunctions;
 
 import java.net.URL;
 import java.sql.ResultSet;
@@ -71,6 +72,7 @@ public class adminShowStaffInformationController {
 
     public void initialize(String stf_id) {
         userPhotoCircle.setClip(new Circle(60, 60, 60));
+        //userPhoto.setImage(ControllerFunctions.readFromUsersFile(stf_id));
         userPhoto.setFitWidth(120);
 
 
@@ -80,7 +82,6 @@ public class adminShowStaffInformationController {
             while (rs.next()) {
                 fullName.setText(String.valueOf(rs.getString("full_name")));
                 type.setText(rs.getString("type"));
-                userPhoto.setImage(new Image("/main/assests/images/users/user_01.jpg"));
                 birthDay.setText(String.valueOf(rs.getDate("birthday")));
                 gender.setText(rs.getString("gender"));
                 id.setText(String.valueOf(rs.getInt("staff_id")));

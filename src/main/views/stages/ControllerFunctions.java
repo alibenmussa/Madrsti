@@ -12,9 +12,10 @@ import javafx.stage.FileChooser;
 import main.Main;
 import main.StagesManager;
 
-import java.io.File;
+import java.io.*;
 import java.net.URL;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
 
 public class ControllerFunctions {
@@ -44,18 +45,40 @@ public class ControllerFunctions {
         return null;
     }
 
-        public static void uploadPhotoToUsersFile(File selectedImage, String userId) {
-        String selectedImageExtension = getFileExtension(selectedImage.getName());
-        String image = userId + "." + selectedImageExtension;
-        File path = new File(Main.class.getResource("/main/assests/images/users/").toExternalForm() + image);
-//        selectedImage.renameTo(path);
+        public static void uploadPhotoToUsersFile(String selectedImage, String userId) {
         try {
-            Files.copy(selectedImage.toPath(), path.toPath(), StandardCopyOption.REPLACE_EXISTING);
-        } catch (Exception ex) {
+            File file = new File(selectedImage);
+            String path2 = ("D:\\projects\\Madrsti\\src\\main\\assests\\images\\users");
+            System.out.println(path2);
+            File file2 = new File(path2);
+            BufferedInputStream bis = new BufferedInputStream(new FileInputStream(file));
+            BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(file2 + "/" + userId + ".jpg"));
 
+
+            int d;
+            while ((d=bis.read()) != -1 ) {
+                bos.write(d);
+            }
+
+            bis.close();
+            bos.close();
+
+        } catch (Exception e) {
+        e.printStackTrace();
+
+    }
         }
-        System.out.println(path.toString());
+
+    public static Image readFromUsersFile(String userId) {
+        String path = "D:\\projects\\Madrsti\\src\\main\\assests\\images\\users\\" + userId + ".jpg";
+
+        File file = new File(path);
+        if (file.exists()) {
+            return new Image(file.getPath());
         }
+        return new Image("D:\\projects\\Madrsti\\src\\main\\assests\\images\\users\\default.jpg");
+
+    }
 
     public static String getFileExtension(String file) {
         return file.substring(file.lastIndexOf(".") + 1);

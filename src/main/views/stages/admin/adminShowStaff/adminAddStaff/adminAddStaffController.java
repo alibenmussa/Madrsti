@@ -190,41 +190,21 @@ public class adminAddStaffController {
 
     @FXML
     public void uploadPhoto(ActionEvent event) throws Exception {
-        try {
 
 
             FileChooser fch = new FileChooser();
-            String path = fch.showOpenDialog(Main.window).toURI().toString();
+            fch.showOpenDialog(Main.window);
+            /*String path = fch.showOpenDialog(Main.window).toURI().toString();
             String n = path.toLowerCase();
             String a="";
             for (int i = 0; i < n.length(); i++) {
                 if (i>5) {
                     a = a + n.charAt(i);
                 }
-            }
-
-            File file = new File(a);
-            String path2 = "D:\\projects\\Madrsti\\src\\main\\assests\\images\\users";
-            File file2 = new File(path2);
-            BufferedInputStream bis = new BufferedInputStream(new FileInputStream(file));
-            BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(file2 + StagesManager.name + ".jpg"));
-
-
-            int d;
-            while ((d=bis.read()) != -1 ) {
-                bos.write(d);
-                System.out.println("blah");
-            }
-
-            bis.close();
-            bos.close();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-
-        }
-       // selectedImage = ControllerFunctions.getPhotoFromUser(event, userPhoto);
+            }*/
+           // ControllerFunctions.uploadPhotoToUsersFile(a, id.getText());
         userPhotoCircle.setClip(new Circle(50, 50, 50));
+        //userPhoto.setImage(new Image(a));
 
 
 

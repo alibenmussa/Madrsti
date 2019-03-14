@@ -53,7 +53,7 @@
                             <children>
                                 <VBox alignment="CENTER" layoutX="33.0" spacing="15.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                     <children>
-                                        <FontAwesomeIconView glyphName="USER" />
+                                        <FontAwesomeIconView glyphName="GRADUATION_CAP" />
                                         <HBox alignment="CENTER" spacing="5.0">
                                             <children>
                                                 <Label fx:id="student" alignment="CENTER" styleClass="percent" text="25 STUDENTS" textAlignment="CENTER" />
@@ -70,7 +70,7 @@
                             <children>
                                 <VBox alignment="CENTER" layoutX="33.0" spacing="15.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                     <children>
-                                        <FontAwesomeIconView glyphName="USER" />
+                                        <FontAwesomeIconView glyphName="USERS" />
                                         <HBox alignment="CENTER" spacing="5.0">
                                             <children>
                                                 <Label fx:id="teacher" alignment="CENTER" styleClass="percent" text="25 STUDENTS" textAlignment="CENTER" />
@@ -105,5 +105,7 @@
             </children>
         </VBox>
     </children>
-
+    <stylesheets>
+        <URL value="@../../../../assests/stylesheets/style.css" />
+    </stylesheets>
 </AnchorPane>
