@@ -39,10 +39,9 @@ public class adminNavbarController {
     }
 
     @FXML
-    void adminShowResults(ActionEvent event) throws Exception {
+    void adminShowResults(ActionEvent event) {
         addActiveButton(adminShowResults);
-        Dialog.showAlert("Error!", "Something is wrong, please try again.");
-        Dialog.show("Profile", "/main/views/stages/admin/adminShowStaff/adminShowStaffInformation/adminShowStaffInformation.fxml");
+        Main.FXMLLoaderPane(StagesManager.stageContent, "/main/views/stages/admin/adminShowResults/adminShowResults.fxml");
 
     }
 

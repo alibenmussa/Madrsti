@@ -1,7 +1,6 @@
 package main.views.stages.employee.employeeShowSubjects;
 
 import main.StagesManager;
-import main.views.stages.employee.employeeShowSubjects.employeeAddSubject.employeeAddSubjectController;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import javafx.event.ActionEvent;

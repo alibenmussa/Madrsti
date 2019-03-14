@@ -1,19 +1,29 @@
-package main.views.stages.teacher.teacherShowHome;
+package main.views.stages.admin.adminShowResults;
 
-import javafx.geometry.HPos;
-import main.StagesManager;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.scene.Node;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
+import javafx.util.Callback;
 import main.DatabaseManager;
+import main.Main;
+import main.StagesManager;
+import main.views.dialog.Dialog;
+import main.views.stages.admin.adminShowResults.adminShowClassResult.adminShowClassResultController;
 import main.views.stages.teacher.teacherShowHome.teacherShowResult.teacherShowResultController;
+import main.views.stages.template.ComboForm;
+import main.views.stages.template.Student;
 
 import java.io.IOException;
 import java.net.URL;
@@ -22,17 +32,45 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
-public class teacherShowHomeController implements Initializable {
+public class adminShowResultsController implements Initializable {
+
     @FXML
-    private VBox classesList;
+    private TextField search;
+
     @FXML
     private GridPane subjects;
 
+    @FXML
+    private ComboBox<ComboForm> type;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        ArrayList<String> data1 = new ArrayList<>();
-        data1.add(StagesManager.userId);
-        ResultSet rs1 = DatabaseManager.executeSQLResultSet("SELECT DISTINCT `schedules`.`grade_id`, `grades`.`name`, `schedules`.`subject_id`, `subjects`.`name` FROM `schedules` INNER JOIN `grades` USING(`grade_id`) INNER JOIN `subjects` USING(`subject_id`) WHERE `schedules`.`staff_id` = ? ORDER BY `grade_id` ASC", data1);
+        DatabaseManager.addComboBoxDataWithId(type, "SELECT `grade_id`, `name` FROM `grades`", null);
+        type.getItems().add(0, new ComboForm("-1", "All"));
+        type.getSelectionModel().selectFirst();
+        setupGrid(null);
+    }
+
+    private void setupGrid(String key) {
+        String selectedGrade =  type.getValue().getId();
+
+        subjects.getChildren().clear();
+        String query1 = null;
+        if (key == null) {
+            if (selectedGrade.equals("-1")) {
+                query1 = "SELECT DISTINCT `schedules`.`grade_id`, `grades`.`name`, `schedules`.`subject_id`, `subjects`.`name` FROM `schedules` INNER JOIN `grades` USING(`grade_id`) INNER JOIN `subjects` USING(`subject_id`) ORDER BY `schedules`.`grade_id`, `schedules`.`class_id`, `subjects`.`name` ASC";
+            } else {
+                query1 = "SELECT DISTINCT `schedules`.`grade_id`, `grades`.`name`, `schedules`.`subject_id`, `subjects`.`name` FROM `schedules` INNER JOIN `grades` USING(`grade_id`) INNER JOIN `subjects` USING(`subject_id`) WHERE `schedules`.`grade_id` = '" + selectedGrade + "'ORDER BY `schedules`.`grade_id`, `schedules`.`class_id`, `subjects`.`name` ASC";
+            }
+        } else {
+            if (selectedGrade.equals("-1")) {
+                query1 = "SELECT DISTINCT `schedules`.`grade_id`, `grades`.`name`, `schedules`.`subject_id`, `subjects`.`name` FROM `schedules` INNER JOIN `grades` USING(`grade_id`) INNER JOIN `subjects` USING(`subject_id`) WHERE `subjects`.`name` LIKE '" + key + "%' ORDER BY `schedules`.`grade_id`, `schedules`.`class_id`, `subjects`.`name` ASC";
+            } else {
+                query1 = "SELECT DISTINCT `schedules`.`grade_id`, `grades`.`name`, `schedules`.`subject_id`, `subjects`.`name` FROM `schedules` INNER JOIN `grades` USING(`grade_id`) INNER JOIN `subjects` USING(`subject_id`) WHERE `subjects`.`name` LIKE '" + key + "%' AND `schedules`.`grade_id` = '" + selectedGrade + "'ORDER BY `schedules`.`grade_id`, `schedules`.`class_id`, `subjects`.`name` ASC";
+
+            }
+        }
+        ResultSet rs1 = DatabaseManager.executeSQLResultSet(query1, null);
         if (rs1 != null) {
             try {
                 int position = 0;
@@ -59,10 +97,10 @@ public class teacherShowHomeController implements Initializable {
                     gp.setVgap(30);
 
                     int i = 0;
-                    ArrayList<String> data = new ArrayList<>();
-                    data.add(currentGradeId);
-                    data.add(StagesManager.userId);
-                    ResultSet rs2 = DatabaseManager.executeSQLResultSet("SELECT `class_id` FROM `schedules` WHERE `grade_id` = ? AND `staff_id` = ? ORDER BY `class_id` ASC", data);
+                    ArrayList<String> data2 = new ArrayList<>();
+                    data2.add(rs1.getString(1));
+                    data2.add(currentSubjectId);
+                    ResultSet rs2 = DatabaseManager.executeSQLResultSet("SELECT DISTINCT `class_id` FROM `schedules` WHERE `grade_id` = ? AND `subject_id` = ? ORDER BY `class_id` ASC", data2);
                     if (rs2 != null) {
                         try {
                             while (rs2.next()) {
@@ -91,6 +129,8 @@ public class teacherShowHomeController implements Initializable {
             } catch (SQLException ex) {
 
             }
+        } else {
+            subjects.setVisible(false);
         }
     }
 
@@ -102,17 +142,27 @@ public class teacherShowHomeController implements Initializable {
     }
 
     private void showClassResult(String gradeId, String gradeName, String className, String subjectId, String subjectName) {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/main/views/stages/teacher/teacherShowHome/teacherShowResult/teacherShowResult.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/main/views/stages/admin/adminShowResults/adminShowClassResult/adminShowClassResult.fxml"));
         try {
             loader.load();
         } catch (IOException ex) {
 
         }
-        teacherShowResultController controller = loader.getController();
+        adminShowClassResultController controller = loader.getController();
         controller.initialize(gradeId, gradeName, className, subjectId, subjectName);
         StagesManager.stageContent.setContent(loader.getRoot());
         StagesManager.stageContent.setVvalue(0);
 
+    }
+
+    @FXML
+    void keySearch(KeyEvent event) {
+        setupGrid(search.getText());
+    }
+
+    @FXML
+    void searchType(ActionEvent event) {
+        setupGrid(search.getText());
     }
 
 }

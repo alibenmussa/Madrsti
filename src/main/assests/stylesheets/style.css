@@ -345,15 +345,82 @@
     -fx-fill: #db193e;
 }
 
-.delete-button:hover > .glyph-icon {
+.edit-button {
+     -fx-background-color: #f1f5f8;
+     -fx-text-fill: #357bc8;
+
+ }
+
+.edit-button:hover {
+    -fx-background-color: #357bc8;
+    -fx-text-fill: #ffffff;
+}
+.edit-button > .glyph-icon {
+    -fx-text-fill: #357bc8;
+    -fx-fill: #357bc8;
+}
+
+.edit-button {
+    -fx-background-color: #f1f5f8;
+    -fx-text-fill: #357bc8;
+
+}
+
+.profile-button {
+    -fx-background-color: #e8f9f0;
+    -fx-text-fill: #47cc5d;
+
+}
+
+.profile-button:hover {
+    -fx-background-color: #47cc5d;
+    -fx-text-fill: #ffffff;
+}
+.profile-button > .glyph-icon {
+    -fx-text-fill: #47cc5d;
+    -fx-fill: #47cc5d;
+}
+
+.show-button {
+    -fx-background-color: #fff3e2;
+    -fx-text-fill: #f5b426;
+
+}
+
+.show-button:hover {
+    -fx-background-color: #f5b426;
+    -fx-text-fill: #ffffff;
+}
+.show-button > .glyph-icon {
+    -fx-text-fill: #f5b426;
+    -fx-fill: #f5b426;
+}
+
+.min-button:hover > .glyph-icon {
     -fx-text-fill: #ffffff;
     -fx-fill: #ffffff;
+}
+
+#content .show-button:pressed, #loginContainer .show-button:pressed, #dialogContent .show-button:pressed {
+    -fx-border-color: #ffe19f;
+    -fx-border-radius: 9;
+}
+
+#content .profile-button:pressed, #loginContainer .profile-button:pressed, #dialogContent .profile-button:pressed {
+    -fx-border-color: #a6ffb5;
+    -fx-border-radius: 9;
+}
+
+#content .edit-button:pressed, #loginContainer .edit-button:pressed, #dialogContent .edit-button:pressed {
+    -fx-border-color: #a2d5fd;
+    -fx-border-radius: 9;
 }
 
 #content .delete-button:pressed, #loginContainer .delete-button:pressed, #dialogContent .delete-button:pressed {
     -fx-border-color: rgba(250, 181, 195, 0.67);
     -fx-border-radius: 9;
 }
+
 
 #content .function-button:pressed, #loginContainer .function-button:pressed, #dialogContent .function-button:pressed {
     /*-fx-border-color: #8EB9ED;*/
@@ -555,6 +622,19 @@
 }
 
 .result-header > * {
+    -fx-font-size: 12;
+    -fx-font-weight: bold;
+}
+
+.table-view .column-header,  .table-view .column-header-background .filler {
+    -fx-border-color: #3F3FF2;
+    -fx-background-color: #3F3FF2;
+    -fx-text-fill: #ffffff;
+    -fx-min-height: 50;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #ffffff;
     -fx-font-size: 12;
     -fx-font-weight: bold;
 }
