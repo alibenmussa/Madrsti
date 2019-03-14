@@ -51,8 +51,7 @@
                <padding>
                   <Insets bottom="25.0" top="25.0" />
                </padding></Button>
-<!--
-            <Button fx:id="employeeShowResults" alignment="CENTER" contentDisplay="TOP" graphicTextGap="10.0" mnemonicParsing="false" onAction="#employeeShowResults" prefWidth="100.0" text="RESULTS" VBox.vgrow="ALWAYS">
+            <Button fx:id="employeeShowProfile" alignment="CENTER" contentDisplay="TOP" graphicTextGap="10.0" mnemonicParsing="false" onAction="#employeeShowProfile" prefWidth="100.0" text="RESULTS" VBox.vgrow="ALWAYS">
                <VBox.margin>
                   <Insets bottom="10.0" top="10.0" />
                </VBox.margin>
@@ -62,7 +61,6 @@
                <padding>
                   <Insets bottom="25.0" top="25.0" />
                </padding></Button>
--->
          </children>
          <padding>
             <Insets top="30.0" />
