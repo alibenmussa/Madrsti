@@ -32,6 +32,12 @@ import java.util.function.Predicate;
 public class adminShowStaffController implements Initializable {
     @FXML
     private TextField search;
+    @FXML
+    private ComboBox type;
+
+    @FXML
+    private ComboBox start;
+
 
     @FXML
     private TableView<Staff> staffTable;
@@ -64,6 +70,7 @@ public class adminShowStaffController implements Initializable {
 
 
     public void setUpTable() {
+
         name.setCellValueFactory(new PropertyValueFactory<>("full_name"));
         section.setCellValueFactory(new PropertyValueFactory<>("state"));
         phone.setCellValueFactory(new PropertyValueFactory<>("phone_number"));
@@ -78,22 +85,32 @@ public class adminShowStaffController implements Initializable {
     @FXML
     void searchKey(KeyEvent event) {
 
+
     }
 
 
 
     public ObservableList<Staff> getStaffList() {
-
         String staffquery ;
+
         data = FXCollections.observableArrayList();
 
-        if (search == null) {
+        if (type.getSelectionModel().getSelectedIndex() == 0 && start.getSelectionModel().getSelectedIndex() == 0) {
             staffquery = "SELECT * FROM `staff`";
-            System.out.println("hi");
-        } else {
-            staffquery = "SELECT * FROM `staff` WHERE `full_name` LIKE '%" + search + "' ORDER BY `staff_id` ASC";
-            System.out.println("hiiii");
+        }else if (type.getSelectionModel().getSelectedIndex() > 0 && start.getSelectionModel().getSelectedItem().equals("A-Z")) {
+            staffquery = "SELECT * FROM `staff` WHERE type LIKE '%"+ type.getSelectionModel().getSelectedItem()+"%' ORDER BY full_name ASC";
+
         }
+        else if (type.getSelectionModel().getSelectedIndex() > 0 && start.getSelectionModel().getSelectedIndex() == 0) {
+            System.out.println("here");
+                    staffquery = "SELECT * FROM `staff` WHERE type LIKE '%"+ type.getSelectionModel().getSelectedItem()+"%' ";
+
+                }
+
+         else {
+            staffquery = "SELECT * FROM `staff`";
+        }
+
 
         ResultSet rs = DatabaseManager.executeSQLResultSet(staffquery,null);
         try {
@@ -126,6 +143,18 @@ public class adminShowStaffController implements Initializable {
       }
       return data;
     }
+
+    @FXML
+    void startOnAction(ActionEvent event) {
+        setUpTable();
+    }
+
+    @FXML
+    void typeOnAction(ActionEvent event) {
+        setUpTable();
+
+    }
+
 
 
     @FXML
