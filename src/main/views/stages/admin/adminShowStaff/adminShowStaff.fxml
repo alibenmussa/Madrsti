@@ -41,29 +41,31 @@
                <children>
                   <HBox spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <TextField fx:id="search" minHeight="40.0" promptText="Search for..." HBox.hgrow="ALWAYS" />
-                        <ComboBox minHeight="40.0" promptText="All">
+                        <TextField fx:id="search" minHeight="40.0" onKeyPressed="#searchKey" promptText="Search for..." HBox.hgrow="ALWAYS" />
+                        <ComboBox fx:id="type" minHeight="40.0" onAction="#typeOnAction" promptText="All">
                            <items>
                            <FXCollections fx:factory="observableArrayList">
                               <String fx:value="All" />
-                              <String fx:value="Teachers" />
-                              <String fx:value="Employees" />
+                              <String fx:value="Teacher" />
+                              <String fx:value="Employee" />
                            </FXCollections>
                            </items>
                            <value>
                               <String fx:value="All" />
                            </value>
                         </ComboBox>
-                        <ComboBox minHeight="40.0" promptText="A-Z">
+                        <ComboBox fx:id="start" minHeight="40.0" onAction="#startOnAction" >
                            <items>
                               <FXCollections fx:factory="observableArrayList">
-                                 <String fx:value="Last" />
                                  <String fx:value="A-Z" />
                                  <String fx:value="First" />
+
+
+
                               </FXCollections>
                            </items>
                            <value>
-                              <String fx:value="Last" />
+                              <String fx:value="A-Z" />
                            </value>
                         </ComboBox>
                      </children>

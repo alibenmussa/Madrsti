@@ -6,10 +6,12 @@ import javafx.scene.chart.LineChart;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.Label;
 import main.DatabaseManager;
+import main.views.stages.employee.employeeShowHome.employeeShowHomeController;
 
 import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class adminShowHomeController implements Initializable {
@@ -22,7 +24,7 @@ public class adminShowHomeController implements Initializable {
     @FXML
     private Label employee;
     @FXML
-    private LineChart<Number, Number> adminChart;
+    private LineChart<String, Number> adminChart;
 
 
     @Override
@@ -42,16 +44,8 @@ public class adminShowHomeController implements Initializable {
 
 
     public void getChartData() {
-        adminChart.getData().clear();
-        XYChart.Series<Number, Number> series = new XYChart.Series<>();
-        series.setName("Series 1");
-        series.getData().add(new XYChart.Data<>(1, 20));
-        series.getData().add(new XYChart.Data<>(2, 100));
-        series.getData().add(new XYChart.Data<>(3, 80));
-        series.getData().add(new XYChart.Data<>(4, 180));
-        series.getData().add(new XYChart.Data<>(5, 20));
-        series.getData().add(new XYChart.Data<>(6, -10));
-        adminChart.getData().add(series);
+
+        employeeShowHomeController.geyXYChartData(adminChart);
 
     }
 

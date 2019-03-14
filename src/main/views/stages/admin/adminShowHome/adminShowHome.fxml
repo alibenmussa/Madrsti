@@ -31,7 +31,7 @@
                     <children>
                         <LineChart fx:id="adminChart" layoutX="80.0" layoutY="16.0" minHeight="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                             <xAxis>
-                                <NumberAxis side="BOTTOM" />
+                                <CategoryAxis side="BOTTOM" />
                             </xAxis>
                             <yAxis>
                                 <NumberAxis side="LEFT" />
@@ -105,7 +105,5 @@
             </children>
         </VBox>
     </children>
-    <stylesheets>
-        <URL value="@../../../../assests/stylesheets/style.css" />
-    </stylesheets>
+
 </AnchorPane>

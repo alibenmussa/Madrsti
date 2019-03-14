@@ -198,7 +198,4 @@
          </children>
       </AnchorPane>
    </children>
-   <stylesheets>
-      <URL value="@../../../../../assests/stylesheets/style.css" />
-   </stylesheets>
 </AnchorPane>

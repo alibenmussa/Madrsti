@@ -2,12 +2,15 @@ package main.views.stages.admin.adminShowStaff;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.KeyEvent;
 import javafx.util.Callback;
 import main.DatabaseManager;
 import main.Main;
@@ -17,15 +20,24 @@ import main.views.stages.admin.adminShowStaff.adminEditStaff.adminEditStaffContr
 import main.views.stages.admin.adminShowStaff.adminShowStaffInformation.adminShowStaffInformationController;
 import main.views.stages.template.Staff;
 
+
 import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.ResourceBundle;
+import java.util.function.Predicate;
 
 public class adminShowStaffController implements Initializable {
     @FXML
     private TextField search;
+    @FXML
+    private ComboBox type;
+
+    @FXML
+    private ComboBox start;
+
 
     @FXML
     private TableView<Staff> staffTable;
@@ -43,6 +55,8 @@ public class adminShowStaffController implements Initializable {
     private TableColumn operations;
 
 
+
+
     ObservableList<Staff> data;
 
 
@@ -56,29 +70,47 @@ public class adminShowStaffController implements Initializable {
 
 
     public void setUpTable() {
+
         name.setCellValueFactory(new PropertyValueFactory<>("full_name"));
         section.setCellValueFactory(new PropertyValueFactory<>("state"));
         phone.setCellValueFactory(new PropertyValueFactory<>("phone_number"));
         operations.setCellFactory((Callback<TableColumn<Staff, Boolean>, TableCell<Staff, Boolean>>) p -> new ButtonsCell(this));
-
-        staffTable.setItems(getStaffList(search));
+        search = null;
+        staffTable.setItems(getStaffList());
 
 
     }
 
-    public ObservableList<Staff> getStaffList(TextField searach) {
 
+    @FXML
+    void searchKey(KeyEvent event) {
+
+
+    }
+
+
+
+    public ObservableList<Staff> getStaffList() {
         String staffquery ;
+
         data = FXCollections.observableArrayList();
 
-
-        if (searach == null) {
+        if (type.getSelectionModel().getSelectedIndex() == 0 && start.getSelectionModel().getSelectedIndex() == 0) {
             staffquery = "SELECT * FROM `staff`";
-            System.out.println("hi");
-        } else {
-            staffquery = "SELECT * FROM `staff` WHERE `full_name` LIKE '%" + search + "' ORDER BY `staff_id` ASC";
-            System.out.println("hiiii");
+        }else if (type.getSelectionModel().getSelectedIndex() > 0 && start.getSelectionModel().getSelectedItem().equals("A-Z")) {
+            staffquery = "SELECT * FROM `staff` WHERE type LIKE '%"+ type.getSelectionModel().getSelectedItem()+"%' ORDER BY full_name ASC";
+
         }
+        else if (type.getSelectionModel().getSelectedIndex() > 0 && start.getSelectionModel().getSelectedIndex() == 0) {
+            System.out.println("here");
+                    staffquery = "SELECT * FROM `staff` WHERE type LIKE '%"+ type.getSelectionModel().getSelectedItem()+"%' ";
+
+                }
+
+         else {
+            staffquery = "SELECT * FROM `staff`";
+        }
+
 
         ResultSet rs = DatabaseManager.executeSQLResultSet(staffquery,null);
         try {
@@ -104,11 +136,26 @@ public class adminShowStaffController implements Initializable {
           }
 
 
+
+
       }catch (Exception e){
 
       }
       return data;
     }
+
+    @FXML
+    void startOnAction(ActionEvent event) {
+        setUpTable();
+    }
+
+    @FXML
+    void typeOnAction(ActionEvent event) {
+        setUpTable();
+
+    }
+
+
 
     @FXML
     void adminAddStaff(ActionEvent event) {
@@ -172,4 +219,6 @@ public class adminShowStaffController implements Initializable {
             }
         }
     }
+
+
 }
