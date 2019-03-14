@@ -16,8 +16,10 @@ public class employeeNavbarController {
     private Button employeeShowClasses;
     @FXML
     private Button employeeShowSubjects;
+/*
     @FXML
     private Button employeeShowResults;
+*/
 
 
     @FXML
@@ -46,20 +48,20 @@ public class employeeNavbarController {
         Main.FXMLLoaderPane(StagesManager.stageContent, "/main/views/stages/employee/employeeShowSubjects/employeeShowSubjects.fxml");
 
     }
-
+/*
     @FXML
     void employeeShowResults(ActionEvent event) throws Exception {
         addActiveButton(employeeShowResults);
         Dialog.show("Show Ali", "/main/views/stages/employee/employeeShowStudents/employeeShowStudentInformation/employeeShowStudentInformation.fxml");
     }
 
-
+*/
     private void addActiveButton(Button currentButton) {
         employeeShowHome.getStyleClass().remove("active");
         employeeShowStudents.getStyleClass().remove("active");
         employeeShowClasses.getStyleClass().remove("active");
         employeeShowSubjects.getStyleClass().remove("active");
-        employeeShowResults.getStyleClass().remove("active");
+//        employeeShowResults.getStyleClass().remove("active");
         currentButton.getStyleClass().add("active");
     }
 

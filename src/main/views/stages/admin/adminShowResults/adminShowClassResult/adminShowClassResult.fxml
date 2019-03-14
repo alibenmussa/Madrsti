@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+
 <?import java.lang.String?>
 <?import java.net.URL?>
 <?import javafx.geometry.Insets?>
@@ -13,9 +15,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
-
-<AnchorPane maxWidth="-Infinity" minWidth="-Infinity" prefWidth="765.0" styleClass="pageContent" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.views.stages.teacher.teacherShowHome.teacherShowResult.teacherShowResultController">
+<AnchorPane maxWidth="-Infinity" minWidth="-Infinity" prefWidth="765.0" styleClass="pageContent" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.views.stages.admin.adminShowResults.adminShowClassResult.adminShowClassResultController">
    <children>
       <VBox fx:id="classesList" prefWidth="715.0" spacing="35.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="60.0">
          <children>
@@ -33,16 +33,6 @@
                             <graphic>
                                 <FontAwesomeIconView glyphName="CHEVRON_LEFT" styleClass="icon" />
                             </graphic>
-                        </Button>
-                         <Button fx:id="cancelEdit" minWidth="120.0" mnemonicParsing="false" prefHeight="40.0" styleClass="gray-button" text="CANCEL" />
-                        <Button fx:id="editButton" alignment="CENTER" graphicTextGap="15.0" layoutX="10.0" layoutY="10.0" minWidth="120.0" mnemonicParsing="false" prefHeight="40.0" styleClass="function-button" text="EDIT" textFill="WHITE">
-                           <padding>
-                              <Insets left="20.0" right="20.0" />
-                           </padding>
-                            <graphic>
-                                <!--<FontAwesomeIconView glyphName="SETTING" styleClass="icon" />-->
-                            </graphic>
-
                         </Button>
                      </children>
                   </HBox>
