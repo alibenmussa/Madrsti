@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxWidth="-Infinity" minWidth="-Infinity" prefWidth="765.0" styleClass="pageContent" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.views.stages.teacher.teacherShowHome.teacherShowResult.teacherShowResultController">
+   <children>
+      <VBox fx:id="classesList" prefWidth="715.0" spacing="35.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="60.0">
+         <children>
+            <BorderPane>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+               <right>
+                  <HBox fx:id="buttons" spacing="20.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#goBack" prefHeight="40.0" styleClass="gray-button" textFill="WHITE">
+                            <padding>
+                                <Insets left="15.0" right="15.0" />
+                            </padding>
+                            <graphic>
+                                <FontAwesomeIconView glyphName="CHEVRON_LEFT" styleClass="icon" />
+                            </graphic>
+                        </Button>
+                         <Button fx:id="cancelEdit" minWidth="120.0" mnemonicParsing="false" onAction="#cancelResults" prefHeight="40.0" styleClass="gray-button" text="CANCEL" />
+                        <Button fx:id="editButton" alignment="CENTER" graphicTextGap="15.0" layoutX="10.0" layoutY="10.0" minWidth="120.0" mnemonicParsing="false" onAction="#editResults" prefHeight="40.0" styleClass="function-button" text="EDIT" textFill="WHITE">
+                           <padding>
+                              <Insets left="20.0" right="20.0" />
+                           </padding>
+                            <graphic>
+                                <!--<FontAwesomeIconView glyphName="SETTING" styleClass="icon" />-->
+                            </graphic>
+
+                        </Button>
+                     </children>
+                  </HBox>
+               </right>
+               <left>
+                  <VBox spacing="10.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label fx:id="subject" styleClass="title" text="Arabic Language" />
+                        <Label fx:id="clas" styleClass="small-subject" text="1st Primary - A" />
+                     </children>
+                  </VBox>
+               </left>
+            </BorderPane>
+            <AnchorPane maxWidth="1.7976931348623157E308">
+               <styleClass>
+                  <String fx:value="content" />
+               </styleClass>
+               <children>
+                  <GridPane fx:id="resultTable" alignment="CENTER_LEFT" hgap="10.0" vgap="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="20.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="20.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="20.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="20.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <AnchorPane>
+                           <children>
+                              <Label alignment="CENTER" prefHeight="60.0" styleClass="result-header" text="NAME" textAlignment="CENTER" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane GridPane.columnIndex="1">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="60.0" styleClass="result-header" text="FIRST MIDTERM" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane GridPane.columnIndex="2">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="60.0" styleClass="result-header" text="FIRST FINAL" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane GridPane.columnIndex="3">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="60.0" styleClass="result-header" text="SECOND MIDTERM" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane GridPane.columnIndex="4">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="60.0" styleClass="result-header" text="SECOND FINAL" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                     <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </padding>
+                  </GridPane>
+               </children>
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </padding></AnchorPane>
+
+         </children>
+      </VBox>
+   </children>
+   <stylesheets>
+      <URL value="@../../../../../assests/stylesheets/style.css" />
+   </stylesheets>
+</AnchorPane>

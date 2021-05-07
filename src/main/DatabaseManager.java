@@ -13,14 +13,23 @@ import javafx.scene.control.ComboBox;
 import main.views.stages.template.ComboForm;
 
 public class DatabaseManager {
+
+    private volatile static Connection connection;
+
     public static final String DB = "jdbc:mysql://localhost/madrsti";
     public static final String USER = "root";
     public static final String PASSWORD = "";
 
     public static Connection createConnection() {
         try {
-            Class.forName("com.mysql.jdbc.Driver");
-            Connection connection = DriverManager.getConnection(DB, USER, PASSWORD);
+            if (connection == null) {
+                synchronized (DatabaseManager.class) {
+                    if (connection == null) {
+                        Class.forName("com.mysql.cj.jdbc.Driver");
+                        connection = DriverManager.getConnection(DB, USER, PASSWORD);
+                    }
+                }
+            }
             return connection;
         } catch (ClassNotFoundException | SQLException ex) {
             Dialog.showAlert("Connection Error", "Madrsti can't connect to database");
