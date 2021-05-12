@@ -25,13 +25,14 @@ public class DatabaseManager {
             if (connection == null) {
                 synchronized (DatabaseManager.class) {
                     if (connection == null) {
-                        Class.forName("com.mysql.cj.jdbc.Driver");
+//                        Class.forName("com.mysql.cj.jdbc.Driver");
                         connection = DriverManager.getConnection(DB, USER, PASSWORD);
                     }
                 }
             }
             return connection;
-        } catch (ClassNotFoundException | SQLException ex) {
+            //ClassNotFoundException
+        } catch (SQLException ex) {
             Dialog.showAlert("Connection Error", "Madrsti can't connect to database");
             return null;
         }

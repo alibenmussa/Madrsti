@@ -1,0 +1,28 @@
+<component name="libraryTable">
+  <library name="com.netopyr.reduxfx:reduxfx-fontawesomefx:0.4.1" type="repository">
+    <properties maven-id="com.netopyr.reduxfx:reduxfx-fontawesomefx:0.4.1" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/reduxfx-fontawesomefx-0.4.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/reduxfx-view-0.4.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-lang3-3.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/vavr-0.9.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/vavr-match-0.9.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/slf4j-api-1.7.25.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/reactive-streams-1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/rxjava-2.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/caffeine-2.5.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/fontawesomefx-commons-8.15.jar!/" />
+      <root url="file://$PROJECT_DIR$/lib/fontawesomefx-controls-8.15.pom" />
+      <root url="jar://$PROJECT_DIR$/lib/fontawesomefx-emojione-2.2.7-2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/fontawesomefx-fontawesome-4.7.0-5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/fontawesomefx-icons525-3.0.0-4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/fontawesomefx-materialdesignfont-1.7.22-4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/fontawesomefx-materialicons-2.2.0-5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/fontawesomefx-materialstackicons-2.1-5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/fontawesomefx-octicons-4.3.0-5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/fontawesomefx-weathericons-2.0.10-5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
