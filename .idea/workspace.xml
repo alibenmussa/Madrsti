@@ -2,15 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b045edff-8949-4d70-b8ca-0bd9df58e8c0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/com_netopyr_reduxfx_reduxfx_fontawesomefx_0_4_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/fontawesomefx_8_81.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_1_46.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_1_46.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/views/access/AdminStage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/views/access/EmployeeStage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/views/access/StageFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/views/access/TeacherStage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/views/stages/template/PersonFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ac67dd44-06eb-4ec7-b257-e72a7c1300db.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ac67dd44-06eb-4ec7-b257-e72a7c1300db.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Madrsti.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Madrsti.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/fontawesomefx_8_81.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/DatabaseManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/DatabaseManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/mysql_connector_java_5_1_46.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/mysql_connector_java_5_1_46.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/DatabaseManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/ControllerFunctions.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/ControllerFunctions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/views/Madrsti.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/Madrsti.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/views/stages/ControllerFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/ControllerFunctions.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,12 +53,14 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="Ali Ben Mussa &lt;alibenmussa@gmail.com&gt;" />
         <option value="alibenmussa &lt;alibenmussa@gmail.com&gt;" />
       </list>
     </option>
@@ -64,6 +68,13 @@
   </component>
   <component name="GithubDefaultAccount">
     <option name="defaultAccountId" value="7822525b-8eeb-453e-8603-9523203ef11d" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\Ali\Projects\madrsti\.idea" />
+      </set>
+    </option>
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
@@ -87,6 +98,7 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -95,18 +107,21 @@
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/mysql-connector-java-5.1.46.jar!/" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.29338843" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\projects\Madrsti\src\main\assests\images\users" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\projects\FX\Madrsti\src\main\views\stages\teacher\teacherShowHome\teacherShowResult" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="main.views.access" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\projects\Madrsti\src\main\assests\images\users" />
     </key>
   </component>
   <component name="RunManager">
@@ -155,6 +170,9 @@
       <workItem from="1552491045156" duration="817000" />
       <workItem from="1552498850097" duration="27379000" />
       <workItem from="1552550906121" duration="9435000" />
+      <workItem from="1620972148539" duration="5352000" />
+      <workItem from="1621104269603" duration="2370000" />
+      <workItem from="1621181561813" duration="2155000" />
     </task>
     <task id="LOCAL-00001" summary="Updating: database and fixing a bug">
       <created>1551580711528</created>
@@ -242,30 +260,42 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="176" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1620831123333" />
+    <state x="765" y="230" key="#com.intellij.ide.util.MemberChooser" timestamp="1621186122968">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="230" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1621186122968" />
+    <state x="585" y="115" key="CommitChangelistDialog2" timestamp="1621186670851">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="585" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1621186670851" />
     <state x="740" y="262" key="FileChooserDialogImpl" timestamp="1620838390818">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="262" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1620838390818" />
-    <state width="1877" height="279" key="GridCell.Tab.0.bottom" timestamp="1620838573584">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1621186644049">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1620838573584" />
-    <state width="1877" height="279" key="GridCell.Tab.0.center" timestamp="1620838573584">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1621186644049" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1621186644049">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="279" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1620838573584" />
-    <state width="1877" height="279" key="GridCell.Tab.0.left" timestamp="1620838573583">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1621186644049" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1621186644049">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="279" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1620838573583" />
-    <state width="1877" height="279" key="GridCell.Tab.0.right" timestamp="1620838573584">
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1621186644049" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1621186644049">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="279" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1620838573584" />
-    <state x="480" y="191" key="SettingsEditor" timestamp="1620838794875">
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1621186644049" />
+    <state x="480" y="191" key="SettingsEditor" timestamp="1620840257513">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="480" y="191" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1620838794875" />
+    <state x="480" y="191" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1620840257513" />
+    <state x="656" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1621181830567">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="656" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1621181830567" />
     <state x="704" y="510" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1620838205188">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

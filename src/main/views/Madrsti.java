@@ -10,6 +10,9 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import main.StagesManager;
+import main.views.access.AdminStage;
+import main.views.access.EmployeeStage;
+import main.views.access.TeacherStage;
 
 import java.io.IOException;
 
@@ -19,23 +22,23 @@ public class Madrsti {
     public static void displayStage(int access) {
         Stage window = new Stage();
         String path;
-        switch (access) {
-            case 1:
-                path = "/main/views/stages/admin/admin.fxml";
-                break;
-            case 2:
-                path = "/main/views/stages/teacher/teacher.fxml";
-                break;
-            case 3:
-                path = "/main/views/stages/employee/employee.fxml";
-                break;
-            default:
-                return;
-        }
+
 
         Pane mainView = null;
         try {
-            mainView = FXMLLoader.load(Madrsti.class.getResource(path));
+            switch (access) {
+                case 1:
+                    mainView = new AdminStage().createStage();
+                    break;
+                case 2:
+                    mainView = new TeacherStage().createStage();
+                    break;
+                case 3:
+                    mainView = new EmployeeStage().createStage();
+                    break;
+                default:
+                    return;
+            }
         } catch (IOException ex) {
 
         }

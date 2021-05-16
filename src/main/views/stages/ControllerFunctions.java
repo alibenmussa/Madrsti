@@ -49,7 +49,7 @@ public class ControllerFunctions {
         try {
             File file = new File(selectedImage);
             String path2 = ("D:\\projects\\Madrsti\\src\\main\\assests\\images\\users");
-            System.out.println(path2);
+
             File file2 = new File(path2);
             BufferedInputStream bis = new BufferedInputStream(new FileInputStream(file));
             BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(file2 + "/" + userId + ".jpg"));
