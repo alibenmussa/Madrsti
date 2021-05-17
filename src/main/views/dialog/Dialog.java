@@ -118,13 +118,14 @@ public class Dialog {
 
     public static boolean showConfirm(String subject, String message) {
         dialogStage = new Stage();
+        dialogFacade dialogFacade = new dialogFacade();
         Dialog.subject = subject;
         Dialog.message = message;
         success = false;
         Pane root = null;
 
         try {
-            root = FXMLLoader.load(Main.class.getResource("/main/views/dialog/confirmDialog.fxml"));
+            root = dialogFacade.createDialog("Confirm");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -159,12 +160,13 @@ public class Dialog {
 
     public static void showAlert(String subject, String message) {
         dialogStage = new Stage();
+        dialogFacade dialogFacade = new dialogFacade();
         Dialog.subject = subject;
         Dialog.message = message;
 
         Pane root = null;
         try {
-            root = FXMLLoader.load(Main.class.getResource("/main/views/dialog/alertDialog.fxml"));
+            root = dialogFacade.createDialog("Alert");
         } catch (IOException e) {
             e.printStackTrace();
         }
