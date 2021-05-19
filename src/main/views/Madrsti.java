@@ -1,6 +1,5 @@
 package main.views;
 
-import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
@@ -10,9 +9,8 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import main.StagesManager;
-import main.views.access.AdminStage;
-import main.views.access.EmployeeStage;
-import main.views.access.TeacherStage;
+import main.views.access.StageFactory;
+import main.views.dialog.Dialog;
 
 import java.io.IOException;
 
@@ -23,24 +21,12 @@ public class Madrsti {
         Stage window = new Stage();
         String path;
 
-
         Pane mainView = null;
+        StageFactory stageFactory = new StageFactory();
         try {
-            switch (access) {
-                case 1:
-                    mainView = new AdminStage().createStage();
-                    break;
-                case 2:
-                    mainView = new TeacherStage().createStage();
-                    break;
-                case 3:
-                    mainView = new EmployeeStage().createStage();
-                    break;
-                default:
-                    return;
-            }
+            mainView = stageFactory.selectStage(access).createStage();
         } catch (IOException ex) {
-
+            Dialog.showAlert("Connection Error", "The permission is not right");
         }
 
         Rectangle page = new Rectangle(1024, StagesManager.windowHeight);
