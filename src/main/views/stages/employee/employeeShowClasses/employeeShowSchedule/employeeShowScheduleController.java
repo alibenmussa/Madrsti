@@ -8,18 +8,16 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.TextAlignment;
-import main.DatabaseManager;
+import main.DB.DatabaseManager;
 import main.Main;
 import main.StagesManager;
 import main.views.dialog.Dialog;
 import main.views.stages.employee.employeeShowClasses.employeeShowSchedule.employeeAddSubject.employeeAddSubjectController;
 
 import java.io.IOException;
-import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.ResourceBundle;
 
 public class employeeShowScheduleController {
     @FXML

@@ -7,7 +7,8 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Circle;
-import main.DatabaseManager;
+import main.DB.ComboFacade;
+import main.DB.DatabaseManager;
 import main.StagesManager;
 import main.views.dialog.Dialog;
 import main.views.stages.ControllerFunctions;
@@ -17,8 +18,6 @@ import java.sql.Date;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-
-import static main.views.stages.ControllerFunctions.uploadPhotoToUsersFile;
 
 public class employeeEditStudentController  {
     @FXML
@@ -84,10 +83,10 @@ public class employeeEditStudentController  {
 
 
         String gradeQuery = "SELECT `name` FROM `grades`";
-        DatabaseManager.addComboBoxData(year, gradeQuery, null);
+        ComboFacade.ComboAddData("ComboBox",year, gradeQuery, null);
         clas.disableProperty().bind(year.valueProperty().isNull());
         String classquery = "select  classes.class_id from students inner join classes using(grade_id) where student_id ="+std_id ;
-        DatabaseManager.addComboBoxData(clas, classquery, null);
+        ComboFacade.ComboAddData("ComboBox",clas, classquery, null);
 
 
 
@@ -130,7 +129,7 @@ public class employeeEditStudentController  {
         String query = "SELECT class_id FROM classes WHERE grade_id = ?";
         int index = year.getSelectionModel().getSelectedIndex() +1;
         list.add(String.valueOf(index));
-        DatabaseManager.addComboBoxData(clas, query, list);
+        ComboFacade.ComboAddData("ComboBox",clas, query, list);
     }
 
 

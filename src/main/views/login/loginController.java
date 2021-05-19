@@ -7,7 +7,7 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.VBox;
 import javafx.scene.control.Button;
-import main.DatabaseManager;
+import main.DB.DatabaseManager;
 import main.Main;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;

@@ -12,7 +12,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
-import main.DatabaseManager;
+import main.DB.DatabaseManager;
 import main.views.stages.teacher.teacherShowHome.teacherShowResult.teacherShowResultController;
 
 import java.io.IOException;

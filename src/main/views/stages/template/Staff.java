@@ -3,8 +3,6 @@ package main.views.stages.template;
 
 
 import javafx.scene.control.Button;
-import main.DatabaseManager;
-import main.views.dialog.Dialog;
 
 import java.sql.*;
 

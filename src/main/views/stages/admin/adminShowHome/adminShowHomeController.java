@@ -3,15 +3,13 @@ package main.views.stages.admin.adminShowHome;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.LineChart;
-import javafx.scene.chart.XYChart;
 import javafx.scene.control.Label;
-import main.DatabaseManager;
+import main.DB.DatabaseManager;
 import main.views.stages.employee.employeeShowHome.employeeShowHomeController;
 
 import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class adminShowHomeController implements Initializable {
