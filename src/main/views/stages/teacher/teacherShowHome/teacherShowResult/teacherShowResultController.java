@@ -9,7 +9,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import main.DatabaseManager;
+import main.DB.DatabaseManager;
 import main.Main;
 import main.StagesManager;
 import main.views.dialog.Dialog;

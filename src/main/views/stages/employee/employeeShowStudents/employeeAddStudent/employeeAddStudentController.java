@@ -8,14 +8,13 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Circle;
-import main.DatabaseManager;
-import main.StagesManager;
+import main.DB.ComboFacade;
+import main.DB.DatabaseManager;
 import main.views.dialog.Dialog;
 import main.views.stages.ControllerFunctions;
 
 import java.io.File;
 import java.net.URL;
-import java.time.Year;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
@@ -80,7 +79,7 @@ public class employeeAddStudentController implements Initializable {
         userPhoto.setFitWidth(100);
 
         String gradeQuery = "SELECT `name` FROM `grades`";
-        DatabaseManager.addComboBoxData(year, gradeQuery, null);
+        ComboFacade.ComboAddData("ComboBox",year, gradeQuery, null);
         clas.disableProperty().bind(year.valueProperty().isNull());
 
 
@@ -92,7 +91,7 @@ public class employeeAddStudentController implements Initializable {
         String query = "SELECT class_id FROM classes WHERE grade_id = ?";
         int index = year.getSelectionModel().getSelectedIndex() + 1;
         list.add(String.valueOf(index));
-        DatabaseManager.addComboBoxData(clas, query, list);
+        ComboFacade.ComboAddData("ComboBox",clas, query, list);
     }
 
 

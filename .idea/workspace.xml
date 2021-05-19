@@ -6,15 +6,77 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b045edff-8949-4d70-b8ca-0bd9df58e8c0" name="Default Changelist" comment="add Factory Pattern to project stages">
+    <list default="true" id="b045edff-8949-4d70-b8ca-0bd9df58e8c0" name="Default Changelist" comment="fix navbar">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Madrsti/main/DB/ComboBoxData.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Madrsti/main/DB/ComboBoxDataWithId.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Madrsti/main/DB/ComboFacade.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Madrsti/main/DB/DatabaseManager.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/dialog/dialogFacade.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/DB/ComboBoxData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/DB/ComboBoxDataWithId.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/DB/ComboFacade.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/views/dialog/dialogFacade.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminNavbar/adminNavbar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminNavbar/adminNavbar.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/employee/employeeNavbar/employeeNavbar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/employee/employeeNavbar/employeeNavbar.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/teacher/teacherNavbar/teacherNavbar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/teacher/teacherNavbar/teacherNavbar.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/DatabaseManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/views/stages/admin/adminNavbar/adminNavbar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/admin/adminNavbar/adminNavbar.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/views/stages/employee/employeeNavbar/employeeNavbar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/employee/employeeNavbar/employeeNavbar.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/views/stages/teacher/teacherNavbar/teacherNavbar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/teacher/teacherNavbar/teacherNavbar.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/DatabaseManager$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/DB/ComboBoxDataWithId$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/DatabaseManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/dialog/Dialog.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/dialog/Dialog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/login/loginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/login/loginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminShowHome/adminShowHomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminShowHome/adminShowHomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminShowResults/adminShowClassResult/adminShowClassResultController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminShowResults/adminShowClassResult/adminShowClassResultController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminShowResults/adminShowResultsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminShowResults/adminShowResultsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminShowStaff/adminAddStaff/adminAddStaffController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminShowStaff/adminAddStaff/adminAddStaffController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminShowStaff/adminEditStaff/adminEditStaffController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminShowStaff/adminEditStaff/adminEditStaffController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminShowStaff/adminShowStaffController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminShowStaff/adminShowStaffController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminShowStaff/adminShowStaffInformation/adminShowStaffInformationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminShowStaff/adminShowStaffInformation/adminShowStaffInformationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminShowStudents/adminShowStudentInformation/adminShowStudentInformationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminShowStudents/adminShowStudentInformation/adminShowStudentInformationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminShowStudents/adminShowStudentsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminShowStudents/adminShowStudentsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/employee/employeeShowClasses/employeeAddClass/employeeAddClassController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/employee/employeeShowClasses/employeeAddClass/employeeAddClassController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/employee/employeeShowClasses/employeeShowClassesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/employee/employeeShowClasses/employeeShowClassesController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/employee/employeeShowClasses/employeeShowSchedule/employeeAddSubject/employeeAddSubjectController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/employee/employeeShowClasses/employeeShowSchedule/employeeAddSubject/employeeAddSubjectController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/employee/employeeShowClasses/employeeShowSchedule/employeeShowScheduleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/employee/employeeShowClasses/employeeShowSchedule/employeeShowScheduleController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/employee/employeeShowHome/employeeShowHomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/employee/employeeShowHome/employeeShowHomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/employee/employeeShowProfile/employeeShowProfileController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/employee/employeeShowProfile/employeeShowProfileController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/employee/employeeShowStudents/employeeAddStudent/employeeAddStudentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/employee/employeeShowStudents/employeeAddStudent/employeeAddStudentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/employee/employeeShowStudents/employeeEditStudent/employeeEditStudentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/employee/employeeShowStudents/employeeEditStudent/employeeEditStudentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/employee/employeeShowStudents/employeeShowStudentInformation/employeeShowStudentInformationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/employee/employeeShowStudents/employeeShowStudentInformation/employeeShowStudentInformationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/employee/employeeShowStudents/employeeShowStudentResult/employeeShowStudentResultController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/employee/employeeShowStudents/employeeShowStudentResult/employeeShowStudentResultController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/employee/employeeShowStudents/employeeShowStudentsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/employee/employeeShowStudents/employeeShowStudentsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/employee/employeeShowSubjects/employeeAddSubject/employeeAddSubjectController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/employee/employeeShowSubjects/employeeAddSubject/employeeAddSubjectController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/employee/employeeShowSubjects/employeeShowSubjectsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/employee/employeeShowSubjects/employeeShowSubjectsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/teacher/teacherShowHome/teacherShowHomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/teacher/teacherShowHome/teacherShowHomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/teacher/teacherShowHome/teacherShowResult/teacherShowResultController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/teacher/teacherShowHome/teacherShowResult/teacherShowResultController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/teacher/teacherShowProfile/teacherShowProfileController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/teacher/teacherShowProfile/teacherShowProfileController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/template/Staff.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/template/Staff.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/DB/DatabaseManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/views/dialog/Dialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/dialog/Dialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/views/login/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/login/loginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowHome/adminShowHomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowHome/adminShowHomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowResults/adminShowClassResult/adminShowClassResultController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowResults/adminShowClassResult/adminShowClassResultController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowResults/adminShowResultsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowResults/adminShowResultsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminAddStaff/adminAddStaffController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminAddStaff/adminAddStaffController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminEditStaff/adminEditStaffController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminEditStaff/adminEditStaffController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminShowStaffController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminShowStaffController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminShowStaffInformation/adminShowStaffInformationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStaff/adminShowStaffInformation/adminShowStaffInformationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminShowStudentInformation/adminShowStudentInformationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminShowStudentInformation/adminShowStudentInformationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminShowStudentsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/admin/adminShowStudents/adminShowStudentsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowClasses/employeeAddClass/employeeAddClassController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowClasses/employeeAddClass/employeeAddClassController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowClasses/employeeShowClassesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowClasses/employeeShowClassesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowClasses/employeeShowSchedule/employeeAddSubject/employeeAddSubjectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowClasses/employeeShowSchedule/employeeAddSubject/employeeAddSubjectController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowClasses/employeeShowSchedule/employeeShowScheduleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowClasses/employeeShowSchedule/employeeShowScheduleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowHome/employeeShowHomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowHome/employeeShowHomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowProfile/employeeShowProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowProfile/employeeShowProfileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowStudents/employeeAddStudent/employeeAddStudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowStudents/employeeAddStudent/employeeAddStudentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowStudents/employeeEditStudent/employeeEditStudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowStudents/employeeEditStudent/employeeEditStudentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowStudents/employeeShowStudentInformation/employeeShowStudentInformationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowStudents/employeeShowStudentInformation/employeeShowStudentInformationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowStudents/employeeShowStudentResult/employeeShowStudentResultController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowStudents/employeeShowStudentResult/employeeShowStudentResultController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowStudents/employeeShowStudentsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowStudents/employeeShowStudentsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowSubjects/employeeAddSubject/employeeAddSubjectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowSubjects/employeeAddSubject/employeeAddSubjectController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowSubjects/employeeShowSubjectsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/employee/employeeShowSubjects/employeeShowSubjectsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/views/stages/teacher/teacherShowHome/teacherShowHomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/teacher/teacherShowHome/teacherShowHomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/views/stages/teacher/teacherShowHome/teacherShowResult/teacherShowResultController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/teacher/teacherShowHome/teacherShowResult/teacherShowResultController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/views/stages/teacher/teacherShowProfile/teacherShowProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/teacher/teacherShowProfile/teacherShowProfileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/views/stages/template/Staff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/template/Staff.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -282,22 +344,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="262" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1621283430185" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1621297328617">
+    <state width="1877" height="9" key="GridCell.Tab.0.bottom" timestamp="1621452307554">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1621297328617" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1621297328617">
+    <state width="1877" height="9" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1621452307554" />
+    <state width="1877" height="9" key="GridCell.Tab.0.center" timestamp="1621452307553">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1621297328617" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1621297328617">
+    <state width="1877" height="9" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1621452307553" />
+    <state width="1877" height="9" key="GridCell.Tab.0.left" timestamp="1621452307553">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1621297328617" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1621297328617">
+    <state width="1877" height="9" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1621452307553" />
+    <state width="1877" height="9" key="GridCell.Tab.0.right" timestamp="1621452307554">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1621297328617" />
+    <state width="1877" height="9" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1621452307554" />
     <state x="480" y="191" key="SettingsEditor" timestamp="1620840257513">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

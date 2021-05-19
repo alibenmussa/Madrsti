@@ -1,21 +1,14 @@
 package main.views.stages.employee.employeeShowSubjects.employeeAddSubject;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.SingleSelectionModel;
 import javafx.scene.control.TextField;
-import main.DatabaseManager;
+import main.DB.ComboFacade;
+import main.DB.DatabaseManager;
 import main.views.dialog.Dialog;
 
-import java.net.URL;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.ResourceBundle;
 
 public class employeeAddSubjectController {
 
@@ -33,7 +26,7 @@ public class employeeAddSubjectController {
 
     public void initialize() {
         String gradeQuery = "SELECT `name` FROM `grades`";
-        DatabaseManager.addComboBoxData(grade, gradeQuery, null);
+        ComboFacade.ComboAddData("ComboBox",grade, gradeQuery, null);
     }
 
     @FXML

@@ -4,12 +4,10 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ComboBox;
-import main.DatabaseManager;
+import main.DB.ComboFacade;
+import main.DB.DatabaseManager;
 import main.views.dialog.Dialog;
 import java.util.ArrayList;
-
-import java.net.URL;
-import java.util.ResourceBundle;
 
 public class employeeAddClassController {
 
@@ -24,7 +22,7 @@ public class employeeAddClassController {
 
     public void initialize() {
         String gradeQuery = "SELECT `name` FROM `grades`";
-        DatabaseManager.addComboBoxData(grade, gradeQuery, null);
+        ComboFacade.ComboAddData("ComboBox",grade, gradeQuery, null);
 
     }
 

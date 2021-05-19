@@ -8,7 +8,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Circle;
 import javafx.stage.FileChooser;
-import main.DatabaseManager;
+import main.DB.DatabaseManager;
 import main.Main;
 import main.StagesManager;
 import main.views.dialog.Dialog;

@@ -5,11 +5,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.Label;
-import javafx.stage.FileChooser;
-import main.DatabaseManager;
-import main.Main;
+import main.DB.DatabaseManager;
 
-import java.io.File;
 import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;

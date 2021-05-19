@@ -9,10 +9,9 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.shape.Circle;
-import main.DatabaseManager;
+import main.DB.DatabaseManager;
 import main.views.dialog.Dialog;
 
-import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;

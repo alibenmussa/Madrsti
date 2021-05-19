@@ -2,17 +2,13 @@ package main.views.stages.employee.employeeShowClasses.employeeShowSchedule.empl
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.TextField;
-import main.DatabaseManager;
+import main.DB.ComboFacade;
+import main.DB.DatabaseManager;
 import main.views.dialog.Dialog;
 import main.views.stages.template.ComboForm;
 
-import java.net.URL;
-import java.sql.DriverManager;
 import java.util.ArrayList;
-import java.util.ResourceBundle;
 
 public class employeeAddSubjectController {
 
@@ -41,8 +37,8 @@ public class employeeAddSubjectController {
         ArrayList<String> data1 = new ArrayList<>();
         data1.add(gradeID);
 //        DatabaseManager.addComboBoxData(subject, subjectQuery, data1);
-        DatabaseManager.addComboBoxDataWithId(subject, subjectQuery, data1);
-        DatabaseManager.addComboBoxDataWithId(teacher, teacherQuery, null);
+        ComboFacade.ComboAddData("ComboBoxWithId",subject, subjectQuery, data1);
+        ComboFacade.ComboAddData("ComboBoxWithId",teacher, teacherQuery, null);
 
     }
 

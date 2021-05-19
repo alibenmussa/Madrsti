@@ -7,7 +7,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Circle;
-import main.DatabaseManager;
+import main.DB.DatabaseManager;
 import main.StagesManager;
 import main.views.dialog.Dialog;
 import main.views.stages.ControllerFunctions;

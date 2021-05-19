@@ -9,7 +9,8 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
 import javafx.util.Callback;
-import main.DatabaseManager;
+import main.DB.ComboFacade;
+import main.DB.DatabaseManager;
 import main.Main;
 import main.StagesManager;
 import main.views.dialog.Dialog;
@@ -67,7 +68,7 @@ public class adminShowStudentsController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
 
         String gradeQuery = "SELECT `grade_id`, `name` FROM `grades`";
-        DatabaseManager.addComboBoxDataWithId(grades, gradeQuery, null);
+        ComboFacade.ComboAddData("ComboBoxWithId",grades, gradeQuery, null);
         grades.getItems().add(0, new ComboForm("-1", "All"));
         grades.getSelectionModel().selectFirst();
         clas.setDisable(true);
@@ -84,7 +85,7 @@ public class adminShowStudentsController implements Initializable {
                 ArrayList<String> data = new ArrayList<>();
                 data.add(grades.getValue().getId());
                 String query = "SELECT `class_id`, `class_id` FROM classes WHERE grade_id = ?";
-                DatabaseManager.addComboBoxDataWithId(clas, query, data);
+                ComboFacade.ComboAddData("ComboBoxWithId",clas, query, data);
                 clas.getItems().add(0, new ComboForm("-1", "All"));
                 clas.getSelectionModel().selectFirst();
                 clas.setOnAction(x -> {

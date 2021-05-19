@@ -12,13 +12,12 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
-import main.DatabaseManager;
+import main.DB.DatabaseManager;
 import main.Main;
 import main.StagesManager;
 import main.views.dialog.Dialog;
 import main.views.stages.employee.employeeShowClasses.employeeShowSchedule.employeeShowScheduleController;
-import main.views.stages.employee.employeeShowClasses.employeeAddClass.employeeAddClassController;
-import java.io.EOFException;
+
 import java.io.IOException;
 import java.net.URL;
 import java.sql.ResultSet;

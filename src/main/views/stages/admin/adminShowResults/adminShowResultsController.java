@@ -1,7 +1,5 @@
 package main.views.stages.admin.adminShowResults;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,20 +8,15 @@ import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.control.*;
-import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
-import javafx.util.Callback;
-import main.DatabaseManager;
-import main.Main;
+import main.DB.ComboFacade;
+import main.DB.DatabaseManager;
 import main.StagesManager;
-import main.views.dialog.Dialog;
 import main.views.stages.admin.adminShowResults.adminShowClassResult.adminShowClassResultController;
-import main.views.stages.teacher.teacherShowHome.teacherShowResult.teacherShowResultController;
 import main.views.stages.template.ComboForm;
-import main.views.stages.template.Student;
 
 import java.io.IOException;
 import java.net.URL;
@@ -45,7 +38,7 @@ public class adminShowResultsController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        DatabaseManager.addComboBoxDataWithId(type, "SELECT `grade_id`, `name` FROM `grades`", null);
+        ComboFacade.ComboAddData("ComboBoxWithId",type, "SELECT `grade_id`, `name` FROM `grades`", null);
         type.getItems().add(0, new ComboForm("-1", "All"));
         type.getSelectionModel().selectFirst();
         setupGrid(null);
