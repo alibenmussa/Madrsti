@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="JavaFXApp.jnlp">
+  <information>
+    <title>Madrsti System</title>
+    <vendor>Unknown</vendor>
+    <description>A Primary School System</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="JavaFXApp.jar" size="1530504" download="eager" />
+    <jar href="fontawesomefx-8.9.jar" size="571068" download="eager" />
+    <jar href="mysql-connector-java-5.1.46.jar" size="1004838" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="960" height="640" main-class="Main"  name="JavaFXApp" />
+  <update check="background"/>
+</jnlp>
