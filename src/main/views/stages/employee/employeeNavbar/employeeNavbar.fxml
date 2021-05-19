@@ -16,7 +16,7 @@
                   <Insets bottom="10.0" top="10.0" />
                </VBox.margin>
                <graphic>
-                  <FontAwesomeIconView glyphName="HOME" styleClass="icon" />
+                  <FontAwesomeIconView glyphName="HOME" size="25" styleClass="icon" />
                </graphic>
                <padding>
                   <Insets bottom="25.0" top="25.0" />

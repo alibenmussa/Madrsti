@@ -31,11 +31,10 @@ public class DatabaseManager {
                 }
             }
             return connection;
-            //ClassNotFoundException
         } catch (SQLException ex) {
             Dialog.showAlert("Connection Error", "Madrsti can't connect to database");
-            return null;
         }
+        return null;
     }
 
     public static ResultSet executeSQLResultSet(String query, ArrayList<String> data) {

@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="JavaFXApp" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="b045edff-8949-4d70-b8ca-0bd9df58e8c0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/views/access/AdminStage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/views/access/EmployeeStage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/views/access/StageFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/views/access/TeacherStage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/views/stages/template/PersonFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ac67dd44-06eb-4ec7-b257-e72a7c1300db.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ac67dd44-06eb-4ec7-b257-e72a7c1300db.xml" afterDir="false" />
+    <list default="true" id="b045edff-8949-4d70-b8ca-0bd9df58e8c0" name="Default Changelist" comment="add Factory Pattern to project stages">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/ControllerFunctions.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/ControllerFunctions.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/views/Madrsti.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/Madrsti.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/views/stages/ControllerFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/ControllerFunctions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminNavbar/adminNavbar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/admin/adminNavbar/adminNavbar.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/employee/employeeNavbar/employeeNavbar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/employee/employeeNavbar/employeeNavbar.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/teacher/teacherNavbar/teacherNavbar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Madrsti/main/views/stages/teacher/teacherNavbar/teacherNavbar.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/DatabaseManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/views/stages/admin/adminNavbar/adminNavbar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/admin/adminNavbar/adminNavbar.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/views/stages/employee/employeeNavbar/employeeNavbar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/employee/employeeNavbar/employeeNavbar.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/views/stages/teacher/teacherNavbar/teacherNavbar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/views/stages/teacher/teacherNavbar/teacherNavbar.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,9 +68,6 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GithubDefaultAccount">
-    <option name="defaultAccountId" value="7822525b-8eeb-453e-8603-9523203ef11d" />
-  </component>
   <component name="IgnoredFileRootStore">
     <option name="generatedRoots">
       <set>
@@ -94,6 +93,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="AnalyzeApkAction.lastApkPath" value="$PROJECT_DIR$/../.." />
     <property name="Downloaded.Files.Path.Enabled" value="true" />
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
@@ -105,7 +105,7 @@
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552560620409" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/mysql-connector-java-5.1.46.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../.." />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -172,7 +172,9 @@
       <workItem from="1552550906121" duration="9435000" />
       <workItem from="1620972148539" duration="5352000" />
       <workItem from="1621104269603" duration="2370000" />
-      <workItem from="1621181561813" duration="2155000" />
+      <workItem from="1621181561813" duration="3611000" />
+      <workItem from="1621279876135" duration="2055000" />
+      <workItem from="1621420269399" duration="1357000" />
     </task>
     <task id="LOCAL-00001" summary="Updating: database and fixing a bug">
       <created>1551580711528</created>
@@ -237,7 +239,14 @@
       <option name="project" value="LOCAL" />
       <updated>1552552222568</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="add Factory Pattern to project stages">
+      <created>1621186692365</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1621186692365</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,7 +262,8 @@
     <MESSAGE value="charts" />
     <MESSAGE value="add Photos" />
     <MESSAGE value="edit Buttons" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit Buttons" />
+    <MESSAGE value="add Factory Pattern to project stages" />
+    <option name="LAST_COMMIT_MESSAGE" value="add Factory Pattern to project stages" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="176" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1620831123333">
@@ -264,41 +274,49 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="230" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1621186122968" />
-    <state x="585" y="115" key="CommitChangelistDialog2" timestamp="1621186670851">
+    <state x="585" y="115" key="CommitChangelistDialog2" timestamp="1621432387557">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1621186670851" />
-    <state x="740" y="262" key="FileChooserDialogImpl" timestamp="1620838390818">
+    <state x="585" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1621432387557" />
+    <state x="740" y="262" key="FileChooserDialogImpl" timestamp="1621283430185">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="262" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1620838390818" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1621186644049">
+    <state x="740" y="262" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1621283430185" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1621297328617">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1621186644049" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1621186644049">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1621297328617" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1621297328617">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1621186644049" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1621186644049">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1621297328617" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1621297328617">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1621186644049" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1621186644049">
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1621297328617" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1621297328617">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1621186644049" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1621297328617" />
     <state x="480" y="191" key="SettingsEditor" timestamp="1620840257513">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="480" y="191" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1620840257513" />
-    <state x="656" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1621181830567">
+    <state x="552" y="254" key="Vcs.Push.Dialog.v2" timestamp="1621187508833">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1621181830567" />
+    <state x="552" y="254" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1621187508833" />
+    <state x="656" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1621421278527">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="656" y="345" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1621421278527" />
     <state x="704" y="510" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1620838205188">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="704" y="510" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1920.1040@0.0.1920.1040" timestamp="1620838205188" />
+    <state x="656" y="118" width="607" height="804" key="find.popup" timestamp="1621279997425">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="656" y="118" width="607" height="804" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1621279997425" />
   </component>
 </project>
